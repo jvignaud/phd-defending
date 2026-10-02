@@ -1,4 +1,5 @@
 {
+  "files.autoSave": "off",
   "ltex.language": "fr",
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.view.pdf.viewer": "tab",
