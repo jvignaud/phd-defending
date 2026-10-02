@@ -4,4 +4,4 @@
 % Charger la classe de base
 \LoadClass[11pt, aspectratio=169, french]{beamer}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[utf8]{inputenc}
+\RequirePackage{libertine}
