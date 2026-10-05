@@ -3,5 +3,10 @@
 
 % Charger la classe de base
 \LoadClass[11pt, aspectratio=169, french]{beamer}
+
+% Packages nécessaires pour la présentation
 \RequirePackage[T1]{fontenc}
 \RequirePackage{libertine}
+
+% thème
+\usetheme{PaloAlto}
