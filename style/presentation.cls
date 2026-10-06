@@ -38,3 +38,7 @@
         \tableofcontents[currentsection, hideothersubsections]
     \end{frame}
 }
+
+
+% désafficher la barre de navigation des slides
+\setbeamertemplate{navigation symbols}{}
