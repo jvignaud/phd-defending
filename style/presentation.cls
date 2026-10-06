@@ -10,7 +10,7 @@
 \RequirePackage{etoolbox}
 
 % thème
-\usetheme{PaloAlto}
+\usetheme[width=2cm, hideothersubsections]{PaloAlto}
 
 % Titre de diapo par défaut = titre de la section courante
 \makeatletter
