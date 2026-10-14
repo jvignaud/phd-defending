@@ -5,120 +5,524 @@
 \institute{IMS, I2M, VLM Robotics}
 \date{2 décembre 2026}
 
+% =============================================================================
+% SQUELETTE DE SOUTENANCE
+%  - \assertion{...}  : le message de la diapo (ce que le jury doit retenir)
+%  - \figafaire{...}  : emplacement de la figure qui PROUVE ce message
+%  - % SOURCE         : figure / tableau / équation de la thèse à adapter
+%  - % ORAL           : ce qui se dit, et pas ce qui s'écrit
+%  - % BUDGET         : temps cible de la section (total visé ~ 45 min)
+% Figures MATLAB : ré-exporter au format diapo (~12 x 7 cm, police >= 14 pt,
+% traits épais), ne garder que ce qui sert le message.
+% =============================================================================
+
 \begin{document}
 
 \frame{\titlepage}
 
+% =============================================================================
 \section{Introduction}
+% BUDGET : ~5 min (4 diapos)
+% =============================================================================
 
 \subsection{Contexte industriel et enjeux}
 
 \begin{frame}
-    VLM Robotics, contraintes résiduelles, minimisation de l'énergie
+    \assertion{Chez VLM Robotics, chaque pièce est unique : impossible de régler les conditions de coupe par essais successifs}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \figafaire{Photo d'une cellule robotisée VLM Robotics\\(ou d'une pièce aéro / spatial / défense)}
+        \column{0.45\linewidth}
+        \begin{itemize}
+            \item Industrie 4.0 : production unitaire ou très petites séries, à cadence industrielle
+            \item Clients aéronautique, spatial, défense
+            \item Pas d'effet de série $\Rightarrow$ pas de campagne de réglage par référence
+        \end{itemize}
+    \end{columns}
+    % ORAL : thèse CIFRE ; besoin d'une stratégie en ligne, pièce par pièce,
+    % avec une instrumentation simple et transposable d'un poste à l'autre.
+\end{frame}
+
+\begin{frame}
+    \assertion{Maîtriser l'énergie mécanique de coupe, c'est maîtriser la tenue en fatigue de la pièce et réduire la consommation}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \figafaire{Schéma : puissance thermique vs puissance mécanique\\$\rightarrow$ contraintes résiduelles en traction / en compression}
+        \column{0.45\linewidth}
+        \begin{itemize}
+            \item Thermique dominant $\Rightarrow$ contraintes résiduelles de \alert{traction} en surface
+            \item Mécanique dominant $\Rightarrow$ contraintes de \alert{compression}, favorables à la fatigue
+            \item Double enjeu : métallurgique et énergétique
+        \end{itemize}
+    \end{columns}
+    % SOURCE : Introduction, § Contexte.
 \end{frame}
 
 \subsection{Problématique et contributions}
 
 \begin{frame}
-    Verrou de la boucle fermée (identification) + Minimisation de l'énergie (optimisation)
+    \assertion{Pour réguler l'énergie, il faut la mesurer, la modéliser, puis agir sur une broche déjà asservie en vitesse}
 
-    Plan
+    \figafaire[0.5\textheight]{SCHÉMA FIL ROUGE (réutilisé à chaque section) :\\
+        Instrumentation $\rightarrow$ Modèle de puissance $\rightarrow$ Broche en boucle fermée $\rightarrow$ Optimisation en ligne\\
+        avec les deux verrous entourés : \textbf{identification en boucle fermée} et \textbf{minimisation de l'énergie}}
+
+    \begin{itemize}
+        \item La boucle de vitesse de la broche (Sinamics) \alert{ne peut pas être désactivée}
+        \item Le modèle doit être \alert{calculable en ligne}
+    \end{itemize}
+    % ORAL : poser ici la question de recherche en une phrase.
+\end{frame}
+
+\begin{frame}
+    \assertion{Quatre contributions, de la mesure jusqu'à l'optimisation sur machine}
+
+    \begin{enumerate}
+        \item \textbf{Instrumentation} : étalonnage de la platine Kistler par cobot, dépendant du point d'application
+        \item \textbf{Modélisation} : puissance de coupe par comoment de torseurs, reliée aux pressions spécifiques $K_c$, $K_f$, $K_m$
+        \item \textbf{Identification en boucle fermée} : 4 algorithmes pour PI parallèle + préfiltre sur la seule voie intégrale
+        \item \textbf{Optimisation en ligne} : RPEM sur un modèle empirique $W_c(V_c)$
+    \end{enumerate}
+    % ORAL : annoncer que la contribution 3 est le cœur théorique.
 \end{frame}
 
 \begin{frame}[sanssoustitre]{Plan}
     \tableofcontents
 \end{frame}
 
+% =============================================================================
 \section{Moyens expérimentaux}
+% BUDGET : ~4 min (3 diapos) -- ne pas s'attarder
+% =============================================================================
 
 \subsection{Machine-outil et chaîne d'acquisition}
 
 \begin{frame}
+    \assertion{Une machine industrielle instrumentée : efforts, puissance électrique et vibrations, synchronisés}
 
+    \begin{columns}[c]
+        \column{0.45\linewidth}
+        \figafaire{Photo annotée de la DMG Mori CMX600V\\(flèches vers platine, broche, accéléromètre)}
+        \column{0.5\linewidth}
+        \figafaire{Synoptique de la chaîne d'acquisition}
+    \end{columns}
+    % SOURCE : fig. 1.1 (CMX600V), fig. 1.15 (chaîne d'acquisition complète).
+    % Capteurs : Kistler 9129AA, Dewesoft Sirius XHS, Kistler 8763B ;
+    % commande Sinumerik 840D sl (grandeurs cinématiques).
 \end{frame}
 
 \subsection{Étalonnage de la platine dynamométrique par un cobot}
 
 \begin{frame}
+    \assertion{Le constructeur ne certifie la platine qu'en un point : un cobot permet un étalonnage dépendant du point d'application}
 
+    \begin{columns}[c]
+        \column{0.45\linewidth}
+        \figafaire{Photo de l'étalonnage avec l'UR5e + KT110}
+        \column{0.5\linewidth}
+        \begin{itemize}
+            \item Certification constructeur : un seul point, 15\,mm au-dessus du centre
+            \item Cobot UR5e + capteur KT110 : charges précises et localisées
+            \item Protocole automatisé sur plaque vissée
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 1.21 (photo), fig. 1.22 (algorithme robot).
 \end{frame}
 
+\begin{frame}
+    \assertion{Les coefficients en force sont proches de 1 ; le couple révèle des non-linéarités}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \figafaire{Régressions linéaires KT110 vs Kistler\\(force, couple +, couple $-$)}
+        \column{0.45\linewidth}
+        \figafaire{Carte du coefficient d'étalonnage\\en fonction de la position $(x, y)$}
+    \end{columns}
+    % SOURCE : fig. 1.23 (régressions), fig. 1.24 à 1.26 (cartes).
+    % ORAL : limites assumées (axe z seul, hystérésis, précision robot ~0,5 mm).
+    % TRANSITION : « Avec des efforts fiables, on peut écrire la puissance de coupe. »
+\end{frame}
+
+% =============================================================================
 \section{Modélisation mécanique de l'énergie de coupe}
+% BUDGET : ~8 min (5-6 diapos)
+% =============================================================================
 
 \subsection{Modèle de puissance par torseurs}
 
 \begin{frame}
-    Comoment, cinématique, actions de la dent
+    \assertion{La puissance de coupe s'obtient par le comoment du torseur d'action et du torseur cinématique à la pointe de la dent}
+
+    \begin{columns}[c]
+        \column{0.45\linewidth}
+        \figafaire{Schéma dent / repère tournant $R_d$\\(trajectoire trochoïdale, angle $\theta$)}
+        \column{0.5\linewidth}
+        \[
+            P_{\text{Outil/Pièce}} = \{\tau_{\text{Outil}\to\text{Pièce}}\} \otimes \{\mathcal{V}_{\text{Pièce/Outil}}\}
+        \]
+        \begin{itemize}
+            \item terme de \alert{coupe} (force $F_{e_\theta}$) : prépondérant
+            \item terme de \alert{moment} ($M_{P,e_z}$) : non négligeable
+            \item terme d'avance ($F_{e_r}$) : négligeable
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 2.1 / 2.6 ; éq. (2.18) en annexe si question.
+    % ORAL : ne pas dérouler l'équation complète, colorer les trois termes.
 \end{frame}
 
 \subsection{Identification des pressions spécifiques}
 
 \begin{frame}
-    Traitement du signal, Kienzle-Victor
+    \assertion{Les efforts sont linéaires en section de copeau : les pressions spécifiques s'identifient par régression}
+
+    \begin{columns}[c]
+        \column{0.45\linewidth}
+        \figafaire{Signal d'effort brut $\rightarrow$ filtré (Notch 1000--1300\,Hz)\\recalage de $\theta$ sur le front descendant}
+        \column{0.5\linewidth}
+        \figafaire{Régression effort vs section de copeau\\$\Rightarrow K_c, K_f, K_m$}
+    \end{columns}
+    % SOURCE : fig. 2.7 (recalage), 2.9 (Notch), 2.11 (régression).
+\end{frame}
+
+\begin{frame}
+    \assertion{Les pressions spécifiques suivent la loi de Kienzle-Victor en fonction de l'avance}
+
+    \figafaire{Variation de $K_c$, $K_f$, $K_m$ en fonction de $f_z$ + modèle de Kienzle-Victor (acier C35)}
+    % SOURCE : fig. 2.12, 2.15. Garder fig. 2.13 (en fonction de Vc) pour la diapo « Limite ».
 \end{frame}
 
 \subsection{Comparaison à la puissance électrique}
 
 \begin{frame}
+    \assertion{La puissance mécanique modélisée et la puissance électrique de la broche ont des dynamiques cohérentes}
 
+    \figafaire{Superposition puissance mécanique (modèle) / puissance électrique (2 wattmètres)}
+    % SOURCE : fig. 2.20.
+    % ORAL : l'écart d'échelle s'explique par le rendement eta ; la puissance
+    % électrique ne suffit pas encore seule (eta et puissance à vide non
+    % caractérisés, grandeur scalaire, période du fondamental).
 \end{frame}
 
 \subsection{Limite}
 
 \begin{frame}
-    $W_c$ indépendant de $V_c$
+    \assertion{Dans ce modèle, $W_c$ décroît strictement avec $f_z$ et ne dépend pas de $V_c$ : aucun minimum à optimiser}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \figafaire{Simulation de $W_c(f_z, V_c)$ : surface sans minimum}
+        \column{0.45\linewidth}
+        \[
+            W_c = \frac{P_{\text{Outil/Pièce}}}{Q}, \qquad Q = a_e\, a_p\, V_f
+        \]
+        \begin{itemize}
+            \item Modèle statique : $V_c$ n'intervient pas
+            \item $\Rightarrow$ il faut un modèle \alert{identifié en ligne} (section 5)
+            \item $\Rightarrow$ et agir sur la broche, \alert{déjà asservie} (section 4)
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 2.16 ; éq. (2.31)-(2.32).
+    % TRANSITION : double motivation des deux sections suivantes.
 \end{frame}
 
+% =============================================================================
 \section{Identification en boucle fermée de la broche}
+% BUDGET : ~14 min (8-9 diapos) -- cœur de la thèse
+% =============================================================================
 
 \subsection{Problème et positionnement}
 
 \begin{frame}
-    architecture Sinamics, état de l'art
+    \assertion{La boucle de vitesse Sinamics ne peut pas être ouverte : la broche doit être identifiée en boucle fermée}
+
+    \figafaire{Schéma bloc de la boucle de régulation de la broche\\(PI parallèle, préfiltre sur la voie intégrale, point d'injection de la SBPA)}
+    % SOURCE : fig. 3.2 (Starter) en petit, fig. 3.3 / 3.6 (schéma bloc) en grand.
+    % ORAL : en boucle fermée, l'entrée est corrélée au bruit
+    % => les moindres carrés classiques sont biaisés.
+\end{frame}
+
+\begin{frame}
+    \assertion{Aucune méthode de la littérature ne traite un PI parallèle avec préfiltre sur la seule voie intégrale}
+
+    \figafaire[0.45\textheight]{Carte de positionnement : LS / IV / SRIV / RIV en boucle fermée (références [19], [20], [37] du chap. 3)\\$\times$ temps discret / temps continu $\times$ structure de régulateur}
+    % SOURCE : § 3.3.6 Positionnement.
+    % ORAL : continuité des CLSRIV / CLRIV, adaptées à cette architecture,
+    % en temps discret ET en temps continu.
 \end{frame}
 
 \subsection{Algorithmes proposés}
 
 \begin{frame}
-    LS -> IV -> SRIV -> RIV
+    \assertion{Quatre algorithmes, chacun corrigeant le défaut du précédent}
+
+    \figafaire[0.5\textheight]{« Escalier » des 4 méthodes (une marche = un apport) :\\
+        CLLSSVFFR (moindres carrés) $\rightarrow$ CLIVSVFFR (+ instruments : biais réduit)\\
+        $\rightarrow$ CLSRIVFR (+ préfiltrage optimal) $\rightarrow$ CLRIVFR (+ modèle de bruit)}
+    % SOURCE : fig. 3.8 à 3.10 (schémas des méthodes).
+    % Détails algorithmiques => ANNEXES.
 \end{frame}
 
 \subsection{Validation en simulation}
 
 \begin{frame}
-    Monte-Carlo, bruit blanc puis coloré
+    \assertion{En bruit blanc, les méthodes proposées réduisent le biais par rapport aux méthodes classiques}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \figafaire{Monte-Carlo 500 essais, RSB = 10\,dB :\\nuages / boxplots des paramètres autour de la vraie valeur}
+        \column{0.45\linewidth}
+        \figafaire{Bode : méthode proposée vs classique\\(CLSRIVFR vs CLSRIV)}
+    \end{columns}
+    % SOURCE : tab. 3.1 (à transformer en boxplots), fig. 3.12-3.15.
+    % ORAL : CLSRIVFR > CLIVSVFFR > CLLSSVFFR en consistance.
+\end{frame}
+
+\begin{frame}
+    \assertion{En bruit coloré, CLRIVFR est la plus consistante et estime aussi le modèle de bruit}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \figafaire{Bode procédé : CLRIVFR vs CLSRIVFR\\(bruit coloré, RSB = 10\,dB)}
+        \column{0.45\linewidth}
+        \figafaire{Bode du modèle de bruit estimé vs vrai}
+    \end{columns}
+    % SOURCE : fig. 3.21, fig. 3.22 ; tab. 3.3 et 3.5.
 \end{frame}
 
 \subsection{Validation expérimentale}
 
 \begin{frame}
-    filtre stabilisateur, résultat sur machine, points de fonctionnement
+    \assertion{Sur machine, la SBPA est injectée par G-code et la mesure contournée par traces concaténées}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \figafaire{Signaux d'entrée / sortie concaténés\\autour de 3900\,tr/min}
+        \column{0.45\linewidth}
+        \begin{itemize}
+            \item SBPA générée par actions synchrones
+            \item Trace variateur à 8\,kHz, mémoire 128\,ko $\approx$ 1\,s
+            \item Concaténation des enregistrements
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 4.1, fig. 4.2.
 \end{frame}
 
+\begin{frame}
+    \assertion{Les méthodes à variables instrumentales ne convergent que vers des modèles stables : un filtre stabilisateur lève le verrou}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \figafaire{Étapes de simplification du schéma bloc\\avec filtre stabilisateur + filtre inverse}
+        \column{0.45\linewidth}
+        \[
+            F(s) = \frac{s}{s + \omega_c}, \quad f_c = 100\,\text{Hz}
+        \]
+        \begin{itemize}
+            \item Hypothèse : intégrateur pur (moteur)
+            \item Filtre inverse $\Rightarrow$ transparent pour les signaux
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 4.3, fig. 4.4 ; éq. (4.4)-(4.5).
+    % ORAL : limite non anticipée, l'assumer franchement (le jury la relèvera).
+\end{frame}
+
+\begin{frame}
+    \assertion{En validation, CLRIVFR reproduit la sortie mesurée avec un fit de 97,6\,\%}
+
+    \begin{columns}[c]
+        \column{0.6\linewidth}
+        \figafaire{Sortie mesurée vs sortie simulée des 4 méthodes\\(données de validation)}
+        \column{0.35\linewidth}
+        \begin{tabular}{lr}
+            Méthode & Fit \\ \hline
+            CLLSSVFFR & 93,05\,\% \\
+            CLIVSVFFR & 90,48\,\% \\
+            CLSRIVFR & 90,59\,\% \\
+            \alert{CLRIVFR} & \alert{97,57\,\%} \\
+        \end{tabular}
+    \end{columns}
+    % SOURCE : fig. 4.11.
+    % ORAL : le gain vient de la modélisation du bruit.
+\end{frame}
+
+\begin{frame}
+    \assertion{Le modèle identifié est cohérent sur toute la plage de 1000 à 5000\,tr/min}
+
+    \figafaire{Bode superposés CLRIVFR aux 6 points de fonctionnement}
+    % SOURCE : fig. 4.12 ; tab. 4.1 en annexe.
+    % ORAL : incertitudes faibles en HF => ouvre vers une commande robuste
+    % (au-delà de 330 rad/s de gain unitaire).
+    % TRANSITION : « La broche est connue ; reste à savoir vers quelle vitesse la piloter. »
+\end{frame}
+
+% =============================================================================
 \section{Optimisation énergétique en ligne}
+% BUDGET : ~10 min (6-7 diapos)
+% =============================================================================
 
 \subsection{Modèle empirique et algorithme RPEM}
 
 \begin{frame}
+    \assertion{Expérimentalement, $W_c(V_c)$ présente bien un minimum : un modèle parabolique suffit à le capturer}
 
+    \begin{columns}[c]
+        \column{0.55\linewidth}
+        \figafaire{Mesures de $W_c$ en fonction de $V_c$ (médiane)\\+ parabole ajustée, minimum marqué}
+        \column{0.4\linewidth}
+        \[
+            \hat W_c = a_w V_c^2 + b_w V_c + c_w
+        \]
+        \[
+            V_{c,\text{opt}} = -\frac{b_w}{2a_w} \quad (a_w > 0)
+        \]
+    \end{columns}
+    % SOURCE : fig. 4.14 ; éq. (4.13)-(4.14).
+    % ORAL : l'énergie par tour ne fonctionne pas (fig. 4.13), minimum noyé dans le bruit.
+\end{frame}
+
+\begin{frame}
+    \assertion{En avance, $W_c(f_z)$ décroît strictement : cohérent avec le modèle, mais pas de minimum exploitable}
+
+    \figafaire{$W_c$ en fonction de $f_z$, avec la borne préconisée par le constructeur}
+    % SOURCE : fig. 4.16. Seul minimum vers 0,42 mm/(tr.dent), hors préconisations.
+    % ORAL : confirme le chapitre 2 => on optimise sur Vc seulement.
+\end{frame}
+
+\begin{frame}
+    \assertion{La RPEM ré-identifie le modèle à chaque itération et suit l'optimum pendant l'usinage}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \begin{align*}
+            \varepsilon_k &= y_k - \hat y_k \\
+            \hat\theta_k &= \hat\theta_{k-1} + \gamma_k R_k^{-1} \psi_k^\top \varepsilon_k \\
+            R_k &= R_{k-1} + \gamma_k\left(\psi_k^\top \psi_k - R_{k-1}\right)
+        \end{align*}
+        \column{0.45\linewidth}
+        \figafaire[0.45\textheight]{Boucle : mesure platine $\rightarrow$ RPEM $\rightarrow$ $V_{c,\text{opt}}$ $\rightarrow$ consigne CN (OPC-UA)}
+    \end{columns}
+    % SOURCE : éq. (4.9)-(4.11).
+    % ORAL : optimisation dynamique et non statique ; theta = [a, b, c, Kf, Kc, Km].
 \end{frame}
 
 \subsection{Validation en simulation}
 
 \begin{frame}
+    \assertion{En simulation, la RPEM converge vers la vitesse de coupe optimale du modèle}
 
+    \figafaire{Évolution de $V_c$ et des paramètres estimés au fil des itérations\\(animation possible en overlays : \texttt{\textbackslash only<1>}, \texttt{\textbackslash only<2>}...)}
+    % SOURCE : fig. 4.17, 4.20 (et 4.21-4.22 en annexe).
 \end{frame}
 
 \subsection{Résultats sur machine-outil}
 
 \begin{frame}
+    \assertion{Sur machine, $V_c$ converge vers 244,9\,m/min, proche des 250\,m/min préconisés par le constructeur}
 
+    \begin{columns}[c]
+        \column{0.55\linewidth}
+        \figafaire{$V_c$ et critère $J$ au fil des 9 itérations\\(extraits de la fig. 4.23, pas les 12 sous-graphes)}
+        \column{0.4\linewidth}
+        \begin{itemize}
+            \item $V_c$ : 250 $\rightarrow$ \alert{244,9\,m/min}, stable
+            \item Critère $J$ décroît vers 0
+            \item $K_c \approx 2400$\,MPa, $K_f \approx 1500$\,MPa
+            \item $K_m$ mal estimé (mesure du moment)
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 4.23.
+    % ORAL : c'est LE résultat à retenir. Assumer les limites :
+    % 9 itérations seulement (OPC-UA lent), réglage de gamma0 et R0.
 \end{frame}
 
+\begin{frame}
+    \assertion{Le comportement parabolique se retrouve sur le titane : le modèle n'est pas propre à l'acier C35}
+
+    \figafaire{$W_c(V_c)$ pour le titane : minima vers 24 et 32\,m/min, plateau 40--50\,m/min}
+    % SOURCE : fig. 4.24.
+\end{frame}
+
+% =============================================================================
 \section{Conclusion et perspectives}
+% BUDGET : ~3 min (2-3 diapos)
+% =============================================================================
 
 \begin{frame}
+    \assertion{Les deux verrous sont levés, de la mesure jusqu'à la machine}
 
+    \figafaire[0.35\textheight]{SCHÉMA FIL ROUGE avec une coche sur chaque bloc}
+    \begin{enumerate}
+        \item Étalonnage de la platine dépendant du point d'application
+        \item Modèle de puissance en ligne, cohérent avec la puissance électrique
+        \item 4 algorithmes d'identification en boucle fermée, validés sur machine (fit 97,6\,\%)
+        \item Optimisation en ligne : $V_c^\star \approx 244{,}9$\,m/min
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \assertion{Perspectives : rendre la démarche robuste, moins invasive et industrielle}
+
+    \begin{itemize}
+        \item \textbf{Court terme} : commande robuste de la broche ($H_\infty$, $\mu$, CRONE) à partir des bornes d'incertitude
+        \item \textbf{Court terme} : remplacer la platine par la puissance électrique (caractériser $\eta$ et la puissance à vide)
+        \item Trouver une grandeur présentant un minimum en $f_z$
+        \item Exploiter la raie vibratoire vers 6300\,Hz comme contrainte de stabilité
+        \item \textbf{Long terme} : communication temps réel (Profinet) au lieu d'OPC-UA
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \assertion{Valorisation}
+
+    \begin{itemize}
+        \item \textbf{Revue} : Automatica (soumis), identification en boucle fermée à temps discret
+        \item \textbf{Conférences internationales} : ECC 2025, ROCOND 2025, IFAC World Congress 2026
+        \item \textbf{Conférence nationale} : Manufacturing'21 (2024)
+        \item Posters (ICFDA 2024, ERNSI 2025) et séminaires invités
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]
+    \centering\Huge Merci de votre attention
+\end{frame}
+
+% =============================================================================
+\appendix
+% DIAPOS DE SECOURS : à sortir uniquement en réponse aux questions du jury
+% =============================================================================
+
+\begin{frame}[sanssoustitre]{Annexe -- Puissance par comoment}
+    % Éq. (2.18) complète, avec les trois termes colorés.
+    \figafaire{Équation (2.18) complète}
+\end{frame}
+
+\begin{frame}[sanssoustitre]{Annexe -- Détail des algorithmes}
+    % Une diapo par méthode si besoin : régresseur, instruments, préfiltres.
+    \figafaire{Algorithmes CLLSSVFFR, CLIVSVFFR, CLSRIVFR, CLRIVFR (fig. 3.8-3.10)}
+\end{frame}
+
+\begin{frame}[sanssoustitre]{Annexe -- Monte-Carlo : tableaux complets}
+    \figafaire{Tab. 3.1, 3.3 (paramètres), 3.2, 3.4 (itérations), 3.5 (bruit)}
+\end{frame}
+
+\begin{frame}[sanssoustitre]{Annexe -- Résultats avec filtre stabilisateur}
+    % Fits avec filtre stabilisateur : 48,78 / 51,43 / 51,44 / 65,83 %.
+    \figafaire{Fig. 4.6, 4.7, pôles et zéros (fig. 4.9)}
+\end{frame}
+
+\begin{frame}[sanssoustitre]{Annexe -- Coefficients identifiés par point de fonctionnement}
+    \figafaire{Tab. 4.1 et 4.2}
+\end{frame}
+
+\begin{frame}[sanssoustitre]{Annexe -- RPEM : simulation complète et réglage}
+    % Sensibilité à gamma0 et R0 ; fig. 4.21, 4.22.
+    \figafaire{Fig. 4.21, 4.22 ; choix de $\gamma_0$ et $R_0$}
+\end{frame}
+
+\begin{frame}[sanssoustitre]{Annexe -- Analyse vibratoire}
+    \figafaire{Spectrogramme, raie vers 6300\,Hz (fig. 2.21)}
 \end{frame}
 
 \end{document}

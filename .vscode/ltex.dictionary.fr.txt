@@ -3,3 +3,10 @@ Vignaud
 IMS
 I2M
 Robotics
+cobot
+Comoment
+Kienzle
+Sinamics
+SRIV
+RIV
+RPEM
