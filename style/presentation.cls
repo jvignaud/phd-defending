@@ -8,6 +8,8 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{libertine}
 \RequirePackage{etoolbox}
+\RequirePackage{subcaption}
+\RequirePackage{tikz}
 
 % thème
 \usetheme[width=2cm, hideothersubsections]{PaloAlto}
