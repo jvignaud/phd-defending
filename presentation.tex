@@ -1,5 +1,16 @@
 \documentclass{style/presentation}
 
+% --- Packages TikZ ---
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.symbols}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{intersections}
+\usetikzlibrary{fit}
+\usetikzlibrary{backgrounds}
+
 \title{Identification et optimisation énergétique pour l'usinage}
 \author{Jamy \textsc{Vignaud}}
 \institute{IMS, I2M, VLM Robotics}
@@ -32,16 +43,20 @@
 
     \begin{columns}[c]
         \column{0.5\linewidth}
-        \figafaire{Photo d'une cellule robotisée VLM Robotics\\(ou d'une pièce aéro / spatial / défense)}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{images/GEMINI_CEA.png}
+            \caption{Cellule Gemini de fabrication et d'usinage de pièce XXL}
+        \end{figure}
         \column{0.45\linewidth}
         \begin{itemize}
             \item Industrie 4.0 : production unitaire ou très petites séries, à cadence industrielle
+            \item Fabrication additive (WAAM), usinage (fraisage, tournage, perçage), CND
             \item Clients aéronautique, spatial, défense
             \item Pas d'effet de série $\Rightarrow$ pas de campagne de réglage par référence
+            \item Besoin d'une stratégie en ligne, pièce par pièce, avec instrumentation simple, non invasif et transposable d'un poste à l'autre
         \end{itemize}
     \end{columns}
-    % ORAL : thèse CIFRE ; besoin d'une stratégie en ligne, pièce par pièce,
-    % avec une instrumentation simple et transposable d'un poste à l'autre.
 \end{frame}
 
 \begin{frame}
@@ -49,7 +64,20 @@
 
     \begin{columns}[c]
         \column{0.5\linewidth}
-        \figafaire{Schéma : puissance thermique vs puissance mécanique\\$\rightarrow$ contraintes résiduelles en traction / en compression}
+        \begin{figure}
+            \centering
+            \begin{subfigure}{\linewidth}
+                \centering
+                \includegraphics[width=\linewidth]{images/CR_meca.png}
+                \caption{Charge mécanique}
+            \end{subfigure} \\
+            \begin{subfigure}{\linewidth}
+                \centering
+                \includegraphics[width=\linewidth]{images/CR_thermique.png}
+                \caption{Charge thermique}
+            \end{subfigure}
+            \caption{Phases de formation des contraintes résiduelles dans la pièce}
+        \end{figure}
         \column{0.45\linewidth}
         \begin{itemize}
             \item Thermique dominant $\Rightarrow$ contraintes résiduelles de \alert{traction} en surface
@@ -65,9 +93,11 @@
 \begin{frame}
     \assertion{Pour réguler l'énergie, il faut la mesurer, la modéliser, puis agir sur une broche déjà asservie en vitesse}
 
-    \figafaire[0.5\textheight]{SCHÉMA FIL ROUGE (réutilisé à chaque section) :\\
-        Instrumentation $\rightarrow$ Modèle de puissance $\rightarrow$ Broche en boucle fermée $\rightarrow$ Optimisation en ligne\\
-        avec les deux verrous entourés : \textbf{identification en boucle fermée} et \textbf{minimisation de l'énergie}}
+    \begin{figure}
+        \centering
+        \input{images/schema_fil_rouge.tex}
+        \caption{Fil rouge de la thèse : de la mesure jusqu'à l'optimisation sur machine}
+    \end{figure}
 
     \begin{itemize}
         \item La boucle de vitesse de la broche (Sinamics) \alert{ne peut pas être désactivée}
@@ -94,6 +124,7 @@
 
 % =============================================================================
 \section{Moyens expérimentaux}
+\label{sec:moyen_exp}
 % BUDGET : ~4 min (3 diapos) -- ne pas s'attarder
 % =============================================================================
 
@@ -147,6 +178,7 @@
 
 % =============================================================================
 \section{Modélisation mécanique de l'énergie de coupe}
+\label{sec:modele}
 % BUDGET : ~8 min (5-6 diapos)
 % =============================================================================
 
@@ -229,6 +261,7 @@
 
 % =============================================================================
 \section{Identification en boucle fermée de la broche}
+\label{sec:ident}
 % BUDGET : ~14 min (8-9 diapos) -- cœur de la thèse
 % =============================================================================
 
@@ -359,6 +392,7 @@
 
 % =============================================================================
 \section{Optimisation énergétique en ligne}
+\label{sec:optim}
 % BUDGET : ~10 min (6-7 diapos)
 % =============================================================================
 
