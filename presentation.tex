@@ -111,7 +111,7 @@
 
     \begin{enumerate}
         \item \textbf{Instrumentation} : étalonnage de la platine Kistler par cobot, dépendant du point d'application
-        \item \textbf{Modélisation} : puissance de coupe par comoment de torseurs, reliée aux pressions spécifiques $K_c$, $K_f$, $K_m$
+        \item \textbf{Modélisation} : formulation générique de la puissance de coupe par torseurs, faisant apparaître le terme de moment ($K_m$), identifiée et confrontée à la puissance électrique broche
         \item \textbf{Identification en boucle fermée} : 4 algorithmes pour PI parallèle + préfiltre sur la seule voie intégrale
         \item \textbf{Optimisation en ligne} : RPEM sur un modèle empirique $W_c(V_c)$
     \end{enumerate}
@@ -137,7 +137,12 @@
         \column{0.45\linewidth}
         \figafaire{Photo annotée de la DMG Mori CMX600V\\(flèches vers platine, broche, accéléromètre)}
         \column{0.5\linewidth}
-        \figafaire{Synoptique de la chaîne d'acquisition}
+        \begin{figure}
+            \centering
+            \def\svgwidth{\textwidth}
+            \import{images/}{montage.pdf_tex}
+            \caption{Schéma du montage}
+        \end{figure}
     \end{columns}
     % SOURCE : fig. 1.1 (CMX600V), fig. 1.15 (chaîne d'acquisition complète).
     % Capteurs : Kistler 9129AA, Dewesoft Sirius XHS, Kistler 8763B ;
