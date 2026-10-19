@@ -10,6 +10,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage{subcaption}
 \RequirePackage{tikz}
+\RequirePackage{import}
 
 % thème
 \usetheme[width=2cm, hideothersubsections]{PaloAlto}
