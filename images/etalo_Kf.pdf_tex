@@ -1,0 +1,103 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'etalo_Kf.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1375.65636342bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.40521941)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{etalo_Kf.pdf}}%
+    \put(0.95872847,0.10963319){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{etalo_Kf.pdf}}%
+    \put(0.91679225,0.09528807){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{etalo_Kf.pdf}}%
+    \put(0.87485603,0.08094295){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{etalo_Kf.pdf}}%
+    \put(0.01990839,0.18708938){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_{f,z}$\end{tabular}}}}}%
+    \put(0.3326747,0.0053492){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$ (mm)\end{tabular}}}}%
+    \put(0.8626747,0.0488906){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$ (mm)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{etalo_Kf.pdf}}%
+    \put(0.84318954,0.06659857){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{etalo_Kf.pdf}}%
+    \put(0.07599183,0.04566218){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0.05006459,0.07534299){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,99\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{etalo_Kf.pdf}}%
+    \put(0.04034266,0.10996202){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,992\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{etalo_Kf.pdf}}%
+    \put(0.17152841,0.03936557){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{etalo_Kf.pdf}}%
+    \put(0.79098421,0.05225344){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{etalo_Kf.pdf}}%
+    \put(0.04034266,0.14458177){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,994\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{etalo_Kf.pdf}}%
+    \put(0.27104286,0.03306898){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{etalo_Kf.pdf}}%
+    \put(0.04034266,0.1792008){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,996\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{etalo_Kf.pdf}}%
+    \put(0.37055732,0.02677162){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{etalo_Kf.pdf}}%
+    \put(0.04034266,0.21382057){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,998\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{etalo_Kf.pdf}}%
+    \put(0.7490487,0.03790832){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$100\end{tabular}}}}%
+    \put(0.44621204,0.02047501){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{etalo_Kf.pdf}}%
+    \put(0.08305722,0.24844105){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{etalo_Kf.pdf}}%
+    \put(0.04034266,0.28305936){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,002\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{etalo_Kf.pdf}}%
+    \put(0.53777028,0.0141784){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{etalo_Kf.pdf}}%
+    \put(0.04034266,0.31767838){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,004\end{tabular}}}}%
+    \put(0.63878346,0.01130504){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{etalo_Kf.pdf}}%
+    \put(0.70711248,0.02356325){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{etalo_Kf.pdf}}%
+  \end{picture}%
+\endgroup%

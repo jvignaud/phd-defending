@@ -1,0 +1,103 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'etalo_Km_positif.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1334.13868341bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.40410274)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{etalo_Km_positif.pdf}}%
+    \put(0.77474872,0.00932334){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$ (mm)\end{tabular}}}}%
+    \put(0.02051023,0.10469369){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_{m,z}$ (Couple positif)\end{tabular}}}}}%
+    \put(0.11904973,0.01148746){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$ (mm)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{etalo_Km_positif.pdf}}%
+    \put(0.0360854,0.08349905){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{etalo_Km_positif.pdf}}%
+    \put(0.00869061,0.0638683){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{etalo_Km_positif.pdf}}%
+    \put(0.04641482,0.12957146){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{etalo_Km_positif.pdf}}%
+    \put(0.0360854,0.1756431){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,85\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{etalo_Km_positif.pdf}}%
+    \put(0.04641482,0.22171476){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{etalo_Km_positif.pdf}}%
+    \put(0.06505744,0.05371868){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{etalo_Km_positif.pdf}}%
+    \put(0.0360854,0.26778641){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,95\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{etalo_Km_positif.pdf}}%
+    \put(0.0641769,0.31385881){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{etalo_Km_positif.pdf}}%
+    \put(0.0360854,0.35993024){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,05\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{etalo_Km_positif.pdf}}%
+    \put(0.13578666,0.04356906){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{etalo_Km_positif.pdf}}%
+    \put(0.95748062,0.04403434){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{etalo_Km_positif.pdf}}%
+    \put(0.87232457,0.03731616){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{etalo_Km_positif.pdf}}%
+    \put(0.21826802,0.03578793){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{etalo_Km_positif.pdf}}%
+    \put(0.78716183,0.03059873){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{etalo_Km_positif.pdf}}%
+    \put(0.261852,0.02326908){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{etalo_Km_positif.pdf}}%
+    \put(0.70200128,0.02388054){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{etalo_Km_positif.pdf}}%
+    \put(0.59709647,0.01716235){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{etalo_Km_positif.pdf}}%
+    \put(0.30622575,0.01311948){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{etalo_Km_positif.pdf}}%
+    \put(0.51193519,0.01044417){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{etalo_Km_positif.pdf}}%
+    \put(0.42677469,0.00372598){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$150\end{tabular}}}}%
+    \put(0.36259246,0.00296987){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{etalo_Km_positif.pdf}}%
+  \end{picture}%
+\endgroup%

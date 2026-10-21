@@ -1,0 +1,108 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'etalo_Km_negatif.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1367.18114658bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.41586533)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{etalo_Km_negatif.pdf}}%
+    \put(0.0200226,0.11382682){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$k_{m,z}$ (Couple négatif)\end{tabular}}}}}%
+    \put(0.75911373,0.01388943){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$ (mm)\end{tabular}}}}%
+    \put(0.18847248,0.02354613){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$ (mm)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{etalo_Km_negatif.pdf}}%
+    \put(0.07424996,0.11375231){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,7\end{tabular}}}}%
+    \put(0.06178687,0.08973108){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{etalo_Km_negatif.pdf}}%
+    \put(0.06382015,0.13637699){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{etalo_Km_negatif.pdf}}%
+    \put(0.07474733,0.15900095){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{etalo_Km_negatif.pdf}}%
+    \put(0.12175552,0.07803439){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{etalo_Km_negatif.pdf}}%
+    \put(0.95849158,0.07270352){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{etalo_Km_negatif.pdf}}%
+    \put(0.06382015,0.18162563){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,85\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{etalo_Km_negatif.pdf}}%
+    \put(0.07415662,0.20424959){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,9\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{etalo_Km_negatif.pdf}}%
+    \put(0.1911642,0.06248998){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{etalo_Km_negatif.pdf}}%
+    \put(0.88034536,0.06077603){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{etalo_Km_negatif.pdf}}%
+    \put(0.06382015,0.22687354){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,95\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{etalo_Km_negatif.pdf}}%
+    \put(0.09014949,0.2494982){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{etalo_Km_negatif.pdf}}%
+    \put(0.80218957,0.04884857){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{etalo_Km_negatif.pdf}}%
+    \put(0.25513237,0.04694558){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{etalo_Km_negatif.pdf}}%
+    \put(0.06382015,0.27212215){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,05\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{etalo_Km_negatif.pdf}}%
+    \put(0.72403669,0.0369211){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{etalo_Km_negatif.pdf}}%
+    \put(0.07603013,0.29474684){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{etalo_Km_negatif.pdf}}%
+    \put(0.28887509,0.03140119){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{etalo_Km_negatif.pdf}}%
+    \put(0.06535896,0.31737093){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{etalo_Km_negatif.pdf}}%
+    \put(0.64588386,0.02499288){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{etalo_Km_negatif.pdf}}%
+    \put(0.33807513,0.01585676){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{etalo_Km_negatif.pdf}}%
+    \put(0.56773098,0.01306541){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{etalo_Km_negatif.pdf}}%
+    \put(0.4895781,0.00113795){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$150\end{tabular}}}}%
+    \put(0.39727447,0.00031237){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{etalo_Km_negatif.pdf}}%
+  \end{picture}%
+\endgroup%

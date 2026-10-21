@@ -196,7 +196,7 @@
 \end{frame}
 
 \begin{frame}
-    \assertion{Les coefficients en force sont proches de 1 ; le couple révèle des non-linéarités}
+    \assertion{La force suit le capteur de référence avec un gain de 1 ; le couple révèle des non-linéarités (gain différent selon le signe, décalage à l’origine)}
 
     \begin{columns}[c]
         \column{0.5\linewidth}
@@ -218,6 +218,36 @@
     % SOURCE : fig. 1.23 (régressions), fig. 1.24 à 1.26 (cartes).
     % ORAL : limites assumées (axe z seul, hystérésis, précision robot ~0,5 mm).
     % TRANSITION : « Avec des efforts fiables, on peut écrire la puissance de coupe. »
+\end{frame}
+
+\begin{frame}
+    \assertion{$k_f$ reste à moins de 1 \% de 1 sur toute la platine ; $k_m$ dépend de la position, avec un écart pouvant aller à 30 \%}
+    \vspace{-3mm}
+    \begin{figure}
+        \centering
+        \begin{subfigure}{.45\linewidth}
+            \centering
+            {\fontsize{4pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{etalo_Kf.pdf_tex}}
+            \caption{Coefficient $k_f$}
+        \end{subfigure} \\
+        \begin{subfigure}{.45\linewidth}
+            \centering
+            {\fontsize{4pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{etalo_Km_negatif.pdf_tex}}
+            \caption{Coefficient $k_m$ (couple négatif)}
+        \end{subfigure}
+        \begin{subfigure}{.45\linewidth}
+            \centering
+            {\fontsize{4pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{etalo_Km_positif.pdf_tex}}
+            \caption{Coefficient $k_m$ (couple positif)}
+        \end{subfigure}
+        \caption{Coefficients d'étalonnage de la platine Kistler en fonction des positions $(x,y)$}
+    \end{figure}
 \end{frame}
 
 % =============================================================================
