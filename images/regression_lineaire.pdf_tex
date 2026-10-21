@@ -1,0 +1,125 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'regression_lineaire.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1302.15480054bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.45940045)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{regression_lineaire.pdf}}%
+    \put(0.44300376,0.3067629){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Force KT110 (N)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{regression_lineaire.pdf}}%
+    \put(0.08309973,0.32739043){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$52\end{tabular}}}}%
+    \put(0.20761777,0.32739043){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$51\end{tabular}}}}%
+    \put(0.33213599,0.32739043){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$50\end{tabular}}}}%
+    \put(0.45665423,0.32739043){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$49\end{tabular}}}}%
+    \put(0.58117169,0.32739043){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$48\end{tabular}}}}%
+    \put(0.70568991,0.32739043){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$47\end{tabular}}}}%
+    \put(0.83020878,0.32739043){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$46\end{tabular}}}}%
+    \put(0.95472544,0.32739043){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$45\end{tabular}}}}%
+    \put(0.01826206,0.38436281){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Force\end{tabular}}}}}%
+    \put(0.0387712,0.36462642){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kistler (N)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{regression_lineaire.pdf}}%
+    \put(0.05496341,0.34438375){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$52\end{tabular}}}}%
+    \put(0.05496341,0.37831574){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$50\end{tabular}}}}%
+    \put(0.05496341,0.41224773){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$48\end{tabular}}}}%
+    \put(0.05496341,0.44617964){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$46\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{regression_lineaire.pdf}}%
+    \put(0.76319097,0.38220537){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mesures\end{tabular}}}}%
+    \put(0.76319097,0.36219837){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Régression linéaire\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{regression_lineaire.pdf}}%
+    \put(0.41210293,0.15850914){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Couple négatif KT110 (N.m)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{regression_lineaire.pdf}}%
+    \put(0.07201963,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$2,01\end{tabular}}}}%
+    \put(0.18383145,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$2\end{tabular}}}}%
+    \put(0.26571395,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,99\end{tabular}}}}%
+    \put(0.36256186,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,98\end{tabular}}}}%
+    \put(0.45940901,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,97\end{tabular}}}}%
+    \put(0.55625617,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,96\end{tabular}}}}%
+    \put(0.65310334,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,95\end{tabular}}}}%
+    \put(0.74995051,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,94\end{tabular}}}}%
+    \put(0.84679908,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,93\end{tabular}}}}%
+    \put(0.94364629,0.17857052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,92\end{tabular}}}}%
+    \put(0.01261373,0.19768087){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Couple négatif\end{tabular}}}}}%
+    \put(0.0351243,0.20682134){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kistler (Nm)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{regression_lineaire.pdf}}%
+    \put(0.05253085,0.19499775){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,9\end{tabular}}}}%
+    \put(0.04257818,0.22923872){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,88\end{tabular}}}}%
+    \put(0.04257818,0.26347965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,86\end{tabular}}}}%
+    \put(0.04257818,0.29772059){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$1,84\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{regression_lineaire.pdf}}%
+    \put(0.40774818,0.00355911){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Couple positif KT110 (N.m)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{regression_lineaire.pdf}}%
+    \put(0.09246946,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,94\end{tabular}}}}%
+    \put(0.17963159,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,95\end{tabular}}}}%
+    \put(0.26679479,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,96\end{tabular}}}}%
+    \put(0.35395722,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,97\end{tabular}}}}%
+    \put(0.44112044,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,98\end{tabular}}}}%
+    \put(0.52828296,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,99\end{tabular}}}}%
+    \put(0.62800347,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.70260782,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,01\end{tabular}}}}%
+    \put(0.78977024,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,02\end{tabular}}}}%
+    \put(0.87693033,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,03\end{tabular}}}}%
+    \put(0.96409351,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,04\end{tabular}}}}%
+    \put(0.01228771,0.0414165){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Couple positif\end{tabular}}}}}%
+    \put(0.03679973,0.04694311){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kistler (Nm)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{regression_lineaire.pdf}}%
+    \put(0.08297554,0.04719188){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,9\end{tabular}}}}%
+    \put(0.07222221,0.06608133){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,92\end{tabular}}}}%
+    \put(0.07222221,0.0849708){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,94\end{tabular}}}}%
+    \put(0.07222221,0.10386024){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,96\end{tabular}}}}%
+    \put(0.07222221,0.12274971){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,98\end{tabular}}}}%
+    \put(0.0973498,0.14163916){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{regression_lineaire.pdf}}%
+    \put(0.12850178,0.42419226){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$Z_{k,\text{Ext.}\to \text{Dynamo}}^\text{Kistler}=1,00219\cdot Z_{k,\text{Ext.}\to \text{Dynamo}}^\text{KT110}$\end{tabular}}}}%
+    \put(0.12850177,0.27157925){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$N_{k,O,\text{Ext.}\to \text{Dynamo}}^\text{Kistler,négatif}=0,95042\cdot N_{k,O,\text{Ext.}\to \text{Dynamo}}^\text{KT110,négatif}-0,705155$\end{tabular}}}}%
+    \put(0.12485996,0.12223069){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$N_{k,O,\text{Ext.}\to \text{Dynamo}}^\text{Kistler,positif}=0,977474\cdot N_{k,O,\text{Ext.}\to \text{Dynamo}}^\text{KT110,positif}-0,0313789$\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -142,7 +142,7 @@
                 \centering
                 \includegraphics[width=.9\linewidth]{images/armoire_elec.png}
                 \caption{Armoire électrique}
-            \end{subfigure} 
+            \end{subfigure}
             \hfill
             \begin{subfigure}{.45\linewidth}
                 \centering
@@ -153,7 +153,7 @@
                 \centering
                 \includegraphics[width=.45\linewidth]{images/MOCN.png}
                 \caption{Platine dynamométrique dans la machine-outil}
-            \end{subfigure} 
+            \end{subfigure}
             \vspace{-7mm}
             \caption{Montage expérimental}
         \end{figure}
@@ -200,7 +200,13 @@
 
     \begin{columns}[c]
         \column{0.5\linewidth}
-        \figafaire{Régressions linéaires KT110 vs Kistler\\(force, couple +, couple $-$)}
+        \begin{figure}
+            \centering
+            {\fontsize{4pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{regression_lineaire.pdf_tex}}
+            \caption{Régressions linéaires KT110 vs platine Kistler à la vis 1}
+        \end{figure}
         \column{0.45\linewidth}
         \figafaire{Carte du coefficient d'étalonnage\\en fonction de la position $(x, y)$}
     \end{columns}
@@ -402,10 +408,10 @@
         \figafaire{Sortie mesurée vs sortie simulée des 4 méthodes\\(données de validation)}
         \column{0.35\linewidth}
         \begin{tabular}{lr}
-            Méthode & Fit \\ \hline
-            CLLSSVFFR & 93,05\,\% \\
-            CLIVSVFFR & 90,48\,\% \\
-            CLSRIVFR & 90,59\,\% \\
+            Méthode         & Fit               \\ \hline
+            CLLSSVFFR       & 93,05\,\%         \\
+            CLIVSVFFR       & 90,48\,\%         \\
+            CLSRIVFR        & 90,59\,\%         \\
             \alert{CLRIVFR} & \alert{97,57\,\%} \\
         \end{tabular}
     \end{columns}
@@ -463,9 +469,9 @@
     \begin{columns}[c]
         \column{0.5\linewidth}
         \begin{align*}
-            \varepsilon_k &= y_k - \hat y_k \\
-            \hat\theta_k &= \hat\theta_{k-1} + \gamma_k R_k^{-1} \psi_k^\top \varepsilon_k \\
-            R_k &= R_{k-1} + \gamma_k\left(\psi_k^\top \psi_k - R_{k-1}\right)
+            \varepsilon_k & = y_k - \hat y_k                                                 \\
+            \hat\theta_k  & = \hat\theta_{k-1} + \gamma_k R_k^{-1} \psi_k^\top \varepsilon_k \\
+            R_k           & = R_{k-1} + \gamma_k\left(\psi_k^\top \psi_k - R_{k-1}\right)
         \end{align*}
         \column{0.45\linewidth}
         \figafaire[0.45\textheight]{Boucle : mesure platine $\rightarrow$ RPEM $\rightarrow$ $V_{c,\text{opt}}$ $\rightarrow$ consigne CN (OPC-UA)}
