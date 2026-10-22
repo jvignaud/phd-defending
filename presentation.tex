@@ -263,7 +263,7 @@
     \vspace{-5mm}
     \begin{align}
         P_{\text{Outil/Pièce}} & = \{\tau_{\text{Outil}\to\text{Pièce}}\} \otimes \{\mathcal{V}_{\text{Pièce/Outil}}\}                                                                                                                       \\
-                               & = - F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \|V_{F,\vec{x},\text{Outil/Pièce}}\| \cos(\theta) - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \|\omega_{\vec{z},\text{Outil/Pièce}}\|\nonumber                                                                                                   \\
+                               & = - F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \|V_{F,\vec{x},\text{Outil/Pièce}}\| \cos(\theta) - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \|\omega_{\vec{z},\text{Outil/Pièce}}\|\nonumber              \\
                                & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \left(\|\omega_{\vec{z},\text{Outil/Pièce}}\|\left(R+\frac{a_p}{2}\cot(\kappa_r)\right)-\|V_{F,\vec{x},\text{Outil/Pièce}}\| \sin(\theta)\right) \nonumber
     \end{align}
 
@@ -290,7 +290,7 @@
 \subsection{Identification des pressions spécifiques}
 
 \begin{frame}
-    \assertion{Les efforts sont linéaires en fonction de la section de copeau : les pressions spécifiques s'identifient par régression}
+    \assertion{Le filtrage coupe-bande et le recalage angulaire rendent les efforts mesurés exploitables dans le repère tournant de la dent}
 
     \begin{columns}[c]
         \column{0.45\linewidth}
@@ -319,17 +319,44 @@
 
     \begin{columns}[c]
         \column{0.45\linewidth}
-        \figafaire{Régression effort vs section de copeau\\$\Rightarrow K_c, K_f, K_m$}
+        \begin{figure}
+            \centering
+            {\fontsize{4.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{reg_lin.pdf_tex}}
+            \caption{Régressions linéaires des efforts en fonction de la section de copeau}
+        \end{figure}
 
         \column{0.5\linewidth}
-        \figafaire{Régression effort vs section de copeau\\$\Rightarrow K_c, K_f, K_m$}
+        \begin{itemize}
+            \item Pentes des droites $\Rightarrow$ coefficients spécifiques :
+                  \begin{itemize}
+                      \item $K_c = 2370$~MPa (coupe, $F_{\vec{e}_\theta}$)
+                      \item $K_f = 926$~MPa (avance, $F_{\vec{e}_r}$)
+                      \item $K_m = -7{,}34$~N.m/mm$^2$ (moment, $M_{P,\vec{e}_z}$)
+                  \end{itemize}
+            \item Ordonnées à l'origine : \alert{effet d'arête} (frottement en dépouille, labourage) et linéarisation locale autour de $A_{d,m}$
+            \item $K_c$ à 9,5~\% de la valeur industrielle (2164~MPa)
+            \item Moment moins bien décrit ($R^2 = 0{,}894$)
+        \end{itemize}
     \end{columns}
 \end{frame}
 
 \begin{frame}
     \assertion{Les pressions spécifiques suivent la loi de Kienzle-Victor en fonction de l'avance}
 
-    \figafaire{Variation de $K_c$, $K_f$, $K_m$ en fonction de $f_z$ + modèle de Kienzle-Victor (acier C35)}
+        \begin{columns}[c]
+        \column{0.7\linewidth}
+        \begin{figure}
+            \centering
+            \def\svgwidth{\textwidth}
+            \import{images/}{Kcfm_fz_reg.pdf_tex}
+            \caption{Modélisation de la loi de \textsc{Kienzle-Victor} : $K_c(f_z)$, $K_f(f_z)$ et $K_m(f_z)$}
+        \end{figure}
+
+        \column{0.25\linewidth}
+        Loi de la forme : $K_*(f_z) = K_{*,1;1}\,f_z^{-m_*}$ 
+    \end{columns}
     % SOURCE : fig. 2.12, 2.15. Garder fig. 2.13 (en fonction de Vc) pour la diapo « Limite ».
 \end{frame}
 
