@@ -345,7 +345,7 @@
 \begin{frame}
     \assertion{Les pressions spécifiques suivent la loi de Kienzle-Victor en fonction de l'avance}
 
-        \begin{columns}[c]
+    \begin{columns}[c]
         \column{0.7\linewidth}
         \begin{figure}
             \centering
@@ -355,12 +355,36 @@
         \end{figure}
 
         \column{0.25\linewidth}
-        Loi de la forme : $K_*(f_z) = K_{*,1;1}\,f_z^{-m_*}$ 
+        Loi de la forme : $K_*(f_z) = K_{*,1;1}\,f_z^{-m_*}$
     \end{columns}
     % SOURCE : fig. 2.12, 2.15. Garder fig. 2.13 (en fonction de Vc) pour la diapo « Limite ».
 \end{frame}
 
 \subsection{Comparaison à la puissance électrique}
+
+\begin{frame}
+    \assertion{Un filtre passe-bas isole le fondamental de la tension et du courant : seule la puissance active utile au moteur est calculée}
+
+    \begin{columns}[c]
+        \column{0.45\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{6pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{tension_u12.pdf_tex}}
+            \caption{Tension filtrée $u_{12}$}
+        \end{figure}
+
+        \column{0.45\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{6pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{courant_i1.pdf_tex}}
+            \caption{Courant filtré $i_1$}
+        \end{figure}
+    \end{columns}
+\end{frame}
 
 \begin{frame}
     \assertion{La puissance mécanique modélisée et la puissance électrique de la broche ont des dynamiques cohérentes}
