@@ -1,5 +1,8 @@
 {
   "files.autoSave": "off",
+  "files.associations": {
+    "*.pdf_tex": "latex"
+  },
   "ltex.language": "fr",
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.view.pdf.viewer": "tab",
