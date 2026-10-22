@@ -1,12 +1,19 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{style/presentation}[2026/10/02 Classe perso pour ma soutenance de thèse]
 
+% Polices Computer Modern (maths) redimensionnables à toute taille
+% (évite les « Font shape ... not available » avec \fontsize{4pt})
+\RequirePackage{fix-cm}
+
 % Charger la classe de base
 \LoadClass[8pt, aspectratio=169, french]{beamer}
 
 % Packages nécessaires pour la présentation
 \RequirePackage[T1]{fontenc}
 \RequirePackage{libertine}
+% Sans-serif CM (opérateurs maths de beamer) à toute taille : fix-cm ne la couvre pas
+\DeclareFontFamily{OT1}{cmss}{\hyphenchar\font45 }
+\DeclareFontShape{OT1}{cmss}{m}{n}{<-9>cmss8<9-10>cmss9<10-12>cmss10<12-17>cmss12<17->cmss17}{}
 \RequirePackage{etoolbox}
 \RequirePackage{subcaption}
 \RequirePackage{tikz}
@@ -42,6 +49,9 @@
     \end{frame}
 }
 
+
+% \appendix de beamer écrit \translate{...} dans les signets PDF
+\pdfstringdefDisableCommands{\def\translate#1{#1}}
 
 % désafficher la barre de navigation des slides
 \setbeamertemplate{navigation symbols}{}
