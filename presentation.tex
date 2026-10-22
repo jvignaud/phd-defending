@@ -290,11 +290,18 @@
 \subsection{Identification des pressions spécifiques}
 
 \begin{frame}
-    \assertion{Les efforts sont linéaires en section de copeau : les pressions spécifiques s'identifient par régression}
+    \assertion{Les efforts sont linéaires en fonction de la section de copeau : les pressions spécifiques s'identifient par régression}
 
     \begin{columns}[c]
         \column{0.45\linewidth}
-        \figafaire{Signal d'effort brut $\rightarrow$ filtré (Notch 1000--1300\,Hz)\\recalage de $\theta$ sur le front descendant}
+        \begin{figure}
+            \centering
+            {\fontsize{4.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{signaux_filtres.pdf_tex}}
+            \caption{Signaux mesurés filtrés par le filtre de \textsc{Notch}}
+        \end{figure}
+
         \column{0.5\linewidth}
         \figafaire{Régression effort vs section de copeau\\$\Rightarrow K_c, K_f, K_m$}
     \end{columns}
