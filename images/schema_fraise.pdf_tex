@@ -1,0 +1,77 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'schema_fraise.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{367.22437581bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.59593636)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{schema_fraise.pdf}}%
+    \put(0.1918891,0.1014139){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}Pièce\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{schema_fraise.pdf}}%
+    \put(0.49452274,0.21614498){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{x}$\end{tabular}}}}%
+    \put(0.61465305,0.31943085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{z}$\end{tabular}}}}%
+    \put(0.67568174,0.1637775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{y}$\end{tabular}}}}%
+    \put(0.58152393,0.17725986){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$F$\end{tabular}}}}%
+    \put(0.55524331,0.23310392){\color[rgb]{0.10588235,0.51372549,0.2}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\theta$\end{tabular}}}}%
+    \put(0.66076542,0.50118389){\color[rgb]{0.10588235,0.51372549,0.2}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{\omega}_{\vec{z},\text{Outil}/\text{Pièce}}$\end{tabular}}}}%
+    \put(0.21708575,0.1650077){\color[rgb]{0.10588235,0.51372549,0.2}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$\vec{V}_{F,\vec{x},\text{Outil}/\text{Pièce}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{schema_fraise.pdf}}%
+    \put(0.64502921,0.08506521){\color[rgb]{0.45490196,0.14901961,0.70980392}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{e}_\theta$\end{tabular}}}}%
+    \put(0.8270286,0.06813125){\color[rgb]{0.45490196,0.14901961,0.70980392}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{e}_r$\end{tabular}}}}%
+    \put(0.75470098,0.03205569){\color[rgb]{0.45490196,0.14901961,0.70980392}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{e}_z$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{schema_fraise.pdf}}%
+    \put(0.73061788,0.09263597){\color[rgb]{0.58039216,0.15294118,0.15294118}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$P$\end{tabular}}}}%
+    \put(0.52443118,0.30693475){\color[rgb]{0.58039216,0.15294118,0.15294118}\rotatebox{-31.172817}{\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{F}_{\vec{e}_r,\text{Outil}\to\text{Pièce}}$\end{tabular}}}}}%
+    \put(0.86585237,0.1439189){\color[rgb]{0.58039216,0.15294118,0.15294118}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{F}_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}}$\end{tabular}}}}%
+    \put(0.77975995,0.24577159){\color[rgb]{0.58039216,0.15294118,0.15294118}\makebox(0,0)[lt]{\lineheight{5}\smash{\begin{tabular}[t]{l}$\vec{M}_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{schema_fraise.pdf}}%
+  \end{picture}%
+\endgroup%
