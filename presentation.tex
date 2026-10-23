@@ -419,12 +419,7 @@
                 \import{images/}{comp_puissance.pdf_tex}}
             \caption{Comparaison des puissances mécanique et électrique}
         \end{figure}
-        
     \end{columns}
-    % SOURCE : fig. 2.20.
-    % ORAL : l'écart d'échelle s'explique par le rendement eta ; la puissance
-    % électrique ne suffit pas encore seule (eta et puissance à vide non
-    % caractérisés, grandeur scalaire, période du fondamental).
 \end{frame}
 
 \subsection{Limite}
@@ -434,15 +429,34 @@
 
     \begin{columns}[c]
         \column{0.5\linewidth}
-        \figafaire{Simulation de $W_c(f_z, V_c)$ : surface sans minimum}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{sim_modele.pdf_tex}}
+            \caption{Évolution de l'énergie spécifique $W_c$ avec le modèle défini précédemment}
+        \end{figure}
+
         \column{0.45\linewidth}
-        \[
-            W_c = \frac{P_{\text{Outil/Pièce}}}{Q}, \qquad Q = a_e\, a_p\, V_f
-        \]
         \begin{itemize}
-            \item Modèle statique : $V_c$ n'intervient pas
-            \item $\Rightarrow$ il faut un modèle \alert{identifié en ligne} (section 5)
-            \item $\Rightarrow$ et agir sur la broche, \alert{déjà asservie} (section 4)
+            \item \textbf{Pourquoi $W_c$ ?}
+                  \begin{itemize}
+                      \item énergie nécessaire pour enlever 1~cm$^3$ de matière
+                      \item critère de référence du couple outil-matière (NF E66-520-6)
+                      \item ramenée au débit : compare des conditions de coupe à productivité différente
+                      \item objectif : \alert{minimiser} $W_c(V_c, f_z)$
+                  \end{itemize}
+        \end{itemize}
+        \begin{equation*}
+            W_c = \frac{P_{\text{méca}}}{Q}, \qquad Q = a_e\, a_p\, V_f
+        \end{equation*}
+        \begin{itemize}
+            \item Modèle statique : $V_c$ n'intervient pas, alors que la norme COM observe une évolution de $W_c$ avec $V_c$
+            \item Pour chercher $V_c$ optimale :
+                  \begin{itemize}
+                      \item $V_c$ est imposée par la vitesse de rotation de la \alert{broche}, asservie : il faut connaître sa dynamique (section 4)
+                      \item $W_c(V_c)$ doit être \alert{identifiée en ligne} (section 5)
+                  \end{itemize}
         \end{itemize}
     \end{columns}
     % SOURCE : fig. 2.16 ; éq. (2.31)-(2.32).
