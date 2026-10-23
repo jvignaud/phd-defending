@@ -6,7 +6,7 @@
    version="1.2"
    id="svg63"
    sodipodi:docname="courant_i1.svg"
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +25,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.2894985"
-     inkscape:cx="114.38556"
-     inkscape:cy="384.25792"
+     inkscape:cx="370.299"
+     inkscape:cy="251.64822"
      inkscape:window-width="1920"
      inkscape:window-height="991"
-     inkscape:window-x="-9"
+     inkscape:window-x="2551"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg63" />
@@ -52,7 +52,7 @@
      font-style="normal"
      id="text2"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Temps (s)</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Temps (s)</text>
   <polyline
      fill="none"
      vector-effect="none"
@@ -178,7 +178,7 @@
      font-style="normal"
      id="text18"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -192,7 +192,7 @@
      font-style="normal"
      id="text19"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,01</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,01</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -206,7 +206,7 @@
      font-style="normal"
      id="text20"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,02</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,02</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -220,7 +220,7 @@
      font-style="normal"
      id="text21"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,03</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,03</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -234,7 +234,7 @@
      font-style="normal"
      id="text22"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,04</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,04</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -248,7 +248,7 @@
      font-style="normal"
      id="text23"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,05</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,05</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -262,7 +262,7 @@
      font-style="normal"
      id="text24"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,06</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">15,06</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -276,7 +276,7 @@
      font-style="normal"
      id="text25"
      transform="matrix(0,-1.00157,0.99843247,0,0,0)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Courant $i_1$ (A)</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Courant $i_1$ (A)</text>
   <polyline
      fill="none"
      vector-effect="none"
@@ -430,7 +430,7 @@
      font-style="normal"
      id="text45"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$-$40</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$-$40</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -444,7 +444,7 @@
      font-style="normal"
      id="text46"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$-$30</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$-$30</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -458,7 +458,7 @@
      font-style="normal"
      id="text47"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$-$20</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$-$20</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -472,7 +472,7 @@
      font-style="normal"
      id="text48"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$-$10</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$-$10</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -486,13 +486,13 @@
      font-style="normal"
      id="text49"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">0</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">0</text>
   <text
      fill="#212121"
      fill-opacity="1"
      stroke="none"
      xml:space="preserve"
-     x="47.04678"
+     x="49.959457"
      y="169.22179"
      font-family="Helvetica"
      font-size="9.77598px"
@@ -500,13 +500,13 @@
      font-style="normal"
      id="text50"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">10</text>
+     style="font-size:22px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">10</text>
   <text
      fill="#212121"
      fill-opacity="1"
      stroke="none"
      xml:space="preserve"
-     x="47.04678"
+     x="49.959457"
      y="119.04357"
      font-family="Helvetica"
      font-size="9.77598px"
@@ -514,13 +514,13 @@
      font-style="normal"
      id="text51"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">20</text>
+     style="font-size:22px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">20</text>
   <text
      fill="#212121"
      fill-opacity="1"
      stroke="none"
      xml:space="preserve"
-     x="47.04678"
+     x="49.959457"
      y="68.864944"
      font-family="Helvetica"
      font-size="9.77598px"
@@ -528,13 +528,13 @@
      font-style="normal"
      id="text52"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">30</text>
+     style="font-size:22px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">30</text>
   <text
      fill="#212121"
      fill-opacity="1"
      stroke="none"
      xml:space="preserve"
-     x="47.04678"
+     x="49.959457"
      y="18.686665"
      font-family="Helvetica"
      font-size="9.77598px"
@@ -542,7 +542,7 @@
      font-style="normal"
      id="text53"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">40</text>
+     style="font-size:22px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">40</text>
   <polyline
      fill="none"
      vector-effect="none"
@@ -562,7 +562,7 @@
      fill-rule="evenodd"
      d="m 482.8641,355.90225 v 30.5979 H 672.70449 V 331.22611 H 482.8641"
      id="path56"
-     style="font-style:normal;font-weight:400;font-size:16px;font-family:Helvetica;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.10999e-05;stroke-linecap:square;stroke-linejoin:bevel"
+     style="font-style:normal;font-weight:400;font-size:16px;font-family:Helvetica;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0000610999;stroke-linecap:square;stroke-linejoin:bevel"
      sodipodi:nodetypes="ccccc" />
   <polyline
      fill="none"
@@ -591,7 +591,7 @@
      font-style="normal"
      id="text59"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Signal brut</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Signal brut</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -605,7 +605,7 @@
      font-style="normal"
      id="text60"
      transform="scale(0.99843247,1.00157)"
-     style="font-size:26px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Signal filtré</text>
+     style="font-size:22.00002982px;fill-rule:evenodd;stroke-width:0.610999;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Signal filtré</text>
   <path
      vector-effect="none"
      fill-rule="evenodd"
