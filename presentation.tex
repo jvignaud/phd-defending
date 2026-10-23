@@ -261,11 +261,11 @@
 \begin{frame}
     \assertion{La puissance de coupe s'obtient par le comoment du torseur d'action et du torseur cinématique à la pointe de la dent}
     \vspace{-5mm}
-    \begin{align}
+    \begin{align*}
         P_{\text{Outil/Pièce}} & = \{\tau_{\text{Outil}\to\text{Pièce}}\} \otimes \{\mathcal{V}_{\text{Pièce/Outil}}\}                                                                                                                       \\
-                               & = - F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \|V_{F,\vec{x},\text{Outil/Pièce}}\| \cos(\theta) - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \|\omega_{\vec{z},\text{Outil/Pièce}}\|\nonumber              \\
-                               & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \left(\|\omega_{\vec{z},\text{Outil/Pièce}}\|\left(R+\frac{a_p}{2}\cot(\kappa_r)\right)-\|V_{F,\vec{x},\text{Outil/Pièce}}\| \sin(\theta)\right) \nonumber
-    \end{align}
+                               & = - F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \|V_{F,\vec{x},\text{Outil/Pièce}}\| \cos(\theta) - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \|\omega_{\vec{z},\text{Outil/Pièce}}\|              \\
+                               & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \left(\|\omega_{\vec{z},\text{Outil/Pièce}}\|\left(R+\frac{a_p}{2}\cot(\kappa_r)\right)-\|V_{F,\vec{x},\text{Outil/Pièce}}\| \sin(\theta)\right) 
+    \end{align*}
 
     \begin{columns}[T]
         \column{0.45\linewidth}
@@ -290,7 +290,7 @@
 \subsection{Identification des pressions spécifiques}
 
 \begin{frame}
-    \assertion{Le filtrage coupe-bande et le recalage angulaire rendent les efforts mesurés exploitables dans le repère tournant de la dent}
+    \assertion{Le filtrage coupe-bande et le recalage angulaire rendent les efforts mesurés exploitables dans le repère tournant de la dent pour l'usinage de l'acier C35}
 
     \begin{columns}[c]
         \column{0.45\linewidth}
@@ -389,7 +389,38 @@
 \begin{frame}
     \assertion{La puissance mécanique modélisée et la puissance électrique de la broche ont des dynamiques cohérentes}
 
-    \figafaire{Superposition puissance mécanique (modèle) / puissance électrique (2 wattmètres)}
+    \begin{columns}[c]
+        \column{0.52\linewidth}
+        \begin{itemize}
+            \item Acier C35, $V_c$ de 100 à 300 m/min : puissance mécanique \textbf{mesurée avec la platine dynamométrique} ($K_c$, $K_f$, $K_m$ identifiés) \textit{vs} puissance électrique \textbf{mesurée sur le variateur}
+            \item Méthode des deux wattmètres sur une période du fondamental :
+            {\small
+            \begin{equation*}
+                \mathcal{P}_{\text{élec}} = \frac{1}{T}\int_{t_0}^{t_0+T} \left(-u_{31,f}\, i_{1,f} + u_{23,f}\, i_{2,f}\right) dt
+            \end{equation*}}
+            \item Passage affine d'une échelle à l'autre, rendement $\eta$ (pente) et puissance à vide (décalage) :
+            \begin{equation*}
+                \mathcal{P}_{\text{méca}} = \eta\, \mathcal{P}_{\text{élec}} - \mathcal{P}_{\text{vide}}
+            \end{equation*}
+            \item \textbf{Pas encore substituable à la platine :}
+            {\small
+            \begin{itemize}
+                \item $\eta$ et $\mathcal{P}_{\text{vide}}$ non caractérisés sur la plage de fonctionnement
+                \item grandeur scalaire : ne sépare pas $K_c$, $K_f$ et $K_m$
+                \item latence incompressible d'une période du fondamental
+            \end{itemize}}
+        \end{itemize}
+
+        \column{0.45\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_puissance.pdf_tex}}
+            \caption{Comparaison des puissances mécanique et électrique}
+        \end{figure}
+        
+    \end{columns}
     % SOURCE : fig. 2.20.
     % ORAL : l'écart d'échelle s'explique par le rendement eta ; la puissance
     % électrique ne suffit pas encore seule (eta et puissance à vide non

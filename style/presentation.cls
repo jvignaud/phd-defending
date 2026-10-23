@@ -56,6 +56,14 @@
 % désafficher la barre de navigation des slides
 \setbeamertemplate{navigation symbols}{}
 
+% Listes : puce collée à la marge gauche (retrait = largeur de la puce + \labelsep)
+\AtBeginDocument{%
+    \settowidth{\leftmargini}{\usebeamertemplate{itemize item}}%
+    \addtolength{\leftmargini}{\labelsep}%
+    \settowidth{\leftmarginii}{\usebeamertemplate{itemize subitem}}%
+    \addtolength{\leftmarginii}{\labelsep}%
+}
+
 % Numéro de diapo : « 12 / 38 » discret en bas à droite
 % (numéro courant en couleur de structure, total en gris ; masqué sur la page de titre)
 \makeatletter

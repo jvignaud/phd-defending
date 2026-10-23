@@ -1,0 +1,94 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'comp_puissance.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{760.58055487bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.60474841)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{comp_puissance.pdf}}%
+    \put(0.46025382,0.01063547){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$V_c$ (m/min)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{comp_puissance.pdf}}%
+    \put(0.06719959,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0.15147772,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}120\end{tabular}}}}%
+    \put(0.23575521,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}140\end{tabular}}}}%
+    \put(0.32003438,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}160\end{tabular}}}}%
+    \put(0.40431225,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}180\end{tabular}}}}%
+    \put(0.48859013,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.57286798,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}220\end{tabular}}}}%
+    \put(0.65714587,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}240\end{tabular}}}}%
+    \put(0.74142376,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}260\end{tabular}}}}%
+    \put(0.8257016,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}280\end{tabular}}}}%
+    \put(0.90997945,0.0378021){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}300\end{tabular}}}}%
+    \put(0.0192154,0.18351312){\color[rgb]{0.06666667,0.44313725,0.74509804}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Puissance électrique (W)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{comp_puissance.pdf}}%
+    \put(0.02731131,0.05796445){\color[rgb]{0.06666667,0.44313725,0.74509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0.02731131,0.13338592){\color[rgb]{0.06666667,0.44313725,0.74509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0.02731131,0.20880868){\color[rgb]{0.06666667,0.44313725,0.74509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.02731131,0.28423017){\color[rgb]{0.06666667,0.44313725,0.74509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}250\end{tabular}}}}%
+    \put(0.02731131,0.35965164){\color[rgb]{0.06666667,0.44313725,0.74509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}300\end{tabular}}}}%
+    \put(0.02731131,0.43507439){\color[rgb]{0.06666667,0.44313725,0.74509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}350\end{tabular}}}}%
+    \put(0.02731131,0.5104964){\color[rgb]{0.06666667,0.44313725,0.74509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.02731131,0.58591855){\color[rgb]{0.06666667,0.44313725,0.74509804}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}450\end{tabular}}}}%
+    \put(0.99444546,0.17949515){\color[rgb]{0.86666667,0.32941176,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Puissance mécanique (W)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{comp_puissance.pdf}}%
+    \put(0.9263065,0.08436144){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0.9263065,0.13715673){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}120\end{tabular}}}}%
+    \put(0.9263065,0.18995199){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}140\end{tabular}}}}%
+    \put(0.9263065,0.2427486){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}160\end{tabular}}}}%
+    \put(0.9263065,0.29554391){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}180\end{tabular}}}}%
+    \put(0.9263065,0.34833921){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.9263065,0.40113448){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}220\end{tabular}}}}%
+    \put(0.9263065,0.45392978){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}240\end{tabular}}}}%
+    \put(0.9263065,0.50672533){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}260\end{tabular}}}}%
+    \put(0.9263065,0.55952075){\color[rgb]{0.86666667,0.32941176,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}280\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{comp_puissance.pdf}}%
+  \end{picture}%
+\endgroup%
