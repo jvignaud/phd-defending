@@ -474,16 +474,56 @@
 \begin{frame}
     \assertion{La boucle de vitesse Sinamics ne peut pas être ouverte : la broche doit être identifiée en boucle fermée}
 
-    \figafaire{Schéma bloc de la boucle de régulation de la broche\\(PI parallèle, préfiltre sur la voie intégrale, point d'injection de la SBPA)}
+    \begin{columns}
+        \column{.65\linewidth}
+        \begin{figure}
+            \centering
+            \resizebox{\linewidth}{!}{\input{images/schema_bloc_broche.tex}}
+            \caption{Schéma fonctionnel de la broche en boucle fermée}
+        \end{figure}
+
+        \column{.35\linewidth}
+        \small
+        \begin{itemize}
+            \item Structure relevée dans Sinamics Starter
+            \item Deux entrées de consigne de vitesse :
+                  \begin{itemize}
+                      \item consigne statique, avec préfiltre $P\!F$ sur la seule voie intégrale
+                      \item commande anticipatrice de vitesse, sans préfiltre
+                  \end{itemize}
+            \item \alert{Une seule est active} : la commande anticipatrice de vitesse
+            \item Sans préfiltre = cas particulier $P\!F = 1$ : les algorithmes restent valables
+        \end{itemize}
+    \end{columns}
+
     % SOURCE : fig. 3.2 (Starter) en petit, fig. 3.3 / 3.6 (schéma bloc) en grand.
+    % ORAL : malgré son nom, la « commande anticipatrice de vitesse » est
+    % bien une consigne de vitesse. Hypothèse initiale : consigne statique +
+    % préfiltre actifs, car Starter affichait une erreur différente en entrée
+    % de C_P et de C_I. Contre-analyse : seule la commande anticipatrice est
+    % utilisée ; l'écart venait d'une mise à jour de l'interface Starter, pas
+    % du préfiltre. Les méthodes développées pour la structure avec préfiltre
+    % s'appliquent directement (PF = 1) -> le dire avant que le jury ne le demande.
     % ORAL : en boucle fermée, l'entrée est corrélée au bruit
     % => les moindres carrés classiques sont biaisés.
 \end{frame}
 
 \begin{frame}
-    \assertion{Aucune méthode de la littérature ne traite un PI parallèle avec préfiltre sur la seule voie intégrale}
+    \begin{center}
+        \resizebox{\linewidth}{!}{\input{images/schema_positionnement.tex}}
+    \end{center}
+    \vfill
+    {\tiny\color{gray}
+        $^1$Gilson \& Van den Hof, \emph{Automatica}, 2005 \quad
+        $^2$Young \emph{et al.}, \emph{IFAC}, 2009 \quad
+        $^3$Gilson \emph{et al.}, \emph{IFAC}, 2009 ; \emph{IET CTA}, 2011\par
+        $^4$Gilson \emph{et al.}, \emph{Identification of Continuous-time Models from Sampled Data}, Springer, 2008\par
+        {\color{alerted text.fg!80!black}%
+        $^5$Vignaud \emph{et al.}, \emph{ECC}, 2025 \quad
+        $^6$Vignaud \emph{et al.}, \emph{ROCOND}, 2025 \quad
+        $^7$Vignaud \emph{et al.}, \emph{IEEE TAC} (soumis)}\par}
+        
 
-    \figafaire[0.45\textheight]{Carte de positionnement : LS / IV / SRIV / RIV en boucle fermée (références [19], [20], [37] du chap. 3)\\$\times$ temps discret / temps continu $\times$ structure de régulateur}
     % SOURCE : § 3.3.6 Positionnement.
     % ORAL : continuité des CLSRIV / CLRIV, adaptées à cette architecture,
     % en temps discret ET en temps continu.

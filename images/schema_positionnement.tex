@@ -1,0 +1,73 @@
+% Carte de positionnement : identification en boucle fermée
+% méthode (LS / IV / SRIV / RIV) x structure de régulateur x temps discret / continu
+% Source : thèse, § 3.3 et § 3.3.6
+\usetikzlibrary{patterns, calc}
+\begin{tikzpicture}[
+        font=\scriptsize,
+        cell/.style={draw=gray!60, minimum width=\cw, minimum height=\ch,
+                align=center, inner sep=1pt},
+        lit/.style={cell, fill=gray!12, text=black!75},
+        contrib/.style={cell, fill=alerted text.fg!12, text=black},
+        gap/.style={cell, pattern=north east lines, pattern color=gray!45},
+        head/.style={cell, fill=structure.fg, text=white, font=\scriptsize\bfseries},
+        sub/.style={cell, fill=structure.fg!20, font=\scriptsize\bfseries},
+        meth/.style={cell, draw=none, minimum width=0.9cm, font=\small\bfseries,
+                text=structure.fg},
+        marche/.style={->, >=latex, thick, structure.fg!70},
+    ]
+    \usebeamercolor{structure}
+    \usebeamercolor{alerted text}
+    \def\cw{2.35cm}
+    \def\ch{0.78cm}
+
+    % --- en-têtes -------------------------------------------------------
+    \node[head, minimum width=2*\cw, anchor=south west] (Hlit) at (0,0)
+        {Régulateur générique $C$};
+    \node[head, minimum width=2*\cw, anchor=south west, fill=alerted text.fg]
+        (Hpi) at (2*\cw,0) {PI parallèle + $P\!F$ sur la voie intégrale};
+    \foreach \j/\t in {0/Temps discret, 1/Temps continu, 2/Temps discret, 3/Temps continu}
+        \node[sub, anchor=north west] at (\j*\cw,0) {\t};
+
+    % --- lignes ---------------------------------------------------------
+    % ordre : LS, IV, SRIV, RIV (de haut en bas)
+    \foreach \i/\m in {1/LS, 2/IV, 3/SRIV, 4/RIV}
+        \node[meth, anchor=east] (M\i) at (0,-\i*\ch-0.5*\ch) {\m};
+
+    \newcommand{\cellule}[4]{% #1 style, #2 colonne, #3 ligne, #4 texte
+        \node[#1, anchor=north west] (C#2#3) at (#2*\cw,-#3*\ch) {#4};}
+
+    % Littérature -- temps discret
+    \cellule{lit}{0}{1}{CLLS}
+    \cellule{lit}{0}{2}{CLIV$^{1}$}
+    \cellule{lit}{0}{3}{CLSRIV$^{2}$}
+    \cellule{lit}{0}{4}{CLRIV$^{3}$}
+    % Littérature -- temps continu
+    \cellule{lit}{1}{1}{CLLSSVF}
+    \cellule{lit}{1}{2}{CLIVSVF$^{4}$}
+    \cellule{lit}{1}{3}{CLSRIVC$^{4}$}
+    \cellule{lit}{1}{4}{CLRIVC$^{4}$}
+    % Contributions -- temps discret
+    \cellule{contrib}{2}{1}{CLLSSVFFR$^{5}$}
+    \cellule{contrib}{2}{2}{CLIVSVFFR$^{5}$}
+    \cellule{contrib}{2}{3}{CLSRIVFR$^{5}$}
+    \cellule{contrib}{2}{4}{CLRIVFR}
+    % Contributions -- temps continu
+    \cellule{contrib}{3}{1}{CLLSSVFFRC$^{6,7}$}
+    \cellule{contrib}{3}{2}{CLIVSVFFRC$^{6,7}$}
+    \cellule{contrib}{3}{3}{CLSRIVFRC$^{6,7}$}
+    \cellule{contrib}{3}{4}{CLRIVFRC$^{7}$}
+
+    % --- cadre « contributions » ---------------------------------------
+    \draw[alerted text.fg, very thick, rounded corners=2pt]
+        ([xshift=-1pt, yshift=1pt]Hpi.north west) rectangle
+        ([xshift=1pt, yshift=-1pt]C34.south east);
+    \node[alerted text.fg, font=\scriptsize\bfseries, anchor=north]
+        at ([yshift=-3pt]$(C24.south)!0.5!(C34.south)$) {Contributions de la thèse};
+
+    % --- marches : apport d'une méthode à la suivante -------------------
+    \foreach \a/\b/\t in {1/2/{biais $\downarrow$}, 2/3/{+ préfiltrage\\optimal}, 3/4/{+ modèle\\de bruit}}{
+        \draw[marche] ([xshift=-4pt]M\a.west) .. controls +(-0.45,0) and +(-0.45,0) ..
+            node[left, align=right, font=\tiny, text=structure.fg] {\t}
+            ([xshift=-2pt]M\b.west);
+    }
+\end{tikzpicture}

@@ -1,0 +1,144 @@
+\tikzset{add/.style n args={4}{
+    minimum width=1.1em,
+    path picture={
+    \draw[black] 
+        (path picture bounding box.south east) -- (path picture bounding box.north west)
+        (path picture bounding box.south west) -- (path picture bounding box.north east);
+    \node[anchor=north, inner sep=0pt] at ($(path picture bounding box.north)+(0,-0.085)$) {\tiny #1};
+    \node[anchor=east,  inner sep=0pt] at ($(path picture bounding box.east)+(-0.085,0)$)  {\tiny #2};
+    \node[anchor=south, inner sep=0pt] at ($(path picture bounding box.south)+(0,0.085)$) {\tiny #3};
+    \node[anchor=west,  inner sep=0pt] at ($(path picture bounding box.west)+(0.085,0)$)  {\tiny #4};
+        }
+    }
+}
+
+\tikzstyle{block} = [draw, fill=white, rectangle, inner xsep=0pt, align=center, font=\small]%
+\tikzstyle{blockMult} = [draw, fill=white, rectangle, inner sep=0pt, align=center, font=\small]%
+\tikzstyle{comp} = [draw, fill=white, circle, add={$-$}{+}{+}{}, node distance=0.5cm]%
+\tikzstyle{sum} = [draw, fill=white, circle, add={+}{+}{+}{}, node distance=0.5cm]%
+\tikzstyle{input} = [text centered, inner sep=0pt, outer sep=0pt, font=\footnotesize]%
+\tikzstyle{output} = [coordinate, font=\footnotesize]%
+
+\begin{tikzpicture}[auto,node distance=1cm,>=latex']
+	% --------------------------------------
+	% --- définition des espacements ---
+	% --------------------------------------
+	\def\x{1.5em}
+	\def\y{2em}
+	\def\yR1{4em}
+	\def\r{3pt} % rayon horizontal du pont
+	\def\h{1.3pt} % hauteur du pont
+	
+	% ------------------------------
+	% --- définition des nodes ---
+	% ------------------------------
+	% nodes de consignes
+	\node [input, text width=3.8em] (r2_bis) {Consigne de vitesse statique};
+	\node [input, text width=4.8em, anchor=south] (r2) at ([yshift=\y]r2_bis.north) {Commande anticipatrice de vitesse};
+	
+	% préfiltre
+	\node [block, anchor=north west, text width=3.8em] (PF) at ([xshift=\x, yshift=-\y]r2_bis.east) {Préfiltre $P\!F$};
+	
+	% comparateurs
+	\node [comp, anchor=west] (compP) at ([xshift=\x]PF.east|-r2_bis.east) {};
+	\node [comp, anchor=west] (compI) at ([xshift=\x]compP.east|-PF.east) {};
+	
+	% régulateurs
+	\node [block, text width=5em, anchor=west] (Ci) at ([xshift=\x]compI.east) {Régulateur intégral $C_I$};
+	\node [block, text width=7.5em] (Cp) at (compP.east-|Ci.north) {Régulateur proportionnel $C_P$};
+	
+	% sommateur
+	\node [sum, anchor=west] (sumCU) at ([xshift=\x]Cp.east) {};
+	
+	% nodes de commande 
+	\node [input, text width=10em, anchor=south] (r1) at ([yshift=\yR1]sumCU.north) {Commande anticipatrice de couple};
+	
+	% multiplicateur
+	\node [blockMult, anchor=west] (mult) at ([xshift=\x]sumCU.east) {$\times$};
+	\node [input, above of=mult, node distance=2.5em, text width=2.5em, font=\scriptsize] (factor) {Facteur de couple};
+	
+	% régulateur de courant
+	\node [block, text width=4.5em, anchor=west] (sysI) at ([xshift=\x]mult.east) {Régulation de courant};
+	
+	% broche
+	\node [block, text width=4.1em, anchor=west] (Go) at ([xshift=\x]sysI.east) {Moteur de broche};	
+	
+	% codeur
+	\node [block, text width=3.2em, anchor=north] (F) at ([yshift=-\y]Go.south|-Ci.south) {Codeur};
+	
+	% différenciateur 
+	\node [block, , text width=7em, anchor=east] (sysF) at ([xshift=-\x]F.west) {Différenciateur en temps discret};	
+	
+	% sortie
+	\node [output, left of=sysF, node distance=13em, below=3em] (y) {};
+	\node [output, anchor=west] (z) at ([xshift=\x]Go.east) {};	
+	
+	% -------------------------------
+	% --- définition des flèches ---
+	% -------------------------------
+	% de r2 aux comparateurs
+	\draw [->] (r2) -| (compP);
+	\draw [->, name path=pathRCI] (r2) -| (compI);
+	
+	% de r2_bis aux comparateurs en passant par PF
+	\draw [->] (r2_bis) -- (compP);
+	\draw[->] ($(r2_bis.east)+(0.5*\x,0)$) |- (PF);
+	\path[name path=pathPFI] (PF) -- (compI);
+	
+	% des comparateurs aux régulateurs
+	\path[name path=pathCPCP] (compP) -- (Cp);
+	\draw [->] (compI) -- (Ci);
+	
+	% des régulateurs au sommateur
+	\draw [->] (Cp) -- (sumCU);
+	\draw [->] (Ci) -| (sumCU);
+	\draw [->] (r1) -- (sumCU);
+	
+	% du sommateur au multiplicateur
+	\draw [->] (sumCU) -- (mult);
+	\draw [->] (factor) -- (mult);
+	
+	% du multiplicateur à la régulation courant
+	\draw [->] (mult) -- (sysI);
+	
+	% de la régulation courant au moteur broche
+	\draw [->] (sysI) -- (Go);
+	\draw [->] ([yshift=-0.5em]sysI.east) -- ([yshift=-0.5em]Go.west);
+	\draw [->] ([yshift=0.5em]sysI.east) -- ([yshift=0.5em]Go.west);
+	
+	% boucle de régulation de courant
+	\draw [->] (Go.south) -| ++ ($(0, -\y/2)$) -| node [pos = 0.26, left, text width=4.2em, font=\scriptsize, align=right] {} (sysI.south);
+	
+	% dessin de l'ellipse en pointillés entourant les flèches
+	\node [draw, ellipse, dashed, minimum width=0.4em, minimum height=2.5em, inner sep=0] (ellips) at ($(sysI)!0.5!(Go)$) {};
+	\node [text width=3em, font=\scriptsize, align=center, anchor=south] () at (ellips.north) {Tension triphasée};
+	
+	% du moteur broche au codeur
+	\draw [->] (Go.east) -| ++ ($(\x/2, 0)$) |- node [pos = 0.30, left, text width=4.2em, font=\scriptsize, align=right] {Position angulaire\\vraie} (F);
+	
+	% du moteur broche à la sortie réelle
+	\draw [->] (Go) -- (z);
+	
+	% du codeur au différenciateur
+	\draw [->] (F) -- (sysF);
+	
+	% du différenciateur aux comparateurs
+	\draw [->] (sysF) -| (compI);
+	\draw[->, name path=pathSFP] (sysF) -| (compP);
+	
+	% du différentiateur à la sortie
+	\draw [->] (sysF) -| node[pos=0.75, text width=4em, font=\footnotesize] {Vitesse angulaire mesurée} (y);
+	
+	% calcul de l'intersection entre le préfiltre--comparateur intégral et différenciateur--comparateur proportionnel
+	\path[name intersections={of=pathPFI and pathSFP, by=crossPFI}];
+	\draw[->] (PF) -- ($(crossPFI)+(-\r,0)$) arc[start angle=180,end angle=0,x radius=\r,y radius=\h] -- (compI);
+	    
+	% calcul de l'intersection entre le préfiltre--comparateur intégral et différenciateur--comparateur proportionnel
+	\path[name intersections={of=pathCPCP and pathRCI, by=crossPCP}];
+	\draw[->] (compP) -- ($(crossPCP)+(-\r,0)$) arc[start angle=180,end angle=0,x radius=\r,y radius=\h] -- (Cp);
+	
+	% rectangle système à identifier
+	\coordinate (se) at ($(sysF.south-|Go.east)+(\x+1.5,-0.03)$);
+	\draw[dotted, ultra thick, color=blue!70] ($(factor.north west) + (-0.03,0.03)$) rectangle (se);
+	\node [below of=se, left, node distance=1em,color=blue!70] {\textit{Système à identifier}};
+\end{tikzpicture}
