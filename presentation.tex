@@ -508,7 +508,11 @@
     % => les moindres carrés classiques sont biaisés.
 \end{frame}
 
+\subsection{Algorithmes proposés}
+
 \begin{frame}
+    \assertion{Quatre algorithmes, chacun corrigeant le défaut du précédent, en temps discret et en temps continu}
+
     \begin{center}
         \resizebox{\linewidth}{!}{\input{images/schema_positionnement.tex}}
     \end{center}
@@ -527,18 +531,9 @@
     % SOURCE : § 3.3.6 Positionnement.
     % ORAL : continuité des CLSRIV / CLRIV, adaptées à cette architecture,
     % en temps discret ET en temps continu.
-\end{frame}
-
-\subsection{Algorithmes proposés}
-
-\begin{frame}
-    \assertion{Quatre algorithmes, chacun corrigeant le défaut du précédent}
-
-    \figafaire[0.5\textheight]{« Escalier » des 4 méthodes (une marche = un apport) :\\
-        CLLSSVFFR (moindres carrés) $\rightarrow$ CLIVSVFFR (+ instruments : biais réduit)\\
-        $\rightarrow$ CLSRIVFR (+ préfiltrage optimal) $\rightarrow$ CLRIVFR (+ modèle de bruit)}
-    % SOURCE : fig. 3.8 à 3.10 (schémas des méthodes).
-    % Détails algorithmiques => ANNEXES.
+    % ORAL : lire l'escalier (une marche = un apport) : LS -> IV (+ instruments,
+    % biais réduit) -> SRIV (+ préfiltrage optimal) -> RIV (+ modèle de bruit).
+    % SOURCE : fig. 3.8 à 3.10 (schémas des méthodes). Détails algorithmiques => ANNEXES.
 \end{frame}
 
 \subsection{Validation en simulation}
@@ -548,9 +543,21 @@
 
     \begin{columns}[c]
         \column{0.5\linewidth}
-        \figafaire{Monte-Carlo 500 essais, RSB = 10\,dB :\\nuages / boxplots des paramètres autour de la vraie valeur}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_cllssvffr_clivsvffr_clsrivfr_whitenoise.pdf_tex}}
+            \caption{Comparaison des méthodes avec le préfiltre}
+        \end{figure}
         \column{0.45\linewidth}
-        \figafaire{Bode : méthode proposée vs classique\\(CLSRIVFR vs CLSRIV)}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_cllssvf_clivsvf_clsriv_whitenoise.pdf_tex}}
+            \caption{Comparaison des méthodes sans le préfiltre}
+        \end{figure}
     \end{columns}
     % SOURCE : tab. 3.1 (à transformer en boxplots), fig. 3.12-3.15.
     % ORAL : CLSRIVFR > CLIVSVFFR > CLLSSVFFR en consistance.

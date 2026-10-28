@@ -65,7 +65,7 @@
         at ([yshift=-3pt]$(C24.south)!0.5!(C34.south)$) {Contributions de la thèse};
 
     % --- marches : apport d'une méthode à la suivante -------------------
-    \foreach \a/\b/\t in {1/2/{biais $\downarrow$}, 2/3/{+ préfiltrage\\optimal}, 3/4/{+ modèle\\de bruit}}{
+    \foreach \a/\b/\t in {1/2/{+ instruments\\biais $\downarrow$}, 2/3/{+ préfiltrage\\optimal}, 3/4/{+ modèle\\de bruit}}{
         \draw[marche] ([xshift=-4pt]M\a.west) .. controls +(-0.45,0) and +(-0.45,0) ..
             node[left, align=right, font=\tiny, text=structure.fg] {\t}
             ([xshift=-2pt]M\b.west);
