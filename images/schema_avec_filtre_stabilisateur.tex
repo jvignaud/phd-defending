@@ -1,0 +1,116 @@
+\tikzset{add/.style n args={4}{
+    minimum width=14,
+    path picture={
+    \draw[black] 
+        (path picture bounding box.south east) -- (path picture bounding box.north west)
+        (path picture bounding box.south west) -- (path picture bounding box.north east);
+    \node[anchor=north, inner sep=0pt] at ($(path picture bounding box.north)+(0,-0.13)$) {\tiny #1};
+    \node[anchor=east,  inner sep=0pt] at ($(path picture bounding box.east)+(-0.13,0)$)  {\tiny #2};
+    \node[anchor=south, inner sep=0pt] at ($(path picture bounding box.south)+(0,0.13)$) {\tiny #3};
+    \node[anchor=west,  inner sep=0pt] at ($(path picture bounding box.west)+(0.13,0)$)  {\tiny #4};
+        }
+    }
+}
+
+\tikzstyle{block} = [draw, rectangle, align=center]%
+\tikzstyle{sum3} = [draw, circle, add={+}{+}{+}{}]%
+\tikzstyle{sum2} = [draw, circle, add={}{+}{+}{}]%
+\tikzstyle{comp} = [draw, circle, add={$-$}{+}{}{}]%
+\tikzstyle{input} = [text centered, inner xsep=0pt, outer sep=0pt]%
+\tikzstyle{output} = [text centered, inner xsep=0pt, outer sep=0pt]%
+
+\begin{tikzpicture}[auto,node distance=1cm,>=latex']
+    % ---------------------------------
+	% --- taille de font par défaut ---
+	% ---------------------------------
+
+	% ----------------------------------
+	% --- définition des espacements ---
+	% ----------------------------------
+	\def\x{1.5em}
+    \def\y{1em}
+
+    % ----------------------------
+	% --- définition des nodes ---
+	% ----------------------------
+	% node de consigne
+	\node [input] (r2) {$r_2(k)$};
+
+    % node du comparateur de consigne
+    \node [comp, right=\x of r2.east] (compR2) {};
+
+    % node de l'intégrateur
+    \node [block, right=\x of compR2.east] (Cp) {$C_P(q)$};
+
+    % node du proportionnel
+    \node [block, below=\y of Cp.south] (Ci) {$C_i(q)$};
+
+    % node de l'additionneur
+    \node [sum3, right=\x of Cp.east] (add) {};
+
+    % node de la commande de couple externe
+    \node [input, above=\y of add.north] (r1) {$r_1(k)$};
+
+    % node du procédé
+    \node [block, right=\x of add.east] (G) {$G_o(q)$};
+
+    % node de l'additionneur
+    \node [sum2, right=\x of G.east] (addH) {};
+
+    % node du modèle de bruit
+    \node [block, above=\y of addH.north] (H) {$H_o(k)$};
+
+    % node du bruit blanc
+    \node [input, above=\y of H.north] (e) {$e_o(k)$};
+
+    % node du filtre stabilisateur
+    \node [block, right=\x of addH.east] (F) {$F(q)$};
+
+    % node du filtre inversé
+    \node [block, right=\x of F.east] (Finv) {$F^{-1}(q)$};
+    
+    % node de la sortie
+    \node [output, right=\x of Finv.east] (y) {$y(k)$};
+
+    % ------------------------------
+	% --- définition des flèches ---
+	% ------------------------------
+    % de r2 au comparateur
+    \draw [->] (r2) -- (compR2);
+
+    % du multiplicateur à l'additionneur
+    \draw [->] (r1) -- (add);
+
+    % du comparateur aux régulateurs
+    \draw [->] (compR2) -- (Cp) node [midway] (epsilon) {};
+    \draw [->] (epsilon) |- (Ci);
+
+    % des régulateurs à l'additionneur
+    \draw [->] (Cp) -- (add);
+    \draw [->] (Ci) -| (add);
+
+    % de l'additionneur au procédé
+    \draw [->] (add) -- (G);
+
+    % du procédé au filtre stabilisateur
+    \draw [->] (G) -- (addH);
+
+    % du bruit au modèle de bruit
+    \draw [->] (e) -- (H);
+
+    % du modèle de bruit à l'additionneur H
+    \draw [->] (H) -- (addH);
+
+    % du filtre stabilisateur au filtre inversé
+    \draw [->] (addH) -- (F);
+
+    % du filtre inversé à l'additionneur H
+    \draw [->] (F) -- (Finv);
+
+    % de l'additionneur H à la sortie
+    \draw [->] (Finv) -- (y) node [midway] (y2) {};
+
+    % de l'additionneur au comparateur
+    \draw [->] (y2) |- ([yshift=-\y]Ci.south) -| (compR2);
+    
+\end{tikzpicture}

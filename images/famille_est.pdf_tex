@@ -1,0 +1,91 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'famille_est.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{706.69983871bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.63964732)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.49836878,0.00539517){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Pulsation (rad/s)\end{tabular}}}}%
+    \put(0.03615746,0.36122493){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-60$\end{tabular}}}}%
+    \put(0.03615746,0.39011412){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-50$\end{tabular}}}}%
+    \put(0.03615746,0.41900192){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-40$\end{tabular}}}}%
+    \put(0.03615746,0.44789111){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-30$\end{tabular}}}}%
+    \put(0.03615746,0.47677891){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-20$\end{tabular}}}}%
+    \put(0.03615746,0.50566739){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-10$\end{tabular}}}}%
+    \put(0.07371671,0.53455575){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.06030448,0.56344409){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.06030448,0.59233245){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
+    \put(0.06030448,0.62122087){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}30\end{tabular}}}}%
+    \put(0.01842291,0.44384294){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Gain (dB)\end{tabular}}}}}%
+    \put(0.07783076,0.02996861){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^1$\end{tabular}}}}%
+    \put(0.30206535,0.02996861){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^2$\end{tabular}}}}%
+    \put(0.52715093,0.02996861){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^3$\end{tabular}}}}%
+    \put(0.75138602,0.02996861){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^4$\end{tabular}}}}%
+    \put(0.97561982,0.02996861){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^5$\end{tabular}}}}%
+    \put(0.02115025,0.05199469){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-225$\end{tabular}}}}%
+    \put(0.02115025,0.08913775){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-180$\end{tabular}}}}%
+    \put(0.02115025,0.12627938){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-135$\end{tabular}}}}%
+    \put(0.03562576,0.16342244){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-90$\end{tabular}}}}%
+    \put(0.03562576,0.20056407){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-45$\end{tabular}}}}%
+    \put(0.07371671,0.2377057){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.06030448,0.2748488){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}45\end{tabular}}}}%
+    \put(0.06030448,0.31199045){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}90\end{tabular}}}}%
+    \put(0.01842291,0.10178152){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Phase (degré)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{famille_est.pdf}}%
+    \put(0.19739561,0.47794786){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2000 tr/min\end{tabular}}}}%
+    \put(0.19739561,0.45593305){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3000 tr/min\end{tabular}}}}%
+    \put(0.19739561,0.43373017){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3900 tr/min\end{tabular}}}}%
+    \put(0.19739561,0.41209124){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4100 tr/min\end{tabular}}}}%
+    \put(0.19739561,0.39176821){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5000 tr/min\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{famille_est.pdf}}%
+    \put(0.19739561,0.50104125){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1000 tr/min\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

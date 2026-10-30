@@ -1,0 +1,84 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'comp_clsriv_clriv_colorednoise.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{793.00060362bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.58763982)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{comp_clsriv_clriv_colorednoise.pdf}}%
+    \put(0.04234688,0.34901704){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$25\end{tabular}}}}%
+    \put(0.04234688,0.38591981){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$20\end{tabular}}}}%
+    \put(0.04234688,0.42282384){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$15\end{tabular}}}}%
+    \put(0.04234688,0.4597266){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$10\end{tabular}}}}%
+    \put(0.05445503,0.49663052){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$5\end{tabular}}}}%
+    \put(0.08362349,0.53370495){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.08362349,0.57060835){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\end{tabular}}}}%
+    \put(0.03140702,0.41012593){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Gain (dB)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{comp_clsriv_clriv_colorednoise.pdf}}%
+    \put(0.68552872,0.55066469){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Modèles CLSRIVFR\end{tabular}}}}%
+    \put(0.68552872,0.52789161){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Modèles CLRIVFR\end{tabular}}}}%
+    \put(0.68552872,0.50382902){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Modèle réel\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{comp_clsriv_clriv_colorednoise.pdf}}%
+    \put(0.08838821,0.03245786){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^{0}$\end{tabular}}}}%
+    \put(0.37368761,0.03245786){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^{1}$\end{tabular}}}}%
+    \put(0.65823012,0.03245786){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^{2}$\end{tabular}}}}%
+    \put(0.9435293,0.03245786){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$10^{3}$\end{tabular}}}}%
+    \put(0.44459915,0.00750564){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Pulsation (rad/s)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{comp_clsriv_clriv_colorednoise.pdf}}%
+    \put(0.03023872,0.05643796){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$180\end{tabular}}}}%
+    \put(0.03023872,0.10459418){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$135\end{tabular}}}}%
+    \put(0.04234688,0.15274912){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$90\end{tabular}}}}%
+    \put(0.04234688,0.20090403){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$45\end{tabular}}}}%
+    \put(0.08362349,0.24922987){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.01929874,0.10808536){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Phase (degré)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{comp_clsriv_clriv_colorednoise.pdf}}%
+  \end{picture}%
+\endgroup%

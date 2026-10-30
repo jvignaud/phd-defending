@@ -1,0 +1,119 @@
+\tikzset{add/.style n args={4}{
+    minimum width=14,
+    path picture={
+    \draw[black] 
+        (path picture bounding box.south east) -- (path picture bounding box.north west)
+        (path picture bounding box.south west) -- (path picture bounding box.north east);
+    \node[anchor=north, inner sep=0pt] at ($(path picture bounding box.north)+(0,-0.13)$) {\tiny #1};
+    \node[anchor=east,  inner sep=0pt] at ($(path picture bounding box.east)+(-0.13,0)$)  {\tiny #2};
+    \node[anchor=south, inner sep=0pt] at ($(path picture bounding box.south)+(0,0.13)$) {\tiny #3};
+    \node[anchor=west,  inner sep=0pt] at ($(path picture bounding box.west)+(0.13,0)$)  {\tiny #4};
+        }
+    }
+}
+
+\tikzstyle{block} = [draw, rectangle, align=center]%
+\tikzstyle{sum3} = [draw, circle, add={$+$}{$+$}{$+$}{}]%
+\tikzstyle{sum2} = [draw, circle, add={}{$+$}{$+$}{}]%
+\tikzstyle{comp} = [draw, circle, add={$-$}{$+$}{}{}]%
+\tikzstyle{input} = [text centered, inner xsep=0pt, outer sep=0pt]%
+\tikzstyle{output} = [text centered, inner xsep=0pt, outer sep=0pt]%
+
+\begin{tikzpicture}[auto,node distance=1cm,>=latex']
+    % ---------------------------------
+	% --- taille de font par défaut ---
+	% ---------------------------------
+
+	% ----------------------------------
+	% --- définition des espacements ---
+	% ----------------------------------
+	\def\x{1.5em}
+    \def\y{1em}
+
+    % ----------------------------
+	% --- définition des nodes ---
+	% ----------------------------
+	% node de consigne
+	\node [input] (r2prime) {$r'_2(k)$};
+
+    % node de l'interpolateur
+    \node [block, right=\x of r2prime.east] (interpo) {Interpolateur};
+
+    % node du comparateur de consigne
+    \node [comp, right=2*\x of interpo.east] (compR2) {};
+
+    % node de l'intégrateur
+    \node [block, right=\x of compR2.east] (Cp) {$C_P(q)$};
+
+    % node du proportionnel
+    \node [block, below=\y of Cp.south] (Ci) {$C_i(q)$};
+
+    % node de l'additionneur
+    \node [sum3, right=\x of Cp.east] (add) {};
+
+    % node du procédé
+    \node [block, right=\x of add.east] (G) {$G_o(q)$};
+
+    % node de l'additionneur
+    \node [sum2, right=\x of G.east] (addH) {};
+
+    % node du modèle de bruit
+    \node [block, above=\y of addH.north] (H) {$H_o(k)$};
+
+    % node du bruit blanc
+    \node [input, above=\y of H.north] (e) {$e_o(k)$};
+    
+    % node de la sortie
+    \node [output, right=\x of addH.east] (y) {$y(k)$};
+
+    % node du dérivateur
+    \node [block, above=\y of compR2.north] (deriv) {$\frac{\text{d}}{\text{d}t}$};
+
+    % node de l'inertie
+    \node [block,  right=\x of deriv.east] (J) {$J$};
+
+    % ------------------------------
+	% --- définition des flèches ---
+	% ------------------------------
+    % de r'2 à l'interpolateur
+    \draw [->] (r2prime) -- (interpo);
+
+    % de l'interpolateur au comparateur
+    \draw [->] (interpo) -- (compR2) node [midway, below] (r2) {$r_2(k)$};
+
+    % de r2 au dérivateur
+    \draw [->] (r2) |- (deriv);
+    
+    % du dérivateur à l'inertie
+    \draw [->] (deriv) -- (J);
+
+    % de l'inertie J à l'additionneur
+    \draw [->] (J) -| (add) node [midway] {$r_1(k)$};
+
+    % du comparateur aux régulateurs
+    \draw [->] (compR2) -- (Cp) node [midway] (epsilon) {};
+    \draw [->] (epsilon) |- (Ci);
+
+    % des régulateurs à l'additionneur
+    \draw [->] (Cp) -- (add);
+    \draw [->] (Ci) -| (add);
+
+    % de l'additionneur au procédé
+    \draw [->] (add) -- (G);
+
+    % du procédé à l'additionneur H
+    \draw [->] (G) -- (addH);
+
+    % du bruit au modèle de bruit
+    \draw [->] (e) -- (H);
+
+    % du modèle de bruit à l'additionneur H
+    \draw [->] (H) -- (addH);
+
+    % de l'additionneur H à la sortie
+    \draw [->] (addH) -- (y) node [midway] (y2) {};
+
+    % de l'additionneur au comparateur
+    \draw [->] (y2) |- ([yshift=-\y]Ci.south) -| (compR2);
+    
+\end{tikzpicture}

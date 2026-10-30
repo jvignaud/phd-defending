@@ -1,0 +1,99 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'sbpa.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{859.95561254bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.58054394)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{sbpa.pdf}}%
+    \put(0.02252922,0.43826054){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sortie $y$ \end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{sbpa.pdf}}%
+    \put(0.07866947,0.40305808){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$4050\end{tabular}}}}%
+    \put(0.07866947,0.42917099){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$4000\end{tabular}}}}%
+    \put(0.07866947,0.45528464){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3950\end{tabular}}}}%
+    \put(0.07866947,0.48139817){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3900\end{tabular}}}}%
+    \put(0.07866947,0.50751179){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3850\end{tabular}}}}%
+    \put(0.07866947,0.53362531){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3800\end{tabular}}}}%
+    \put(0.07866947,0.55973889){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3750\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{sbpa.pdf}}%
+    \put(0.02282258,0.22514154){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Commande $r_1$\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{sbpa.pdf}}%
+    \put(0.100837,0.22790779){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$20\end{tabular}}}}%
+    \put(0.100837,0.26690392){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$10\end{tabular}}}}%
+    \put(0.14141313,0.30590006){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.12789793,0.3448962){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.12789793,0.38389234){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{sbpa.pdf}}%
+    \put(0.53621621,0.00560084){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Temps (s)\end{tabular}}}}%
+    \put(0.15145277,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.24420635,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.33695982,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.42971213,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3\end{tabular}}}}%
+    \put(0.52246559,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4\end{tabular}}}}%
+    \put(0.61521908,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\end{tabular}}}}%
+    \put(0.70797257,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6\end{tabular}}}}%
+    \put(0.80072599,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}7\end{tabular}}}}%
+    \put(0.89347948,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}8\end{tabular}}}}%
+    \put(0.98623298,0.03521303){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}9\end{tabular}}}}%
+    \put(0.02101144,0.06310075){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Consigne $r_2$ \end{tabular}}}}}%
+    \put(0.07776581,0.05915644){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$4000\end{tabular}}}}%
+    \put(0.07776581,0.09420383){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3950\end{tabular}}}}%
+    \put(0.07776581,0.12925003){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3900\end{tabular}}}}%
+    \put(0.07776581,0.16381233){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3850\end{tabular}}}}%
+    \put(0.07776581,0.20055749){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$3800\end{tabular}}}}%
+    \put(0.06163178,0.43688853){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(tr/min)\end{tabular}}}}}%
+    \put(0.06261115,0.27041819){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} (N.m)\end{tabular}}}}}%
+    \put(0.05874197,0.08368106){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(tr/min)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{sbpa.pdf}}%
+    \put(0.94727363,0.1918758){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$r_2$\end{tabular}}}}%
+    \put(0.94727356,0.1550166){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$r'_2$\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

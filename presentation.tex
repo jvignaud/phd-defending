@@ -568,9 +568,21 @@
 
     \begin{columns}[c]
         \column{0.5\linewidth}
-        \figafaire{Bode procédé : CLRIVFR vs CLSRIVFR\\(bruit coloré, RSB = 10\,dB)}
-        \column{0.45\linewidth}
-        \figafaire{Bode du modèle de bruit estimé vs vrai}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_clsriv_clriv_colorednoise.pdf_tex}}
+            \caption{Comparaison des méthodes raffinées avec ou sans modèle de bruits}
+        \end{figure}
+        \column{0.5\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_clriv_clrivfr_Hest.pdf_tex}}
+            \caption{Résultat des modèles de bruits estimés}
+        \end{figure}
     \end{columns}
     % SOURCE : fig. 3.21, fig. 3.22 ; tab. 3.3 et 3.5.
 \end{frame}
@@ -582,8 +594,19 @@
 
     \begin{columns}[c]
         \column{0.5\linewidth}
-        \figafaire{Signaux d'entrée / sortie concaténés\\autour de 3900\,tr/min}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{sbpa.pdf_tex}}
+            \caption{Signaux concaténés}
+        \end{figure}
         \column{0.45\linewidth}
+        \begin{figure}
+            \centering
+            \resizebox{\linewidth}{!}{\input{images/schema_broche_interpolation.tex}}
+            \caption{Signaux concaténés}
+        \end{figure}
         \begin{itemize}
             \item SBPA générée par actions synchrones
             \item Trace variateur à 8\,kHz, mémoire 128\,ko $\approx$ 1\,s
@@ -598,8 +621,33 @@
 
     \begin{columns}[c]
         \column{0.5\linewidth}
-        \figafaire{Étapes de simplification du schéma bloc\\avec filtre stabilisateur + filtre inverse}
+        \begin{figure}
+            \centering
+            \begin{subfigure}[b]{\textwidth}
+                \centering
+                \resizebox{\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur}}
+                \caption{Schéma complet avec filtre stabilisateur et filtre inverse}
+            \end{subfigure}
+
+            \begin{subfigure}[b]{\textwidth}
+                \centering
+                \resizebox{\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur_rearange}}
+                \caption{Réorganisation du schéma fonctionnel}
+            \end{subfigure}
+        \end{figure}
+
         \column{0.45\linewidth}
+        \begin{figure}
+            \centering
+            \begin{subfigure}[b]{\textwidth}
+                \centering
+                \resizebox{.8\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur_normalise}}
+                \setcounter{subfigure}{2}% subcaption remet le compteur à zéro au début du subfigure
+                \caption{Représentation simplifiée}
+            \end{subfigure}
+
+            \caption{Étapes de simplification du schéma fonctionnel avec filtre stabilisateur}
+        \end{figure}
         \[
             F(s) = \frac{s}{s + \omega_c}, \quad f_c = 100\,\text{Hz}
         \]
@@ -617,7 +665,13 @@
 
     \begin{columns}[c]
         \column{0.6\linewidth}
-        \figafaire{Sortie mesurée vs sortie simulée des 4 méthodes\\(données de validation)}
+        \begin{figure}
+            \centering
+            {\fontsize{6pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_est.pdf_tex}}
+            \caption{Comparaison mesure et prédictions}
+        \end{figure}
         \column{0.35\linewidth}
         \begin{tabular}{lr}
             Méthode         & Fit               \\ \hline
@@ -633,8 +687,23 @@
 
 \begin{frame}
     \assertion{Le modèle identifié est cohérent sur toute la plage de 1000 à 5000\,tr/min}
+    \begin{columns}[c]
+        \column{0.6\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{6pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{famille_est.pdf_tex}}
+            \caption{Comparaison mesure et prédictions}
+        \end{figure}
 
-    \figafaire{Bode superposés CLRIVFR aux 6 points de fonctionnement}
+        \column{0.4\linewidth}
+        \begin{itemize}
+            \item Estimation avec la méthode CLRIVFR
+            \item Basses vitesses des couplages étoile/triangle sont différentes
+            \item Apparition d'incertitude au-delà de 100~Hz pouvant être dû au filtre stabilisateur
+        \end{itemize}
+    \end{columns}
     % SOURCE : fig. 4.12 ; tab. 4.1 en annexe.
     % ORAL : incertitudes faibles en HF => ouvre vers une commande robuste
     % (au-delà de 330 rad/s de gain unitaire).
