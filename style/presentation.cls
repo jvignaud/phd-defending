@@ -18,6 +18,7 @@
 \RequirePackage{subcaption}
 \RequirePackage{tikz}
 \RequirePackage{import}
+\RequirePackage{mathtools}
 
 % thème
 \usetheme[width=2cm, hideothersubsections]{PaloAlto}

@@ -91,8 +91,9 @@
     \put(0,0){\includegraphics[width=\unitlength,page=7]{signaux_filtres.pdf}}%
     \put(0.82114763,0.18312174){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}signal filtré\end{tabular}}}}%
     \put(0.82175895,0.2123863){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}signal brut\end{tabular}}}}%
-    \put(0.02766956,0.46989069){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$F_{\vec{e}_r,\text{Outil}\to\text{Pièce}}$\end{tabular}}}}}%
-    \put(0.02766956,0.27739147){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}}$\end{tabular}}}}}%
+    \put(0.02766956,0.46989069){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$F_{\vec{e}_r,\text{Outil}\to\text{Pièce}}$ (N)\end{tabular}}}}}%
+    \put(0.02766956,0.27739147){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}}$ (N)\end{tabular}}}}}%
     \put(0.02382177,0.07398802){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}$\end{tabular}}}}}%
+    \put(0.05414985,0.12091381){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}(N.m)\end{tabular}}}}}%
   \end{picture}%
 \endgroup%

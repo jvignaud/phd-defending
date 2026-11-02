@@ -1,0 +1,84 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'energie_spec_Wc_titane.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{715.60019185bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.63925817)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{energie_spec_Wc_titane.pdf}}%
+    \put(0.01720583,0.27311392){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$W_c$ (J/cm\textsuperscript{3})\end{tabular}}}}}%
+    \put(0.4984024,0.00449797){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$V_c$ (m/min)\end{tabular}}}}%
+    \put(0.08287982,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}15\end{tabular}}}}%
+    \put(0.17162351,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}20\end{tabular}}}}%
+    \put(0.25959553,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}25\end{tabular}}}}%
+    \put(0.34833923,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}30\end{tabular}}}}%
+    \put(0.43669711,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}35\end{tabular}}}}%
+    \put(0.52544081,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}40\end{tabular}}}}%
+    \put(0.61341282,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}45\end{tabular}}}}%
+    \put(0.70215652,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0.79128612,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}55\end{tabular}}}}%
+    \put(0.88002978,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}60\end{tabular}}}}%
+    \put(0.9680018,0.0301441){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}65\end{tabular}}}}%
+    \put(0.04176644,0.04800749){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,95\end{tabular}}}}%
+    \put(0.07976289,0.10897053){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.04292397,0.17263452){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,05\end{tabular}}}}%
+    \put(0.05723226,0.23514097){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,1\end{tabular}}}}%
+    \put(0.04292397,0.29650004){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,15\end{tabular}}}}%
+    \put(0.05723226,0.35900649){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,2\end{tabular}}}}%
+    \put(0.04292397,0.42254825){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,25\end{tabular}}}}%
+    \put(0.05723226,0.48505472){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,3\end{tabular}}}}%
+    \put(0.04292397,0.54641383){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,35\end{tabular}}}}%
+    \put(0.05723226,0.60892028){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,4\end{tabular}}}}%
+    \put(0.09679422,0.62205235){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$\times 10^4$\end{tabular}}}}%
+    \put(0.21967182,0.576778){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}relevé d'énergie\end{tabular}}}}%
+    \put(0.21967182,0.55145763){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}médiane\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

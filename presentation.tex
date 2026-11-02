@@ -135,7 +135,7 @@
 
     \begin{columns}[c]
         \column{0.45\linewidth}
-        \vspace{-5mm}
+        \vspace{-2mm}
         \begin{figure}
             \centering
             \begin{subfigure}{.45\linewidth}
@@ -723,11 +723,19 @@
 
     \begin{columns}[c]
         \column{0.55\linewidth}
-        \figafaire{Mesures de $W_c$ en fonction de $V_c$ (médiane)\\+ parabole ajustée, minimum marqué}
+        \begin{figure}
+            \centering
+            {\fontsize{10pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{energie_spec_Wc.pdf_tex}}
+            \caption{Énergie spécifique $W_c$ en fonction de la vitesse de coupe $V_c$}
+        \end{figure}
         \column{0.4\linewidth}
+        Modèle empirique parabolique :
         \[
             \hat W_c = a_w V_c^2 + b_w V_c + c_w
         \]
+        Minimum analytique :
         \[
             V_{c,\text{opt}} = -\frac{b_w}{2a_w} \quad (a_w > 0)
         \]
@@ -739,7 +747,12 @@
 \begin{frame}
     \assertion{En avance, $W_c(f_z)$ décroît strictement : cohérent avec le modèle, mais pas de minimum exploitable}
 
-    \figafaire{$W_c$ en fonction de $f_z$, avec la borne préconisée par le constructeur}
+    \begin{figure}
+        \centering
+        \def\svgwidth{.7\textwidth}
+        \import{images/}{energie_spec_Wc_fz.pdf_tex}
+        \caption{Énergie spécifique $W_c$ en fonction de l'avance $f_z$}
+    \end{figure}
     % SOURCE : fig. 4.16. Seul minimum vers 0,42 mm/(tr.dent), hors préconisations.
     % ORAL : confirme le chapitre 2 => on optimise sur Vc seulement.
 \end{frame}
@@ -748,14 +761,20 @@
     \assertion{La RPEM ré-identifie le modèle à chaque itération et suit l'optimum pendant l'usinage}
 
     \begin{columns}[c]
-        \column{0.5\linewidth}
+        \column{0.25\linewidth}
+        Équations de la méthode RPEM :
         \begin{align*}
             \varepsilon_k & = y_k - \hat y_k                                                 \\
             \hat\theta_k  & = \hat\theta_{k-1} + \gamma_k R_k^{-1} \psi_k^\top \varepsilon_k \\
             R_k           & = R_{k-1} + \gamma_k\left(\psi_k^\top \psi_k - R_{k-1}\right)
         \end{align*}
-        \column{0.45\linewidth}
-        \figafaire[0.45\textheight]{Boucle : mesure platine $\rightarrow$ RPEM $\rightarrow$ $V_{c,\text{opt}}$ $\rightarrow$ consigne CN (OPC-UA)}
+        \column{0.7\linewidth}
+        \begin{figure}
+            \centering
+            \resizebox{\linewidth}{!}{\input{images/schema_rpem.tex}}
+            \caption{Schéma de la boucle RPEM}
+        \end{figure}
+        
     \end{columns}
     % SOURCE : éq. (4.9)-(4.11).
     % ORAL : optimisation dynamique et non statique ; theta = [a, b, c, Kf, Kc, Km].
@@ -766,7 +785,24 @@
 \begin{frame}
     \assertion{En simulation, la RPEM converge vers la vitesse de coupe optimale du modèle}
 
-    \figafaire{Évolution de $V_c$ et des paramètres estimés au fil des itérations\\(animation possible en overlays : \texttt{\textbackslash only<1>}, \texttt{\textbackslash only<2>}...)}
+    \begin{columns}[c]
+        \column{0.4\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{4pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{Wc_simu.pdf_tex}}
+            \caption{Modèle parabolique de $W_c$ en simulation}
+        \end{figure}
+        \column{0.6\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{3.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{rpem_simu.pdf_tex}}
+            \caption{Résultats de la méthode RPEM en simulation}
+        \end{figure}
+    \end{columns}
     % SOURCE : fig. 4.17, 4.20 (et 4.21-4.22 en annexe).
 \end{frame}
 
@@ -776,12 +812,18 @@
     \assertion{Sur machine, $V_c$ converge vers 244,9\,m/min, proche des 250\,m/min préconisés par le constructeur}
 
     \begin{columns}[c]
-        \column{0.55\linewidth}
-        \figafaire{$V_c$ et critère $J$ au fil des 9 itérations\\(extraits de la fig. 4.23, pas les 12 sous-graphes)}
-        \column{0.4\linewidth}
+        \column{0.6\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{3.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{rpem.pdf_tex}}
+            \caption{Résultats de la méthode RPEM en simulation}
+        \end{figure}
+        \column{0.35\linewidth}
         \begin{itemize}
             \item $V_c$ : 250 $\rightarrow$ \alert{244,9\,m/min}, stable
-            \item Critère $J$ décroît vers 0
+            \item Critère $J$ décroît
             \item $K_c \approx 2400$\,MPa, $K_f \approx 1500$\,MPa
             \item $K_m$ mal estimé (mesure du moment)
         \end{itemize}
@@ -794,7 +836,22 @@
 \begin{frame}
     \assertion{Le comportement parabolique se retrouve sur le titane : le modèle n'est pas propre à l'acier C35}
 
-    \figafaire{$W_c(V_c)$ pour le titane : minima vers 24 et 32\,m/min, plateau 40--50\,m/min}
+    \begin{columns}[c]
+        \column{0.6\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{6pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{energie_spec_Wc_titane.pdf_tex}}
+            \caption{Énergie spécifique $W_c$ en fonction de la vitesse de coupe $V_c$ pour le titane}
+        \end{figure}
+
+        \column{0.4\linewidth}
+        \begin{itemize}
+            \item Usinage de titane Ti6Al4V, $V_c$ de 15 à 65 m/min
+            \item Deux points minimum : 24 et 32 m/min
+        \end{itemize}
+    \end{columns}
     % SOURCE : fig. 4.24.
 \end{frame}
 
@@ -806,7 +863,12 @@
 \begin{frame}
     \assertion{Les deux verrous sont levés, de la mesure jusqu'à la machine}
 
-    \figafaire[0.35\textheight]{SCHÉMA FIL ROUGE avec une coche sur chaque bloc}
+    \begin{figure}
+        \centering
+        \input{images/schema_fil_rouge.tex}
+        \caption{Fil rouge de la thèse : de la mesure jusqu'à l'optimisation sur machine}
+    \end{figure}
+
     \begin{enumerate}
         \item Étalonnage de la platine dépendant du point d'application
         \item Modèle de puissance en ligne, cohérent avec la puissance électrique
@@ -819,7 +881,7 @@
     \assertion{Perspectives : rendre la démarche robuste, moins invasive et industrielle}
 
     \begin{itemize}
-        \item \textbf{Court terme} : commande robuste de la broche ($H_\infty$, $\mu$, CRONE) à partir des bornes d'incertitude
+        \item \textbf{Court terme} : commande robuste de la broche ($H_\infty$, $\mu$-synthèse, CRONE) à partir des bornes d'incertitude
         \item \textbf{Court terme} : remplacer la platine par la puissance électrique (caractériser $\eta$ et la puissance à vide)
         \item Trouver une grandeur présentant un minimum en $f_z$
         \item Exploiter la raie vibratoire vers 6300\,Hz comme contrainte de stabilité
@@ -831,7 +893,7 @@
     \assertion{Valorisation}
 
     \begin{itemize}
-        \item \textbf{Revue} : Automatica (soumis), identification en boucle fermée à temps discret
+        \item \textbf{Revue} : IEEE Transactions on Automatic Control (soumis), \textit{identification en boucle fermée à temps discret}
         \item \textbf{Conférences internationales} : ECC 2025, ROCOND 2025, IFAC World Congress 2026
         \item \textbf{Conférence nationale} : Manufacturing'21 (2024)
         \item Posters (ICFDA 2024, ERNSI 2025) et séminaires invités
@@ -849,7 +911,42 @@
 
 \begin{frame}[sanssoustitre]{Annexe -- Puissance par comoment}
     % Éq. (2.18) complète, avec les trois termes colorés.
-    \figafaire{Équation (2.18) complète}
+    \begin{equation*}
+        \left\{\tau_{\text{Outil}\to\text{Pièce}}\right\} = \prescript{}{P}{
+        \left\{
+            \begin{array}{cc}
+                F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} & M_{P,\vec{e}_r,\text{Outil}\to\text{Pièce}}\\
+                F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} & M_{P,\vec{e}_\theta,\text{Outil}\to\text{Pièce}}\\
+                F_{\vec{e}_z,\text{Outil}\to\text{Pièce}} & M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}\\
+            \end{array}    
+        \right\}_{(\vec{e}_r,\vec{e}_\theta,\vec{e}_z)}}
+    \end{equation*}
+    \begin{align*}
+        \left\{\mathcal{V}_{\text{Pièce}/\text{Outil}}\right\} &= \prescript{}{F}{
+        \left\{
+            \begin{array}{cc}
+                0 & \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\| \\
+                0 & 0 \\
+                -\|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| & 0
+            \end{array}    
+        \right\}_{(\vec{x},\vec{y},\vec{z})}}\\
+        &= \prescript{}{P}{
+        \left\{
+            \begin{array}{cc}
+                0 & \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\cos(\theta) \\
+                0 & \|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| \left(R+\frac{a_p}{2}\cot(\kappa_r)\right) - \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\sin(\theta) \\
+                \|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| & 0
+            \end{array}    
+        \right\}_{(\vec{e}_r,\vec{e}_\theta,\vec{e}_z)}}
+    \end{align*}
+    \begin{equation*}
+        \begin{split}
+            \mathcal{P}_{\text{Outil}/\text{Pièce}} = & \left\{\tau_{\text{Outil}\to\text{Pièce}}\right\} \otimes \left\{\mathcal{V}_{\text{Pièce}/\text{Outil}}\right\}                                                                                                         \\
+            =                                         & -F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \cdot \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\cos(\theta)                                                                                                          \\
+                                                    & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \cdot \left(\|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| \left(R+\frac{a_p}{2}\cot(\kappa_r)\right) - \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\sin(\theta)\right) \\
+                                                    & - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \cdot \|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\|.
+        \end{split}
+    \end{equation*}
 \end{frame}
 
 \begin{frame}[sanssoustitre]{Annexe -- Détail des algorithmes}

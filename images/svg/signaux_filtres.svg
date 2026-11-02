@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.2017022"
-     inkscape:cx="498.04353"
-     inkscape:cy="268.36932"
+     inkscape:zoom="2.4034044"
+     inkscape:cx="-6.8652616"
+     inkscape:cy="-78.430413"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -1270,7 +1270,7 @@
      font-style="normal"
      id="text23"
      transform="rotate(-90)"
-     style="font-size:14.9999935px;fill-rule:evenodd;stroke-width:0.6;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$F_{\vec{e}_r,\text{Outil}\to\text{Pièce}}$</text>
+     style="font-size:15px;fill-rule:evenodd;stroke-width:0.6;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$F_{\vec{e}_r,\text{Outil}\to\text{Pièce}}$ (N)</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -1284,7 +1284,7 @@
      font-style="normal"
      id="text68"
      transform="rotate(-90)"
-     style="font-size:14.9999935px;fill-rule:evenodd;stroke-width:0.6;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}}$</text>
+     style="font-size:15px;fill-rule:evenodd;stroke-width:0.6;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}}$ (N)</text>
   <text
      fill="#212121"
      fill-opacity="1"
@@ -1299,4 +1299,16 @@
      id="text124"
      transform="rotate(-90)"
      style="font-size:14.9999935px;fill-rule:evenodd;stroke-width:0.6;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}$</text>
+  <text
+     xml:space="preserve"
+     style="font-size:18px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:-0.0225px;writing-mode:lr-tb;direction:ltr;fill:#212121;fill-opacity:1;stroke-width:0.632126;stroke-dasharray:0.50446, 0.50446;stroke-opacity:0.701961"
+     x="-386.65604"
+     y="39.093739"
+     id="text2"
+     transform="rotate(-90)"><tspan
+       sodipodi:role="line"
+       id="tspan1"
+       style="fill:#212121;fill-opacity:1;stroke-width:0.632126"
+       x="-386.65604"
+       y="39.093739">(N.m)</tspan></text>
 </svg>

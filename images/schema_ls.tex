@@ -1,0 +1,150 @@
+\tikzset{add/.style n args={4}{
+    minimum width=14,
+    path picture={
+    \draw[black] 
+        (path picture bounding box.south east) -- (path picture bounding box.north west)
+        (path picture bounding box.south west) -- (path picture bounding box.north east);
+    \node[anchor=north, inner sep=0pt] at ($(path picture bounding box.north)+(0,-0.13)$) {\tiny #1};
+    \node[anchor=east,  inner sep=0pt] at ($(path picture bounding box.east)+(-0.13,0)$)  {\tiny #2};
+    \node[anchor=south, inner sep=0pt] at ($(path picture bounding box.south)+(0,0.13)$) {\tiny #3};
+    \node[anchor=west,  inner sep=0pt] at ($(path picture bounding box.west)+(0.13,0)$)  {\tiny #4};
+        }
+    }
+}
+
+\tikzstyle{block} = [draw, rectangle, align=center, font=\small]%
+\tikzstyle{sum} = [draw, circle, add={}{+}{+}{$-$}]%
+\tikzstyle{input} = [text centered, inner sep=0pt, outer sep=0pt, font=\footnotesize]%
+\tikzstyle{output} = [text centered, inner sep=0pt, outer sep=0pt, font=\footnotesize]%
+
+\begin{tikzpicture}[auto,node distance=1cm,>=latex']
+	% ----------------------------------
+	% --- définition des espacements ---
+	% ----------------------------------
+	\def\x{2.5em}
+	\def\y{2em}
+    \def\dx{-250}
+    \def\dy{1}
+
+    % ----------------------------
+	% --- définition des nodes ---
+	% ----------------------------
+	% node de consigne
+	\node [input] (r2) {$r_2(k)$};
+
+    % node des régulateurs + préfiltre
+    \node [block, below=\y of r2.south, fill=cyan!30, anchor=north] (CpCiPf) {$C_P(q)+C_I(q)P\!F(q)$}; 
+
+    % node sommateur
+    \node [sum, below=\y of CpCiPf.south, fill=cyan!30, anchor=north] (sum3) {};
+
+    % node des régulateurs
+    \node [block, right=\x of sum3.east, fill=cyan!30, anchor=west] (CpCi) {$C_P(q)+C_I(q)$}; 
+
+    % node de commande
+    \node [input] (r1) at ([xshift=-\x]r2-|CpCiPf.west) {$r_1(k)$};
+
+    % node de sortie
+    \node [input] (y) at ([xshift=\x]r2-|CpCi.east) {$y(k)$};
+
+    % node filtres
+    \node [block, below=\y of sum3.south, fill=red!30, anchor=north] (Fsvfl) {$F_{svf}(q)$};
+    \node [block, fill=red!30] (Fsvfr) at (Fsvfl-|y) {$F_{svf}(q)$};
+
+    % node vecteur régresseur
+    \node [block, fill=cyan!30, anchor=north] (phi) at ([yshift=-\y]$(Fsvfl.south)!0.5!(Fsvfr.south)$){%
+        $\begin{aligned}%
+              \varphi_f^T(k) = [ - & y_f(k-n_a),\,\cdots, -y_f(k-1),                       \\%
+                             & u_f(k-n_b-n_k-1), \,\cdots, \,u_f(k-n_k) ]%
+          \end{aligned}$%
+    };
+
+    % node matrice de régression
+    \node [block, below=\y of phi.south, fill=cyan!30, anchor=north] (Phi) {%
+        $\Phi_f = %
+        \begin{bmatrix} %
+            \varphi_f^T(1) \\ %
+            \vdots \\ %
+            \varphi_f^T(N) %
+        \end{bmatrix}$%
+    };
+
+    % node matrice de sortie
+    \node [block, below right=\y and \x of phi.south east, fill=cyan!30, anchor=north] (Y) {%
+        $Y_f = %
+        \begin{bmatrix} %
+            y_f(1) \\ %
+            \vdots \\ %
+            y_f(N) %
+        \end{bmatrix}$%
+    };
+
+    % node solution
+    \node [block, fill=cyan!30, anchor=north] (sol) at ([yshift=-\y]$(Phi.south)!0.5!(Y.south)$){\textbf{Solution CLLSSVFFR}\\$\hat{\theta}_{ls}=\left(\Phi_f^T \Phi_f\right)^{-1}\Phi_f^T Y_f$};
+
+    % node de sortie
+    \node [output, below=\y of sol.south, anchor=north] (theta) {$\hat{\theta}_{ls}$};
+
+    % ------------------------------
+	% --- définition des flèches ---
+	% ------------------------------
+    % de r1 au sommateur
+    \draw [->] (r1) |- (sum3);
+
+    % de r2 au sommateur
+    \draw [->] (r2) -- (CpCiPf);
+    \draw [->] (CpCiPf) -- (sum3);
+
+    % de y au sommateur
+    \draw [->] (y) |- (CpCi);
+    \draw [->] (CpCi) -- (sum3);
+
+    % du sommateur au filtre 
+    \draw [->] (sum3) -- (Fsvfl) node [midway, right] {$u(k)$};
+
+    % de la sortie y au filtre
+    \draw [->] (CpCi-|y) -- (Fsvfr);
+
+    % des filtres à phi
+    \draw [->] (Fsvfl) -- (phi.north-|Fsvfl) node [midway, right] {$u_f(k)$};
+    \draw [->] (Fsvfr) -- (phi.north-|Fsvfr) node [midway, left, name=yf] {$y_f(k)$};
+
+    % de phi à Phi
+    \draw [->] (phi) -- (Phi);
+
+    % de yf à Y
+    \draw [->] (yf) -| (Y);
+
+    % de Phi à la solution
+    \draw [->] (Phi) |- (sol);
+
+    % de Y à la solution
+    \draw [->] (Y) |- (sol);
+
+    % de sol à theta
+    \draw [->] (sol) -- (theta);
+
+    % partie génération du signal
+    \coordinate (p1) at ([xshift=\dx, yshift=-\dy]CpCi.south);
+    \coordinate (p2) at ([yshift=-\dy]CpCi.south-|Y.east);
+    \draw [dashed] (p1) -- (p2);
+    \node [align=center, anchor=west] (sig_gen) at ($(r1.north-|p1)!0.5!(p1)$) {Génération\\du\\signal};
+
+    % partie filtrage
+    \coordinate (p3) at ([yshift=\dy]p1|-phi.north);
+    \coordinate (p4) at ([yshift=\dy]p2|-phi.north);
+    \draw [dashed] (p3) -- (p4);
+    \coordinate (ptextfilt) at ($(p3)!0.5!(p1)$);
+    \node (filt) at (ptextfilt-|sig_gen) {Filtrage};
+
+    % partie régresseur
+    \coordinate (p5) at ([yshift=-\dy]p1|-Phi.south);
+    \coordinate (p6) at ([yshift=-\dy]p2|-Phi.south);
+    \draw [dashed] (p5) -- (p6);
+    \coordinate (ptextreg) at ($(p5)!0.5!(p3)$);
+    \node [align=center] (reg) at (ptextreg-|sig_gen) {Conception\\du\\regresseur};
+
+    % partie résolution
+    \coordinate (ptextresol) at ($(p5)!0.5!(theta)$);
+    \node [align=center] (resol) at (ptextresol-|sig_gen) {Résolution};
+\end{tikzpicture}

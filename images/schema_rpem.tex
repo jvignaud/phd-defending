@@ -1,0 +1,20 @@
+% \usetikzlibrary{positioning,arrows.meta}
+\begin{tikzpicture}[
+    font=\small, >=Stealth,
+    bloc/.style={draw, thick, rounded corners=2pt, minimum height=1.1cm,
+                minimum width=2.5cm, align=center, fill=#1!12},
+    bloc/.default=gray,
+    lbl/.style={font=\scriptsize, align=center}
+    ]
+    \node[bloc=blue]   (cn)  {Commande numérique\\Siemens};
+    \node[bloc=gray,   right=1.5cm of cn] (mo) {Usinage\\DMG Mori CMX600V};
+    \node[bloc=orange, right=1.5cm of mo] (pl) {Platine\\Kistler 9129AA};
+    \node[bloc=green,  below=1.4cm of pl] (rp) {RPEM\\$\hat a,\hat b,\hat c,\ \hat K_f,\hat K_c,\hat K_m$};
+    \node[bloc=red,    below=1.4cm of cn] (op) {$V_{c,\text{opt}} = -\dfrac{\hat b}{2\hat a}$};
+
+    \draw[->, thick] (cn) -- node[above, lbl]{$N,\ V_f$} (mo);
+    \draw[->, thick] (mo) -- node[above, lbl]{$\vec F,\ \vec M$} (pl);
+    \draw[->, thick] (pl) -- node[right, lbl]{$W_c(k)$\\(Sirius)} (rp);
+    \draw[->, thick] (rp) -- node[below, lbl]{modèle $W_c(V_c)$ parabolique} (op);
+    \draw[->, thick, dashed] (op) -- node[left, lbl]{OPC-UA\\$V_c(k{+}1)$} (cn);
+\end{tikzpicture}
