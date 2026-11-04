@@ -25,16 +25,97 @@
 \RequirePackage{siunitx}
 \RequirePackage{appendixnumberbeamer}
 
-% thème
-\usetheme[width=2cm, hideothersubsections]{PaloAlto}
+% ---------------------------------------------------------------------------
+% Thème : épuré, sans barre latérale (l'ancien réglage PaloAlto est conservé
+% dans style/presentation_paloalto.cls)
+% ---------------------------------------------------------------------------
+\usetheme{default}
+
+% Palette
+\definecolor{jvbleu}{HTML}{17325C}   % bleu nuit : titres, messages
+\definecolor{jvteal}{HTML}{0F8B8D}   % sarcelle : accents, puces, progression
+\definecolor{jvcorail}{HTML}{D1495B} % corail : mise en évidence (\alert)
+\definecolor{jvtexte}{HTML}{23272F}  % texte courant
+\definecolor{jvgris}{HTML}{6B7280}   % texte secondaire
+
+\setbeamercolor{normal text}{fg=jvtexte, bg=white}
+\setbeamercolor{structure}{fg=jvbleu}
+\setbeamercolor{alerted text}{fg=jvcorail}
+\setbeamercolor{frametitle}{fg=jvteal, bg=}
+\setbeamercolor{framesubtitle}{fg=jvgris}
+\setbeamercolor{item}{fg=jvteal}
+\setbeamercolor{subitem}{fg=jvgris}
+\setbeamercolor{caption}{fg=jvgris}
+\setbeamercolor{caption name}{fg=jvgris}
+\setbeamercolor{section in toc}{fg=jvbleu}
+\setbeamercolor{subsection in toc}{fg=jvgris}
+\setbeamercolor{section number projected}{fg=jvteal, bg=}
+\setbeamercolor{block title}{fg=jvbleu, bg=jvteal!12}
+\setbeamercolor{block body}{fg=jvtexte, bg=jvteal!4}
+\setbeamercolor{block title alerted}{fg=jvcorail!80!black, bg=jvcorail!12}
+\setbeamercolor{block body alerted}{fg=jvtexte, bg=jvcorail!4}
+\setbeamercolor{block title example}{fg=jvbleu, bg=jvbleu!10}
+\setbeamercolor{block body example}{fg=jvtexte, bg=jvbleu!4}
+
+% Marges : même largeur utile que l'ancienne mise en page (130 mm)
+\setbeamersize{text margin left=15mm, text margin right=15mm}
+
+% En-tête : fil d'Ariane discret « SECTION › sous-section » + filet
+\setbeamerfont{frametitle}{size=\scriptsize, series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\scriptsize, series=\mdseries}
+\setbeamertemplate{frametitle}{%
+    \vspace*{3.2mm}%
+    \begin{beamercolorbox}[wd=\textwidth, left]{frametitle}%
+        \usebeamerfont{frametitle}\MakeUppercase{\insertframetitle}%
+        \ifx\insertframesubtitle\@empty\else
+            {\usebeamercolor[fg]{framesubtitle}\usebeamerfont{framesubtitle}%
+             \hspace{0.5em}\textperiodcentered\hspace{0.5em}\insertframesubtitle}%
+        \fi
+    \end{beamercolorbox}%
+    \vspace{0.6mm}%
+    {\color{black!12}\rule{\textwidth}{0.4pt}}%
+    \vspace{0.8mm}%
+}
+
+% Puces et numéros : plats, couleur d'accent
+\setbeamertemplate{itemize item}{\raisebox{0.18ex}{\scalebox{0.75}{$\bullet$}}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.1ex}{\textendash}}
+\setbeamertemplate{itemize subsubitem}{\raisebox{0.1ex}{\textperiodcentered}}
+\setbeamertemplate{enumerate item}{\usebeamercolor[fg]{item}\bfseries\insertenumlabel.}
+\setbeamertemplate{enumerate subitem}{\usebeamercolor[fg]{item}\insertenumlabel.\insertsubenumlabel}
+
+% Blocs : plats, sans ombre
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+% Légendes : sans « Figure: », petites et grises (gérées par le paquet caption,
+% chargé par subcaption) ; les sous-figures gardent leur « (a) »
+\DeclareCaptionFont{jvgris}{\color{jvgris}}
+\captionsetup{font={scriptsize,jvgris}, labelfont={scriptsize,jvgris}, skip=3pt}
+\captionsetup[figure]{labelformat=empty, labelsep=none}
+\captionsetup[table]{labelformat=empty, labelsep=none}
+\captionsetup[sub]{labelformat=parens, labelsep=space, font={scriptsize,jvgris}}
+
+% Plan : numéros de section en couleur d'accent, sans boules 3D
+\setbeamertemplate{section in toc}{%
+    \leavevmode\hangindent=1.6em\hangafter=1
+    \makebox[1.6em][l]{\usebeamercolor[fg]{section number projected}\bfseries\inserttocsectionnumber}%
+    \inserttocsection\par}
+\setbeamertemplate{subsection in toc}{%
+    \leavevmode\hangindent=2.6em\hangafter=1\hspace{1.6em}%
+    {\small\inserttocsubsection}\par}
+\setbeamertemplate{section in toc shaded}[default][35]
+\setbeamertemplate{subsection in toc shaded}[default][35]
 
 % Titre de diapo par défaut = titre de la section courante
 \makeatletter
 % Option de diapo [sanssoustitre] : pas de sous-titre automatique
 \newif\ifjv@sanssoustitre
-\BeforeBeginEnvironment{frame}{\global\jv@sanssoustitrefalse}
+\newif\ifjv@sanstitre
+\BeforeBeginEnvironment{frame}{\global\jv@sanssoustitrefalse\global\jv@sanstitrefalse}
+\define@key{beamerframe}{sanstitre}[true]{\global\jv@sanstitretrue}
 \define@key{beamerframe}{sanssoustitre}[true]{\global\jv@sanssoustitretrue}
 \pretocmd\beamer@checkframetitle{%
+    \ifjv@sanstitre\else
     \frametitle{\insertsection}%
     \ifjv@sanssoustitre\else
     \ifx\insertsubsection\@empty\else
@@ -45,16 +126,31 @@
         \fi
     \fi
     \fi
+    \fi
 }{}{}
 \makeatother
 
-% Plan en début de section
+% Intercalaire en début de section : grand numéro, titre, sous-parties,
+% et rappel du plan complet à droite
+\makeatletter
 \AtBeginSection[]{
-    \begin{frame}[sanssoustitre]{Plan}
-        \tableofcontents[currentsection, hideothersubsections]
+    \begin{frame}[plain, noframenumbering, sanstitre]
+        \begin{tikzpicture}[remember picture, overlay]
+            \fill[jvbleu] (current page.south west) rectangle ([xshift=0.47\paperwidth]current page.north west);
+            \node[anchor=south west, inner sep=0pt, text width=0.47\paperwidth-30mm, align=left]
+                at ([xshift=15mm, yshift=0.5\paperheight-12mm]current page.south west) {%
+                {\fontsize{40}{40}\selectfont\bfseries\color{jvteal!70!white}%
+                 \ifbeamer@inappendix A\else\two@digits{\insertsectionnumber}\fi}\par\vspace{3mm}
+                {\Large\bfseries\color{white}\insertsectionhead}%
+            };
+            \node[anchor=west, inner sep=0pt, text width=0.53\paperwidth-28mm, align=left]
+                at ([xshift=0.47\paperwidth+14mm]current page.west) {%
+                \tableofcontents[currentsection, subsectionstyle=show/show/hide]%
+            };
+        \end{tikzpicture}
     \end{frame}
 }
-
+\makeatother
 
 % \appendix de beamer écrit \translate{...} dans les signets PDF
 \pdfstringdefDisableCommands{\def\translate#1{#1}}
@@ -70,18 +166,37 @@
     \addtolength{\leftmarginii}{\labelsep}%
 }
 
-% Numéro de diapo : « 12 / 38 » discret en bas à droite
-% (numéro courant en couleur de structure, total en gris ; masqué sur la page de titre)
+% Pied de page : auteur · titre court à gauche, « 12 / 38 » à droite,
+% fine barre de progression en bas de page (masqués sur la page de titre)
 \makeatletter
 \setbeamertemplate{footline}{%
     \ifnum\c@framenumber>1
-        \hfill
-        \usebeamerfont{page number in head/foot}%
-        {\usebeamercolor[fg]{structure}\bfseries\insertframenumber}%
-        {\color{gray!70}\,/\,\inserttotalframenumber}%
-        \hspace*{1.2em}%
+        \leavevmode
+        \hbox to \paperwidth{%
+            \hspace*{15mm}%
+            {\usebeamerfont{page number in head/foot}\color{black!38}%
+             \insertshortauthor\hspace{0.5em}\textperiodcentered\hspace{0.5em}\insertshorttitle}%
+            \hfill
+            {\usebeamerfont{page number in head/foot}%
+             {\color{jvbleu}\bfseries\insertframenumber}%
+             {\color{black!38}\,/\,\inserttotalframenumber}}%
+            \hspace*{15mm}}%
+        \par\vspace*{2mm}%
+        \jv@progression
     \fi
-    \vspace*{1.2ex}%
+}
+\newcommand{\jv@progression}{%
+    \begingroup
+    \ifnum\inserttotalframenumber>0
+        \dimen0=\paperwidth
+        \divide\dimen0 by \inserttotalframenumber
+        \multiply\dimen0 by \c@framenumber
+        \ifdim\dimen0>\paperwidth \dimen0=\paperwidth \fi
+    \else \dimen0=0pt \fi
+    \hbox to \paperwidth{%
+        {\color{jvteal}\rule{\dimen0}{0.7mm}}%
+        {\color{black!7}\rule{\dimexpr\paperwidth-\dimen0\relax}{0.7mm}}}%
+    \endgroup
 }
 \makeatother
 \setbeamerfont{page number in head/foot}{size=\scriptsize}
