@@ -37,37 +37,37 @@
 	\node [input, text width=4.8em, anchor=south] (r2) at ([yshift=\y]r2_bis.north) {Commande anticipatrice de vitesse};
 	
 	% préfiltre
-	\node [block, anchor=north west, text width=3.8em] (PF) at ([xshift=\x, yshift=-\y]r2_bis.east) {Préfiltre $P\!F$};
+	\node [block, anchor=north west, text width=3.8em, blocRegul] (PF) at ([xshift=\x, yshift=-\y]r2_bis.east) {Préfiltre $P\!F$};
 	
 	% comparateurs
-	\node [comp, anchor=west] (compP) at ([xshift=\x]PF.east|-r2_bis.east) {};
-	\node [comp, anchor=west] (compI) at ([xshift=\x]compP.east|-PF.east) {};
+	\node [comp, anchor=west, blocRegul] (compP) at ([xshift=\x]PF.east|-r2_bis.east) {};
+	\node [comp, anchor=west, blocRegul] (compI) at ([xshift=\x]compP.east|-PF.east) {};
 	
 	% régulateurs
-	\node [block, text width=5em, anchor=west] (Ci) at ([xshift=\x]compI.east) {Régulateur intégral $C_I$};
-	\node [block, text width=7.5em] (Cp) at (compP.east-|Ci.north) {Régulateur proportionnel $C_P$};
+	\node [block, text width=5em, anchor=west, blocRegul] (Ci) at ([xshift=\x]compI.east) {Régulateur intégral $C_I$};
+	\node [block, text width=7.5em, blocRegul] (Cp) at (compP.east-|Ci.north) {Régulateur proportionnel $C_P$};
 	
 	% sommateur
-	\node [sum, anchor=west] (sumCU) at ([xshift=\x]Cp.east) {};
+	\node [sum, anchor=west, blocRegul] (sumCU) at ([xshift=\x]Cp.east) {};
 	
 	% nodes de commande 
 	\node [input, text width=10em, anchor=south] (r1) at ([yshift=\yR1]sumCU.north) {Commande anticipatrice de couple};
 	
 	% multiplicateur
-	\node [blockMult, anchor=west] (mult) at ([xshift=\x]sumCU.east) {$\times$};
+	\node [blockMult, anchor=west, blocProcede] (mult) at ([xshift=\x]sumCU.east) {$\times$};
 	\node [input, above of=mult, node distance=2.5em, text width=2.5em, font=\scriptsize] (factor) {Facteur de couple};
 	
 	% régulateur de courant
-	\node [block, text width=4.5em, anchor=west] (sysI) at ([xshift=\x]mult.east) {Régulation de courant};
+	\node [block, text width=4.5em, anchor=west, blocProcede] (sysI) at ([xshift=\x]mult.east) {Régulation de courant};
 	
 	% broche
-	\node [block, text width=4.1em, anchor=west] (Go) at ([xshift=\x]sysI.east) {Moteur de broche};	
+	\node [block, text width=4.1em, anchor=west, blocProcede] (Go) at ([xshift=\x]sysI.east) {Moteur de broche};	
 	
 	% codeur
-	\node [block, text width=3.2em, anchor=north] (F) at ([yshift=-\y]Go.south|-Ci.south) {Codeur};
+	\node [block, text width=3.2em, anchor=north, blocMesure] (F) at ([yshift=-\y]Go.south|-Ci.south) {Codeur};
 	
 	% différenciateur 
-	\node [block, , text width=7em, anchor=east] (sysF) at ([xshift=-\x]F.west) {Différenciateur en temps discret};	
+	\node [block, text width=7em, anchor=east, blocMesure] (sysF) at ([xshift=-\x]F.west) {Différenciateur en temps discret};	
 	
 	% sortie
 	\node [output, left of=sysF, node distance=13em, below=3em] (y) {};
@@ -139,6 +139,6 @@
 	
 	% rectangle système à identifier
 	\coordinate (se) at ($(sysF.south-|Go.east)+(\x+1.5,-0.03)$);
-	\draw[dotted, ultra thick, color=blue!70] ($(factor.north west) + (-0.03,0.03)$) rectangle (se);
-	\node [below of=se, left, node distance=1em,color=blue!70] {\textit{Système à identifier}};
+	\draw[dotted, ultra thick, color=jvcorail] ($(factor.north west) + (-0.03,0.03)$) rectangle (se);
+	\node [below of=se, left, node distance=1em,color=jvcorail] {\textit{Système à identifier}};
 \end{tikzpicture}

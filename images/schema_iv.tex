@@ -40,16 +40,16 @@
 	\node [input] (r2) {$r_2(k)$};
 
     % node des régulateurs + préfiltre
-    \node [block, below=2*\y of r2.south, fill=cyan!30, anchor=north] (CpCiPf) {$C_P(q)+C_I(q)P\!F(q)$}; 
+    \node [block, below=2*\y of r2.south, anchor=north, blocRegul] (CpCiPf) {$C_P(q)+C_I(q)P\!F(q)$}; 
 
     % node sommateur
-    \node [sum, below=\y of CpCiPf.south, fill=cyan!30, anchor=north] (sum2) {};
+    \node [sum, below=\y of CpCiPf.south, anchor=north, blocRegul] (sum2) {};
 
     % node comparateur
-    \node [comp, below=\y of sum2.south, fill=cyan!30, anchor=north] (comp2) {};
+    \node [comp, below=\y of sum2.south, anchor=north, blocRegul] (comp2) {};
 
     % node des régulateurs
-    \node [block, right=\x of comp2.east, fill=cyan!30, anchor=west] (CpCi) {$C_P(q)+C_I(q)$}; 
+    \node [block, right=\x of comp2.east, anchor=west, blocRegul] (CpCi) {$C_P(q)+C_I(q)$}; 
 
     % node de commande
     \node [input] (r1) at ([xshift=-\x]r2-|CpCiPf.west) {$r_1(k)$};
@@ -58,11 +58,11 @@
     \node [input] (y) at ([xshift=\x]r2-|CpCi.east) {$y(k)$};
 
     % node filtres
-    \node [block, below=\y of comp2.south, fill=red!30, anchor=north] (Fsvfl) {$F_{svf}(q)$};
-    \node [block, fill=red!30] (Fsvfr) at (Fsvfl-|y) {$F_{svf}(q)$};
+    \node [block, below=\y of comp2.south, anchor=north, blocFiltre] (Fsvfl) {$F_{svf}(q)$};
+    \node [block, blocFiltre] (Fsvfr) at (Fsvfl-|y) {$F_{svf}(q)$};
 
     % node vecteur régresseur
-    \node [block, fill=cyan!30, anchor=north] (phi) at ([yshift=-\y]$(Fsvfl.south)!0.5!(Fsvfr.south)$){%
+    \node [block, anchor=north, blocEstim] (phi) at ([yshift=-\y]$(Fsvfl.south)!0.5!(Fsvfr.south)$){%
         $\begin{aligned}%
               \varphi_f^T(k) = [ - & y_f(k-n_a),\,\cdots, -y_f(k-1),                       \\%
                              & u_f(k-n_b-n_k-1), \,\cdots, \,u_f(k-n_k) ]%
@@ -70,7 +70,7 @@
     };
 
     % node matrice de régression
-    \node [block, below=\y of phi.south, fill=cyan!30, anchor=north] (Phi) {%
+    \node [block, below=\y of phi.south, anchor=north, blocEstim] (Phi) {%
         $\Phi_f = %
         \begin{bmatrix} %
             \varphi_f^T(1) \\ %
@@ -80,7 +80,7 @@
     };
 
     % node matrice de sortie
-    \node [block, below right=\y and \x of phi.south east, fill=cyan!30, anchor=north] (Y) {%
+    \node [block, below right=\y and \x of phi.south east, anchor=north, blocEstim] (Y) {%
         $Y_f = %
         \begin{bmatrix} %
             y_f(1) \\ %
@@ -90,23 +90,23 @@
     };
 
     % node solution
-    \node [block, below=\y of Phi.south, fill=cyan!30, anchor=north] (sol) {\textbf{Solution CLIVSVFFR}\\$\hat{\theta}_{iv}=\left(Z_f^T \Phi_f\right)^{-1}Z_f^T Y_f$};
+    \node [block, below=\y of Phi.south, anchor=north, blocEstim] (sol) {\textbf{Solution CLIVSVFFR}\\$\hat{\theta}_{iv}=\left(Z_f^T \Phi_f\right)^{-1}Z_f^T Y_f$};
 
     % node de sortie
     \node [output, below=2*\y of sol.south, anchor=north] (theta) {$\hat{\theta}_{iv}$};
 
     % node fonction de sensibilité auxiliaire
-    \node [block, left=\iv of CpCiPf.west, fill=teal!30, anchor=east] (Saux) {$\displaystyle \frac{1}{1+\left[C_P(q)+C_I(q)\right]\hat{G}^{\text{iter}}\left(q,\hat{\theta}_{iv}^{\text{iter}-1}\right)}$};
+    \node [block, left=\iv of CpCiPf.west, anchor=east, blocProcede] (Saux) {$\displaystyle \frac{1}{1+\left[C_P(q)+C_I(q)\right]\hat{G}^{\text{iter}}\left(q,\hat{\theta}_{iv}^{\text{iter}-1}\right)}$};
 
     % node système auxiliaire
-    \node [block, below=\y of Saux.south, fill=teal!30, anchor=north] (Gaux) {$\hat{G}^{\text{iter}}\left(q,\hat{\theta}_{iv}^{\text{iter}-1}\right)$};
+    \node [block, below=\y of Saux.south, anchor=north, blocProcede] (Gaux) {$\hat{G}^{\text{iter}}\left(q,\hat{\theta}_{iv}^{\text{iter}-1}\right)$};
 
     % node filtres auxiliaires
-    \node [block, fill=red!30] (Fsvflaux) at (Gaux|-Fsvfl) {$F_{svf}(q)$};
-    \node [block, fill=red!30, anchor=west] (Fsvfraux) at ([xshift=\x]Fsvflaux.east) {$F_{svf}(q)$};
+    \node [block, blocFiltre] (Fsvflaux) at (Gaux|-Fsvfl) {$F_{svf}(q)$};
+    \node [block, anchor=west, blocFiltre] (Fsvfraux) at ([xshift=\x]Fsvflaux.east) {$F_{svf}(q)$};
 
     % node vecteur instrumental
-    \node [block, fill=teal!30, anchor=north] (z) at ([yshift=-\y]$(Fsvflaux.south)!0.5!(Fsvfraux.south)$){%
+    \node [block, anchor=north, blocProcede] (z) at ([yshift=-\y]$(Fsvflaux.south)!0.5!(Fsvfraux.south)$){%
         $\begin{aligned}%
               z_f^T(k) = [ - & x_f(k-n_a),\,\cdots, -x_f(k-1),                       \\%
                              & \nu_f(k-n_b-n_k-1), \,\cdots, \,\nu_f(k-n_k) ]%
@@ -114,7 +114,7 @@
     };
 
     % node système auxiliaire
-    \node [block, below=\y of z.south, fill=teal!30, anchor=north] (Z) {%
+    \node [block, below=\y of z.south, anchor=north, blocProcede] (Z) {%
         $Z_f = %
         \begin{bmatrix} %
             z_f^T(1) \\ %
@@ -127,7 +127,7 @@
     \node [input] (theta_init) at ([xshift=-\x]r1-|Saux.west) {$\theta_\text{init}$};
 
     % node condition d'arrêt
-    \node [block, fill=lightgray!50, anchor=north west] (stop) at ([yshift=-\y/2] y-|Fsvfr.east) {\scriptsize \text{while} $\displaystyle \sum_{j=1}^{\dim \hat{\theta}_{iv}} \left|\frac{\hat{\theta}_{iv,j}^{\text{iter}}-\hat{\theta}_{iv,j}^{\text{iter-1}}}{\hat{\theta}_{iv,j}^{\text{iter}}}\right| > \epsilon$};
+    \node [block, anchor=north west, blocIter] (stop) at ([yshift=-\y/2] y-|Fsvfr.east) {\scriptsize \text{while} $\displaystyle \sum_{j=1}^{\dim \hat{\theta}_{iv}} \left|\frac{\hat{\theta}_{iv,j}^{\text{iter}}-\hat{\theta}_{iv,j}^{\text{iter-1}}}{\hat{\theta}_{iv,j}^{\text{iter}}}\right| > \epsilon$};
 
     % ------------------------------
 	% --- définition des flèches ---
@@ -198,7 +198,7 @@
     \draw [->, dotted] (theta_init) |- (Gaux);
 
     % node iter+1
-    \node [block, fill=lightgray!50] (iter) at ([xshift=-\dy]z.west|-theta_s) {$\text{iter} = \text{iter} + 1$};
+    \node [block, blocIter] (iter) at ([xshift=-\dy]z.west|-theta_s) {$\text{iter} = \text{iter} + 1$};
 
     % de theta_s à iter
     \draw [->, densely dashed] (theta_s) -- (iter) node [very near end, above] {$\hat{\theta}_{iv}^{\text{iter}}$};

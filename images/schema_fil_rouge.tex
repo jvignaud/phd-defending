@@ -18,7 +18,7 @@
     % --- grille 3 colonnes x 2 rangées ---
     \def\dx{43mm}\def\dy{14mm}
     % rangée haute : commande
-    \node[etape]   (optim)   at (0,0)       {Optimisation\soustitre{RPEM en ligne}};
+    \node[coeur]   (optim)   at (0,0)       {Optimisation\soustitre{RPEM en ligne}};
     \node[coeur]   (broche)  at (\dx,0)     {Broche asservie\soustitre{identification en boucle fermée}};
     \node[procede] (usinage) at (2*\dx,0)   {Usinage\soustitre{machine-outil}};
     % rangée basse : mesure et modèle
@@ -26,7 +26,7 @@
     \node[etape]   (instrum) at (2*\dx,-\dy){Instrumentation\soustitre{platine étalonnée par cobot}};
 
     % --- pastilles de section ---
-    \foreach \n/\s/\c in {optim/sec:optim/jvteal, broche/sec:ident/jvbleu,
+    \foreach \n/\s/\c in {optim/sec:optim/jvbleu, broche/sec:ident/jvbleu,
                           modele/sec:modele/jvteal, instrum/sec:moyen_exp/jvteal}
         \node[pastille=\c] at ([xshift=0.6mm, yshift=-0.6mm]\n.north west) {\ref{\s}};
 

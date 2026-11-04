@@ -33,13 +33,13 @@
 	\node [input] (r2) {$r_2(k)$};
 
     % node des régulateurs + préfiltre
-    \node [block, below=\y of r2.south, fill=cyan!30, anchor=north] (CpCiPf) {$C_P(q)+C_I(q)P\!F(q)$}; 
+    \node [block, below=\y of r2.south, anchor=north, blocRegul] (CpCiPf) {$C_P(q)+C_I(q)P\!F(q)$}; 
 
     % node sommateur
-    \node [sum, below=\y of CpCiPf.south, fill=cyan!30, anchor=north] (sum3) {};
+    \node [sum, below=\y of CpCiPf.south, anchor=north, blocRegul] (sum3) {};
 
     % node des régulateurs
-    \node [block, right=\x of sum3.east, fill=cyan!30, anchor=west] (CpCi) {$C_P(q)+C_I(q)$}; 
+    \node [block, right=\x of sum3.east, anchor=west, blocRegul] (CpCi) {$C_P(q)+C_I(q)$}; 
 
     % node de commande
     \node [input] (r1) at ([xshift=-\x]r2-|CpCiPf.west) {$r_1(k)$};
@@ -48,11 +48,11 @@
     \node [input] (y) at ([xshift=\x]r2-|CpCi.east) {$y(k)$};
 
     % node filtres
-    \node [block, below=\y of sum3.south, fill=red!30, anchor=north] (Fsvfl) {$F_{svf}(q)$};
-    \node [block, fill=red!30] (Fsvfr) at (Fsvfl-|y) {$F_{svf}(q)$};
+    \node [block, below=\y of sum3.south, anchor=north, blocFiltre] (Fsvfl) {$F_{svf}(q)$};
+    \node [block, blocFiltre] (Fsvfr) at (Fsvfl-|y) {$F_{svf}(q)$};
 
     % node vecteur régresseur
-    \node [block, fill=cyan!30, anchor=north] (phi) at ([yshift=-\y]$(Fsvfl.south)!0.5!(Fsvfr.south)$){%
+    \node [block, anchor=north, blocEstim] (phi) at ([yshift=-\y]$(Fsvfl.south)!0.5!(Fsvfr.south)$){%
         $\begin{aligned}%
               \varphi_f^T(k) = [ - & y_f(k-n_a),\,\cdots, -y_f(k-1),                       \\%
                              & u_f(k-n_b-n_k-1), \,\cdots, \,u_f(k-n_k) ]%
@@ -60,7 +60,7 @@
     };
 
     % node matrice de régression
-    \node [block, below=\y of phi.south, fill=cyan!30, anchor=north] (Phi) {%
+    \node [block, below=\y of phi.south, anchor=north, blocEstim] (Phi) {%
         $\Phi_f = %
         \begin{bmatrix} %
             \varphi_f^T(1) \\ %
@@ -70,7 +70,7 @@
     };
 
     % node matrice de sortie
-    \node [block, below right=\y and \x of phi.south east, fill=cyan!30, anchor=north] (Y) {%
+    \node [block, below right=\y and \x of phi.south east, anchor=north, blocEstim] (Y) {%
         $Y_f = %
         \begin{bmatrix} %
             y_f(1) \\ %
@@ -80,7 +80,7 @@
     };
 
     % node solution
-    \node [block, fill=cyan!30, anchor=north] (sol) at ([yshift=-\y]$(Phi.south)!0.5!(Y.south)$){\textbf{Solution CLLSSVFFR}\\$\hat{\theta}_{ls}=\left(\Phi_f^T \Phi_f\right)^{-1}\Phi_f^T Y_f$};
+    \node [block, anchor=north, blocEstim] (sol) at ([yshift=-\y]$(Phi.south)!0.5!(Y.south)$){\textbf{Solution CLLSSVFFR}\\$\hat{\theta}_{ls}=\left(\Phi_f^T \Phi_f\right)^{-1}\Phi_f^T Y_f$};
 
     % node de sortie
     \node [output, below=\y of sol.south, anchor=north] (theta) {$\hat{\theta}_{ls}$};

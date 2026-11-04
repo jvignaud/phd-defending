@@ -37,28 +37,28 @@
 	\node [input] (r2) {$r_2^*(k)$};
 
     % node du comparateur de consigne
-    \node [comp, right=\x of r2.east] (compR2) {};
+    \node [comp, right=\x of r2.east, blocRegul] (compR2) {};
 
     % node de l'intégrateur
-    \node [block, right=\x of compR2.east] (Cp) {$C_P^*(q)$};
+    \node [block, right=\x of compR2.east, blocRegul] (Cp) {$C_P^*(q)$};
 
     % node du proportionnel
-    \node [block, below=\y of Cp.south] (Ci) {$C_i^*(q)$};
+    \node [block, below=\y of Cp.south, blocRegul] (Ci) {$C_i^*(q)$};
 
     % node de l'additionneur
-    \node [sum3, right=\x of Cp.east] (add) {};
+    \node [sum3, right=\x of Cp.east, blocRegul] (add) {};
 
     % node de la commande de couple externe
     \node [input, above=\y of add.north] (r1) {$r_1(k)$};
 
     % node du procédé
-    \node [block, right=\x of add.east] (G) {$G_o^*(q)$};
+    \node [block, right=\x of add.east, blocProcede] (G) {$G_o^*(q)$};
 
     % node de l'additionneur
-    \node [sum2, right=\x of G.east] (addH) {};
+    \node [sum2, right=\x of G.east, blocBruit] (addH) {};
 
     % node du modèle de bruit
-    \node [block, above=\y of addH.north] (H) {$H_o^*(k)$};
+    \node [block, above=\y of addH.north, blocBruit] (H) {$H_o^*(k)$};
 
     % node du bruit blanc
     \node [input, above=\y of H.north] (e) {$e_o(k)$};

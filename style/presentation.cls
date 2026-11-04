@@ -9,6 +9,7 @@
 \LoadClass[8pt, aspectratio=169, french]{beamer}
 
 % Packages nécessaires pour la présentation
+\RequirePackage[french]{babel}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{libertine}
 % Sans-serif CM (opérateurs maths de beamer) à toute taille : fix-cm ne la couvre pas
@@ -37,6 +38,26 @@
 \definecolor{jvcorail}{HTML}{D1495B} % corail : mise en évidence (\alert)
 \definecolor{jvtexte}{HTML}{23272F}  % texte courant
 \definecolor{jvgris}{HTML}{6B7280}   % texte secondaire
+
+% Palette sémantique des schémas fonctionnels (TikZ)
+% même rôle = même couleur d'un schéma à l'autre
+\colorlet{cRegul}{jvbleu}            % régulation : correcteurs, comparateurs, préfiltre
+\definecolor{cProcede}{HTML}{D98E04} % procédé / modèle auxiliaire / instruments
+\definecolor{cMesure}{HTML}{3A8D4F}  % chaîne de mesure : codeur, différenciateur
+\definecolor{cBruit}{HTML}{7A5195}   % bruit et modèle de bruit (H, ARMA)
+\colorlet{cFiltre}{jvteal}           % filtres : stabilisateur, SVF, filtres optimaux
+\colorlet{cEstim}{jvcorail}          % estimation : régresseur, solution
+\colorlet{cIter}{jvgris}             % logique itérative : boucle, critère d'arrêt
+\tikzset{
+    blocCouleur/.style={fill=#1!13, draw=#1!80!black},
+    blocRegul/.style={blocCouleur=cRegul},
+    blocProcede/.style={blocCouleur=cProcede},
+    blocMesure/.style={blocCouleur=cMesure},
+    blocBruit/.style={blocCouleur=cBruit},
+    blocFiltre/.style={blocCouleur=cFiltre},
+    blocEstim/.style={blocCouleur=cEstim},
+    blocIter/.style={blocCouleur=cIter},
+}
 
 \setbeamercolor{normal text}{fg=jvtexte, bg=white}
 \setbeamercolor{structure}{fg=jvbleu}
