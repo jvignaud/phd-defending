@@ -185,17 +185,20 @@
         \jv@progression
     \fi
 }
+\newlength{\jv@prog}
+\newlength{\jv@reste}
 \newcommand{\jv@progression}{%
     \begingroup
     \ifnum\inserttotalframenumber>0
-        \dimen0=\paperwidth
-        \divide\dimen0 by \inserttotalframenumber
-        \multiply\dimen0 by \c@framenumber
-        \ifdim\dimen0>\paperwidth \dimen0=\paperwidth \fi
-    \else \dimen0=0pt \fi
+        \setlength{\jv@prog}{\paperwidth}%
+        \divide\jv@prog by \inserttotalframenumber
+        \multiply\jv@prog by \c@framenumber
+        \ifdim\jv@prog>\paperwidth \setlength{\jv@prog}{\paperwidth}\fi
+    \else \setlength{\jv@prog}{0pt}\fi
+    \setlength{\jv@reste}{\dimexpr\paperwidth-\jv@prog\relax}%
     \hbox to \paperwidth{%
-        {\color{jvteal}\rule{\dimen0}{0.7mm}}%
-        {\color{black!7}\rule{\dimexpr\paperwidth-\dimen0\relax}{0.7mm}}}%
+        {\color{jvteal}\rule{\jv@prog}{0.7mm}}%
+        {\color{black!7}\rule{\jv@reste}{0.7mm}}}%
     \endgroup
 }
 \makeatother
@@ -322,10 +325,20 @@
 \setbeamerfont{block body}{size=\small}
 
 % \tuile[couleur]{largeur}{valeur}{légende} : chiffre clé mis en avant
+% (le chiffre est réduit automatiquement s'il dépasse la largeur de la tuile)
+\newsavebox{\jv@tuileboite}
+\newlength{\jv@tuilelarg}
 \newcommand{\tuile}[4][jvteal]{%
+    \begingroup
+    \setlength{\jv@tuilelarg}{\dimexpr#2-3.6mm\relax}%
+    \sbox{\jv@tuileboite}{\color{#1}\bfseries\fontsize{13}{15}\selectfont #3}%
+    \ifdim\wd\jv@tuileboite>\jv@tuilelarg
+        \sbox{\jv@tuileboite}{\resizebox{\jv@tuilelarg}{!}{\usebox{\jv@tuileboite}}}%
+    \fi
     \tikz[baseline=(t.north)]\node[fill=#1!8, rounded corners=1.5pt, inner sep=1.8mm,
-        text width=#2-3.6mm, align=center, minimum height=12mm] (t)
-        {{\color{#1}\bfseries\fontsize{13}{15}\selectfont #3}\\[0.4mm]{\scriptsize\color{jvgris}#4}};%
+        text width=\jv@tuilelarg, align=center, minimum height=12mm] (t)
+        {\usebox{\jv@tuileboite}\\[0.4mm]{\scriptsize\color{jvgris}#4}};%
+    \endgroup
 }
 
 % \carte[couleur]{largeur}{étiquette}{titre}{texte} : carte avec filet coloré
