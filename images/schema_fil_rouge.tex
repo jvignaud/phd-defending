@@ -1,26 +1,39 @@
-\tikzstyle{block} = [draw, rectangle, align=center]
+% Fil rouge de la thèse : boucle d'optimisation en ligne
+% (couleurs jvteal / jvbleu / jvgris définies dans style/presentation.cls)
+\begin{tikzpicture}[
+        >=latex,
+        etape/.style={draw=jvteal, fill=jvteal!7, rounded corners=2pt, thick,
+                      align=center, minimum width=31mm, minimum height=9.5mm,
+                      font=\footnotesize\bfseries, text=jvbleu},
+        coeur/.style={etape, draw=jvbleu, fill=jvbleu!8},
+        procede/.style={draw=black!35, dashed, fill=black!3, rounded corners=2pt,
+                      align=center, minimum width=31mm, minimum height=9.5mm,
+                      font=\footnotesize, text=black!60},
+        pastille/.style={circle, fill=#1, text=white, font=\tiny\bfseries,
+                      inner sep=0pt, minimum size=3.8mm},
+        flux/.style={->, thick, draw=jvgris},
+        etiq/.style={font=\scriptsize, text=jvgris, inner sep=1pt},
+    ]
+    \newcommand{\soustitre}[1]{\\[-0.4ex]{\normalfont\scriptsize\color{jvgris}#1}}
+    % --- grille 3 colonnes x 2 rangées ---
+    \def\dx{43mm}\def\dy{14mm}
+    % rangée haute : commande
+    \node[etape]   (optim)   at (0,0)       {Optimisation\soustitre{RPEM en ligne}};
+    \node[coeur]   (broche)  at (\dx,0)     {Broche asservie\soustitre{identification en boucle fermée}};
+    \node[procede] (usinage) at (2*\dx,0)   {Usinage\soustitre{machine-outil}};
+    % rangée basse : mesure et modèle
+    \node[etape]   (modele)  at (\dx,-\dy)  {Modèle de puissance\soustitre{torseurs, $K_c$, $K_f$, $K_m$}};
+    \node[etape]   (instrum) at (2*\dx,-\dy){Instrumentation\soustitre{platine étalonnée par cobot}};
 
-\begin{tikzpicture}[>=latex']
-	% ----------------------------------
-	% --- définition des espacements ---
-	% ----------------------------------
-	\def\x{5mm}
-    \def\y{3mm}
+    % --- pastilles de section ---
+    \foreach \n/\s/\c in {optim/sec:optim/jvteal, broche/sec:ident/jvbleu,
+                          modele/sec:modele/jvteal, instrum/sec:moyen_exp/jvteal}
+        \node[pastille=\c] at ([xshift=0.6mm, yshift=-0.6mm]\n.north west) {\ref{\s}};
 
-    % ----------------------------
-	% --- définition des nodes ---
-	% ----------------------------
-    \node [block, double] (optim) {Optimisation\\(Section \ref{sec:optim})};
-    \node [block, double, right=2*\x of optim.east] (broche) {Broche asservie\\(Section \ref{sec:ident})};
-    \node [block, right=\x of broche.east] (modele) {Modèle de puissance\\(Section \ref{sec:modele})};
-    \node [block, double, anchor=north] (instrum) at ($(optim.south east)!0.5!(broche.south west) - (0,\y)$) {Instrumentation\\(Section \ref{sec:moyen_exp})};
-
-    % ------------------------------
-	% --- définition des flèches ---
-	% ------------------------------
-    \draw [->] (optim) -- (broche);
-    \draw [->] (broche) -- (modele);
-    \draw [->] (modele) |- (instrum);
-    \draw (broche) |- (instrum-|broche);
-    \draw [->] (instrum) -| (optim);
+    % --- flux ---
+    \draw[flux] (optim) -- node[etiq, above] {$V_c^\star$} (broche);
+    \draw[flux] (broche) -- node[etiq, above] {$\omega$} (usinage);
+    \draw[flux] (usinage) -- node[etiq, right] {$F,\ \mathcal{P}$} (instrum);
+    \draw[flux] (instrum) -- node[etiq, above] {efforts} (modele);
+    \draw[flux] (modele.west) -| node[etiq, pos=0.75, left] {$W_c$} (optim.south);
 \end{tikzpicture}

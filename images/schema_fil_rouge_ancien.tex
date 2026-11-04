@@ -1,0 +1,26 @@
+\tikzstyle{block} = [draw, rectangle, align=center]
+
+\begin{tikzpicture}[>=latex']
+	% ----------------------------------
+	% --- définition des espacements ---
+	% ----------------------------------
+	\def\x{5mm}
+    \def\y{3mm}
+
+    % ----------------------------
+	% --- définition des nodes ---
+	% ----------------------------
+    \node [block, double] (optim) {Optimisation\\(Section \ref{sec:optim})};
+    \node [block, double, right=2*\x of optim.east] (broche) {Broche asservie\\(Section \ref{sec:ident})};
+    \node [block, right=\x of broche.east] (modele) {Modèle de puissance\\(Section \ref{sec:modele})};
+    \node [block, double, anchor=north] (instrum) at ($(optim.south east)!0.5!(broche.south west) - (0,\y)$) {Instrumentation\\(Section \ref{sec:moyen_exp})};
+
+    % ------------------------------
+	% --- définition des flèches ---
+	% ------------------------------
+    \draw [->] (optim) -- (broche);
+    \draw [->] (broche) -- (modele);
+    \draw [->] (modele) |- (instrum);
+    \draw (broche) |- (instrum-|broche);
+    \draw [->] (instrum) -| (optim);
+\end{tikzpicture}

@@ -313,3 +313,72 @@
     \end{tikzpicture}%
 }
 \makeatother
+
+\makeatletter
+% ---------------------------------------------------------------------------
+% Composants de mise en page
+% ---------------------------------------------------------------------------
+\setbeamerfont{block title}{size=\small, series=\bfseries}
+\setbeamerfont{block body}{size=\small}
+
+% \tuile[couleur]{largeur}{valeur}{légende} : chiffre clé mis en avant
+\newcommand{\tuile}[4][jvteal]{%
+    \tikz[baseline=(t.north)]\node[fill=#1!8, rounded corners=1.5pt, inner sep=1.8mm,
+        text width=#2-3.6mm, align=center, minimum height=12mm] (t)
+        {{\color{#1}\bfseries\fontsize{13}{15}\selectfont #3}\\[0.4mm]{\scriptsize\color{jvgris}#4}};%
+}
+
+% \carte[couleur]{largeur}{étiquette}{titre}{texte} : carte avec filet coloré
+% (hauteur minimale commune réglable par \setlength{\hauteurcarte}{...})
+\newlength{\hauteurcarte}
+\setlength{\hauteurcarte}{0pt}
+\newcommand{\carte}[5][jvteal]{%
+    \begin{tikzpicture}[baseline=(c.north)]
+        \node[fill=#1!6, inner sep=2.4mm, text width=#2-4.8mm, align=left,
+              minimum height=\hauteurcarte, anchor=north west] (c) {%
+            {\scriptsize\bfseries\color{#1}#3}\par\vspace{0.8mm}
+            {\bfseries\color{jvbleu}#4}\par\vspace{1mm}
+            {\footnotesize #5}\par};
+        \fill[#1] (c.north west) rectangle ([yshift=-0.8mm]c.north east);
+    \end{tikzpicture}%
+}
+
+% \aretenir{texte} : bandeau « message à retenir » en bas de diapo
+\newcommand{\aretenir}[1]{%
+    \par\vspace{2mm}\noindent
+    \begin{tikzpicture}
+        \node[fill=jvteal!9, inner sep=2mm, text width=\linewidth-4mm, align=left] (a)
+            {\small #1};
+        \fill[jvteal] (a.north west) rectangle ([xshift=0.9mm]a.south west);
+    \end{tikzpicture}\par
+}
+
+% \pagemerci : diapo de remerciements, en écho à la page de titre
+% (à placer dans \begin{frame}[plain] ... \end{frame})
+\newcommand{\pagemerci}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[white] (current page.south west) rectangle (current page.north east);
+        \ifx\jv@photo\@empty\else
+            \begin{scope}
+                \clip ([xshift=-0.36\paperwidth]current page.south east) rectangle (current page.north east);
+                \node at ([xshift=-0.18\paperwidth]current page.east)
+                    {\includegraphics[height=\paperheight]{\jv@photo}};
+            \end{scope}
+            \fill[white, path fading=jvfondu]
+                ([xshift=-0.361\paperwidth]current page.south east)
+                rectangle ([xshift=-0.27\paperwidth]current page.north east);
+        \fi
+        \fill[jvbleu] (current page.south west) rectangle ([xshift=2.2mm]current page.north west);
+        \node[anchor=west, inner sep=0pt, text width=0.56\paperwidth, align=left]
+            at ([xshift=11mm, yshift=4mm]current page.west) {%
+            {\fontsize{26}{30}\selectfont\bfseries\color{jvbleu}Merci de votre\\attention}\par\vspace{4mm}
+            {\color{jvteal}\rule{22mm}{0.8pt}}\par\vspace{3mm}
+            {\Large\color{jvteal}Questions ?}\par\vspace{6mm}
+            {\small\color{jvgris}\inserttitle}\par\vspace{0.6mm}
+            {\small\color{jvgris}\insertauthor\ \textperiodcentered\ \insertdate}%
+        };
+        \node[anchor=south west, inner sep=0pt] at ([xshift=11mm, yshift=5mm]current page.south west)
+            {\jv@logos};
+    \end{tikzpicture}%
+}
+\makeatother
