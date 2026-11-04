@@ -1,0 +1,84 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'comp_prime.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{679.70833365bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.65926082)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.06222449,0.04328734){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.13464208,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,05\end{tabular}}}}%
+    \put(0.23423203,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,1\end{tabular}}}}%
+    \put(0.31795121,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,15\end{tabular}}}}%
+    \put(0.41754115,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,2\end{tabular}}}}%
+    \put(0.50126179,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,25\end{tabular}}}}%
+    \put(0.6008503,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,3\end{tabular}}}}%
+    \put(0.68457094,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,35\end{tabular}}}}%
+    \put(0.78021754,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,4\end{tabular}}}}%
+    \put(0.86788004,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,45\end{tabular}}}}%
+    \put(0.96746845,0.0432873){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,5\end{tabular}}}}%
+    \put(0.01020818,0.06771582){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-15$\end{tabular}}}}%
+    \put(0.01020818,0.16312853){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-10$\end{tabular}}}}%
+    \put(0.0174053,0.25854129){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-5$\end{tabular}}}}%
+    \put(0.04916332,0.35395557){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.04916332,0.44936835){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\end{tabular}}}}%
+    \put(0.03408272,0.54478112){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.03408272,0.6401942){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}15\end{tabular}}}}%
+    \put(0.47003572,0.00558267){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Temps (s)\end{tabular}}}}%
+    \put(0.02066625,0.32229942){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sortie $y^*$\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{comp_prime.pdf}}%
+    \put(0.67191667,0.61522913){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Données de validation\end{tabular}}}}%
+    \put(0.67205786,0.58809381){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLLSSVFFR : \SI{48.78}{\percent}\end{tabular}}}}%
+    \put(0.67205786,0.56329415){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLIVSVFFR : \SI{51.43}{\percent}\end{tabular}}}}%
+    \put(0.67205786,0.53799841){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLSRIVFR : \SI{51.44}{\percent}\end{tabular}}}}%
+    \put(0.67205786,0.51201618){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLRIVFR : \SI{65.83}{\percent}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{comp_prime.pdf}}%
+  \end{picture}%
+\endgroup%

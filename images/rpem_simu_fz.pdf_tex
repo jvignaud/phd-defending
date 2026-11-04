@@ -1,0 +1,229 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'rpem_simu_fz.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{766.03946235bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.61494306)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{rpem_simu_fz.pdf}}%
+    \put(0.04869234,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.10262911,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.16504147,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.2266,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.01068296,0.45207795){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$f_z$ (\si{\milli\meter\per\tour\per\dent})\end{tabular}}}}}%
+    \put(0.03158666,0.59659434){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,2\end{tabular}}}}%
+    \put(0.02345212,0.5555755){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,19\end{tabular}}}}%
+    \put(0.02345212,0.51438358){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,18\end{tabular}}}}%
+    \put(0.02345212,0.47319166){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,17\end{tabular}}}}%
+    \put(0.02345212,0.43199974){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,16\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{rpem_simu_fz.pdf}}%
+    \put(0.29986389,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.35312242,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.41492525,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.4759287,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.27218933,0.51187248){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$a_w$\end{tabular}}}}}%
+    \put(0.30382982,0.60479646){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$\times10^6$\end{tabular}}}}%
+    \put(0.28103568,0.59645693){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}8,2\end{tabular}}}}%
+    \put(0.29400824,0.56781937){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}8\end{tabular}}}}%
+    \put(0.28103568,0.54138471){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}7,8\end{tabular}}}}%
+    \put(0.28103568,0.51421574){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}7,8\end{tabular}}}}%
+    \put(0.28103568,0.48655724){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}7,4\end{tabular}}}}%
+    \put(0.28103568,0.4593883){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}7,2\end{tabular}}}}%
+    \put(0.29400824,0.4309955){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}7\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{rpem_simu_fz.pdf}}%
+    \put(0.51749517,0.51198722){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$b_w$\end{tabular}}}}}%
+    \put(0.54995296,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.60298685,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.66505946,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.72614931,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.55312347,0.60479646){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$\times10^6$\end{tabular}}}}%
+    \put(0.51735673,0.59633455){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$-$2,3\end{tabular}}}}%
+    \put(0.51735673,0.57283707){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$-$2,4\end{tabular}}}}%
+    \put(0.51735673,0.54943114){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$-$2,5\end{tabular}}}}%
+    \put(0.51735673,0.52593366){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$-$2,6\end{tabular}}}}%
+    \put(0.51735673,0.50235467){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$-$2,7\end{tabular}}}}%
+    \put(0.51735673,0.47885719){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$-$2,8\end{tabular}}}}%
+    \put(0.51735673,0.45540549){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$-$2,9\end{tabular}}}}%
+    \put(0.52983978,0.43215276){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$-$3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{rpem_simu_fz.pdf}}%
+    \put(0.01068296,0.27858141){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$K_f$ (\si{\mega\pascal})\end{tabular}}}}}%
+    \put(0.04869234,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.1026291,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.16504148,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.22659999,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.01947138,0.39132703){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2200\end{tabular}}}}%
+    \put(0.01947138,0.36051963){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2000\end{tabular}}}}%
+    \put(0.01947138,0.32901993){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1800\end{tabular}}}}%
+    \put(0.01947138,0.29821251){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1600\end{tabular}}}}%
+    \put(0.01947138,0.26636667){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1400\end{tabular}}}}%
+    \put(0.01947138,0.23555926){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1200\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{rpem_simu_fz.pdf}}%
+    \put(0.2619217,0.27858141){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$K_c$ (\si{\mega\pascal})\end{tabular}}}}}%
+    \put(0.29986389,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.35312242,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.41492525,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.4759287,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.27008443,0.39132703){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}3400\end{tabular}}}}%
+    \put(0.27008443,0.36051963){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}3200\end{tabular}}}}%
+    \put(0.27008443,0.32901993){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}3000\end{tabular}}}}%
+    \put(0.27008443,0.29821251){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2800\end{tabular}}}}%
+    \put(0.27008443,0.26636667){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2600\end{tabular}}}}%
+    \put(0.27008443,0.23555926){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2400\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{rpem_simu_fz.pdf}}%
+    \put(0.54995296,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.60298685,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.66505946,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.72614931,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.54408099,0.39183397){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}4\end{tabular}}}}%
+    \put(0.53149652,0.36530934){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}3,5\end{tabular}}}}%
+    \put(0.54408099,0.33725128){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}3\end{tabular}}}}%
+    \put(0.53149652,0.31072665){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,5\end{tabular}}}}%
+    \put(0.54408099,0.28340289){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.53149652,0.25687825){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,5\end{tabular}}}}%
+    \put(0.54408099,0.22882018){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.51317912,0.25900019){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$K_m$ (\si{\newton\meter\per\milli\meter\squared})\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{rpem_simu_fz.pdf}}%
+    \put(0.77086526,0.25900019){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$W_{c,\text{max}}$ (\si{\joule\per\centi\meter\cubed})\end{tabular}}}}}%
+    \put(0.80547661,0.40185682){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$\times10^4$\end{tabular}}}}%
+    \put(0.80020365,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.85284171,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.91437392,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.97602207,0.219252){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{rpem_simu_fz.pdf}}%
+    \put(0.88267561,0.37049677){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}estimation\end{tabular}}}}%
+    \put(0.88267561,0.38322456){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}mesure\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{rpem_simu_fz.pdf}}%
+    \put(0.77088956,0.51198722){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$c_w$\end{tabular}}}}}%
+    \put(0.80547661,0.60479646){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$\times10^5$\end{tabular}}}}%
+    \put(0.80020365,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.85284171,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.91437392,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.97602207,0.41995965){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.78231535,0.59645693){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}3,2\end{tabular}}}}%
+    \put(0.79430882,0.56855367){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}3\end{tabular}}}}%
+    \put(0.78231535,0.54162947){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,8\end{tabular}}}}%
+    \put(0.78231535,0.51421574){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,6\end{tabular}}}}%
+    \put(0.78231535,0.48655724){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,4\end{tabular}}}}%
+    \put(0.78231535,0.45914351){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,2\end{tabular}}}}%
+    \put(0.79430882,0.4317298){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.78011238,0.22832969){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,5\end{tabular}}}}%
+    \put(0.78011238,0.25207196){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,6\end{tabular}}}}%
+    \put(0.78011238,0.27507989){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,7\end{tabular}}}}%
+    \put(0.78011238,0.29882215){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1,8\end{tabular}}}}%
+    \put(0.78011238,0.32231961){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,0\end{tabular}}}}%
+    \put(0.78011238,0.34606188){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,2\end{tabular}}}}%
+    \put(0.78011238,0.36906981){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,4\end{tabular}}}}%
+    \put(0.78011238,0.39281207){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2,6\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{rpem_simu_fz.pdf}}%
+    \put(0.01068296,0.02780382){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$F_{\vec{e}_r,\text{Outil}\to\text{Pièce},\text{max}}$ (\si{\newton})\end{tabular}}}}}%
+    \put(0.10095914,0.00019758){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}itération\end{tabular}}}}%
+    \put(0.04869234,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.1026291,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.16504148,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.22659999,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{rpem_simu_fz.pdf}}%
+    \put(0.13047936,0.16619186){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}estimation\end{tabular}}}}%
+    \put(0.13047936,0.17891967){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}mesure\end{tabular}}}}%
+    \put(0.02733015,0.18841809){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}450\end{tabular}}}}%
+    \put(0.02733015,0.15544727){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.02733015,0.12355526){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}350\end{tabular}}}}%
+    \put(0.02733015,0.09058444){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}300\end{tabular}}}}%
+    \put(0.02733015,0.0574686){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}250\end{tabular}}}}%
+    \put(0.02733015,0.02449778){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{rpem_simu_fz.pdf}}%
+    \put(0.26567183,0.02780382){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce},\text{max}}$ (\si{\newton})\end{tabular}}}}}%
+    \put(0.36025251,0.00019758){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}itération\end{tabular}}}}%
+    \put(0.29986389,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.35312242,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.41492525,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.4759287,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{rpem_simu_fz.pdf}}%
+    \put(0.38040011,0.16619186){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}estimation\end{tabular}}}}%
+    \put(0.38040011,0.17891967){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}mesure\end{tabular}}}}%
+    \put(0.2784493,0.18850717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}700\end{tabular}}}}%
+    \put(0.2784493,0.16116127){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}650\end{tabular}}}}%
+    \put(0.2784493,0.13355576){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.2784493,0.10612334){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}550\end{tabular}}}}%
+    \put(0.2784493,0.07851782){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}500\end{tabular}}}}%
+    \put(0.2784493,0.05212385){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}450\end{tabular}}}}%
+    \put(0.2784493,0.02451834){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{rpem_simu_fz.pdf}}%
+    \put(0.51425056,0.00136914){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce},\text{max}}$ (\si{\newton\meter})\end{tabular}}}}}%
+    \put(0.60883124,0.00019758){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}itération\end{tabular}}}}%
+    \put(0.54995296,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.60298685,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.66449695,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.72614931,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{rpem_simu_fz.pdf}}%
+    \put(0.63170548,0.16619186){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}estimation\end{tabular}}}}%
+    \put(0.63170548,0.17891967){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}mesure\end{tabular}}}}%
+    \put(0.53044695,0.18850717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,8\end{tabular}}}}%
+    \put(0.53044695,0.16116127){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,7\end{tabular}}}}%
+    \put(0.53044695,0.13355576){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,6\end{tabular}}}}%
+    \put(0.53044695,0.10612334){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,5\end{tabular}}}}%
+    \put(0.53044695,0.07851782){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,4\end{tabular}}}}%
+    \put(0.53044695,0.05212385){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,3\end{tabular}}}}%
+    \put(0.53044695,0.02451834){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0,2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{rpem_simu_fz.pdf}}%
+    \put(0.75839532,0.08199424){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}Critère $J$\end{tabular}}}}}%
+    \put(0.86651739,0.00019758){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}itération\end{tabular}}}}%
+    \put(0.80020365,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.85284171,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}200\end{tabular}}}}%
+    \put(0.91437392,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}400\end{tabular}}}}%
+    \put(0.97602207,0.01560717){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}600\end{tabular}}}}%
+    \put(0.7680221,0.18779044){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2500\end{tabular}}}}%
+    \put(0.7680221,0.15572617){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}2000\end{tabular}}}}%
+    \put(0.7680221,0.12243808){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1500\end{tabular}}}}%
+    \put(0.7680221,0.09037381){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}1000\end{tabular}}}}%
+    \put(0.77579338,0.05677976){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}500\end{tabular}}}}%
+    \put(0.79261594,0.02386802){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

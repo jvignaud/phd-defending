@@ -1,0 +1,150 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'spectro_vibration.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1214.07870555bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.50091439)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{spectro_vibration.pdf}}%
+    \put(0.04595603,0.49391169){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Vibration sur l'axe $\vec{x}$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{spectro_vibration.pdf}}%
+    \put(0.09001006,0.00190538){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Fréquence (Hz)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{spectro_vibration.pdf}}%
+    \put(0.05357557,0.04945358){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}}%
+    \put(0.08800571,0.05275686){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2000\end{tabular}}}}}%
+    \put(0.12737934,0.05272376){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4000\end{tabular}}}}}%
+    \put(0.16847803,0.05277342){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6000\end{tabular}}}}}%
+    \put(0.20995667,0.05277925){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}8000\end{tabular}}}}}%
+    \put(0.24761291,0.0540248){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10000\end{tabular}}}}}%
+    \put(0.01566462,0.25203095){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$V_c$ (m/min)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{spectro_vibration.pdf}}%
+    \put(0.02065069,0.09137088){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}130\end{tabular}}}}%
+    \put(0.02065069,0.14140057){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}135\end{tabular}}}}%
+    \put(0.02065069,0.19143027){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}140\end{tabular}}}}%
+    \put(0.02065069,0.2414608){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}145\end{tabular}}}}%
+    \put(0.02065069,0.29149049){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0.02065069,0.34152019){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}155\end{tabular}}}}%
+    \put(0.02065069,0.3915499){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}160\end{tabular}}}}%
+    \put(0.02065069,0.44158025){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}165\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{spectro_vibration.pdf}}%
+    \put(0.28490151,0.09251915){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$80\end{tabular}}}}%
+    \put(0.28490151,0.14306282){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$70\end{tabular}}}}%
+    \put(0.28490151,0.19360649){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$60\end{tabular}}}}%
+    \put(0.28490151,0.24414933){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$50\end{tabular}}}}%
+    \put(0.28490151,0.29469299){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$40\end{tabular}}}}%
+    \put(0.28490151,0.34523666){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$30\end{tabular}}}}%
+    \put(0.28490151,0.39577951){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$20\end{tabular}}}}%
+    \put(0.28490151,0.44632309){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$10\end{tabular}}}}%
+    \put(0.32467276,0.25432071){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny Amplitude (dB)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{spectro_vibration.pdf}}%
+    \put(0.38137371,0.49391169){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Vibration sur l'axe $\vec{y}$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{spectro_vibration.pdf}}%
+    \put(0.42657145,0.00190538){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Fréquence (Hz)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{spectro_vibration.pdf}}%
+    \put(0.39013704,0.04945349){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}}%
+    \put(0.42456727,0.05275677){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2000\end{tabular}}}}}%
+    \put(0.46394062,0.05272368){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4000\end{tabular}}}}}%
+    \put(0.50504014,0.05277334){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6000\end{tabular}}}}}%
+    \put(0.54651881,0.05277916){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}8000\end{tabular}}}}}%
+    \put(0.58417422,0.05402473){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10000\end{tabular}}}}}%
+    \put(0.35222605,0.25203095){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$V_c$ (m/min)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{spectro_vibration.pdf}}%
+    \put(0.35721256,0.09137088){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}130\end{tabular}}}}%
+    \put(0.35721256,0.14140057){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}135\end{tabular}}}}%
+    \put(0.35721256,0.19143027){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}140\end{tabular}}}}%
+    \put(0.35721256,0.2414608){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}145\end{tabular}}}}%
+    \put(0.35721256,0.29149049){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0.35721256,0.34152019){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}155\end{tabular}}}}%
+    \put(0.35721256,0.3915499){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}160\end{tabular}}}}%
+    \put(0.35721256,0.44158025){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}165\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{spectro_vibration.pdf}}%
+    \put(0.62146371,0.08948805){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$70\end{tabular}}}}%
+    \put(0.62146371,0.14943638){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$60\end{tabular}}}}%
+    \put(0.62146371,0.20938388){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$50\end{tabular}}}}%
+    \put(0.62146371,0.26933221){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$40\end{tabular}}}}%
+    \put(0.62146371,0.32928053){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$30\end{tabular}}}}%
+    \put(0.62146371,0.38922886){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$20\end{tabular}}}}%
+    \put(0.62146371,0.4491771){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$10\end{tabular}}}}%
+    \put(0.66123411,0.25432071){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny Amplitude (dB)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{spectro_vibration.pdf}}%
+    \put(0.71768631,0.49391169){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Vibration sur l'axe $\vec{z}$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{spectro_vibration.pdf}}%
+    \put(0.7626345,0.00190538){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Fréquence (Hz)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{spectro_vibration.pdf}}%
+    \put(0.72619972,0.04945368){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}}%
+    \put(0.76062996,0.05275697){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2000\end{tabular}}}}}%
+    \put(0.80000335,0.05272386){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4000\end{tabular}}}}}%
+    \put(0.84110201,0.05277352){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6000\end{tabular}}}}}%
+    \put(0.88258073,0.05277934){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}8000\end{tabular}}}}}%
+    \put(0.92023613,0.05402488){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{-30.00000021}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10000\end{tabular}}}}}%
+    \put(0.6882891,0.25203095){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$V_c$ (m/min)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{spectro_vibration.pdf}}%
+    \put(0.69327557,0.09137088){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}130\end{tabular}}}}%
+    \put(0.69327557,0.14140057){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}135\end{tabular}}}}%
+    \put(0.69327557,0.19143027){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}140\end{tabular}}}}%
+    \put(0.69327557,0.2414608){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}145\end{tabular}}}}%
+    \put(0.69327557,0.29149049){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0.69327557,0.34152019){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}155\end{tabular}}}}%
+    \put(0.69327557,0.3915499){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}160\end{tabular}}}}%
+    \put(0.69327557,0.44158025){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}165\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{spectro_vibration.pdf}}%
+    \put(0.9575226,0.10029542){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$70\end{tabular}}}}%
+    \put(0.9575226,0.15353659){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$60\end{tabular}}}}%
+    \put(0.9575226,0.20677861){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$50\end{tabular}}}}%
+    \put(0.9575226,0.2600198){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$40\end{tabular}}}}%
+    \put(0.9575226,0.31326098){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$30\end{tabular}}}}%
+    \put(0.9575226,0.36650216){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$20\end{tabular}}}}%
+    \put(0.9575226,0.41974376){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny $-$10\end{tabular}}}}%
+    \put(0.9575226,0.47298511){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny 0\end{tabular}}}}%
+    \put(0.9972938,0.25432071){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny Amplitude (dB)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{spectro_vibration.pdf}}%
+  \end{picture}%
+\endgroup%

@@ -16,6 +16,28 @@
 \institute{IMS, I2M, VLM Robotics}
 \date{2 décembre 2026}
 
+% --- Page de garde (gabarit défini dans style/presentation.cls) ---
+\surtitre{Soutenance de thèse de doctorat \textperiodcentered{} Université de Bordeaux}
+\photogarde{images/MOCN.png}
+\jury{%
+    \membre{Marion Gilson}{PU, Université de Lorraine}{Rapporteure}%
+    \membre{Vincent Wagner}{PU, Université de Technologie Tarbes}{Rapporteur}%
+    \membre{Yann Landon}{PU, Université Toulouse 3}{Examinateur}%
+    \membre{Xavier Bombois}{DR, CNRS}{Examinateur}%
+    \membre{Stéphane Victor}{MCF HDR, Université de Bordeaux}{Directeur}%
+    \membre{Jean-Yves K'Nevez}{MCF, Université de Bordeaux}{Directeur}%
+    \membre{Olivier Cahuc}{PU, Université de Bordeaux}{Invité}%
+    \membre{Philippe Verlet}{VLM Robotics}{Invité}%
+}
+% Déposer les logos dans images/logos/ (PDF/SVG→PDF de préférence, sinon PNG)
+\logosgarde{%
+    \logogarde{images/logos/UB.pdf}{Univ. Bordeaux}%
+    \logogarde{images/logos/IMS.pdf}{IMS}%
+    \logogarde{images/logos/I2M.pdf}{I2M}%
+    \logogarde{images/logos/VLM.pdf}{VLM Robotics}%
+    \logogarde{images/logos/CIFRE.pdf}{ANRT / CIFRE}%
+}
+
 % =============================================================================
 % SQUELETTE DE SOUTENANCE
 %  - \assertion{...}  : le message de la diapo (ce que le jury doit retenir)
@@ -29,7 +51,9 @@
 
 \begin{document}
 
-\frame{\titlepage}
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
 
 % =============================================================================
 \section{Introduction}
@@ -262,9 +286,9 @@
     \assertion{La puissance de coupe s'obtient par le comoment du torseur d'action et du torseur cinématique à la pointe de la dent}
     \vspace{-5mm}
     \begin{align*}
-        P_{\text{Outil/Pièce}} & = \{\tau_{\text{Outil}\to\text{Pièce}}\} \otimes \{\mathcal{V}_{\text{Pièce/Outil}}\}                                                                                                                       \\
-                               & = - F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \|V_{F,\vec{x},\text{Outil/Pièce}}\| \cos(\theta) - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \|\omega_{\vec{z},\text{Outil/Pièce}}\|              \\
-                               & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \left(\|\omega_{\vec{z},\text{Outil/Pièce}}\|\left(R+\frac{a_p}{2}\cot(\kappa_r)\right)-\|V_{F,\vec{x},\text{Outil/Pièce}}\| \sin(\theta)\right) 
+        P_{\text{Outil/Pièce}} & = \{\tau_{\text{Outil}\to\text{Pièce}}\} \otimes \{\mathcal{V}_{\text{Pièce/Outil}}\}                                                                                                             \\
+                               & = - F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \|V_{F,\vec{x},\text{Outil/Pièce}}\| \cos(\theta) - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \|\omega_{\vec{z},\text{Outil/Pièce}}\|             \\
+                               & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \left(\|\omega_{\vec{z},\text{Outil/Pièce}}\|\left(R+\frac{a_p}{2}\cot(\kappa_r)\right)-\|V_{F,\vec{x},\text{Outil/Pièce}}\| \sin(\theta)\right)
     \end{align*}
 
     \begin{columns}[T]
@@ -394,21 +418,21 @@
         \begin{itemize}
             \item Acier C35, $V_c$ de 100 à 300 m/min : puissance mécanique \textbf{mesurée avec la platine dynamométrique} ($K_c$, $K_f$, $K_m$ identifiés) \textit{vs} puissance électrique \textbf{mesurée sur le variateur}
             \item Méthode des deux wattmètres sur une période du fondamental :
-            {\small
-            \begin{equation*}
-                \mathcal{P}_{\text{élec}} = \frac{1}{T}\int_{t_0}^{t_0+T} \left(-u_{31,f}\, i_{1,f} + u_{23,f}\, i_{2,f}\right) dt
-            \end{equation*}}
+                  {\small
+                  \begin{equation*}
+                      \mathcal{P}_{\text{élec}} = \frac{1}{T}\int_{t_0}^{t_0+T} \left(-u_{31,f}\, i_{1,f} + u_{23,f}\, i_{2,f}\right) dt
+                  \end{equation*}}
             \item Passage affine d'une échelle à l'autre, rendement $\eta$ (pente) et puissance à vide (décalage) :
-            \begin{equation*}
-                \mathcal{P}_{\text{méca}} = \eta\, \mathcal{P}_{\text{élec}} - \mathcal{P}_{\text{vide}}
-            \end{equation*}
+                  \begin{equation*}
+                      \mathcal{P}_{\text{méca}} = \eta\, \mathcal{P}_{\text{élec}} - \mathcal{P}_{\text{vide}}
+                  \end{equation*}
             \item \textbf{Pas encore substituable à la platine :}
-            {\small
-            \begin{itemize}
-                \item $\eta$ et $\mathcal{P}_{\text{vide}}$ non caractérisés sur la plage de fonctionnement
-                \item grandeur scalaire : ne sépare pas $K_c$, $K_f$ et $K_m$
-                \item latence incompressible d'une période du fondamental
-            \end{itemize}}
+                  {\small
+                      \begin{itemize}
+                          \item $\eta$ et $\mathcal{P}_{\text{vide}}$ non caractérisés sur la plage de fonctionnement
+                          \item grandeur scalaire : ne sépare pas $K_c$, $K_f$ et $K_m$
+                          \item latence incompressible d'une période du fondamental
+                      \end{itemize}}
         \end{itemize}
 
         \column{0.45\linewidth}
@@ -523,10 +547,10 @@
         $^3$Gilson \emph{et al.}, \emph{IFAC}, 2009 ; \emph{IET CTA}, 2011\par
         $^4$Gilson \emph{et al.}, \emph{Identification of Continuous-time Models from Sampled Data}, Springer, 2008\par
         {\color{alerted text.fg!80!black}%
-        $^5$Vignaud \emph{et al.}, \emph{ECC}, 2025 \quad
-        $^6$Vignaud \emph{et al.}, \emph{ROCOND}, 2025 \quad
-        $^7$Vignaud \emph{et al.}, \emph{IEEE TAC} (soumis)}\par}
-        
+            $^5$Vignaud \emph{et al.}, \emph{ECC}, 2025 \quad
+            $^6$Vignaud \emph{et al.}, \emph{ROCOND}, 2025 \quad
+            $^7$Vignaud \emph{et al.}, \emph{IEEE TAC} (soumis)}\par}
+
 
     % SOURCE : § 3.3.6 Positionnement.
     % ORAL : continuité des CLSRIV / CLRIV, adaptées à cette architecture,
@@ -774,7 +798,7 @@
             \resizebox{\linewidth}{!}{\input{images/schema_rpem.tex}}
             \caption{Schéma de la boucle RPEM}
         \end{figure}
-        
+
     \end{columns}
     % SOURCE : éq. (4.9)-(4.11).
     % ORAL : optimisation dynamique et non statique ; theta = [a, b, c, Kf, Kc, Km].
@@ -800,7 +824,7 @@
             {\fontsize{3.5pt}{5pt}\selectfont
                 \def\svgwidth{\textwidth}
                 \import{images/}{rpem_simu.pdf_tex}}
-            \caption{Résultats de la méthode RPEM en simulation}
+            \caption{Résultats de la méthode RPEM en simulation avec $f_z=\SI{0.17}{\milli\meter\per\tour\per\dent}$}
         \end{figure}
     \end{columns}
     % SOURCE : fig. 4.17, 4.20 (et 4.21-4.22 en annexe).
@@ -818,7 +842,7 @@
             {\fontsize{3.5pt}{5pt}\selectfont
                 \def\svgwidth{\textwidth}
                 \import{images/}{rpem.pdf_tex}}
-            \caption{Résultats de la méthode RPEM en simulation}
+            \caption{Résultats de la méthode RPEM}
         \end{figure}
         \column{0.35\linewidth}
         \begin{itemize}
@@ -909,71 +933,415 @@
 % DIAPOS DE SECOURS : à sortir uniquement en réponse aux questions du jury
 % =============================================================================
 
-\begin{frame}[sanssoustitre]{Annexe -- Puissance par comoment}
+\section{Puissance par comoment}
+\begin{frame}
     % Éq. (2.18) complète, avec les trois termes colorés.
     \begin{equation*}
         \left\{\tau_{\text{Outil}\to\text{Pièce}}\right\} = \prescript{}{P}{
-        \left\{
+            \left\{
             \begin{array}{cc}
-                F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} & M_{P,\vec{e}_r,\text{Outil}\to\text{Pièce}}\\
-                F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} & M_{P,\vec{e}_\theta,\text{Outil}\to\text{Pièce}}\\
-                F_{\vec{e}_z,\text{Outil}\to\text{Pièce}} & M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}\\
-            \end{array}    
-        \right\}_{(\vec{e}_r,\vec{e}_\theta,\vec{e}_z)}}
+                F_{\vec{e}_r,\text{Outil}\to\text{Pièce}}      & M_{P,\vec{e}_r,\text{Outil}\to\text{Pièce}}      \\
+                F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} & M_{P,\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \\
+                F_{\vec{e}_z,\text{Outil}\to\text{Pièce}}      & M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}      \\
+            \end{array}
+            \right\}_{(\vec{e}_r,\vec{e}_\theta,\vec{e}_z)}}
     \end{equation*}
     \begin{align*}
-        \left\{\mathcal{V}_{\text{Pièce}/\text{Outil}}\right\} &= \prescript{}{F}{
-        \left\{
+        \left\{\mathcal{V}_{\text{Pièce}/\text{Outil}}\right\} & = \prescript{}{F}{
+            \left\{
             \begin{array}{cc}
-                0 & \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\| \\
-                0 & 0 \\
+                0                                               & \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\| \\
+                0                                               & 0                                           \\
                 -\|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| & 0
-            \end{array}    
-        \right\}_{(\vec{x},\vec{y},\vec{z})}}\\
-        &= \prescript{}{P}{
-        \left\{
+            \end{array}
+        \right\}_{(\vec{x},\vec{y},\vec{z})}}                                       \\
+                                                               & = \prescript{}{P}{
+            \left\{
             \begin{array}{cc}
-                0 & \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\cos(\theta) \\
-                0 & \|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| \left(R+\frac{a_p}{2}\cot(\kappa_r)\right) - \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\sin(\theta) \\
+                0                                              & \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\cos(\theta)                                                                                             \\
+                0                                              & \|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| \left(R+\frac{a_p}{2}\cot(\kappa_r)\right) - \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\sin(\theta) \\
                 \|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| & 0
-            \end{array}    
-        \right\}_{(\vec{e}_r,\vec{e}_\theta,\vec{e}_z)}}
+            \end{array}
+            \right\}_{(\vec{e}_r,\vec{e}_\theta,\vec{e}_z)}}
     \end{align*}
     \begin{equation*}
         \begin{split}
-            \mathcal{P}_{\text{Outil}/\text{Pièce}} = & \left\{\tau_{\text{Outil}\to\text{Pièce}}\right\} \otimes \left\{\mathcal{V}_{\text{Pièce}/\text{Outil}}\right\}                                                                                                         \\
-            =                                         & -F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \cdot \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\cos(\theta)                                                                                                          \\
-                                                    & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \cdot \left(\|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| \left(R+\frac{a_p}{2}\cot(\kappa_r)\right) - \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\sin(\theta)\right) \\
-                                                    & - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \cdot \|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\|.
+            \mathcal{P}_{\text{Outil}/\text{Pièce}} = & \left\{\tau_{\text{Outil}\to\text{Pièce}}\right\} \otimes \left\{\mathcal{V}_{\text{Pièce}/\text{Outil}}\right\}                                                                                                        \\
+            =                                         & -F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \cdot \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\cos(\theta)                                                                                                                \\
+                                                      & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \cdot \left(\|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\| \left(R+\frac{a_p}{2}\cot(\kappa_r)\right) - \|V_{F,\vec{x},\text{Outil}/\text{Pièce}}\|\sin(\theta)\right) \\
+                                                      & - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \cdot \|\omega_{\vec{z},\text{Outil}/\text{Pièce}}\|.
         \end{split}
     \end{equation*}
 \end{frame}
 
-\begin{frame}[sanssoustitre]{Annexe -- Détail des algorithmes}
+\section{Détail des algorithmes}
+
+\subsection{CLLSSVFFR : moindres carrés classiques avec préfiltre}
+\begin{frame}
     % Une diapo par méthode si besoin : régresseur, instruments, préfiltres.
-    \figafaire{Algorithmes CLLSSVFFR, CLIVSVFFR, CLSRIVFR, CLRIVFR (fig. 3.8-3.10)}
+    \begin{figure}
+        \centering
+        \resizebox{!}{.9\textheight}{\input{images/schema_ls.tex}}
+        \caption{Schéma de méthode des moindres carrés (CLLSSVFFR)}
+    \end{figure}
 \end{frame}
 
-\begin{frame}[sanssoustitre]{Annexe -- Monte-Carlo : tableaux complets}
-    \figafaire{Tab. 3.1, 3.3 (paramètres), 3.2, 3.4 (itérations), 3.5 (bruit)}
+\subsection{CLIVSVFFR : variables instrumentales classiques avec préfiltre}
+\begin{frame}
+    % Une diapo par méthode si besoin : régresseur, instruments, préfiltres.
+    \begin{figure}
+        \centering
+        \resizebox{!}{.9\textheight}{\input{images/schema_iv.tex}}
+        \caption{Schéma de méthode des variables instrumentales (CLIVSVFFR)}
+    \end{figure}
 \end{frame}
 
-\begin{frame}[sanssoustitre]{Annexe -- Résultats avec filtre stabilisateur}
+\subsection{CLSRIVFR : variables instrumentales raffinées simplifiées avec préfiltre}
+\begin{frame}
+    % Une diapo par méthode si besoin : régresseur, instruments, préfiltres.
+    \begin{figure}
+        \centering
+        \resizebox{!}{.9\textheight}{\input{images/schema_sriv.tex}}
+        \caption{Schéma de méthode des variables instrumentales raffinées simplifiées (CLSRIVFR)}
+    \end{figure}
+\end{frame}
+
+\subsection{CLRIVFR : variables instrumentales raffinées avec préfiltre}
+\begin{frame}
+    % Une diapo par méthode si besoin : régresseur, instruments, préfiltres.
+    \begin{figure}
+        \centering
+        \resizebox{!}{.9\textheight}{\input{images/schema_riv.tex}}
+        \caption{Schéma de méthode des variables instrumentales raffinées (CLRIVFR)}
+    \end{figure}
+\end{frame}
+
+\section{Monte-Carlo : tableaux complets}
+
+\subsection{Bruit blanc}
+\begin{frame}
+    \begin{table}[!htbp]
+        \caption{Simulation de Monte Carlo (\num{500} essais) : coefficients estimés du modèle avec un bruit blanc additif sur la sortie ($\hat{\theta}$: moyenne ; $\sigma_\theta$: écart-type)}
+        \begin{center}
+            \tiny
+            \begin{tabular}{cccccccccc}
+                \cline{3-10}
+                                                             &          & $b_{0}$                             &                                        & $b_{1}$                             &                                        & $a_{1}$          &                                        & $a_{2}$                             &                                        \\\hline\hline
+                Réel                                         &          & \num{9.97e-2}                       &                                        & \num{-9e-2}                         &                                        & \num{-1.8838}    &                                        & \num{9.048e-1}                      &                                        \\\hline
+                Méthode                                      & SNR      & $\hat{b}_{0}${\tiny$\times10^{-2}$} & $\sigma_{b_{0}}${\tiny$\times10^{-4}$} & $\hat{b}_{1}${\tiny$\times10^{-2}$} & $\sigma_{b_{1}}${\tiny$\times10^{-4}$} & $\hat{a}_{1}$    & $\sigma_{a_{1}}${\tiny$\times10^{-4}$} & $\hat{a}_{2}${\tiny$\times10^{-1}$} & $\sigma_{a_{2}}${\tiny$\times10^{-4}$} \\\hline
+                \multirow{3}{*}{CLLSSVF}                     & \num{10} & \num{9.40045}                       & \num{6.945}                            & \num{-9.34945}                      & \num{6.950}                            & \num{-1.8424525} & \num{47.067}                           & \num{8.873033}                      & \num{47.023}                           \\
+                                                             & \num{15} & \num{9.76030}                       & \num{4.423}                            & \num{-9.74585}                      & \num{4.412}                            & \num{-1.8432176} & \num{29.093}                           & \num{8.736220}                      & \num{28.473}                           \\
+                                                             & \num{20} & \num{9.88906}                       & \num{2.536}                            & \num{-9.88614}                      & \num{2.530}                            & \num{-1.8431192} & \num{15.613}                           & \num{8.685910}                      & \num{15.704}                           \\
+                \hline
+                \multirow{3}{*}{CLLSSVFFR}                   & \num{10} & \num{9.43585}                       & \num{5.797}                            & \num{-5.70585}                      & \num{10.153}                           & \num{-1.6193985} & \num{77.480}                           & \num{6.673526}                      & \num{69.093}                           \\
+                                                             & \num{15} & \num{9.76644}                       & \num{3.687}                            & \num{-7.08725}                      & \num{7.107}                            & \num{-1.7183872} & \num{56.623}                           & \num{7.526873}                      & \num{50.068}                           \\
+                                                             & \num{20} & \num{9.89737}                       & \num{2.204}                            & \num{-8.14293}                      & \num{4.415}                            & \num{-1.8075620} & \num{33.570}                           & \num{8.341143}                      & \num{29.502}                           \\
+                \hline
+                \multirow{3}{*}{CLIVSVF}                     & \num{10} & \num{9.95677}                       & \num{7.700}                            & \num{-9.95904}                      & \num{7.682}                            & \num{-1.8434494} & \num{51.657}                           & \num{8.665892}                      & \num{52.614}                           \\
+                                                             & \num{15} & \num{9.95329}                       & \num{4.567}                            & \num{-9.95559}                      & \num{4.554}                            & \num{-1.8432164} & \num{30.090}                           & \num{8.663524}                      & \num{29.753}                           \\
+                                                             & \num{20} & \num{9.95227}                       & \num{2.564}                            & \num{-9.95455}                      & \num{2.558}                            & \num{-1.8430540} & \num{15.834}                           & \num{8.661976}                      & \num{16.060}                           \\
+                \hline
+                \multirow{3}{*}{CLIVSVFFR}                   & \num{10} & \num{9.97323}                       & \num{6.874}                            & \num{-8.99100}                      & \num{14.678}                           & \num{-1.8830025} & \num{100.856}                          & \num{9.040533}                      & \num{85.620}                           \\
+                                                             & \num{15} & \num{9.97030}                       & \num{4.081}                            & \num{-8.99542}                      & \num{7.896}                            & \num{-1.8834564} & \num{55.348}                           & \num{9.044830}                      & \num{47.112}                           \\
+                                                             & \num{20} & \num{9.96970}                       & \num{2.295}                            & \num{-8.99907}                      & \num{4.550}                            & \num{-1.8837248} & \num{31.050}                           & \num{9.047373}                      & \num{26.279}                           \\
+                \hline
+                \multirow{3}{*}{CLSRIV}                      & \num{10} & \num{9.90581}                       & \num{5.245}                            & \num{-9.90756}                      & \num{5.244}                            & \num{-1.8588991} & \num{19.073}                           & \num{8.839160}                      & \num{18.713}                           \\
+                                                             & \num{15} & \num{9.90299}                       & \num{3.086}                            & \num{-9.90474}                      & \num{3.085}                            & \num{-1.8588671} & \num{10.777}                           & \num{8.838664}                      & \num{10.596}                           \\
+                                                             & \num{20} & \num{9.90337}                       & \num{1.750}                            & \num{-9.90513}                      & \num{1.750}                            & \num{-1.8588247} & \num{5.916}                            & \num{8.838319}                      & \num{5.827}                            \\
+                \hline
+                \rowcolor{gray!50}                           & \num{10} & \num{9.97251}                       & \num{4.727}                            & \num{-9.00071}                      & \num{5.680}                            & \num{-1.8838147} & \num{24.991}                           & \num{9.048411}                      & \num{22.595}                           \\
+                \rowcolor{gray!50}                           & \num{15} & \num{9.96982}                       & \num{2.825}                            & \num{-8.99955}                      & \num{3.268}                            & \num{-1.8837880} & \num{13.275}                           & \num{9.047905}                      & \num{12.094}                           \\
+                \rowcolor{gray!50}\multirow{-3}{*}{CLSRIVFR} & \num{20} & \num{9.97059}                       & \num{1.636}                            & \num{-9.00044}                      & \num{1.986}                            & \num{-1.8838048} & \num{7.440}                            & \num{9.048120}                      & \num{6.783}                            \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+    \begin{table}[!htbp]
+        \caption{Performance des fonctions d'identification en termes de nombre d'itérations dans le cas d'un bruit blanc de mesure avec un $\mathrm{SNR} = \SI{10}{\decibel}$}
+        \centering
+        \begin{tabularx}{.95\textwidth}{cYYYY}
+            \hline
+            \textbf{Méthode} & \textbf{Minimum d'itérations} & \textbf{Maximum d'itérations} & \textbf{Moyenne} & \textbf{Écart-type} \\
+            \hline
+            CLIVSVF          & \num{4}                       & \num{23}                      & \num{7.076}      & \num{2.088}         \\ \hline
+            CLIVSVFFR        & \num{4}                       & \num{8}                       & \num{5.376}      & \num{8.410e-1}      \\ \hline
+            CLSRIV           & \num{4}                       & \num{6}                       & \num{4.998}      & \num{1.000e-1}      \\ \hline
+            CLSRIVFR         & \num{3}                       & \num{5}                       & \num{3.956}      & \num{4.180e-1}      \\ \hline
+        \end{tabularx}
+    \end{table}
+\end{frame}
+
+\subsection{Bruit coloré}
+\begin{frame}
+    \begin{table}[!htbp]
+        \caption{Simulation de Monte Carlo (500 essais) : coefficients estimés du modèle avec un bruit coloré sur la mesure ($\hat{\theta}$: moyenne; $\sigma_\theta$: écart-type)}
+        \begin{center}
+            \scriptsize
+            \begin{tabular}{cccccccccc}
+                \cline{3-10}
+                                                            &          & $b_{0}$                             &                                        & $b_{1}$                             &                                        & $a_{1}$                            &                                        & $a_{2}$                             &                                        \\\hline\hline
+                Réel                                        &          & \num{9.97e-2}                       &                                        & \num{-9e-2}                         &                                        & \num{-1.8838}                      &                                        & \num{9.048e-1}                      &                                        \\\hline
+                Méthode                                     & SNR      & $\hat{b}_{0}${\tiny$\times10^{-2}$} & $\sigma_{b_{0}}${\tiny$\times10^{-4}$} & $\hat{b}_{1}${\tiny$\times10^{-2}$} & $\sigma_{b_{1}}${\tiny$\times10^{-4}$} & $\hat{a}_{1}${\tiny$\times10^{0}$} & $\sigma_{a_{1}}${\tiny$\times10^{-3}$} & $\hat{a}_{2}${\tiny$\times10^{-1}$} & $\sigma_{a_{2}}${\tiny$\times10^{-3}$} \\\hline
+                \multirow{3}{*}{CLLSSVF}                    & \num{10} & \num{9.5506}                        & \num{5.443}                            & \num{-9.5268}                       & \num{5.477}                            & \num{-1.845601}                    & \num{4.374}                            & \num{8.81820}                       & \num{4.159}                            \\
+                                                            & \num{15} & \num{9.8182}                        & \num{2.968}                            & \num{-9.8122}                       & \num{2.968}                            & \num{-1.843972}                    & \num{2.563}                            & \num{8.71393}                       & \num{2.445}                            \\
+                                                            & \num{20} & \num{9.9090}                        & \num{1.737}                            & \num{-9.9088}                       & \num{1.733}                            & \num{-1.843335}                    & \num{1.380}                            & \num{8.67848}                       & \num{1.352}                            \\
+                \hline
+                \multirow{3}{*}{CLLSSVFFR}                  & \num{10} & \num{9.6492}                        & \num{4.779}                            & \num{-7.7467}                       & \num{9.149}                            & \num{-1.796522}                    & \num{7.524}                            & \num{8.29979}                       & \num{6.662}                            \\
+                                                            & \num{15} & \num{9.8536}                        & \num{2.601}                            & \num{-8.2900}                       & \num{6.267}                            & \num{-1.826999}                    & \num{5.479}                            & \num{8.53680}                       & \num{4.863}                            \\
+                                                            & \num{20} & \num{9.9297}                        & \num{1.513}                            & \num{-8.6845}                       & \num{3.970}                            & \num{-1.857249}                    & \num{3.590}                            & \num{8.80551}                       & \num{3.183}                            \\
+                \hline
+                \multirow{3}{*}{CLIVSVF}                    & \num{10} & \num{9.9513}                        & \num{5.423}                            & \num{-9.9537}                       & \num{5.421}                            & \num{-1.843325}                    & \num{4.665}                            & \num{8.66490}                       & \num{4.449}                            \\
+                                                            & \num{15} & \num{9.9516}                        & \num{2.946}                            & \num{-9.9539}                       & \num{2.939}                            & \num{-1.843131}                    & \num{2.618}                            & \num{8.66271}                       & \num{2.495}                            \\
+                                                            & \num{20} & \num{9.9520}                        & \num{1.729}                            & \num{-9.9544}                       & \num{1.724}                            & \num{-1.843039}                    & \num{1.391}                            & \num{8.66200}                       & \num{1.364}                            \\
+                \hline
+                \multirow{3}{*}{CLIVSVFFR}                  & \num{10} & \num{9.9689}                        & \num{4.856}                            & \num{-8.9923}                       & \num{12.649}                           & \num{-1.883404}                    & \num{11.217}                           & \num{9.04449}                       & \num{9.838}                            \\
+                                                            & \num{15} & \num{9.9690}                        & \num{2.610}                            & \num{-8.9958}                       & \num{7.085}                            & \num{-1.883532}                    & \num{6.350}                            & \num{9.04558}                       & \num{5.539}                            \\
+                                                            & \num{20} & \num{9.9697}                        & \num{1.517}                            & \num{-9.0002}                       & \num{3.816}                            & \num{-1.883824}                    & \num{3.450}                            & \num{9.04842}                       & \num{3.010}                            \\
+                \hline
+                \multirow{3}{*}{CLSRIV}                     & \num{10} & \num{9.9016}                        & \num{5.471}                            & \num{-9.9033}                       & \num{5.470}                            & \num{-1.859082}                    & \num{3.606}                            & \num{8.84110}                       & \num{3.528}                            \\
+                                                            & \num{15} & \num{9.9021}                        & \num{3.200}                            & \num{-9.9039}                       & \num{3.201}                            & \num{-1.858866}                    & \num{1.992}                            & \num{8.83863}                       & \num{1.960}                            \\
+                                                            & \num{20} & \num{9.9039}                        & \num{1.736}                            & \num{-9.9056}                       & \num{1.736}                            & \num{-1.858880}                    & \num{1.079}                            & \num{8.83894}                       & \num{1.066}                            \\
+                \hline
+                \multirow{3}{*}{CLSRIVFR}                   & \num{10} & \num{9.9688}                        & \num{5.483}                            & \num{-8.9966}                       & \num{9.372}                            & \num{-1.883932}                    & \num{6.444}                            & \num{9.04961}                       & \num{5.817}                            \\
+                                                            & \num{15} & \num{9.9687}                        & \num{3.275}                            & \num{-8.9982}                       & \num{5.188}                            & \num{-1.883739}                    & \num{3.483}                            & \num{9.04747}                       & \num{3.166}                            \\
+                                                            & \num{20} & \num{9.9709}                        & \num{1.805}                            & \num{-9.0007}                       & \num{2.919}                            & \num{-1.883875}                    & \num{1.972}                            & \num{9.04886}                       & \num{1.795}                            \\
+                \hline
+                \multirow{3}{*}{CLRIV}                      & \num{10} & \num{9.9991}                        & \num{3.315}                            & \num{-10.0013}                      & \num{3.313}                            & \num{-1.851299}                    & \num{3.051}                            & \num{8.76091}                       & \num{2.992}                            \\
+                                                            & \num{15} & \num{9.9967}                        & \num{1.985}                            & \num{-9.9990}                       & \num{1.984}                            & \num{-1.850401}                    & \num{1.780}                            & \num{8.75119}                       & \num{1.765}                            \\
+                                                            & \num{20} & \num{9.9914}                        & \num{1.089}                            & \num{-9.9939}                       & \num{1.087}                            & \num{-1.848571}                    & \num{1.026}                            & \num{8.73137}                       & \num{1.053}                            \\
+                \hline
+                \rowcolor{gray!50}                          & \num{10} & \num{9.9712}                        & \num{3.133}                            & \num{-8.9982}                       & \num{7.327}                            & \num{-1.883857}                    & \num{6.297}                            & \num{9.04889}                       & \num{5.745}                            \\
+                \rowcolor{gray!50}                          & \num{15} & \num{9.9698}                        & \num{1.892}                            & \num{-8.9991}                       & \num{4.093}                            & \num{-1.883741}                    & \num{3.465}                            & \num{9.04748}                       & \num{3.167}                            \\
+                \rowcolor{gray!50}\multirow{-3}{*}{CLRIVFR} & \num{20} & \num{9.9705}                        & \num{1.048}                            & \num{-9.0011}                       & \num{2.275}                            & \num{-1.883891}                    & \num{1.972}                            & \num{9.04896}                       & \num{1.804}                            \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+    \begin{table}[!htbp]
+        \caption{Performance des fonctions d'identification en termes de nombre d'itérations dans le cas d'un bruit coloré de mesure avec un $\mathrm{SNR} = \SI{10}{\decibel}$}
+        \centering
+        \begin{tabularx}{.95\textwidth}{cYYYY}
+            \hline
+            \textbf{Méthode} & \textbf{Minimum d'itérations} & \textbf{Maximum d'itérations} & \textbf{Moyenne} & \textbf{Écart-type} \\
+            \hline
+            CLIVSVF          & \num{4}                       & \num{18}                      & \num{6.548}      & \num{1.71}          \\ \hline
+            CLIVSVFFR        & \num{4}                       & \num{7}                       & \num{4.936}      & \num{7.25e-1}       \\ \hline
+            CLSRIV           & \num{4}                       & \num{6}                       & \num{5.02}       & \num{2.44e-1}       \\ \hline
+            CLSRIVFR         & \num{3}                       & \num{7}                       & \num{4.456}      & \num{6.52e-1}       \\ \hline
+            CLRIV            & \num{3}                       & \num{5}                       & \num{4.364}      & \num{4.9e-1}        \\ \hline
+            CLRIVFR          & \num{3}                       & \num{7}                       & \num{4.044}      & \num{7.29e-1}       \\ \hline
+        \end{tabularx}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+    \begin{table}[!htbp]
+        \caption{Coefficients des modèles de bruit estimés ($\hat{\eta}_n$: moyenne; $\sigma_\eta$: écart-type)}
+        \begin{center}
+            \begin{tabular}{cccccc}
+                \cline{3-6}
+                                         &          & $c_{1}$                             &                                        & $d_{1}$                             &                                        \\\hline\hline
+                Réel                     &          & \num{1.111e-1}                      &                                        & \num{-7.778e-1}                     &                                        \\\hline
+                Méthode                  & SNR      & $\hat{b}_{0}${\tiny$\times10^{-1}$} & $\sigma_{b_{0}}${\tiny$\times10^{-2}$} & $\hat{a}_{1}${\tiny$\times10^{-1}$} & $\sigma_{a_{1}}${\tiny$\times10^{-2}$} \\\hline
+                \multirow{3}{*}{CLRIV}   & \num{10} & \num{2.8565}                        & \num{1.707}                            & \num{-6.4245}                       & \num{1.405}                            \\
+                                         & \num{15} & \num{2.7825}                        & \num{1.706}                            & \num{-6.6900}                       & \num{1.305}                            \\
+                                         & \num{20} & \num{2.5888}                        & \num{1.740}                            & \num{-7.3840}                       & \num{1.322}                            \\
+                \hline
+                \multirow{3}{*}{CLRIVFR} & \num{10} & \num{1.1082}                        & \num{1.901}                            & \num{-7.7733}                       & \num{1.315}                            \\
+                                         & \num{15} & \num{1.1113}                        & \num{1.924}                            & \num{-7.7667}                       & \num{1.175}                            \\
+                                         & \num{20} & \num{1.1213}                        & \num{1.864}                            & \num{-7.7662}                       & \num{1.198}                            \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{table}
+\end{frame}
+
+\section{Résultats avec filtre stabilisateur}
+\begin{frame}
     % Fits avec filtre stabilisateur : 48,78 / 51,43 / 51,44 / 65,83 %.
-    \figafaire{Fig. 4.6, 4.7, pôles et zéros (fig. 4.9)}
+    \begin{columns}
+        \column{.5\textwidth}
+        \begin{figure}
+            \centering
+            {\fontsize{4.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{bode_estim_prime.pdf_tex}}
+            \caption{Réponse fréquentielle du modèle estimé de la broche avec le filtre stabilisateur}
+        \end{figure}
+
+        \column{.5\textwidth}
+        \begin{figure}
+            \centering
+            {\fontsize{4.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_prime.pdf_tex}}
+            \caption{Signaux simulés en boucle fermée du modèle estimé de la broche avec le filtre stabilisateur}
+        \end{figure}
+    \end{columns}
 \end{frame}
 
-\begin{frame}[sanssoustitre]{Annexe -- Coefficients identifiés par point de fonctionnement}
-    \figafaire{Tab. 4.1 et 4.2}
+\section{Coefficients identifiés par point de fonctionnement}
+\begin{frame}
+    \begin{table}[!htbp]
+        \centering
+        \caption{Coefficients identifiés des fonctions de transfert du moteur de broche selon la méthode et la vitesse de rotation de la forme $\hat{G}(z)=\frac{\hat{b}_0+\hat{b}_1 z^{-1}+\hat{b}_2 z^{-2}}{1+\hat{a}_1 z^{-1}+\hat{a}_2 z^{-2}+\hat{a}_3 z^{-3}}$}
+        \tiny
+        \begin{tabular}{c|ccc|ccc}
+            \hline
+            Vitesse                     & $\hat{b}_0$    & $\hat{b}_1$    & $\hat{b}_2$    & $\hat{a}_1$   & $\hat{a}_2$   & $\hat{a}_3$   \\
+            \hline
+            \multicolumn{7}{c}{\textbf{CLLSSVFFR}}                                                                                         \\
+            \hline
+            \SI{1000}{\tour\per\minute} & \num{-0.36243} & \num{0.71091}  & \num{-0.34746} & \num{-2.1795} & \num{1.3980}  & \num{-0.2184} \\
+            \SI{2000}{\tour\per\minute} & \num{-0.66173} & \num{1.30696}  & \num{-0.64269} & \num{-2.0789} & \num{1.2545}  & \num{-0.1756} \\
+            \SI{3000}{\tour\per\minute} & \num{-2.19088} & \num{4.47341}  & \num{-2.26309} & \num{-1.4695} & \num{0.6689}  & \num{-0.1994} \\
+            \SI{3900}{\tour\per\minute} & \num{-1.45493} & \num{2.95807}  & \num{-1.49118} & \num{-1.8299} & \num{1.1265}  & \num{-0.2966} \\
+            \SI{4100}{\tour\per\minute} & \num{-1.24085} & \num{2.65145}  & \num{-1.39069} & \num{-1.6799} & \num{1.1243}  & \num{-0.4444} \\
+            \SI{5000}{\tour\per\minute} & \num{-1.35613} & \num{2.87728}  & \num{-1.50094} & \num{-1.6482} & \num{1.0717}  & \num{-0.4235} \\
+            \hline
+            \multicolumn{7}{c}{\textbf{CLIVSVFFR}}                                                                                         \\
+            \hline
+            \SI{1000}{\tour\per\minute} & \num{-0.02185} & \num{0.04832}  & \num{-0.02599} & \num{-2.8306} & \num{2.6794}  & \num{-0.8488} \\
+            \SI{2000}{\tour\per\minute} & \num{0.00744}  & \num{-0.01296} & \num{0.00563}  & \num{-2.9284} & \num{2.8606}  & \num{-0.9323} \\
+            \SI{3000}{\tour\per\minute} & \num{0.01963}  & \num{-0.03747} & \num{0.01787}  & \num{-2.9274} & \num{2.8557}  & \num{-0.9283} \\
+            \SI{3900}{\tour\per\minute} & \num{0.01765}  & \num{-0.03390} & \num{0.01626}  & \num{-2.9431} & \num{2.8864}  & \num{-0.9433} \\
+            \SI{4100}{\tour\per\minute} & \num{0.01267}  & \num{-0.02264} & \num{0.01010}  & \num{-2.8980} & \num{2.8011}  & \num{-0.9030} \\
+            \SI{5000}{\tour\per\minute} & \num{0.01751}  & \num{-0.03277} & \num{0.01533}  & \num{-2.9152} & \num{2.8331}  & \num{-0.9179} \\
+            \hline
+            \multicolumn{7}{c}{\textbf{CLSRIVFR}}                                                                                          \\
+            \hline
+            \SI{1000}{\tour\per\minute} & \num{-0.01711} & \num{0.03895}  & \num{-0.02138} & \num{-2.8254} & \num{2.6683}  & \num{-0.8428} \\
+            \SI{2000}{\tour\per\minute} & \num{0.00583}  & \num{-0.00972} & \num{0.00401}  & \num{-2.9273} & \num{2.8589}  & \num{-0.9316} \\
+            \SI{3000}{\tour\per\minute} & \num{0.01915}  & \num{-0.00150} & \num{-0.01498} & \num{-0.9524} & \num{-0.9963} & \num{0.9487}  \\
+            \SI{3900}{\tour\per\minute} & \num{0.01821}  & \num{-0.03496} & \num{0.01675}  & \num{-2.9383} & \num{2.8769}  & \num{-0.9386} \\
+            \SI{4100}{\tour\per\minute} & \num{-0.03572} & \num{0.07983}  & \num{-0.04327} & \num{-2.6767} & \num{2.3855}  & \num{-0.7087} \\
+            \SI{5000}{\tour\per\minute} & \num{0.01643}  & \num{-0.03055} & \num{0.01420}  & \num{-2.9124} & \num{2.8280}  & \num{-0.9155} \\
+            \hline
+            \multicolumn{7}{c}{\textbf{CLRIVFR}}                                                                                           \\
+            \hline
+            \SI{1000}{\tour\per\minute} & \num{-0.00320} & \num{0.00999}  & \num{-0.00650} & \num{-2.8677} & \num{2.7465}  & \num{-0.8788} \\
+            \SI{2000}{\tour\per\minute} & \num{0.00568}  & \num{-0.00942} & \num{0.00386}  & \num{-2.9272} & \num{2.8587}  & \num{-0.9315} \\
+            \SI{3000}{\tour\per\minute} & \num{0.01924}  & \num{-0.00170} & \num{-0.01488} & \num{-0.9525} & \num{-0.9962} & \num{0.9486}  \\
+            \SI{3900}{\tour\per\minute} & \num{0.01707}  & \num{-0.03278} & \num{0.01571}  & \num{-2.9431} & \num{2.8863}  & \num{-0.9433} \\
+            \SI{4100}{\tour\per\minute} & \num{-0.03614} & \num{0.08069}  & \num{-0.04371} & \num{-2.6762} & \num{2.3845}  & \num{-0.7084} \\
+            \SI{5000}{\tour\per\minute} & \num{-0.02511} & \num{0.05924}  & \num{-0.03330} & \num{-2.6481} & \num{2.3278}  & \num{-0.6796} \\
+            \hline
+        \end{tabular}
+    \end{table}
 \end{frame}
 
-\begin{frame}[sanssoustitre]{Annexe -- RPEM : simulation complète et réglage}
-    % Sensibilité à gamma0 et R0 ; fig. 4.21, 4.22.
-    \figafaire{Fig. 4.21, 4.22 ; choix de $\gamma_0$ et $R_0$}
+\begin{frame}
+    \begin{table}[!htbp]
+        \centering
+        \caption{Coefficients identifiés des fonctions de transfert du modèle de bruit de la forme $\hat{H}(z)=\frac{\hat{c}_0+\hat{c}_1 z^{-1}+\hat{c}_2 z^{-2}+\hat{c}_3 z^{-3}}{1+\hat{d}_1 z^{-1}+\hat{d}_2 z^{-2}+\hat{d}_3 z^{-3}}$}
+        \label{tb:identification:coef_bruit_vitesses}
+        \begin{tabular}{c|ccc|ccc}
+            \hline
+            Vitesse                     & $\hat{c}_1$   & $\hat{c}_2$   & $\hat{c}_3$   & $\hat{d}_1$   & $\hat{d}_2$   & $\hat{d}_3$   \\
+            \hline
+            \SI{1000}{\tour\per\minute} & \num{-1.8318} & \num{0.6725}  & \num{0.1227}  & \num{-1.0796} & \num{-0.3983} & \num{0.4779}  \\
+            \SI{2000}{\tour\per\minute} & \num{-1.6166} & \num{1.3732}  & \num{-0.7089} & \num{-1.3802} & \num{1.2527}  & \num{-0.8724} \\
+            \SI{3000}{\tour\per\minute} & \num{-0.5948} & \num{-0.0047} & \num{-0.3084} & \num{-0.0940} & \num{-0.1350} & \num{-0.7710} \\
+            \SI{3900}{\tour\per\minute} & \num{-2.5116} & \num{2.0117}  & \num{-0.5343} & \num{-1.6673} & \num{0.3782}  & \num{0.2890}  \\
+            \SI{4100}{\tour\per\minute} & \num{-1.1619} & \num{-0.1098} & \num{0.2735}  & \num{-0.3839} & \num{-0.7592} & \num{0.1431}  \\
+            \SI{5000}{\tour\per\minute} & \num{-2.6037} & \num{2.2898}  & \num{-0.7127} & \num{-1.6532} & \num{0.5323}  & \num{0.1209}  \\
+            \hline
+        \end{tabular}
+        \\[0.4em]
+        \footnotesize Note : pour toutes les vitesses, $\hat{c}_0 = \num{1.0393}$ au numérateur.
+    \end{table}
 \end{frame}
 
-\begin{frame}[sanssoustitre]{Annexe -- Analyse vibratoire}
-    \figafaire{Spectrogramme, raie vers 6300\,Hz (fig. 2.21)}
+\section{RPEM : simulation complète et réglage}
+\begin{frame}
+    \begin{columns}[c]
+        \column{0.6\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{3.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{rpem_simu_fz.pdf_tex}}
+            \caption{Résultats de la méthode RPEM avec $V_c=\SI{250}{\meter\per\minute}$}
+        \end{figure}
+        \column{0.35\linewidth}
+        \begin{itemize}
+            \item $f_z$ : 0,21 $\rightarrow$ \alert{0,17\,m/min}, stable
+        \end{itemize}
+        \begin{equation*}
+            \left\{
+            \begin{array}{l}
+                a_{w,\text{init}} = \num{8e6}  \\
+                b_{w,\text{init}} = \num{-3e6} \\
+                c_{w,\text{init}} = \num{3e5}
+            \end{array}
+            \right.
+        \end{equation*}
+        au lieu de
+        \begin{equation*}
+            \left\{
+            \begin{array}{l}
+                a_{w} = \num{7.0439e6}  \\
+                b_{w} = \num{-2.3948e6} \\
+                c_{w} = \num{2.1923e5}.
+            \end{array}
+            \right.
+        \end{equation*}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \begin{columns}[c]
+        \column{0.6\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{3.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{rpem_simu_fz_Vc.pdf_tex}}
+            \caption{Résultats de la méthode RPEM}
+        \end{figure}
+        \column{0.35\linewidth}
+        \begin{equation*}
+            \left\{
+            \begin{array}{l}
+                a_{w,\text{init}} = \num{6e7}  \\
+                b_{w,\text{init}} = \num{-2e8} \\
+                c_{w,\text{init}} = \num{-3e5} \\
+                d_{w,\text{init}} = \num{7e8}  \\
+                e_{w,\text{init}} = \num{-500} \\
+                f_{w,\text{init}} = \num{700}
+            \end{array}
+            \right.
+        \end{equation*}
+        au lieu de
+        \begin{equation*}
+            \left\{
+            \begin{array}{l}
+                a_{w} = \num{6.461e7}  \\
+                b_{w} = \num{-2.37e8}  \\
+                c_{w} = \num{-3.444e5} \\
+                d_{w} = \num{7.017e8}  \\
+                e_{w} = \num{-552.6}   \\
+                f_{w} = \num{688.8}.
+            \end{array}
+            \right.
+        \end{equation*}
+    \end{columns}
+\end{frame}
+
+\section{Analyse vibratoire}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \def\svgwidth{\textwidth}
+        \import{images/}{spectro_vibration.pdf_tex}
+        \caption{Résultats de la méthode RPEM}
+    \end{figure}
 \end{frame}
 
 \end{document}
