@@ -56,11 +56,12 @@
 \end{frame}
 
 % =============================================================================
-\section{Introduction}
+\section*{Introduction}
+\addtocounter{section}{-1}% section non numérotée : ne pas décaler la numérotation
 % BUDGET : ~5 min (4 diapos)
 % =============================================================================
 
-\subsection{Contexte industriel et enjeux}
+\subsection*{Contexte industriel et enjeux}
 
 \begin{frame}
     \assertion{Chez VLM Robotics, chaque pièce est unique : impossible de régler les conditions de coupe par essais successifs}
@@ -107,12 +108,12 @@
             \item Thermique dominant $\Rightarrow$ contraintes résiduelles de \alert{traction} en surface
             \item Mécanique dominant $\Rightarrow$ contraintes de \alert{compression}, favorables à la fatigue
         \end{itemize}
-        \aretenir{\textbf{Double enjeu :} métallurgique et énergétique}
+        \aretenir{\textbf{Double enjeu :} intégrité de surface (tenue en fatigue) et sobriété énergétique}
     \end{columns}
     % SOURCE : Introduction, § Contexte.
 \end{frame}
 
-\subsection{Problématique et contributions}
+\subsection*{Problématique et contributions}
 
 \begin{frame}
     \assertion{Pour réguler l'énergie, il faut la mesurer, la modéliser, puis agir sur une broche déjà asservie en vitesse}
@@ -134,10 +135,10 @@
 
     \vspace{2mm}
     \setlength{\hauteurcarte}{44mm}
-    \carte{0.24\linewidth}{01 \textperiodcentered{} SECTION 2}{Instrumentation}{Étalonnage de la platine Kistler par cobot, dépendant du point d'application}\hfill
-    \carte{0.24\linewidth}{02 \textperiodcentered{} SECTION 3}{Modélisation}{Puissance de coupe par torseurs, avec le terme de moment ($K_m$), confrontée à la puissance électrique}\hfill
-    \carte[jvbleu]{0.24\linewidth}{03 \textperiodcentered{} SECTION 4 \textperiodcentered{} CŒUR DE LA THÈSE}{Identification en boucle fermée}{4 algorithmes pour PI parallèle + préfiltre sur la seule voie intégrale}\hfill
-    \carte[jvbleu]{0.24\linewidth}{04 \textperiodcentered{} SECTION 5}{Optimisation en ligne}{RPEM sur un modèle empirique $W_c(V_c)$}
+    \carte{0.24\linewidth}{01 \textperiodcentered{} SECTION 1}{Instrumentation}{Étalonnage de la platine Kistler par cobot, dépendant du point d'application}\hfill
+    \carte{0.24\linewidth}{02 \textperiodcentered{} SECTION 2}{Modélisation}{Puissance de coupe par torseurs, avec le terme de moment ($K_m$), confrontée à la puissance électrique}\hfill
+    \carte[jvbleu]{0.24\linewidth}{03 \textperiodcentered{} SECTION 3}{Identification en boucle fermée}{4 algorithmes pour PI parallèle + préfiltre sur la seule voie intégrale}\hfill
+    \carte[jvbleu]{0.24\linewidth}{04 \textperiodcentered{} SECTION 4}{Optimisation en ligne}{RPEM sur un modèle empirique $W_c(V_c)$}
     % ORAL : annoncer que la contribution 3 est le cœur théorique.
 \end{frame}
 
@@ -154,7 +155,7 @@
 \subsection{Machine-outil et chaîne d'acquisition}
 
 \begin{frame}
-    \assertion{Une machine industrielle instrumentée : efforts, puissance électrique et vibrations, synchronisés}
+    \assertion{Une machine industrielle instrumentée : efforts, cinématique et puissance électrique synchronisés}
 
     \begin{columns}[c]
         \column{0.45\linewidth}
@@ -362,7 +363,6 @@
         \begin{itemize}
             \item Ordonnées à l'origine : \alert{effet d'arête} (frottement en dépouille, labourage) et linéarisation locale autour de $A_{d,m}$
             \item $K_c$ à 9,5~\% de la valeur industrielle (2164~MPa)
-            \item Moment moins bien décrit ($R^2 = 0{,}894$)
         \end{itemize}
     \end{columns}
 \end{frame}
@@ -386,6 +386,50 @@
         \end{block}
     \end{columns}
     % SOURCE : fig. 2.12, 2.15. Garder fig. 2.13 (en fonction de Vc) pour la diapo « Limite ».
+\end{frame}
+
+\subsection{Limite}
+
+\begin{frame}
+    \assertion{Dans ce modèle, $W_c$ décroît strictement avec $f_z$ et ne dépend pas de $V_c$ : aucun minimum à optimiser}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{0.8\textwidth}
+                \import{images/}{sim_modele.pdf_tex}}
+            \caption{Évolution de l'énergie spécifique $W_c$ avec le modèle défini précédemment}
+        \end{figure}
+        \vspace{-2mm}
+        \begin{block}{Pour chercher la $V_c$ optimale}
+            \footnotesize
+            \begin{itemize}
+                \item $V_c$ est imposée par la \alert{broche}, asservie : il faut connaître sa dynamique (section 4)
+                \item $W_c(V_c)$ doit être \alert{identifiée en ligne} (section 5)
+            \end{itemize}
+        \end{block}
+
+        \column{0.45\linewidth}
+        \begin{itemize}
+            \item \textbf{Pourquoi $W_c$ ?}
+                  \begin{itemize}
+                      \item énergie nécessaire pour enlever 1~cm$^3$ de matière
+                      \item critère de référence du couple outil-matière (NF~E66-520-6)
+                      \item ramenée au débit : compare des conditions de coupe à productivité différente
+                      \item objectif : \alert{minimiser} $W_c(V_c, f_z)$
+                  \end{itemize}
+        \end{itemize}
+        \begin{equation*}
+            W_c = \frac{P_{\text{méca}}}{Q}, \qquad Q = a_e\, a_p\, V_f
+        \end{equation*}
+        \begin{itemize}
+            \item Modèle statique : $V_c$ n'intervient pas, alors que la norme COM observe une évolution de $W_c$ avec $V_c$
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 2.16 ; éq. (2.31)-(2.32).
+    % TRANSITION : double motivation des deux sections suivantes.
 \end{frame}
 
 \subsection{Comparaison à la puissance électrique}
@@ -450,50 +494,6 @@
             \end{itemize}
         \end{alertblock}
     \end{columns}
-\end{frame}
-
-\subsection{Limite}
-
-\begin{frame}
-    \assertion{Dans ce modèle, $W_c$ décroît strictement avec $f_z$ et ne dépend pas de $V_c$ : aucun minimum à optimiser}
-
-    \begin{columns}[c]
-        \column{0.5\linewidth}
-        \begin{figure}
-            \centering
-            {\fontsize{5pt}{5pt}\selectfont
-                \def\svgwidth{0.8\textwidth}
-                \import{images/}{sim_modele.pdf_tex}}
-            \caption{Évolution de l'énergie spécifique $W_c$ avec le modèle défini précédemment}
-        \end{figure}
-        \vspace{-2mm}
-        \begin{block}{Pour chercher la $V_c$ optimale}
-            \footnotesize
-            \begin{itemize}
-                \item $V_c$ est imposée par la \alert{broche}, asservie : il faut connaître sa dynamique (section 4)
-                \item $W_c(V_c)$ doit être \alert{identifiée en ligne} (section 5)
-            \end{itemize}
-        \end{block}
-
-        \column{0.45\linewidth}
-        \begin{itemize}
-            \item \textbf{Pourquoi $W_c$ ?}
-                  \begin{itemize}
-                      \item énergie nécessaire pour enlever 1~cm$^3$ de matière
-                      \item critère de référence du couple outil-matière (NF~E66-520-6)
-                      \item ramenée au débit : compare des conditions de coupe à productivité différente
-                      \item objectif : \alert{minimiser} $W_c(V_c, f_z)$
-                  \end{itemize}
-        \end{itemize}
-        \begin{equation*}
-            W_c = \frac{P_{\text{méca}}}{Q}, \qquad Q = a_e\, a_p\, V_f
-        \end{equation*}
-        \begin{itemize}
-            \item Modèle statique : $V_c$ n'intervient pas, alors que la norme COM observe une évolution de $W_c$ avec $V_c$
-        \end{itemize}
-    \end{columns}
-    % SOURCE : fig. 2.16 ; éq. (2.31)-(2.32).
-    % TRANSITION : double motivation des deux sections suivantes.
 \end{frame}
 
 % =============================================================================
@@ -699,6 +699,7 @@
     \begin{columns}[c]
         \column{0.6\linewidth}
         \begin{figure}
+            \vspace{-5mm}
             \centering
             {\fontsize{6pt}{5pt}\selectfont
                 \def\svgwidth{\textwidth}
@@ -901,7 +902,8 @@
 \end{frame}
 
 % =============================================================================
-\section{Conclusion et perspectives}
+\section*{Conclusion et perspectives}
+\addtocounter{section}{-1}% section non numérotée : ne pas décaler la numérotation
 % BUDGET : ~3 min (2-3 diapos)
 % =============================================================================
 

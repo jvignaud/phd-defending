@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{687.98268236bp}%
+    \setlength{\unitlength}{686.6692106bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,33 +50,33 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.64495661)%
+  \begin{picture}(1,0.83252654)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.18086589,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.27517038,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
-    \put(0.36947633,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3\end{tabular}}}}%
-    \put(0.46378083,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4\end{tabular}}}}%
-    \put(0.55808678,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\end{tabular}}}}%
-    \put(0.65239274,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6\end{tabular}}}}%
-    \put(0.74669724,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}7\end{tabular}}}}%
-    \put(0.84100319,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}8\end{tabular}}}}%
-    \put(0.93530764,0.03869005){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}9\end{tabular}}}}%
-    \put(0.02225191,0.05643985){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-150$\end{tabular}}}}%
-    \put(0.02225191,0.15137514){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-100$\end{tabular}}}}%
-    \put(0.03666472,0.24631047){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-50$\end{tabular}}}}%
-    \put(0.07324022,0.34124725){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
-    \put(0.05933528,0.43618258){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
-    \put(0.04456917,0.53111775){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
-    \put(0.04456917,0.62605337){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
-    \put(0.50728933,0.0055348){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Temps (s)\end{tabular}}}}%
-    \put(0.01863109,0.25525446){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sortie $y$ (tr/min)\end{tabular}}}}}%
+    \put(0.18293066,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.27741554,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.37190186,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3\end{tabular}}}}%
+    \put(0.46638674,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4\end{tabular}}}}%
+    \put(0.56087308,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5\end{tabular}}}}%
+    \put(0.65535942,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6\end{tabular}}}}%
+    \put(0.74984431,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}7\end{tabular}}}}%
+    \put(0.84433065,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}8\end{tabular}}}}%
+    \put(0.93881549,0.03876409){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}9\end{tabular}}}}%
+    \put(0.02401328,0.0565478){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-150$\end{tabular}}}}%
+    \put(0.02401328,0.15166472){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-100$\end{tabular}}}}%
+    \put(0.03845366,0.24678165){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-50$\end{tabular}}}}%
+    \put(0.07509913,0.3419){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.06116758,0.43701693){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}50\end{tabular}}}}%
+    \put(0.04637323,0.5321337){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}100\end{tabular}}}}%
+    \put(0.04637323,0.62725091){\color[rgb]{0.38039216,0.38039216,0.38039216}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}150\end{tabular}}}}%
+    \put(0.50997846,0.00554543){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Temps (s)\end{tabular}}}}%
+    \put(0.02038554,0.25574275){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sortie $y$ (tr/min)\end{tabular}}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{comp_est.pdf}}%
-    \put(0.69260788,0.59031414){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Données de validation\end{tabular}}}}%
-    \put(0.69278668,0.56808489){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLLSSVFFR : 93,05\%\end{tabular}}}}%
-    \put(0.69278668,0.54467841){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLIVSVFFR : 90,48\%\end{tabular}}}}%
-    \put(0.69278668,0.52067445){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLSRIVFR : 90,59\%\end{tabular}}}}%
-    \put(0.69278668,0.49812883){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLRIVFR : 97,57\%\end{tabular}}}}%
+    \put(0.69565149,0.59144333){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Données de validation\end{tabular}}}}%
+    \put(0.69583063,0.56917154){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLLSSVFFR : 93,05\%\end{tabular}}}}%
+    \put(0.69583063,0.54572029){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLIVSVFFR : 90,48\%\end{tabular}}}}%
+    \put(0.69583063,0.52167042){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLSRIVFR : 90,59\%\end{tabular}}}}%
+    \put(0.69583063,0.49908169){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CLRIVFR : 97,57\%\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{comp_est.pdf}}%
   \end{picture}%
 \endgroup%
