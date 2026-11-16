@@ -25,7 +25,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.2172439"
-     inkscape:cx="307.66225"
+     inkscape:cx="307.25149"
      inkscape:cy="351.20324"
      inkscape:window-width="2560"
      inkscape:window-height="1351"
@@ -908,7 +908,7 @@
      font-style="normal"
      id="text114"
      transform="matrix(0,-0.99386241,1.0061755,0,0,0)"
-     style="fill-rule:evenodd;stroke-width:0.594895;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-size:21.19998485px">Gain(dB)</text>
+     style="font-size:21.2px;fill-rule:evenodd;stroke-width:0.594895;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Gain (dB)</text>
   <polyline
      fill="none"
      vector-effect="none"

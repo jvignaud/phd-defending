@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.0000001"
-     inkscape:cx="732.49996"
-     inkscape:cy="230.24999"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="370.52393"
+     inkscape:cy="397.74754"
      inkscape:window-width="2560"
      inkscape:window-height="1351"
      inkscape:window-x="1911"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg533" />
+     inkscape:current-layer="g82" />
   <title
      id="title1">Qt SVG Document</title>
   <desc
@@ -712,7 +712,7 @@
        points="408,76.7038 640,76.7038 "
        id="polyline85"
        transform="matrix(0.60047141,0,0,0.59980742,-11.273169,-6.7286233)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21a721;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.41699382;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none" />
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98425"
@@ -933,7 +933,7 @@
        points="728,193.386 960,193.386 "
        id="polyline116-4"
        transform="matrix(0.60047141,0,0,0.59980742,-11.111138,-6.7292973)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';display:inline;fill-opacity:0.701961;fill-rule:evenodd;stroke:#63c163;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';display:inline;fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.41699382;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none" />
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98425"
@@ -1275,7 +1275,7 @@
        points="1048,64.9125 1280,64.9125 "
        id="polyline150-8"
        transform="matrix(0.60047141,0,0,0.59980742,-11.552435,-6.7285033)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#63c163;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.41699382;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none" />
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98425"
@@ -1644,7 +1644,7 @@
        points="408,76.7038 640,76.7038 "
        id="polyline76"
        transform="matrix(0.60047141,0,0,0.59980742,-203.58748,238.27499)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21a721;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.41699382;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.70196098;stroke-dasharray:none" />
   </g>
   <g
      id="g80"
@@ -1958,7 +1958,7 @@
        points="408,76.7038 640,76.7038 "
        id="polyline77"
        transform="matrix(0.60047141,0,0,0.59980742,-11.424592,229.79721)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21a721;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.41699382;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.70196098;stroke-dasharray:none" />
     <text
        xml:space="preserve"
        style="font-size:9.99998px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98425"
@@ -2244,7 +2244,7 @@
        points="408,76.7038 640,76.7038 "
        id="polyline78"
        transform="matrix(0.60047141,0,0,0.59980742,181.03971,227.77836)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21a721;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.41699382;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.70196098;stroke-dasharray:none" />
   </g>
   <g
      id="g83"

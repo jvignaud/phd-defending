@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.6625"
-     inkscape:cx="327.54717"
-     inkscape:cy="370.56604"
+     inkscape:zoom="1.873833"
+     inkscape:cx="924.57547"
+     inkscape:cy="413.32393"
      inkscape:window-width="2560"
      inkscape:window-height="1351"
      inkscape:window-x="1911"
@@ -4257,6 +4257,11 @@
      d="m 742.33434,261.95988 c 0,-0.56628 -0.45228,-1.02496 -1.01457,-1.02496 -0.5684,0 -1.02068,0.45868 -1.02068,1.02496 0,0.56567 0.45228,1.02435 1.02068,1.02435 0.56229,0 1.01457,-0.45868 1.01457,-1.02435"
      id="path671"
      style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill:none;stroke:#1171be;stroke-width:0.510848;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5;stroke-opacity:1" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#167b00;stroke-width:0.850395;stroke-opacity:1"
+     d="M 754.93086,327.87143 C 698.29513,436.89052 579.47532,195.43056 531.64494,27.450786"
+     id="path1"
+     sodipodi:nodetypes="cc" />
   <ellipse
      cx="746.38043"
      cy="285.71915"
@@ -4319,13 +4324,13 @@
   <path
      vector-effect="none"
      fill-rule="evenodd"
-     d="M 426.81234,81.575949 V 106.17019 H 744.29676 V 41.81178 H 426.81234"
+     d="m 139.26504,387.23647 v 24.59424 H 456.74946 V 318.60436 H 139.26504"
      id="path681"
      style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.13018e-05;stroke-linecap:square;stroke-linejoin:bevel"
      sodipodi:nodetypes="ccccc" />
   <g
      id="g24"
-     transform="translate(-67.517008,10.083433)">
+     transform="translate(-355.06431,285.79316)">
     <ellipse
        cx="512.68939"
        cy="50.867096"
@@ -4345,12 +4350,12 @@
      vector-effect="none"
      points="1033.01,101.896 1083.08,101.896 "
      id="polyline684"
-     transform="matrix(0.611185,0,0,0.614856,-201.48584,31.597119)"
+     transform="matrix(0.611185,0,0,0.614856,-489.03314,303.96067)"
      style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:1;fill-rule:evenodd;stroke:#dd5400;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
   <path
      vector-effect="none"
      fill-rule="evenodd"
-     d="M 426.81234,106.17019 V 41.81178 h 317.48442 v 64.35841 H 426.81234"
+     d="m 139.26504,411.83071 0,-93.22635 h 317.48442 l 0,93.22635 H 139.26504"
      id="path687"
      style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill:none;stroke:#212121;stroke-width:0.510848;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5;stroke-opacity:1"
      sodipodi:nodetypes="ccccc" />
@@ -4587,23 +4592,41 @@
   <text
      xml:space="preserve"
      style="font-size:30px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;fill-opacity:1;stroke:none;stroke-width:0.507401"
-     x="461.65204"
-     y="102.15714"
+     x="174.10474"
+     y="374.52069"
      id="text23"><tspan
        sodipodi:role="line"
        id="tspan23"
        style="font-size:30px;fill:#212121;fill-opacity:1;stroke-width:0.507402"
-       x="461.65204"
-       y="102.15714">médiane</tspan></text>
+       x="174.10474"
+       y="374.52069">médiane</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:30px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;fill-opacity:1;stroke:none;stroke-width:0.507401"
-     x="461.72858"
-     y="69.446663"
+     x="174.18127"
+     y="345.1564"
      id="text24"><tspan
        sodipodi:role="line"
        id="tspan24"
        style="font-size:30px;stroke-width:0.507402"
-       x="461.72858"
-       y="69.446663">relevé d'énergie</tspan></text>
+       x="174.18127"
+       y="345.1564">relevé d'énergie</tspan></text>
+  <polyline
+     fill="none"
+     vector-effect="none"
+     points="1033.01,101.896 1083.08,101.896 "
+     id="polyline1"
+     transform="matrix(0.611185,0,0,0.614856,-489.03314,333.81222)"
+     style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:1;fill-rule:evenodd;stroke:#167b00;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
+  <text
+     xml:space="preserve"
+     style="font-size:30px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;fill-opacity:1;stroke:none;stroke-width:0.507401"
+     x="174.10474"
+     y="404.37225"
+     id="text14"><tspan
+       sodipodi:role="line"
+       id="tspan11"
+       style="font-size:30px;fill:#212121;fill-opacity:1;stroke-width:0.507402"
+       x="174.10474"
+       y="404.37225">parabole</tspan></text>
 </svg>

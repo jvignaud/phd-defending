@@ -96,5 +96,6 @@
     \put(0,0){\includegraphics[width=\unitlength,page=11]{reg_lin.pdf}}%
     \put(0.50899004,0.1868031){\color[rgb]{0,0,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}=-7{,}34A_d-1{,}23$\end{tabular}}}}%
     \put(0.50899004,0.15052144){\color[rgb]{0,0,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$R^2=0{,}894$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{reg_lin.pdf}}%
   \end{picture}%
 \endgroup%

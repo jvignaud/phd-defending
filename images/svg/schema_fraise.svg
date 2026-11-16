@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.7545174"
-     inkscape:cx="294.97"
-     inkscape:cy="180.97544"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
+     inkscape:zoom="1.9477379"
+     inkscape:cx="354.0004"
+     inkscape:cy="369.9163"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="1911"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer17" />
+     inkscape:current-layer="layer4" />
   <defs
      id="defs1">
     <marker
@@ -307,16 +307,14 @@
      transform="translate(-20.360656,-66.217352)">
     <path
        id="rect41"
-       style="fill:#929292;fill-opacity:0.828125;stroke:none;stroke-width:0.499999;stroke-opacity:1.671642"
-       d="m 23.90357,107.62238 30.031338,-0.13584 c 0,0 -3.153805,6.3653 5.116325,9.34838 21.594757,7.78933 51.994507,5.28536 51.994507,5.28536 l -11.959646,15.79675 -73.82411,-0.11331 c 0,0 -5.489931,-4.23843 -4.84933,-8.28985 0.640601,-4.05142 6.728754,-9.36595 7.253981,-13.85928 0.402029,-3.43936 -3.763065,-8.03221 -3.763065,-8.03221 z"
+       style="fill:#929292;fill-opacity:0.828125;stroke:none;stroke-width:0.499999;stroke-opacity:1"
+       d="m 23.711461,110.52802 30.223447,-3.04148 c 0,0 -3.153805,6.3653 5.116325,9.34838 21.594757,7.78933 47.138177,5.2514 47.138177,5.2514 l -1.12349,7.93234 -79.803936,7.78506 c 0,0 -5.489931,-4.23843 -4.84933,-8.28985 0.640601,-4.05142 6.728754,-9.36595 7.253981,-13.85928 0.402029,-3.43936 -3.955174,-5.12657 -3.955174,-5.12657 z"
        sodipodi:nodetypes="ccsccczsc" />
-    <rect
-       style="fill:#b7b7b7;fill-opacity:1.63806;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1.671642"
+    <path
        id="rect43"
-       width="73.802803"
-       height="5.6163502"
-       x="25.261984"
-       y="137.8037" />
+       style="fill:#b7b7b7;stroke-width:0.499999"
+       d="m 25.261984,137.8037 79.803936,-7.78504 -0.0107,5.45469 -79.793276,7.9467 z"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="rect43-0"
        style="fill:#a7a7a7;fill-opacity:1.63806;stroke-width:0.499999;stroke-opacity:1.671642"
@@ -324,8 +322,8 @@
        sodipodi:nodetypes="cccscc" />
     <path
        id="rect42"
-       style="fill:#747474;fill-opacity:0.92812502;stroke-width:0.499999;stroke-opacity:1.671642"
-       d="m 99.086094,137.91703 11.959646,-15.79675 v 5.40635 l -11.980952,15.89344 z"
+       style="fill:#747474;fill-opacity:0.928125;stroke-width:0.499999;stroke-opacity:1"
+       d="m 105.06592,130.01866 1.12349,-7.93234 -0.006,6.34329 -1.1281,7.04374 z"
        sodipodi:nodetypes="ccccc" />
     <path
        id="rect45"
@@ -335,12 +333,12 @@
     <path
        id="rect44"
        style="fill:#aeaeae;fill-opacity:1;stroke-width:0.499999;stroke-opacity:1"
-       d="m 23.912164,107.63437 c 3.501784,4.17125 4.508749,7.20884 3.312225,9.75551 -0.659529,-1.89587 -0.682743,-2.08346 -3.312223,-5.33062 z"
+       d="m 23.711461,110.52802 c 3.813961,1.52976 4.709452,4.31519 3.512928,6.86186 -1.247301,-2.04649 -1.543404,-2.19038 -3.500212,-3.21805 z"
        sodipodi:nodetypes="cccc" />
     <path
        id="rect46"
-       style="fill:#ff6f6f;fill-opacity:0.921875;stroke-width:0.499999;stroke-opacity:1.671642"
-       d="m 109.08215,124.71387 1.96359,-2.59359 v 5.40636 l -1.96139,2.60189 z"
+       style="fill:#ff6f6f;fill-opacity:0.921875;stroke-width:0.499999;stroke-opacity:1"
+       d="m 106.18341,128.42961 0.006,-6.34329 -0.73001,5.15423 8.8e-4,5.7042 z"
        sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
@@ -407,8 +405,8 @@
        id="path46"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;fill-opacity:1.63806;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle-8)"
-       d="m 86.382559,117.13898 12.682229,-1.3707"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle-8)"
+       d="m 86.382559,117.11718 12.682229,-1.3707"
        id="path46-0"
        sodipodi:nodetypes="cc" />
     <text
@@ -513,14 +511,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:5;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';text-align:start;letter-spacing:-0.0079375px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#7426b5;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="103.92329"
-       y="132.39999"
+       x="109.0443"
+       y="134.0024"
        id="text46-6"><tspan
          sodipodi:role="line"
          id="tspan46-8"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:sans;-inkscape-font-specification:sans;letter-spacing:-0.0079375px;fill:#7426b5;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-opacity:1"
-         x="103.92329"
-         y="132.39999">$\vec{e}_\theta$</tspan></text>
+         x="109.0443"
+         y="134.0024">$\vec{e}_\theta$</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:5;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';text-align:start;letter-spacing:-0.0079375px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#7426b5;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -547,13 +545,13 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:5;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';text-align:start;letter-spacing:-0.0079375px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#7426b5;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="118.13111"
-       y="139.2673"
+       y="140.48987"
        id="text46-6-8-3"><tspan
          sodipodi:role="line"
          id="tspan46-8-9-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:-0.0079375px;fill:#7426b5;fill-opacity:1;stroke:none;stroke-width:0.3"
          x="118.13111"
-         y="139.2673">$\vec{e}_z$</tspan></text>
+         y="140.48987">$\vec{e}_z$</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

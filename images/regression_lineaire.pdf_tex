@@ -108,14 +108,14 @@
     \put(0.78977024,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,02\end{tabular}}}}%
     \put(0.87693033,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,03\end{tabular}}}}%
     \put(0.96409351,0.02814929){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1,04\end{tabular}}}}%
-    \put(0.01228771,0.0414165){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Couple positif\end{tabular}}}}}%
-    \put(0.03679973,0.04694311){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kistler (Nm)\end{tabular}}}}}%
+    \put(0.01228771,0.03741365){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Couple positif\end{tabular}}}}}%
+    \put(0.03679973,0.04454139){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kistler (Nm)\end{tabular}}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{regression_lineaire.pdf}}%
-    \put(0.08297554,0.04719188){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,9\end{tabular}}}}%
-    \put(0.07222221,0.06608133){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,92\end{tabular}}}}%
-    \put(0.07222221,0.0849708){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,94\end{tabular}}}}%
-    \put(0.07222221,0.10386024){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,96\end{tabular}}}}%
-    \put(0.07222221,0.12274971){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,98\end{tabular}}}}%
+    \put(0.07617066,0.04719188){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,9\end{tabular}}}}%
+    \put(0.06301561,0.06608133){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,92\end{tabular}}}}%
+    \put(0.06301561,0.0849708){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,94\end{tabular}}}}%
+    \put(0.06301561,0.10386024){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,96\end{tabular}}}}%
+    \put(0.06301561,0.12274971){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0,98\end{tabular}}}}%
     \put(0.0973498,0.14163916){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{regression_lineaire.pdf}}%
     \put(0.12850178,0.42419226){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$Z_{k,\text{Ext.}\to \text{Dynamo}}^\text{Kistler}=1,00219\cdot Z_{k,\text{Ext.}\to \text{Dynamo}}^\text{KT110}$\end{tabular}}}}%

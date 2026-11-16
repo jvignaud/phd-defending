@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.90475015"
-     inkscape:cx="454.8217"
-     inkscape:cy="459.24281"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="2551"
+     inkscape:zoom="1.2795099"
+     inkscape:cx="796.78944"
+     inkscape:cy="390.38384"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="1911"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg212" />
@@ -417,6 +417,14 @@
      id="text58"
      transform="scale(0.9999367,1.0000633)"
      style="font-size:21.0001px;fill-rule:evenodd;stroke-width:0.600157;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">3000</text>
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850397"
+     d="M 437.55715,24.448069 V 154.69038"
+     id="path4" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850397"
+     d="M 617.14275,24.448069 V 154.69038"
+     id="path5" />
   <text
      fill="#212121"
      fill-opacity="1"
@@ -1103,6 +1111,14 @@
      id="polyline167"
      transform="matrix(0.600119,0,0,0.600195,25.575447,6.6922997)"
      style="font-style:normal;font-weight:400;font-size:16px;font-family:Helvetica;fill-opacity:1;fill-rule:evenodd;stroke:#212121;stroke-width:0.833333;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:1" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850397"
+     d="M 437.55715,176.21978 V 306.46209"
+     id="path6" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850397"
+     d="M 617.14275,176.21978 V 306.46209"
+     id="path7" />
   <polyline
      fill="none"
      vector-effect="none"
@@ -1264,6 +1280,14 @@
      id="text179"
      transform="matrix(0,-1.0000633,0.9999367,0,0,0)"
      style="font-size:21.0001px;fill-rule:evenodd;stroke-width:0.600157;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">$K_m$ (N.m/mm\textsuperscript{2})</text>
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850397"
+     d="M 437.55715,328.99702 V 459.23933"
+     id="path2" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850397"
+     d="M 617.14275,328.99702 V 459.23933"
+     id="path3" />
   <polyline
      fill="none"
      vector-effect="none"

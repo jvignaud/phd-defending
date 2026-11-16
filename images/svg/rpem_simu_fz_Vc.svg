@@ -25,14 +25,14 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.7752149"
-     inkscape:cx="617.6717"
-     inkscape:cy="204.76394"
+     inkscape:cx="627.81131"
+     inkscape:cy="467.83068"
      inkscape:window-width="1920"
      inkscape:window-height="991"
-     inkscape:window-x="-9"
+     inkscape:window-x="2551"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg623" />
+     inkscape:current-layer="g776" />
   <title
      id="title1">Qt SVG Document</title>
   <desc
@@ -955,7 +955,7 @@
        points="721,87.3278 953,87.3278 "
        id="polyline129"
        transform="matrix(0.607229,0,0,0.598604,-14.478112,-8.0069181)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:8.00002px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98426"
@@ -1227,7 +1227,7 @@
        points="1038,125.882 1270,125.882 "
        id="polyline161"
        transform="matrix(0.607229,0,0,0.598604,-14.478112,-8.0069181)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0003;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:8.00002px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98426"
@@ -1488,7 +1488,7 @@
        points="87,340.631 319,340.631 "
        id="polyline193"
        transform="matrix(0.607229,0,0,0.598604,-14.478112,-8.0069181)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:8.00002px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98426"
@@ -1763,7 +1763,7 @@
        points="404,238.667 636,238.667 "
        id="polyline228"
        transform="matrix(0.607229,0,0,0.598604,-14.478112,-8.0069181)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:8.00002px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98426"
@@ -2036,7 +2036,7 @@
        points="721,275.804 953,275.804 "
        id="polyline260"
        transform="matrix(0.607229,0,0,0.598604,-14.478112,-8.0069181)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -2311,7 +2311,7 @@
        points="1038,283.961 1270,283.961 "
        id="polyline292"
        transform="matrix(0.607229,0,0,0.598604,-14.478112,-8.0069181)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -2572,7 +2572,7 @@
        points="87,340.631 319,340.631 "
        id="polyline623"
        transform="matrix(0.607229,0,0,0.598604,-14.478113,129.89288)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:8.00002px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98426"
@@ -2583,7 +2583,7 @@
          id="tspan631"
          style="font-size:8.00002px;stroke-width:1.98426"
          x="38.293362"
-         y="241.11696">\tiny$\times10^8$</tspan></text>
+         y="241.11696">$\times10^8$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -2830,7 +2830,7 @@
        points="404,238.667 636,238.667 "
        id="polyline624"
        transform="matrix(0.607229,0,0,0.598604,-14.478112,131.11045)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:8.00002px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98426"
@@ -2841,7 +2841,7 @@
          id="tspan630"
          style="font-size:8.00002px;stroke-width:1.98426"
          x="230.45923"
-         y="241.11696">\tiny$\times10^5$</tspan></text>
+         y="241.11696">$\times10^5$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -3091,7 +3091,7 @@
        points="721,275.804 953,275.804 "
        id="polyline625"
        transform="matrix(0.607229,0,0,0.598604,-14.478112,79.703533)"
-       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#21c121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.701961" />
+       style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.701961;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -3719,7 +3719,7 @@
          id="tspan633"
          style="font-size:8.00002px;stroke-width:1.98426"
          x="38.293362"
-         y="357.92514">\tiny$\times10^7$</tspan></text>
+         y="357.92514">$\times10^7$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -3812,14 +3812,14 @@
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98426"
        x="-465.05554"
-       y="8.1827593"
+       y="15.682778"
        id="text541"
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
          id="tspan541"
          style="font-size:10px;stroke-width:1.98426"
          x="-465.05554"
-         y="8.1827593">$F_{\vec{e}_r,\text{Outil}\to\text{Pièce},\text{max}}$</tspan></text>
+         y="15.682778">$F_{\vec{e}_r,\text{Outil}\to\text{Pièce},\text{max}}$ (\si{\newton})</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -3831,7 +3831,7 @@
          id="tspan766"
          style="stroke-width:0.632128"
          x="-415.02362"
-         y="22.105986">(\si{\newton})</tspan></text>
+         y="22.105986" /></text>
   </g>
   <g
      id="g779"
@@ -4039,7 +4039,7 @@
          id="tspan632"
          style="font-size:8.00002px;stroke-width:1.98426"
          x="230.45923"
-         y="357.92514">\tiny$\times10^4$</tspan></text>
+         y="357.92514">$\times10^4$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -4132,14 +4132,14 @@
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke-width:1.98426"
        x="-459.67819"
-       y="198.02249"
+       y="205.19231"
        id="text542"
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
          id="tspan542"
          style="font-size:10px;stroke-width:1.98426"
          x="-459.67819"
-         y="198.02249">$F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce},\text{max}}$</tspan></text>
+         y="205.19231">$F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce},\text{max}}$ (\si{\newton})</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -4151,7 +4151,7 @@
          id="tspan765"
          style="stroke-width:0.632128"
          x="-415.02362"
-         y="211.5085">(\si{\newton})</tspan></text>
+         y="211.5085" /></text>
   </g>
   <g
      id="g780"
@@ -4487,7 +4487,7 @@
          id="tspan543"
          style="font-size:10px;stroke-width:1.98426"
          x="-464.39362"
-         y="390.23663">$M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce},\text{max}}$</tspan></text>
+         y="390.23663">$M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce},\text{max}}$ (\si{\newton\meter})</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;line-height:4.4;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;letter-spacing:-0.0225001px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#212121;stroke:none;stroke-width:0.632128;stroke-dasharray:0.504462, 0.504462;stroke-opacity:0.701961"
@@ -4499,7 +4499,7 @@
          id="tspan764"
          style="stroke-width:0.632128"
          x="-422.78375"
-         y="402.10223">(\si{\newton\meter})</tspan></text>
+         y="402.10223" /></text>
   </g>
   <g
      id="g781"

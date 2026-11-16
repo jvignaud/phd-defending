@@ -1,0 +1,122 @@
+% Schéma de la chaîne d'acquisition complète
+% Images attendues dans images/chaine/ (png, jpg ou pdf ; un svg doit être converti en pdf). Si un fichier manque,
+% un cadre gris avec le nom attendu s'affiche à la place.
+%   platine.png  eclateur.png  amplis.png  stgm.png  xhs.png
+%   cn.png  variateur.png  broche.png  pc.png
+% Couleurs : jvbleu / jvteal / jvcorail / jvgris (style/presentation.cls)
+\begin{tikzpicture}[
+        >=Latex,
+        font=\scriptsize,
+        bloc/.style={align=center, inner sep=1pt},
+        nom/.style={font=\scriptsize\bfseries, text=jvbleu, align=center},
+        detail/.style={font=\tiny, text=jvgris, align=center},
+        analog/.style={->, thick, draw=cProcede},
+        numerique/.style={->, thick, draw=jvteal},
+        puissance/.style={->, very thick, draw=jvcorail},
+        etiq/.style={font=\tiny, text=jvtexte, inner sep=1pt, align=center},
+        zone/.style={draw=jvgris, dashed, rounded corners=3pt},
+        zonetitre/.style={font=\tiny\bfseries, text=jvgris, anchor=north west},
+    ]
+    % --- image ou cadre de remplacement -------------------------------------
+    % \photo{nom du node}{position}{fichier sans extension}{largeur}{hauteur}
+    \newcommand{\photo}[5]{%
+        \node[bloc] (#1) at (#2) {%
+            \IfFileExists{images/chaine/#3.png}{%
+                \includegraphics[width=#4,height=#5,keepaspectratio]{images/chaine/#3.png}}{%
+            \IfFileExists{images/chaine/#3.jpg}{%
+                \includegraphics[width=#4,height=#5,keepaspectratio]{images/chaine/#3.jpg}}{%
+            \IfFileExists{images/chaine/#3.pdf}{%
+                \includegraphics[width=#4,height=#5,keepaspectratio]{images/chaine/#3.pdf}}{%
+                \fcolorbox{jvgris}{jvgris!10}{\parbox[c][#5][c]{#4}{\centering\tiny\ttfamily #3}}}}}};}
+    % \legende{node}{nom}{détail}
+    \newcommand{\legende}[3]{%
+        \node[nom, below=0.5mm of #1] (#1-nom) {#2};
+        \node[detail, below=0mm of #1-nom] {#3};}
+
+    % ======================= MACHINE-OUTIL ===================================
+    \photo{broche}{1.4,5.6}{broche}{14mm}{13mm}
+    \legende{broche}{Moteur de broche}{}
+    \photo{platine}{4.3,5.6}{platine}{18mm}{13mm}
+    \legende{platine}{Platine\\dynamométrique}{Kistler 9129AA}
+    \photo{variateur}{1.4,1.9}{variateur}{14mm}{13mm}
+    \legende{variateur}{Variateur}{Sinamics}
+    \photo{cn}{4.3,1.9}{cn}{16mm}{13mm}
+    \legende{cn}{Commande\\numérique}{Sinumerik 840D sl}
+
+    \begin{scope}[on background layer]
+        % cadres (calculés d'abord, tracés après la photo de fond)
+        \node[fit=(cn) (variateur) (cn-nom) (variateur-nom),
+              inner xsep=2mm, inner ysep=4.5mm, yshift=-0.5mm] (armoire) {};
+        \node[fit=(platine) (broche) (armoire), inner sep=3mm, yshift=1mm] (mocn) {};
+
+        % photo de fond de la machine-outil, recadrée pour remplir l'encadré
+        % fichier : images/chaine/machine.png (ou .jpg) ; sinon images/MOCN.png
+        \def\opacitefond{0.18}% transparence : 0 = invisible, 1 = opaque
+        \def\fichierfond{}%
+        \IfFileExists{images/chaine/machine.png}{\def\fichierfond{images/chaine/machine.png}}{%
+        \IfFileExists{images/chaine/machine.jpg}{\def\fichierfond{images/chaine/machine.jpg}}{%
+        \IfFileExists{images/MOCN.png}{\def\fichierfond{images/MOCN.png}}{}}}%
+        \ifx\fichierfond\empty\else
+            \begin{scope}
+                \clip[rounded corners=3pt] (mocn.south west) rectangle (mocn.north east);
+                \path let \p1 = ($(mocn.north east)-(mocn.south west)$) in
+                    \pgfextra{%
+                        \sbox0{\includegraphics{\fichierfond}}%
+                        \pgfmathparse{(\wd0/\ht0) > (\x1/\y1) ? 1 : 0}%
+                        \ifnum\pgfmathresult=1
+                            \xdef\optionsfond{height=\y1}%
+                        \else
+                            \xdef\optionsfond{width=\x1}%
+                        \fi}
+                    node[opacity=\opacitefond, inner sep=0] at (mocn.center)
+                        {\expandafter\includegraphics\expandafter[\optionsfond]{\fichierfond}};
+            \end{scope}
+        \fi
+
+        \draw[zone] (armoire.south west) rectangle (armoire.north east);
+        \node[zonetitre] at (armoire.north west) {Armoire électrique};
+        \draw[zone, draw=jvbleu, thick] (mocn.south west) rectangle (mocn.north east);
+        \node[font=\scriptsize\bfseries, text=jvbleu, anchor=south west]
+            at (mocn.north west) {Machine-outil DMG Mori CMX600V};
+    \end{scope}
+
+    % ======================= CHAÎNE EFFORTS ==================================
+    \photo{eclateur}{7.2,5.6}{eclateur}{14mm}{11mm}
+    \legende{eclateur}{Éclateur}{8 voies}
+    \photo{amplis}{9.7,5.6}{amplis}{16mm}{11mm}
+    \legende{amplis}{2 amplificateurs}{de charge}
+    \photo{stgm}{12.2,5.6}{stgm}{14mm}{11mm}
+    \legende{stgm}{Sirius STGM+}{Dewesoft}
+
+    % ======================= PUISSANCE ÉLECTRIQUE ============================
+    \photo{xhs}{7.2,3.2}{xhs}{14mm}{11mm}
+    \legende{xhs}{Sirius XHS}{Dewesoft}
+
+    % ======================= ORDINATEUR ======================================
+    \photo{pc}{12.2,1.9}{pc}{16mm}{13mm}
+    \legende{pc}{Ordinateur}{DewesoftX}
+
+    % ======================= LIAISONS ========================================
+    % efforts (analogique, charges puis tensions)
+    \draw[analog] (platine.east) -- node[etiq, above=1.5mm] {charges (pC)} (eclateur.west);
+    \draw[analog] (eclateur) -- node[etiq, above=1.5mm] {8 forces} (amplis);
+    \draw[analog] (amplis) -- node[etiq, above=1.5mm] {pC $\to$ V} (stgm);
+    % puissance : variateur -> moteur, mesurée par le XHS
+    \coordinate (cable) at (variateur.north |- xhs.west);
+    \draw[puissance] (variateur.north) -- (broche-nom.south);
+    \node[etiq, left=1mm] at (cable) {$U$, $I$};
+    \fill[jvcorail] (cable) circle (0.6mm);
+    \draw[analog] (cable) -- node[etiq, below=0.5mm, pos=0.8] {sondes $U$, $I$} (xhs.west);
+    % numérique vers DewesoftX
+    \draw[numerique] (stgm-nom.south) ++(0,-2.5mm) -- node[etiq, right=0.5mm] {numérique} (pc.north);
+    \draw[numerique] (xhs.east) -| node[etiq, pos=0.25, above=0.5mm] {numérique} ([xshift=-4mm]pc.north);
+    \draw[numerique] (cn.east) -- node[etiq, below=0.5mm, pos=0.55]
+        {OPC-UA : vitesses, positions} (cn.east -| pc.west);
+
+    % ======================= LÉGENDE DES FLUX ================================
+    \begin{scope}[shift={(6.0,-0.05)}]
+        \draw[analog] (0,0) -- (0.6,0) node[right, font=\tiny, text=jvtexte] {analogique};
+        \draw[puissance] (1.9,0) -- (2.5,0) node[right, font=\tiny, text=jvtexte] {puissance};
+        \draw[numerique] (3.8,0) -- (4.4,0) node[right, font=\tiny, text=jvtexte] {numérique};
+    \end{scope}
+\end{tikzpicture}

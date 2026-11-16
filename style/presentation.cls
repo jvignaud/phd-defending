@@ -25,6 +25,8 @@
 \RequirePackage{colortbl}
 \RequirePackage{siunitx}
 \RequirePackage{appendixnumberbeamer}
+\RequirePackage{pgfplots}
+\usetikzlibrary{babel}% neutralise les ; : actifs de babel-french dans TikZ/pgfplots
 
 % ---------------------------------------------------------------------------
 % Thème : épuré, sans barre latérale (l'ancien réglage PaloAlto est conservé
@@ -416,3 +418,6 @@
     \end{tikzpicture}%
 }
 \makeatother
+
+% Composante de TikZ pour la surface optimale
+\pgfplotsset{compat=1.18}

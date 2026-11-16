@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.0866281"
-     inkscape:cx="467.96139"
-     inkscape:cy="315.19523"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
+     inkscape:zoom="2.1732562"
+     inkscape:cx="466.35091"
+     inkscape:cy="159.89831"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="1911"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg128" />
@@ -101,6 +101,14 @@
      id="polyline9"
      transform="matrix(0.6,0,0,0.6,41.245157,-6.6187496)"
      style="font-style:normal;font-weight:400;font-size:7.8px;font-family:'MS Shell Dlg 2';fill-opacity:0.14902;fill-rule:evenodd;stroke:#212121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.14902" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850392;stroke-dasharray:none;stroke-opacity:1"
+     d="M 425.93779,8.3312504 V 114.53125"
+     id="path6" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850392;stroke-dasharray:none;stroke-opacity:1"
+     d="M 250.10744,8.0812504 V 114.28125"
+     id="path7" />
   <polyline
      fill="none"
      vector-effect="none"
@@ -553,6 +561,14 @@
      id="polyline63"
      transform="matrix(0.6,0,0,0.6,41.245157,-6.6187496)"
      style="font-style:normal;font-weight:400;font-size:16px;font-family:Helvetica;fill-opacity:1;fill-rule:evenodd;stroke:#212121;stroke-width:0.833333;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:1" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850392;stroke-dasharray:none;stroke-opacity:1"
+     d="m 425.93779,128.28125 v 106.2"
+     id="path4" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850392;stroke-dasharray:none;stroke-opacity:1"
+     d="m 250.10744,128.03125 v 106.2"
+     id="path5" />
   <text
      fill="#212121"
      fill-opacity="1"
@@ -868,6 +884,10 @@
      id="polyline96"
      transform="matrix(0.6,0,0,0.6,41.245157,-6.6187496)"
      style="font-style:normal;font-weight:400;font-size:12px;font-family:Helvetica;fill-opacity:0.14902;fill-rule:evenodd;stroke:#212121;stroke-width:0.833333;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.14902" />
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850392;stroke-dasharray:none;stroke-opacity:1"
+     d="m 425.93779,248.63125 v 106.2"
+     id="path3" />
   <polyline
      fill="none"
      vector-effect="none"
@@ -1179,4 +1199,8 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <path
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.850392;stroke-dasharray:none;stroke-opacity:1"
+     d="m 250.10744,248.38125 v 106.2"
+     id="path1" />
 </svg>
