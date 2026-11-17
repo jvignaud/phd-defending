@@ -148,7 +148,7 @@
     \carte{0.24\linewidth}{01 \textperiodcentered{} VERROU 1}{Instrumentation}{\textbf{Pourquoi ?} L'étalonnage constructeur n'est valable qu'\alert{en un seul point}, alors que l'outil parcourt toute la pièce\par\vspace{1mm}\textbf{Apport :} étalonnage de la platine par cobot, dépendant du point d'application}\hfill
     \carte{0.24\linewidth}{02 \textperiodcentered{} VERROU 1}{Modélisation}{\textbf{Pourquoi ?} Pour réguler, il faut \alert{calculer l'énergie en ligne} à partir des conditions de coupe\par\vspace{1mm}\textbf{Apport :} puissance de coupe par torseurs, confrontée à la puissance électrique}\hfill
     \carte[jvbleu]{0.24\linewidth}{03 \textperiodcentered{} VERROU 2}{Identification en boucle fermée}{\textbf{Pourquoi ?} Agir sur la broche exige de connaître sa dynamique, or sa boucle de vitesse \alert{ne se désactive pas}\par\vspace{1mm}\textbf{Apport :} 4 algorithmes adaptés au régulateur du variateur Sinamics}\hfill
-    \carte[jvbleu]{0.24\linewidth}{04 \textperiodcentered{} VERROU 3}{Optimisation en ligne}{\textbf{Pourquoi ?} Sans effet de série, les conditions optimales doivent être trouvées \alert{pendant l'usinage}\par\vspace{1mm}\textbf{Apport :} RPEM sur un modèle empirique $W_c(V_c)$, validé sur machine}
+    \carte[jvbleu]{0.24\linewidth}{04 \textperiodcentered{} VERROU 3}{Optimisation en ligne}{\textbf{Pourquoi ?} Sans effet de série, les conditions optimales doivent être trouvées \alert{pendant l'usinage}\par\vspace{1mm}\textbf{Apport :} RPEM sur un modèle empirique de l'énergie spécifique en fonction de $V_c$, validé sur machine}
     % ORAL : annoncer que la contribution 3 est le cœur théorique.
 \end{frame}
 
@@ -192,7 +192,7 @@
         \end{figure}
         \column{0.5\linewidth}
         \begin{itemize}
-            \item \textbf{Besoin :} l'énergie spécifique $W_c$ s'obtient par le comoment
+            \item \textbf{Besoin :} l'énergie spécifique s'obtient par le comoment
                   $\{\mathcal{T}_{\text{actions}}\}\otimes\{\mathcal{V}_{\text{cinématique}}\}$
                   \begin{itemize}
                       \item torseur d'actions : platine Kistler
@@ -275,7 +275,7 @@
     \carte{0.32\linewidth}{ACQUIS 2}{Étalonnage par cobot}{Force : $k_f$ à moins de 1\,\% de 1 sur toute la platine\par\vspace{1mm}Moment : $k_m$ \alert{dépend du point d'application}, jusqu'à 30\,\% d'écart}\hfill
     \carte[jvcorail]{0.32\linewidth}{LIMITES}{Ce qui reste à faire}{Axe $z$ seul, hystérésis, précision du robot ($\approx$\,0,5\,mm)\par\vspace{1mm}Platine invasive et coûteuse : à terme, la remplacer par la puissance électrique de la broche}
 
-    \aretenir{\textbf{À retenir :} la matrice d'étalonnage rend les mesures d'effort et de moment selon $z$ fiables en tout point d'application $\Rightarrow$ le comoment des torseurs, donc $W_c$, devient calculable}
+    \aretenir{\textbf{À retenir :} la matrice d'étalonnage rend les mesures d'effort et de moment selon $z$ fiables en tout point d'application $\Rightarrow$ le comoment des torseurs, donc l'énergie spécifique, devient calculable}
     % ORAL : synthèse en 30 s ; insister sur le gain du moment (jusqu'à 30 %).
     % TRANSITION : « Avec des efforts fiables, on peut écrire la puissance de coupe. »
 \end{frame}
@@ -410,7 +410,7 @@
 \subsection{Limite}
 
 \begin{frame}
-    \assertion{Dans ce modèle, $W_c$ décroît strictement avec $f_z$ et ne dépend pas de $V_c$ : aucun minimum à optimiser}
+    \assertion{Dans ce modèle, l'énergie spécifique décroît strictement avec $f_z$ et ne dépend pas de $V_c$ : aucun minimum à optimiser}
 
     \begin{columns}[c]
         \column{0.5\linewidth}
@@ -432,7 +432,7 @@
 
         \column{0.45\linewidth}
         \begin{itemize}
-            \item \textbf{Pourquoi $W_c$ ?}
+            \item \textbf{Pourquoi l'énergie spécifique $W_c$ ?}
                   \begin{itemize}
                       \item énergie nécessaire pour enlever 1~cm$^3$ de matière
                       \item critère de référence du couple outil-matière (NF~E66-520-6)
