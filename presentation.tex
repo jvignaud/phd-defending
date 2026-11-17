@@ -715,7 +715,7 @@
 \end{frame}
 
 \begin{frame}
-    \assertion{Les méthodes à variables instrumentales ne convergent que vers des modèles stables : un filtre stabilisateur lève le verrou}
+    \assertion{Les méthodes à variables instrumentales ne convergent que vers des modèles stables : un filtre passe-haut lève le verrou}
 
     \vspace{-5mm}
     \begin{columns}[c]
@@ -725,7 +725,7 @@
             \begin{subfigure}[b]{\textwidth}
                 \centering
                 \resizebox{\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur}}
-                \caption{Schéma complet avec filtre stabilisateur et filtre inverse}
+                \caption{Schéma complet avec filtre passe-haut et filtre inverse}
             \end{subfigure}
 
             \begin{subfigure}[b]{\textwidth}
@@ -745,7 +745,7 @@
                 \caption{Représentation simplifiée}
             \end{subfigure}
 
-            \caption{Étapes de simplification du schéma fonctionnel avec filtre stabilisateur}
+            \caption{Étapes de simplification du schéma fonctionnel avec filtre passe-haut}
         \end{figure}
         \[
             F(q) = \frac{\dfrac{2}{\omega_c T_e + 2}\left(1 - q^{-1}\right)}{1 + \dfrac{\omega_c T_e - 2}{\omega_c T_e + 2}\, q^{-1}}, \quad f_c = 100\,\text{Hz}
@@ -820,7 +820,7 @@
     \setlength{\hauteurcarte}{42mm}
     \carte{0.32\linewidth}{ACQUIS 1}{Quatre algorithmes}{Adaptés au PI parallèle avec préfiltre sur la voie intégrale, en temps discret et continu\par\vspace{1mm}Biais réduit par rapport aux méthodes classiques (Monte-Carlo)\par\vspace{1mm}CLRIVFR : la plus consistante, \alert{estime aussi le bruit}}\hfill
     \carte{0.32\linewidth}{ACQUIS 2}{Validation sur machine}{SBPA injectée par G-code, traces variateur concaténées\par\vspace{1mm}CLRIVFR : \alert{fit de 97,6\,\%} en validation\par\vspace{1mm}Modèle cohérent de 1000 à 5000\,tr/min}\hfill
-    \carte[jvcorail]{0.32\linewidth}{LIMITES}{Ce qui reste à faire}{Intégrateur pur : filtre stabilisateur nécessaire pour les variables instrumentales\par\vspace{1mm}Incertitudes au-delà de 100\,Hz et différences étoile/triangle à basse vitesse}
+    \carte[jvcorail]{0.32\linewidth}{LIMITES}{Ce qui reste à faire}{Intégrateur pur : filtre causal nécessaire pour les variables instrumentales\par\vspace{1mm}Incertitudes au-delà de 100\,Hz et différences étoile/triangle à basse vitesse}
 
     \aretenir{\textbf{À retenir :} la broche est connue et ses incertitudes sont bornées $\Rightarrow$ on peut la piloter en $V_c$ et, à terme, concevoir une commande robuste}
     % ORAL : synthèse en 30 s ; cœur théorique de la thèse.
@@ -1131,7 +1131,7 @@
 
     \tuile{0.235\linewidth}{1}{revue (soumise)}\hfill
     \tuile{0.235\linewidth}{3}{conférences internationales}\hfill
-    \tuile{0.235\linewidth}{1}{conférence nationale}\hfill
+    \tuile{0.235\linewidth}{2}{conférence nationale}\hfill
     \tuile{0.235\linewidth}{2}{posters}
     \vspace{4mm}
 
@@ -1146,7 +1146,7 @@
         \item \textbf{Conférence nationale} : 
         \begin{itemize}
             \item J. Vignaud, J.-Y. K’nevez, G. Albert, S. Victor, R. Laheurte, O. Cahuc, Ph. Verlet, «~Vers une instrumentation non-invasive pour l’analyse en temps réel de la puissance de fraisage: étude comparative avec une platine dynamométrique invasive~», dans Manufacturing’21, 2024.
-            \item J. Vignaud, S. Victor, «~Closed-Loop System Identification Using Parallel PI Controller and Reference Prefiltering: White Noise Case~», dans Sagip CT Identif, 2024.
+            \item J. Vignaud, S. Victor, «~Closed-Loop System Identification Using Parallel PI Controller and Reference Prefiltering: White Noise Case~», dans Sagip CT Identification, 2024.
         \end{itemize}
         \item Posters (ICFDA 2024, ERNSI 2025) et séminaires invités
     \end{itemize}
@@ -1415,9 +1415,9 @@
     \end{table}
 \end{frame}
 
-\section{Résultats avec filtre stabilisateur}
+\section{Résultats avec filtre passe-haut}
 \begin{frame}
-    % Fits avec filtre stabilisateur : 48,78 / 51,43 / 51,44 / 65,83 %.
+    % Fits avec filtre causal : 48,78 / 51,43 / 51,44 / 65,83 %.
     \begin{columns}
         \column{.5\textwidth}
         \begin{figure}
@@ -1425,7 +1425,7 @@
             {\fontsize{4.5pt}{5pt}\selectfont
                 \def\svgwidth{\textwidth}
                 \import{images/}{bode_estim_prime.pdf_tex}}
-            \caption{Réponse fréquentielle du modèle estimé de la broche avec le filtre stabilisateur}
+            \caption{Réponse fréquentielle du modèle estimé de la broche avec le filtre passe-haut}
         \end{figure}
 
         \column{.5\textwidth}
@@ -1434,7 +1434,7 @@
             {\fontsize{4.5pt}{5pt}\selectfont
                 \def\svgwidth{\textwidth}
                 \import{images/}{comp_prime.pdf_tex}}
-            \caption{Signaux simulés en boucle fermée du modèle estimé de la broche avec le filtre stabilisateur}
+            \caption{Signaux simulés en boucle fermée du modèle estimé de la broche avec le filtre passe-haut}
         \end{figure}
     \end{columns}
 \end{frame}
