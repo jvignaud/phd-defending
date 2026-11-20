@@ -1,0 +1,45 @@
+% Coefficients d'étalonnage k_f et k_m (couple positif) en fonction de la position (x, y)
+% avec le plan k = 1 (étalonnage constructeur) en référence.
+% Données : images/data/Kf.csv et images/data/Km_positif.csv
+%   3 colonnes x (mm), y (mm), k, séparées par des virgules, sans en-tête,
+%   x variant le plus vite (11 valeurs de x par ligne de la grille), NaN pour une vis sans valeur.
+% Nécessite \usepgfplotslibrary{groupplots}.
+\begin{tikzpicture}
+\pgfplotsset{
+    surfk/.style={surf, shader=faceted interp, faceted color=black!25, line width=0.1pt,
+                  mesh/cols=11, unbounded coords=jump, opacity=0.95},
+    planun/.style={surf, shader=flat, draw=jvcorail, line width=0.4pt,
+                   fill=jvcorail, fill opacity=0.18, samples=2, domain=-150:150, y domain=-150:150},
+}
+\begin{groupplot}[
+    group style={group size=2 by 1, horizontal sep=16mm},
+    width=0.46\linewidth, height=0.40\linewidth,
+    view={-35}{25},
+    xmin=-150, xmax=150, ymin=-150, ymax=150,
+    zmin=0.75, zmax=1.1,
+    xtick={-100,0,100}, ytick={-100,0,100}, ztick={0.8,0.9,1,1.1},
+    /pgf/number format/use comma, /pgf/number format/1000 sep={},
+    every axis/.append style={font=\scriptsize},
+    tick label style={font=\tiny},
+    label style={font=\scriptsize},
+    title style={font=\scriptsize\bfseries, text=jvbleu},
+    xlabel={$x$ (mm)}, ylabel={$y$ (mm)},
+    grid=major, grid style={jvgris!20},
+    colormap/viridis, point meta min=0.75, point meta max=1.1,
+]
+    \nextgroupplot[title={Force : $k_f$}, zlabel={$k$}]
+    \addplot3[surfk] table[header=false, col sep=comma, x index=0, y index=1, z index=2]
+        {images/data/Kf.csv};
+    \addplot3[planun] {1};
+
+    \nextgroupplot[title={Couple : $k_m$},
+        colorbar, colorbar style={width=2mm, ymin=0.75, ymax=1.1, ytick={0.8,0.9,1,1.1},
+                                   yticklabel style={font=\tiny}}]
+    \addplot3[surfk] table[header=false, col sep=comma, x index=0, y index=1, z index=2]
+        {images/data/Km_positif.csv};
+    \addplot3[planun] {1};
+\end{groupplot}
+% légende du plan
+\node[anchor=north, font=\tiny, text=jvcorail] at ([yshift=-9mm]$(group c1r1.south)!0.5!(group c2r1.south)$)
+    {\tikz\fill[jvcorail, fill opacity=0.3, draw=jvcorail] (0,0) rectangle (3mm,2mm);~plan $k = 1$};
+\end{tikzpicture}

@@ -2,7 +2,7 @@
 % Images attendues dans images/chaine/ (png, jpg ou pdf ; un svg doit être converti en pdf). Si un fichier manque,
 % un cadre gris avec le nom attendu s'affiche à la place.
 %   platine.png  eclateur.png  amplis.png  stgm.png  xhs.png
-%   cn.png  variateur.png  broche.png  pc.png
+%   cn.png  variateur.png  broche.png  fraise.png  pc.png
 % Couleurs : jvbleu / jvteal / jvcorail / jvgris (style/presentation.cls)
 \begin{tikzpicture}[
         >=Latex,
@@ -13,6 +13,7 @@
         analog/.style={->, thick, draw=cProcede},
         numerique/.style={->, thick, draw=jvteal},
         puissance/.style={->, very thick, draw=jvcorail},
+        mecanique/.style={->, very thick, draw=jvbleu},
         etiq/.style={font=\tiny, text=jvtexte, inner sep=1pt, align=center},
         zone/.style={draw=jvgris, dashed, rounded corners=3pt},
         zonetitre/.style={font=\tiny\bfseries, text=jvgris, anchor=north west},
@@ -34,9 +35,11 @@
         \node[detail, below=0mm of #1-nom] {#3};}
 
     % ======================= MACHINE-OUTIL ===================================
-    \photo{broche}{1.4,5.6}{broche}{14mm}{13mm}
-    \legende{broche}{Moteur de broche}{}
-    \photo{platine}{4.3,5.6}{platine}{18mm}{13mm}
+    \photo{broche}{1.4,5.6}{broche}{12mm}{13mm}
+    \legende{broche}{Moteur\\de broche}{}
+    \photo{fraise}{3.0,5.6}{fraise}{8mm}{12mm}% symbolise l'usinage
+    \legende{fraise}{Outil}{}
+    \photo{platine}{4.75,5.6}{platine}{18mm}{13mm}
     \legende{platine}{Platine\\dynamométrique}{Kistler 9129AA}
     \photo{variateur}{1.4,1.9}{variateur}{14mm}{13mm}
     \legende{variateur}{Variateur}{Sinamics}
@@ -97,6 +100,9 @@
     \legende{pc}{Ordinateur}{DewesoftX}
 
     % ======================= LIAISONS ========================================
+    % mécanique : moteur -> outil -> pièce sur la platine
+    \draw[mecanique] (broche.east) -- (fraise.west);
+    \draw[mecanique] (fraise.east) -- node[etiq, above=0.5mm] {$F$, $M$} (platine.west);
     % efforts (analogique, charges puis tensions)
     \draw[analog] (platine.east) -- node[etiq, above=1.5mm] {charges (pC)} (eclateur.west);
     \draw[analog] (eclateur) -- node[etiq, above=1.5mm] {8 forces} (amplis);
@@ -118,5 +124,6 @@
         \draw[analog] (0,0) -- (0.6,0) node[right, font=\tiny, text=jvtexte] {analogique};
         \draw[puissance] (1.9,0) -- (2.5,0) node[right, font=\tiny, text=jvtexte] {puissance};
         \draw[numerique] (3.8,0) -- (4.4,0) node[right, font=\tiny, text=jvtexte] {numérique};
+        \draw[mecanique] (5.7,0) -- (6.3,0) node[right, font=\tiny, text=jvtexte] {mécanique};
     \end{scope}
 \end{tikzpicture}

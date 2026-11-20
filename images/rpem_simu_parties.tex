@@ -1,0 +1,58 @@
+% Résultats RPEM en simulation (V_c seul), découpés en trois parties (frame avec \only<1-3>)
+%   partie 1 : V_c + a_w, b_w, c_w
+%   partie 2 : V_c + K_f, K_c, K_m et les efforts associés
+%   partie 3 : V_c + W_c,max et critère J
+% Les sous-figures sont découpées dans images/rpem_simu.pdf_tex (grille 3 lignes x 4 colonnes).
+% Vert = validé, orange = biaisé mais exploitable (c_w).
+% La macro \rpempanneau est définie dans le préambule de presentation.tex.
+\providecommand{\rpemlargeur}{0.83\linewidth}
+\sbox{\rpemboite}{\fontsize{3.5pt}{5pt}\selectfont\def\svgwidth{\rpemlargeur}\import{images/}{rpem_simu.pdf_tex}}%
+% V_c rendu directement en grand (texte à 4,8 pt, non agrandi) ; facteur = (0.213+0.6152-0.4099)/(0.6152-0.4099)
+\setlength{\rpemL}{\rpemlargeur}\pgfmathsetmacro{\echG}{(0.213+0.6152-0.4099)/(0.6152-0.4099)}%
+\setlength{\rpemLg}{\echG\rpemL}%
+\sbox{\rpemboiteG}{\fontsize{4.8pt}{5.5pt}\selectfont\def\svgwidth{\rpemLg}\import{images/}{rpem_simu.pdf_tex}}%
+\begin{tikzpicture}[x=\rpemlargeur, y=\rpemlargeur]
+    % bornes des cellules dans la figure d'origine (fraction de la largeur)
+    \def\cA{0}\def\cB{0.252}\def\cC{0.498}\def\cD{0.748}\def\cE{1}
+    % ligne du haut : bornes décalées (graduations et étiquettes à cheval sur les colonnes)
+    \def\cCa{0.501}\def\cCb{0.509}\def\cDa{0.754}
+    \def\rA{0}\def\rB{0.2054}\def\rC{0.4099}\def\rD{0.6152}
+    % position des facteurs d'échelle (x10^n) dans leur case
+    \def\rpemexA{0.048}\def\rpemexB{0.13}\def\rpemcoin{0.028}
+    % disposition : V_c agrandi à gauche, panneaux de chaque partie à droite (2 lignes max)
+    \def\pas{0.258}\def\haut{0.213}% pas des colonnes, décalage entre les deux lignes
+    % V_c agrandi pour occuper exactement la hauteur des deux lignes de droite
+    \pgfmathsetmacro{\ech}{(\haut+\rD-\rC)/(\rD-\rC)}
+    \def\yvc{0}
+    \pgfmathsetmacro{\xg}{\ech*(\cB-\cA)+0.012}
+
+    % V_c : présent dans les trois parties
+    \rpempanneau[echelle=\ech, grande]{\cA}{\cB}{\rC}{\rD}{0}{\yvc}{1}
+
+    % partie 1 : coefficients du modèle a_w, b_w, c_w
+    \only<1>{%
+        \rpempanneau[droite=0.0175, droitey=0.025]{\cB}{\cCb}{\rC}{\rD}{\xg}{\haut}{1}                  % a_w
+        \rpempanneau[bande=0.012, etiq={$b_w$}, etiqx=0.006]{\cCa}{\cDa}{\rC}{\rD}{\xg+\pas}{\haut}{1}   % b_w
+        \rpempanneau[expo+, expo-]{\cDa}{1.01}{\rC}{\rD}{\xg}{0}{2}}                                    % c_w (biaisé)
+
+    % partie 2 : pressions spécifiques (ligne 1) et efforts associés (ligne 2)
+    \only<2>{%
+        \rpempanneau[etiq-]{\cA}{\cB}{\rB}{\rC}{\xg}{\haut}{1}          % K_f
+        \rpempanneau[etiq-]{\cB}{\cC}{\rB}{\rC}{\xg+\pas}{\haut}{1}     % K_c
+        \rpempanneau[etiq-]{\cC}{\cD}{\rB}{\rC}{\xg+2*\pas}{\haut}{1}   % K_m
+        \rpempanneau[etiq+]{\cA}{\cB}{\rA}{\rB}{\xg}{0}{1}              % F_er
+        \rpempanneau[etiq+]{\cB}{\cC}{\rA}{\rB}{\xg+\pas}{0}{1}         % F_etheta
+        \rpempanneau[etiq+]{\cC}{\cD}{\rA}{\rB}{\xg+2*\pas}{0}{1}}      % M_P,ez
+
+    % partie 3 : énergie spécifique maximale et critère J
+    \only<3>{%
+        \rpempanneau[expo+]{\cD}{\cE}{\rB}{\rC}{\xg}{\haut}{1}          % W_c,max
+        \rpempanneau{\cD}{\cE}{\rA}{\rB}{\xg}{0}{1}}                    % J
+
+    % largeur constante d'une partie à l'autre
+    \path (0,0) rectangle (\xg+3*\pas, \haut+\rD-\rC);
+    % légende des filtres, sous V_c
+    \node[anchor=north west, font=\tiny, text=jvtexte, inner sep=0pt]
+        at (0, \yvc-0.012)
+        {\rpemlegende{1}{1}{0}};
+\end{tikzpicture}

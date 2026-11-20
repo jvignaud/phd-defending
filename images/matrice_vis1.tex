@@ -1,0 +1,25 @@
+% Matrice d'étalonnage de la vis 1 : (Z, N) en fonction des huit voies brutes de la platine Kistler
+% Z = Fz1+Fz2+Fz3+Fz4 et N = b(-Fx1+2 + Fx3+4) + a(Fy1+4 - Fy2+3) (éq. 1.1), corrigés par k_f et k_m
+% Nécessite \usetikzlibrary{matrix} dans le préambule.
+{\small\setlength{\abovedisplayskip}{1mm}\setlength{\belowdisplayskip}{0mm}
+\begin{equation*}
+\begin{pmatrix} Z_k \\ N_{k,O} \end{pmatrix}_{\text{vis 1}}
+=
+\begin{tikzpicture}[baseline=(M.center)]
+    \matrix (M) [matrix of math nodes, ampersand replacement=\&,
+                 left delimiter=(, right delimiter=),
+                 column sep=2.4mm, row sep=0.8mm,
+                 nodes={inner sep=0.6pt, minimum width=5mm, anchor=center}] {
+        0 \& 0 \& 0 \& 0 \& \frac{1}{k_f} \& \frac{1}{k_f} \& \frac{1}{k_f} \& \frac{1}{k_f} \\
+        -\frac{b}{k_m} \& \frac{b}{k_m} \& \frac{a}{k_m} \& -\frac{a}{k_m} \& 0 \& 0 \& 0 \& 0 \\
+    };
+    % nom de la voie multipliée par chaque colonne
+    \foreach \c/\voie in {1/F_{x1+2}, 2/F_{x3+4}, 3/F_{y1+4}, 4/F_{y2+3},
+                          5/F_{z1}, 6/F_{z2}, 7/F_{z3}, 8/F_{z4}}
+        \node[font=\tiny, text=jvgris, anchor=south, inner sep=0pt]
+            at ([yshift=1mm]M-1-\c.center |- M.north) {$\voie$};
+\end{tikzpicture}
+\begin{pmatrix} F_{x1+2} \\ \vdots \\ F_{z4} \end{pmatrix}
+\end{equation*}}
+\par\vspace{0.5mm}
+{\centering\scriptsize avec $k_f = 1{,}002$ et $k_m = 0{,}977$ ; $a$, $b$ : position des capteurs\par}

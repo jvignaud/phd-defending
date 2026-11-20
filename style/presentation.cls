@@ -379,6 +379,17 @@
     \end{tikzpicture}%
 }
 
+% \verrou[couleur]{largeur}{texte} : accolade-bandeau regroupant des cartes
+% (à placer au-dessus d'une rangée de \carte, avec la même largeur cumulée)
+\newcommand{\verrou}[3][jvcorail]{%
+    \begin{tikzpicture}[baseline=(v.base)]
+        \path[use as bounding box] (0,-1.4mm) rectangle (#2,4.2mm);
+        \draw[#1, line width=0.7pt, line cap=round]
+            (0,-1.4mm) -- (0,0) -- node[above=0.5mm, inner sep=0pt,
+                font=\scriptsize\bfseries, text=#1] (v) {#3} (#2,0) -- (#2,-1.4mm);
+    \end{tikzpicture}%
+}
+
 % \aretenir{texte} : bandeau « message à retenir » en bas de diapo
 \newcommand{\aretenir}[1]{%
     \par\vspace{2mm}\noindent

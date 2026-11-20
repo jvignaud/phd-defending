@@ -31,8 +31,8 @@
         \node[pastille=\c] at ([xshift=0.6mm, yshift=-0.6mm]\n.north west) {\ref{\s}};
 
     % --- flux ---
-    \draw[flux] (optim) -- node[etiq, above] {$V_c^\star$} (broche);
-    \draw[flux] (broche) -- node[etiq, above] {$\omega$} (usinage);
+    \draw[flux] (optim) -- node[etiq, above] {$V_c$} node[etiq, below] {$f_z$} (broche);
+    \draw[flux] (broche) -- node[etiq, above] {$N$} node[etiq, below] {$V_f$} (usinage);
     \draw[flux] (usinage) -- node[etiq, right] {$F,\ \mathcal{P}$} (instrum);
     \draw[flux] (instrum) -- node[etiq, above] {efforts} (modele);
     \draw[flux] (modele.west) -| node[etiq, pos=0.75, left, align=center] {énergie\\spécifique} (optim.south);
