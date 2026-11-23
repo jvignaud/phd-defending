@@ -8,12 +8,13 @@
 % La macro \rpempanneau est définie dans le préambule de presentation.tex.
 \providecommand{\rpemlargeur}{0.9\linewidth}
 \sbox{\rpemboite}{\fontsize{3.5pt}{5pt}\selectfont\def\svgwidth{\rpemlargeur}\import{images/}{rpem.pdf_tex}}%
+\setlength{\rpemL}{\rpemlargeur}% largeur de la figure, pour les épaisseurs de trait redessinées
 \begin{tikzpicture}[x=\rpemlargeur, y=\rpemlargeur]
     % bornes des cellules dans la figure d'origine (fraction de la largeur)
     \def\cA{0}\def\cB{0.251}\def\cC{0.500}\def\cD{0.745}\def\cE{1}
     \def\rA{0}\def\rB{0.207}\def\rC{0.417}\def\rD{0.626}
     % disposition : V_c agrandi à gauche, panneaux de chaque partie à droite (2 lignes max)
-    \def\pas{0.258}\def\haut{0.218}% pas des colonnes, décalage entre les deux lignes
+    \def\pas{0.258}\def\haut{0.224}% pas des colonnes, décalage entre les deux lignes
     % V_c agrandi pour occuper exactement la hauteur des deux lignes de droite
     \pgfmathsetmacro{\ech}{(\haut+\rD-\rC)/(\rD-\rC)}
     \def\yvc{0}
@@ -24,9 +25,11 @@
 
     % partie 1 : coefficients du modèle a_w, b_w, c_w
     \only<1>{%
-        \rpempanneau{\cB}{\cC}{\rC}{\rD}{\xg}{\haut}{1}             % a_w
-        \rpempanneau{\cC}{\cD}{\rC}{\rD}{\xg+\pas}{\haut}{1}        % b_w
-        \rpempanneau[expo-]{\cD}{\cE}{\rC}{\rD}{\xg}{0}{1}}         % c_w
+        % fenêtre remontée de 0,006 : les exposants (x10^n) dépassent le haut de la figure MATLAB
+        \pgfmathsetmacro{\rCh}{\rC+0.006}\pgfmathsetmacro{\rDh}{\rD+0.006}%
+        \rpempanneau[droite=0.006, droitey=0.03]{\cB}{\cC}{\rCh}{\rDh}{\xg}{\haut}{1}                    % a_w (sans le bout d'étiquette de b_w)
+        \rpempanneau{0.494}{\cD}{\rCh}{\rDh}{\xg+\pas}{\haut}{1}                      % b_w (élargi à gauche : haut du « b » de l'étiquette)
+        \rpempanneau[expo-]{\cD}{\cE}{\rCh}{\rDh}{\xg}{0}{1}}         % c_w
 
     % partie 2 : pressions spécifiques (ligne 1) et efforts associés (ligne 2)
     \only<2>{%
@@ -35,7 +38,32 @@
         \rpempanneau[etiq-]{\cC}{\cD}{\rB}{\rC}{\xg+2*\pas}{\haut}{0}   % K_m (non exploitable)
         \rpempanneau[etiq+]{\cA}{\cB}{\rA}{\rB}{\xg}{0}{1}              % F_er
         \rpempanneau[etiq+]{\cB}{\cC}{\rA}{\rB}{\xg+\pas}{0}{1}         % F_etheta
-        \rpempanneau[etiq+]{\cC}{\cD}{\rA}{\rB}{\xg+2*\pas}{0}{0}       % M_P,ez (non exploitable)
+        \rpempanneau[bande=0.0738, etiq={$M_{P,\vec{e}_z,\text{max}}$ (N.m)}, etiqx=0.029,
+            % graduations d'origine masquées avec l'axe qu'elles chevauchaient, puis axe, grille,
+            % petits traits, graduations et « 0 » de l'axe des abscisses redessinés (positions issues du SVG)
+            apres={\draw[color={rgb,255:red,33;green,33;blue,33}, line width=0.0007\rpemL] (0.0705,0.0334) -- (0.0705,0.1993);
+                \draw[color={rgb,255:red,33;green,33;blue,33}, opacity=0.149, line width=0.0007\rpemL] (0.0705,0.1955) -- (0.0742,0.1955);
+                \draw[color={rgb,255:red,33;green,33;blue,33}, line width=0.0007\rpemL] (0.0705,0.1955) -- (0.0722,0.1955);
+                \rpemgrad[3.5pt]{0.068}{0.1907}{10}
+                \draw[color={rgb,255:red,33;green,33;blue,33}, opacity=0.149, line width=0.0007\rpemL] (0.0705,0.1685) -- (0.0742,0.1685);
+                \draw[color={rgb,255:red,33;green,33;blue,33}, line width=0.0007\rpemL] (0.0705,0.1685) -- (0.0722,0.1685);
+                \rpemgrad[3.5pt]{0.068}{0.1635}{5}
+                \draw[color={rgb,255:red,33;green,33;blue,33}, opacity=0.149, line width=0.0007\rpemL] (0.0705,0.1415) -- (0.0742,0.1415);
+                \draw[color={rgb,255:red,33;green,33;blue,33}, line width=0.0007\rpemL] (0.0705,0.1415) -- (0.0722,0.1415);
+                \rpemgrad[3.5pt]{0.068}{0.1355}{0}
+                \draw[color={rgb,255:red,33;green,33;blue,33}, opacity=0.149, line width=0.0007\rpemL] (0.0705,0.1144) -- (0.0742,0.1144);
+                \draw[color={rgb,255:red,33;green,33;blue,33}, line width=0.0007\rpemL] (0.0705,0.1144) -- (0.0722,0.1144);
+                \rpemgrad[3.5pt]{0.068}{0.1094}{$-5$}
+                \draw[color={rgb,255:red,33;green,33;blue,33}, opacity=0.149, line width=0.0007\rpemL] (0.0705,0.0874) -- (0.0742,0.0874);
+                \draw[color={rgb,255:red,33;green,33;blue,33}, line width=0.0007\rpemL] (0.0705,0.0874) -- (0.0722,0.0874);
+                \rpemgrad[3.5pt]{0.068}{0.0831}{$-10$}
+                \draw[color={rgb,255:red,33;green,33;blue,33}, opacity=0.149, line width=0.0007\rpemL] (0.0705,0.0604) -- (0.0742,0.0604);
+                \draw[color={rgb,255:red,33;green,33;blue,33}, line width=0.0007\rpemL] (0.0705,0.0604) -- (0.0722,0.0604);
+                \rpemgrad[3.5pt]{0.068}{0.0557}{$-15$}
+                \draw[color={rgb,255:red,33;green,33;blue,33}, line width=0.0007\rpemL] (0.0705,0.0334) -- (0.0742,0.0334);
+                \rpemgrad[3.5pt]{0.068}{0.0286}{$-20$}
+                \node[anchor=base, inner sep=0, font=\fontsize{3.5pt}{3.5pt}\selectfont, text=jvtexte] at (0.0705,0.0186) {0};}]
+            {\cC}{\cD}{\rA}{\rB}{\xg+2*\pas}{0}{0}       % M_P,ez (non exploitable, graduations réalignées à droite)
         \path (0,0);}% la partie 2 occupe les deux lignes
 
     % partie 3 : énergie spécifique maximale et critère J

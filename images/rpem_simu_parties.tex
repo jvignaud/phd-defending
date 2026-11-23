@@ -6,11 +6,11 @@
 % Vert = validé, orange = biaisé mais exploitable (c_w).
 % La macro \rpempanneau est définie dans le préambule de presentation.tex.
 \providecommand{\rpemlargeur}{0.83\linewidth}
-\sbox{\rpemboite}{\fontsize{3.5pt}{5pt}\selectfont\def\svgwidth{\rpemlargeur}\import{images/}{rpem_simu.pdf_tex}}%
-% V_c rendu directement en grand (texte à 4,8 pt, non agrandi) ; facteur = (0.213+0.6152-0.4099)/(0.6152-0.4099)
-\setlength{\rpemL}{\rpemlargeur}\pgfmathsetmacro{\echG}{(0.213+0.6152-0.4099)/(0.6152-0.4099)}%
+\sbox{\rpemboite}{\fontsize{3pt}{3.6pt}\selectfont\def\svgwidth{\rpemlargeur}\import{images/}{rpem_simu_aligne.pdf_tex}}%
+% V_c rendu directement en grand (texte à 4,8 pt, non agrandi) ; facteur = (0.222+0.6152-0.4099)/(0.6152-0.4099)
+\setlength{\rpemL}{\rpemlargeur}\pgfmathsetmacro{\echG}{(0.222+0.6152-0.4099)/(0.6152-0.4099)}%
 \setlength{\rpemLg}{\echG\rpemL}%
-\sbox{\rpemboiteG}{\fontsize{4.8pt}{5.5pt}\selectfont\def\svgwidth{\rpemLg}\import{images/}{rpem_simu.pdf_tex}}%
+\sbox{\rpemboiteG}{\fontsize{4.8pt}{5.5pt}\selectfont\def\svgwidth{\rpemLg}\import{images/}{rpem_simu_aligne.pdf_tex}}%
 \begin{tikzpicture}[x=\rpemlargeur, y=\rpemlargeur]
     % bornes des cellules dans la figure d'origine (fraction de la largeur)
     \def\cA{0}\def\cB{0.252}\def\cC{0.498}\def\cD{0.748}\def\cE{1}
@@ -20,7 +20,7 @@
     % position des facteurs d'échelle (x10^n) dans leur case
     \def\rpemexA{0.048}\def\rpemexB{0.13}\def\rpemcoin{0.028}
     % disposition : V_c agrandi à gauche, panneaux de chaque partie à droite (2 lignes max)
-    \def\pas{0.258}\def\haut{0.213}% pas des colonnes, décalage entre les deux lignes
+    \def\pas{0.274}\def\haut{0.222}% pas des colonnes, décalage entre les deux lignes
     % V_c agrandi pour occuper exactement la hauteur des deux lignes de droite
     \pgfmathsetmacro{\ech}{(\haut+\rD-\rC)/(\rD-\rC)}
     \def\yvc{0}
@@ -32,22 +32,38 @@
     % partie 1 : coefficients du modèle a_w, b_w, c_w
     \only<1>{%
         \rpempanneau[droite=0.0175, droitey=0.025]{\cB}{\cCb}{\rC}{\rD}{\xg}{\haut}{1}                  % a_w
-        \rpempanneau[bande=0.012, etiq={$b_w$}, etiqx=0.006]{\cCa}{\cDa}{\rC}{\rD}{\xg+\pas}{\haut}{1}   % b_w
+        \rpempanneau[etiq-, coin=0.006, deb=0.03]{0.494}{\cDa}{\rC}{\rD}{\xg+\pas}{\haut}{1}   % b_w (élargi à gauche : étiquette entière)
         \rpempanneau[expo+, expo-]{\cDa}{1.01}{\rC}{\rD}{\xg}{0}{2}}                                    % c_w (biaisé)
 
     % partie 2 : pressions spécifiques (ligne 1) et efforts associés (ligne 2)
     \only<2>{%
-        \rpempanneau[etiq-]{\cA}{\cB}{\rB}{\rC}{\xg}{\haut}{1}          % K_f
-        \rpempanneau[etiq-]{\cB}{\cC}{\rB}{\rC}{\xg+\pas}{\haut}{1}     % K_c
-        \rpempanneau[etiq-]{\cC}{\cD}{\rB}{\rC}{\xg+2*\pas}{\haut}{1}   % K_m
-        \rpempanneau[etiq+]{\cA}{\cB}{\rA}{\rB}{\xg}{0}{1}              % F_er
-        \rpempanneau[etiq+]{\cB}{\cC}{\rA}{\rB}{\xg+\pas}{0}{1}         % F_etheta
-        \rpempanneau[etiq+]{\cC}{\cD}{\rA}{\rB}{\xg+2*\pas}{0}{1}}      % M_P,ez
+        % étiquettes et graduations verticales réécrites : dans l'export MATLAB, les étiquettes
+        % des efforts, trop longues, se superposaient aux graduations et aux cases du dessus
+        \rpempanneau[bande=0.0560, marge=0.008, etiq={$K_f$ (MPa)}, etiqx=0.0125,
+            apres={\rpemgrad{0.0554}{0.1874}{4000} \rpemgrad{0.0554}{0.1615}{3500} \rpemgrad{0.0554}{0.1327}{3000} \rpemgrad{0.0554}{0.1060}{2500} \rpemgrad{0.0554}{0.0783}{2000} \rpemgrad{0.0554}{0.0508}{1500} \rpemgrad{0.0554}{0.0242}{1000}}]
+            {-0.007}{\cB}{\rB}{\rC}{\xg}{\haut}{1}   % K_f
+        \rpempanneau[bande=0.0532, marge=0.008, etiq={$K_c$ (MPa)}, etiqx=0.0125,
+            apres={\rpemgrad{0.0526}{0.1871}{5000} \rpemgrad{0.0526}{0.1597}{4500} \rpemgrad{0.0526}{0.1327}{4000} \rpemgrad{0.0526}{0.1054}{3500} \rpemgrad{0.0526}{0.0780}{3000} \rpemgrad{0.0526}{0.0503}{2500} \rpemgrad{0.0526}{0.0231}{2000}}]
+            {0.2465}{\cC}{\rB}{\rC}{\xg+\pas}{\haut}{1}   % K_c
+        \rpempanneau[bande=0.0549, etiq={$K_m$ (N.m/mm\textsuperscript{2})}, etiqx=0.010,
+            apres={\rpemgrad{0.0543}{0.1874}{8} \rpemgrad{0.0543}{0.1449}{6} \rpemgrad{0.0543}{0.1050}{4} \rpemgrad{0.0543}{0.0642}{2} \rpemgrad{0.0543}{0.0243}{0}}]
+            {0.498}{\cD}{\rB}{\rC}{\xg+2*\pas}{\haut}{1}   % K_m
+        \rpempanneau[bande=0.0563, marge=0.008, etiq={$F_{\vec{e}_r,\text{max}}$ (N)}, etiqx=0.0125,
+            apres={\rpemgrad{0.0557}{0.1889}{700} \rpemgrad{0.0557}{0.1570}{600} \rpemgrad{0.0557}{0.1241}{500} \rpemgrad{0.0557}{0.0923}{400} \rpemgrad{0.0557}{0.0587}{300} \rpemgrad{0.0557}{0.0268}{200}}]
+            {-0.007}{\cB}{\rA}{\rB}{\xg}{0}{1}   % F_er
+        \rpempanneau[bande=0.0535, marge=0.008, etiq={$F_{\vec{e}_\theta,\text{max}}$ (N)}, etiqx=0.0125,
+            apres={\rpemgrad{0.0529}{0.1889}{900} \rpemgrad{0.0529}{0.1570}{800} \rpemgrad{0.0529}{0.1241}{700} \rpemgrad{0.0529}{0.0923}{600} \rpemgrad{0.0529}{0.0587}{500} \rpemgrad{0.0529}{0.0268}{400}}]
+            {0.2465}{\cC}{\rA}{\rB}{\xg+\pas}{0}{1}   % F_etheta
+        \rpempanneau[bande=0.0549, etiq={$M_{P,\vec{e}_z,\text{max}}$ (N.m)}, etiqx=0.010,
+            apres={\rpemgrad{0.0523}{0.1896}{1,4} \rpemgrad{0.0523}{0.1639}{1,2} \rpemgrad{0.0543}{0.1362}{1} \rpemgrad{0.0523}{0.1075}{0,8} \rpemgrad{0.0523}{0.0798}{0,6} \rpemgrad{0.0523}{0.0542}{0,4} \rpemgrad{0.0523}{0.0265}{0,2}}]
+            {0.498}{\cD}{\rA}{\rB}{\xg+2*\pas}{0}{1}}   % M_P,ez
 
     % partie 3 : énergie spécifique maximale et critère J
     \only<3>{%
-        \rpempanneau[expo+]{\cD}{\cE}{\rB}{\rC}{\xg}{\haut}{1}          % W_c,max
-        \rpempanneau{\cD}{\cE}{\rA}{\rB}{\xg}{0}{1}}                    % J
+        \rpempanneau[expo+]{0.7515}{1.01}{\rB}{\rC}{\xg}{\haut}{1}          % W_c,max
+        \rpempanneau[bande=0.0559, bandey=0.025, bandeb=0.035, marge=0.016, etiq={Critère $J$}, etiqx=0.0125,
+            apres={\rpemgrad{0.0542}{0.1899}{15000} \rpemgrad{0.0542}{0.1349}{10000} \rpemgrad{0.0525}{0.0805}{5000} \rpemgrad{0.0553}{0.0258}{0}}]
+            {\cD}{1.01}{\rA}{\rB}{\xg}{0}{1}}                    % J (graduations et étiquette réécrites)
 
     % largeur constante d'une partie à l'autre
     \path (0,0) rectangle (\xg+3*\pas, \haut+\rD-\rC);

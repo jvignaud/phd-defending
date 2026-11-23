@@ -8,7 +8,7 @@
 % Les étiquettes verticales de K_f, K_c, K_m et des efforts sont réécrites (elles se chevauchaient dans l'export MATLAB).
 % La macro \rpempanneau est définie dans le préambule de presentation.tex.
 \providecommand{\rpemlargeur}{0.83\linewidth}
-\sbox{\rpemboite}{\fontsize{3.5pt}{5pt}\selectfont\def\svgwidth{\rpemlargeur}\import{images/}{rpem_simu_fz_Vc.pdf_tex}}%
+\sbox{\rpemboite}{\fontsize{3.5pt}{5pt}\selectfont\def\svgwidth{\rpemlargeur}\import{images/}{rpem_simu_fz_Vc_aligne.pdf_tex}}%
 \begin{tikzpicture}[x=\rpemlargeur, y=\rpemlargeur]
     % bornes des cellules dans la figure d'origine (fraction de la largeur)
     \def\cA{0}\def\cB{0.252}\def\cC{0.4975}\def\cD{0.755}\def\cE{1}
@@ -17,7 +17,7 @@
     \def\rpemcoin{0.03}\def\rpemdeb{0.008}\def\rpemexA{0.035}\def\rpemexB{0.105}\def\rpemexH{0.007}\def\rpemexHb{0.0079}
     % disposition : V_c et f_z agrandis à gauche, panneaux de chaque partie à droite
     % (tous les panneaux à la même échelle : les deux côtés ont la même hauteur)
-    \def\pas{0.258}\def\haut{0.16}\def\xg{0.262}
+    \def\pas{0.27}\def\haut{0.174}\def\xg{0.262}
     \pgfmathsetmacro{\hl}{\rE-\rD}% hauteur d'une ligne
     \def\yvc{\haut}\def\yfz{0}
 
@@ -27,21 +27,26 @@
 
     % partie 1 : coefficients du modèle a_w ... f_w
     \only<1>{%
-        \rpempanneau[expo-]{\cC}{\cD}{\rD}{\rE}{\xg}{\haut}{2}                % a_w
-        \rpempanneau{\cD}{\cE}{\rD}{\rE}{\xg+\pas}{\haut}{2}                  % b_w
+        % fenêtre de la ligne du haut remontée de 0,006 : les exposants (x10^n) dépassent le haut de la figure
+        \pgfmathsetmacro{\rDh}{\rD+0.006}\pgfmathsetmacro{\rEh}{\rE+0.006}%
+        \rpempanneau[droite=0.008, droitey=0.03]{\cC}{\cD}{\rDh}{\rEh}{\xg}{\haut}{2}                % a_w
+        \rpempanneau[bande=0.0369, marge=0.018, etiq={$b_w$}, etiqx=0.008,
+            apres={\rpemgrad[3.5pt]{0.0363}{0.1220}{$-$2} \rpemgrad[3.5pt]{0.0344}{0.0851}{$-$2,2} \rpemgrad[3.5pt]{0.0344}{0.0489}{$-$2,4} \rpemgrad[3.5pt]{0.0344}{0.0128}{$-$2,6}}]
+            {\cD}{\cE}{\rDh}{\rEh}{\xg+\pas}{\haut}{2}                  % b_w (étiquette et graduations réécrites)
         \rpempanneau[expo+, expo-]{\cA}{\cB}{\rC}{\rD}{\xg+2*\pas}{\haut}{2}  % c_w
         \rpempanneau[expo+, expo-]{\cB}{\cC}{\rC}{\rD}{\xg}{0}{2}             % d_w
-        \rpempanneau[expo+]{\cC}{\cD}{\rC}{\rD}{\xg+\pas}{0}{1}               % e_w
-        \rpempanneau[expo-]{\cD}{\cE}{\rC}{\rD}{\xg+2*\pas}{0}{2}}            % f_w
+        \rpempanneau[expo+, droite=0.004, droitey=0.03]{\cC}{\cD}{\rC}{\rD}{\xg+\pas}{0}{1}               % e_w
+        \rpempanneau[expo-, bande=0.0465, bandey=0.0155, bandeb=0.035, marge=0.008, etiq={$f_w$}, etiqx=0.013,
+            apres={\rpemgrad[3.5pt]{0.0445}{0.1332}{1000} \rpemgrad[3.5pt]{0.0459}{0.1043}{800} \rpemgrad[3.5pt]{0.0459}{0.0749}{600} \rpemgrad[3.5pt]{0.0459}{0.0462}{400} \rpemgrad[3.5pt]{0.0459}{0.0167}{200}}]
+            {\cD}{\cE}{\rC}{\rD}{\xg+2*\pas}{0}{2}}            % f_w (étiquette et graduations réécrites)
 
     % partie 2 : pressions spécifiques (ligne 1) et efforts associés (ligne 2)
     \only<2>{%
         \rpempanneau[expo+, expo-, bande=0.039, etiq={$K_f$ (\si{\mega\pascal})}, etiqx=0.014]{\cA}{\cB}{\rB}{\rC}{\xg}{\haut}{0}        % K_f (non exploitable)
         \rpempanneau[expo+, expo-, bande=0.025, etiq={$K_c$ (\si{\mega\pascal})}, etiqx=0.013]{\cB}{0.4895}{\rB}{\rC}{\xg+\pas}{\haut}{1}   % K_c
-        \rpempanneau[bande=0.0548, bandey=0.0152, bandeb=0.035, marge=0.006, etiqx=0.0055,
+        \rpempanneau[bande=0.045, marge=0.028, etiqx=0.011,
             etiq={$K_m$ (\si{\newton\meter\per\milli\meter\squared})},
-            apres={\foreach \yt/\vt in {0.1325/0, 0.0938/$-$2000, 0.0551/$-$4000, 0.0165/$-$6000}
-                       \node[anchor=base east, inner sep=0, font=\fontsize{3.5pt}{4pt}\selectfont, text=jvtexte] at (0.053,\yt) {\vt};}
+            apres={\rpemgrad[3.5pt]{0.0518}{0.0938}{$-$2000} \rpemgrad[3.5pt]{0.0518}{0.0551}{$-$4000} \rpemgrad[3.5pt]{0.0518}{0.0165}{$-$6000}}
             ]{\cC}{\cD}{\rB}{\rC}{\xg+2*\pas}{\haut}{0}   % K_m (non exploitable)
         \rpempanneau[expo+, bande=0.031, etiq={$F_{\vec{e}_r,\text{max}}$ (\si{\newton})}, etiqx=0.015]{\cA}{\cB}{\rA}{\rB}{\xg}{0}{0}                   % F_er
         \rpempanneau[expo+, bande=0.026, etiq={$F_{\vec{e}_\theta,\text{max}}$ (\si{\newton})}, etiqx=0.012]{\cB}{\cC}{\rA}{\rB}{\xg+\pas}{0}{1}              % F_etheta

@@ -23,6 +23,7 @@
 %   echelle=<k> : agrandit le panneau (texte compris)
 %   bande=<L> : masque la bande de gauche de largeur L (étiquette d'origine illisible)
 %   bandey=<y>, bandeb=<x> : sous la hauteur y, seule la bande [0, x] est masquée (garde les graduations de l'axe x)
+%   bandea=<a> : la bande masquée commence en a au lieu de 0 (garde l'étiquette à sa gauche)
 %   marge=<m> : ajoute une marge à gauche (place pour une nouvelle étiquette)
 %   etiq={texte}, etiqx=<x> : nouvelle étiquette verticale, centrée en x dans le panneau
 %   apres={code TikZ} : dessin ajouté dans le repère du panneau d'origine (ex. graduations réécrites)
@@ -37,14 +38,14 @@
 \pgfkeys{/rpem/.cd,
     etiq+/.code=\rpemetiqhtrue, etiq-/.code=\rpemetiqbtrue,
     expo+/.code=\rpemexphtrue,  expo-/.code=\rpemexpbtrue,
-    echelle/.store in=\rpemechelle, bande/.store in=\rpembande, bandey/.store in=\rpembandey, bandeb/.store in=\rpembandeb, marge/.store in=\rpemmarge,
+    echelle/.store in=\rpemechelle, bande/.store in=\rpembande, bandey/.store in=\rpembandey, bandeb/.store in=\rpembandeb, bandea/.store in=\rpembandea, marge/.store in=\rpemmarge,
     etiq/.store in=\rpemetiq, etiqx/.store in=\rpemetiqx, apres/.store in=\rpemapres,
     coin/.store in=\rpemcoin, deb/.store in=\rpemdeb, droite/.store in=\rpemdroite, droitey/.store in=\rpemdroitey,
     grande/.code=\rpemgrandetrue, rect/.code={}}
 \newcommand{\rpempanneau}[8][rect]{%
   \begingroup% les options restent locales au panneau
     \rpemetiqhfalse\rpemetiqbfalse\rpemexphfalse\rpemexpbfalse\rpemgrandefalse\def\rpemdroite{0}\def\rpemdroitey{0}%
-    \def\rpemechelle{1}\def\rpembande{0}\def\rpembandey{-1}\def\rpembandeb{0}\def\rpemmarge{0}\def\rpemetiq{}\def\rpemetiqx{0}\def\rpemapres{}%
+    \def\rpemechelle{1}\def\rpembande{0}\def\rpembandey{-1}\def\rpembandeb{0}\def\rpembandea{-1}\def\rpemmarge{0}\def\rpemetiq{}\def\rpemetiqx{0}\def\rpemapres{}%
     \pgfkeys{/rpem/.cd,#1}%
     \ifrpemgrande\def\rpemts{}\else\def\rpemts{transform shape}\fi
     \begin{scope}[shift={(#6,#7)}, scale=\rpemechelle, \rpemts]
@@ -57,7 +58,12 @@
                 \ifrpemetiqh -- (\rpemcoin,\rhc) -- (\rpemcoin,\rh+\rpemdeb) -- (0,\rh+\rpemdeb) \else -- (0,\rhc) \fi
                 \ifrpemetiqb -- (0,\rpemdeb) -- (\rpemcoin,\rpemdeb) \fi
                 -- cycle;
-            \clip (\rpembandeb,-1) -- (\rw+1,-1) -- (\rw+1,\rhc+1) -- (\rpembande,\rhc+1) -- (\rpembande,\rpembandey) -- (\rpembandeb,\rpembandey) -- cycle;
+            \pgfmathparse{\rpembandea<0 ? 1 : 0}%
+            \ifnum\pgfmathresult=1
+                \clip (\rpembandeb,-1) -- (\rw+1,-1) -- (\rw+1,\rhc+1) -- (\rpembande,\rhc+1) -- (\rpembande,\rpembandey) -- (\rpembandeb,\rpembandey) -- cycle;
+            \else
+                \clip (-1,-1) -- (\rw+1,-1) -- (\rw+1,\rhc+1) -- (\rpembande,\rhc+1) -- (\rpembande,\rpembandey) -- (\rpembandea,\rpembandey) -- (\rpembandea,\rhc+1) -- (-1,\rhc+1) -- cycle;
+            \fi
             \clip (-1,-1) -- (\rw+1,-1) -- (\rw+1,\rpemdroitey) -- (\rw-\rpemdroite,\rpemdroitey) -- (\rw-\rpemdroite,\rhc+1) -- (-1,\rhc+1) -- cycle;
             \ifrpemgrande
                 \node[anchor=south west, inner sep=0] at (-#2,-#4) {\usebox{\rpemboiteG}};
@@ -75,6 +81,8 @@
         \draw[\rpemcoul, line width=0.5pt, rounded corners=1pt] (0,0) rectangle (\rw+\rpemmarge, \rhc);
     \end{scope}
   \endgroup}
+% \rpemgrad{x}{y}{texte} : graduation réécrite (alignée à droite sur x, ligne de base en y), pour l'option apres
+\newcommand{\rpemgrad}[4][3pt]{\node[anchor=base east, inner sep=0, font=\fontsize{#1}{#1}\selectfont, text=jvtexte] at (#2,#3) {#4};}% [taille]{x}{y}{texte}
 % \rpemlegende{v}{b}{n} : légende des filtres (1 = afficher) : validé, biaisé mais exploitable, non exploitable
 \newcommand{\rpemlegende}[3]{%
     \ifnum#1=1 \tikz\filldraw[cMesure, fill opacity=0.13, draw=cMesure, line width=0.5pt] (0,0) rectangle (2.6mm,1.8mm);~validé\quad\fi
@@ -987,7 +995,7 @@
         \column{0.60\linewidth}
         \begin{figure}
             \centering
-            \def\rpemlargeur{0.85\linewidth}
+            \def\rpemlargeur{0.83\linewidth}
             \input{images/rpem_simu_parties.tex}
             \caption{Résultats de la méthode RPEM en simulation avec $f_z=\SI{0.17}{\milli\meter\per\tour\per\dent}$
                 \only<1>{: coefficients $a_w$, $b_w$, $c_w$ du modèle}%
