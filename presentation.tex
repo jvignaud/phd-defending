@@ -98,7 +98,7 @@
 \algrenewcommand\algorithmicensure{\textbf{Sortie :}}
 \algrenewcommand\algorithmicdo{\textbf{répéter}}
 \algrenewcommand\algorithmicwhile{\textbf{tant que}}
-\algrenewcommand\alglinenumber[1]{{\scriptsize\color{jvgris}#1}}
+\algrenewcommand\alglinenumber[1]{{\footnotesize\color{jvgris}#1}}
 
 \title{Identification et optimisation énergétique pour l'usinage}
 \author{Jamy \textsc{Vignaud}}
@@ -156,13 +156,13 @@
     \assertion{Chez VLM Robotics, chaque pièce est unique : impossible de régler les conditions de coupe par essais successifs}
 
     \begin{columns}[c]
-        \column{0.5\linewidth}
+        \column{0.46\linewidth}
         \begin{figure}
             \centering
             \includegraphics[width=\linewidth]{images/GEMINI_CEA.png}
             \caption{Cellule Gemini de fabrication et d'usinage de pièce XXL}
         \end{figure}
-        \column{0.45\linewidth}
+        \column{0.52\linewidth}
         \vspace{-5mm}
         \begin{itemize}
             \item Industrie 4.0 : production unitaire ou très petites séries, à cadence industrielle
@@ -171,9 +171,10 @@
             \item Pas d'effet de série $\Rightarrow$ pas de campagne de réglage par référence
         \end{itemize}
         \setlength{\hauteurcarte}{0mm}
-        \carte[jvcorail]{\linewidth}{SUJET DE THÈSE \textperiodcentered{} L'USINAGE}{Étape qui fixe la pièce finale}{Après le brut WAAM, l'usinage donne la \alert{géométrie finale} et l'\alert{état de surface} : c'est là que se joue la tenue en fatigue et une part de la consommation de la cellule}
-        \aretenir{\textbf{Besoin :} une stratégie \alert{en ligne}, pièce par pièce, avec une instrumentation simple, non invasive et transposable d'un poste à l'autre}
+        \carte[jvcorail]{\linewidth}{CONTEXTE \textperiodcentered{} L'USINAGE}{Étape qui fixe la pièce finale}{Après le brut WAAM, l'usinage donne la \alert{géométrie finale} et l'\alert{état de surface} : c'est là que se joue la tenue en fatigue et une part de la consommation de la cellule}
     \end{columns}
+    \vspace{-1mm}
+    \aretenir{\textbf{Besoin :} une stratégie \alert{en ligne}, pièce par pièce, avec une instrumentation simple, non invasive et transposable d'un poste à l'autre}
     % ORAL : situer ma thèse dans la cellule = la brique usinage. Intérêt : étape de finition,
     % elle impose géométrie, intégrité de surface et énergie consommée -> transition diapo suivante.
 \end{frame}
@@ -317,7 +318,7 @@
 \end{frame}
 
 \begin{frame}
-    \assertion{$k_f$ reste à moins de 1 \% de 1 sur toute la platine ; $k_m$ dépend de la position, avec un écart pouvant aller à 30 \%}
+    \assertion{$k_{f,z}$ reste à moins de 1 \% de 1 sur toute la platine ; $k_{m,z}$ dépend de la position, avec un écart pouvant aller à 30 \%}
     \begin{figure}
         \centering
         \input{images/surfaces_k.tex}
@@ -331,7 +332,7 @@
     \vspace{2mm}
     \setlength{\hauteurcarte}{38mm}
     \carte{0.32\linewidth}{ACQUIS 1}{Chaîne d'acquisition}{Efforts (platine Kistler), cinématique (commande numérique, OPC-UA) et puissance électrique (Sirius XHS) \alert{synchronisés} dans DewesoftX}\hfill
-    \carte{0.32\linewidth}{ACQUIS 2}{Étalonnage par cobot}{Force : $k_f$ à moins de 1\,\% de 1 sur toute la platine\par\vspace{1mm}Moment : $k_m$ \alert{dépend du point d'application}, jusqu'à 30\,\% d'écart}\hfill
+    \carte{0.32\linewidth}{ACQUIS 2}{Étalonnage par cobot}{Force : $k_{f,z}$ à moins de 1\,\% de 1 sur toute la platine\par\vspace{1mm}Moment : $k_{m,z}$ \alert{dépend du point d'application}, jusqu'à 30\,\% d'écart}\hfill
     \carte[jvcorail]{0.32\linewidth}{LIMITES}{Ce qui reste à faire}{Axe $z$ seul, hystérésis, précision du robot ($\approx$\,0,5\,mm)\par\vspace{1mm}Platine invasive et coûteuse : à terme, la remplacer par la puissance électrique de la broche}
 
     \aretenir{\textbf{À retenir :} la matrice d'étalonnage rend les mesures d'effort et de moment selon $z$ fiables en tout point d'application $\Rightarrow$ le comoment des torseurs, donc l'énergie spécifique, devient calculable}
@@ -352,8 +353,8 @@
     \vspace{-5mm}
     \begin{align*}
         P_{\text{Outil/Pièce}} = & \{\tau_{\text{Outil}\to\text{Pièce}}\} \otimes \{\mathcal{V}_{\text{Pièce/Outil}}\}                                                                                                             \\
-                               = & - F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \|V_{F,\vec{x},\text{Outil/Pièce}}\| \cos(\theta) - M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \|\omega_{\vec{z},\text{Outil/Pièce}}\|             \\
-                               & - F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \left(\|\omega_{\vec{z},\text{Outil/Pièce}}\|\left(R+\frac{a_p}{2}\cot(\kappa_r)\right)-\|V_{F,\vec{x},\text{Outil/Pièce}}\| \sin(\theta)\right)
+                               = & \uncover<3->{\alert<3>{- F_{\vec{e}_r,\text{Outil}\to\text{Pièce}} \|V_{F,\vec{x},\text{Outil/Pièce}}\| \cos(\theta)}} \uncover<2->{\alert<2>{- M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}} \|\omega_{\vec{z},\text{Outil/Pièce}}\|}} \\
+                               & \alert<1>{- F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}} \left(\|\omega_{\vec{z},\text{Outil/Pièce}}\|\left(R+\frac{a_p}{2}\cot(\kappa_r)\right)-\|V_{F,\vec{x},\text{Outil/Pièce}}\| \sin(\theta)\right)}
     \end{align*}
 
     \begin{columns}[T]
@@ -367,16 +368,17 @@
 
         \column{0.5\linewidth}
         \begin{itemize}
-            \item terme de \alert{coupe} ($F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}}$) : prépondérant
-            \item terme de \alert{moment} ($M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}$) : non négligeable
-            \item terme d'avance ($F_{\vec{e}_r,\text{Outil}\to\text{Pièce}}$) : négligeable
+            \item terme de \alert<1>{coupe} ($F_{\vec{e}_\theta,\text{Outil}\to\text{Pièce}}$) : prépondérant
+            \item<2-> terme de \alert<2>{moment} ($M_{P,\vec{e}_z,\text{Outil}\to\text{Pièce}}$) : non négligeable
+            \item<3-> terme d'\alert<3>{avance} ($F_{\vec{e}_r,\text{Outil}\to\text{Pièce}}$) : négligeable
         \end{itemize}
-        \vspace{2mm}
-        {\scriptsize\color{jvgris} Y.~\textsc{Couétard}, O.~\textsc{Cahuc}, Ph.~\textsc{Darnis}, \emph{Mesure des 6 actions de coupe en fraisage grande vitesse}, 3\textsuperscript{rd} Int. Conf. on Metal Cutting and High Speed Machining, p.~37--42, 2001.\par
+        \vspace{2cm}
+        {\footnotesize\color{jvgris} Y.~\textsc{Couétard}, O.~\textsc{Cahuc}, Ph.~\textsc{Darnis}, \emph{Mesure des 6 actions de coupe en fraisage grande vitesse}, 3\textsuperscript{rd} Int. Conf. on Metal Cutting and High Speed Machining, p.~37--42, 2001.\par
         G.~\textsc{Albert}, \emph{Identification et modélisation du torseur des actions de coupe en fraisage}, thèse de doctorat, Université Bordeaux~1, 2010.\par}
     \end{columns}
     % SOURCE : fig. 2.1 / 2.6 ; éq. (2.18) en annexe si question.
-    % ORAL : ne pas dérouler l'équation complète, colorer les trois termes.
+    % ORAL : ne pas dérouler l'équation complète ; les trois termes apparaissent un à un
+    % (coupe, puis moment, puis avance), le terme introduit est en couleur d'accent.
 \end{frame}
 
 \subsection{Identification des pressions spécifiques}
@@ -386,7 +388,7 @@
 
     \vspace{-2mm}
     \hfill\tikz[baseline=(m.base)]\node[fill=jvcorail, text=white, rounded corners=2pt,
-        inner xsep=2.5mm, inner ysep=1.2mm, font=\footnotesize\bfseries] (m)
+        inner xsep=2.5mm, inner ysep=1.2mm, font=\small\bfseries] (m)
         {Matériau usiné : acier C35};
     \vspace{-1mm}
 
@@ -397,7 +399,7 @@
             {\fontsize{4.5pt}{5pt}\selectfont
                 \def\svgwidth{\textwidth}
                 \import{images/}{signaux_filtres.pdf_tex}}
-            \caption{Signaux mesurés filtrés par le filtre de \textsc{Notch}}
+            \caption{Signaux mesurés filtrés par le filtre notch}
         \end{figure}
 
         \column{0.5\linewidth}
@@ -409,7 +411,7 @@
             \caption{Recalage des signaux par rapport à l'angle $\theta$}
         \end{figure}
     \end{columns}
-    % SOURCE : fig. 2.7 (recalage), 2.9 (Notch), 2.11 (régression).
+    % SOURCE : fig. 2.7 (recalage), 2.9 (notch), 2.11 (régression).
     % ORAL : préciser le matériau des essais (acier C35) avant de commenter les signaux.
 \end{frame}
 
@@ -437,10 +439,11 @@
         \vspace{1mm}
         \begin{itemize}
             \item Ordonnées à l'origine : \alert{effet d'arête} (frottement en dépouille, labourage) et linéarisation locale autour de $A_{d,m}$
-            \item $K_c$ à 9,5~\% de la valeur industrielle (2164~MPa)
+            \item $K_c$ \alert{proche de la valeur industrielle} de l'acier C35 (\num{2164}\,MPa)
+            \item $K_f \approx 0{,}3\,K_c$ : effort d'avance nettement inférieur à l'effort de coupe, ordre de grandeur attendu
         \end{itemize}
         \vspace{2mm}
-        {\scriptsize\color{jvgris} M.~E.~\textsc{Martellotti}, \emph{An analysis of the milling process}, Transactions of the ASME, vol.~63, n\textsuperscript{o}~8, p.~677--695, 1941.\par
+        {\footnotesize\color{jvgris} M.~E.~\textsc{Martellotti}, \emph{An analysis of the milling process}, Transactions of the ASME, vol.~63, n\textsuperscript{o}~8, p.~677--695, 1941.\par
         M.~\textsc{Jeulin}, O.~\textsc{Cahuc}, P.~\textsc{Darnis}, R.~\textsc{Laheurte}, \emph{A 6-components mechanistic model of cutting forces and moments in milling}, Forces in Mechanics, vol.~9, 100130, 2022.\par}
     \end{columns}
 \end{frame}
@@ -482,7 +485,6 @@
         \end{figure}
         \vspace{-2mm}
         \begin{block}{Pour chercher la $V_c$ optimale}
-            \footnotesize
             \begin{itemize}
                 \item $V_c$ est imposée par la \alert{broche}, asservie : il faut connaître sa dynamique (section 4)
                 \item $W_c(V_c)$ doit être \alert{identifiée en ligne} (section 5)
@@ -558,14 +560,13 @@
         \begin{figure}
             \centering
             {\fontsize{5pt}{5pt}\selectfont
-                \def\svgwidth{0.82\textwidth}
+                \def\svgwidth{0.72\textwidth}
                 \only<1>{\import{images/}{comp_puissance_2.pdf_tex}}
                 \only<2>{\import{images/}{comp_puissance.pdf_tex}}}
             \caption{Comparaison des puissances mécanique et électrique}
         \end{figure}
         \vspace{-2mm}
         \begin{alertblock}{Pas encore substituable à la platine}
-            \footnotesize
             \begin{itemize}
                 \item $\eta$ et $\mathcal{P}_{\text{vide}}$ non caractérisés sur la plage de fonctionnement
                 \item grandeur scalaire : ne sépare pas $K_c$, $K_f$ et $K_m$
@@ -609,7 +610,6 @@
         \end{figure}
 
         \column{.35\linewidth}
-        \small
         \begin{itemize}
             \item Structure relevée dans Sinamics Starter
             \item Deux entrées de consigne de vitesse :
@@ -617,8 +617,7 @@
                       \item consigne statique, avec préfiltre $P\!F$ sur la seule voie intégrale
                       \item commande anticipatrice de vitesse, sans préfiltre
                   \end{itemize}
-            \item \alert{Une seule est active} : la commande anticipatrice de vitesse
-            \item Sans préfiltre = cas particulier $P\!F = 1$ : les algorithmes restent valables
+            \item \alert{Une seule est active}
         \end{itemize}
     \end{columns}
 
@@ -643,7 +642,7 @@
         \resizebox{\linewidth}{!}{\input{images/schema_positionnement.tex}}
     \end{center}
     \vfill
-    {\tiny\color{gray}
+    {\footnotesize\color{gray}
         $^1$Gilson \& Van den Hof, \emph{Automatica}, 2005 \quad
         $^2$Young \emph{et al.}, \emph{IFAC}, 2009 \quad
         $^3$Gilson \emph{et al.}, \emph{IFAC}, 2009 ; \emph{IET CTA}, 2011\par
@@ -667,28 +666,46 @@
 
     \vspace{-1mm}
     \begin{columns}[T]
-        \column{0.45\linewidth}
-        {\small
+        \column{0.5\linewidth}
+        {\footnotesize
         \begin{algorithmic}[1]
             \Require $y$, $r_1$, $r_2$, $C_P$, $C_I$, $P\!F$
             \State $\hat{\theta}^{0} \gets$ CLSRIVFR
             \State $r \gets r_1 +  (C_P + C_I P\!F) r_2$, \quad $u \gets r + (C_P + C_I) y$
             \Do
-                \State $\hat{G} = \hat{B}/\hat{A}$ \hfill {\scriptsize\color{jvgris}modèle courant}
-                \State $\nu,\ x \gets$ simulation sans bruit par $\hat{G}$ \hfill {\scriptsize\color{jvgris}instruments}
-                \State \alert{$\hat{\xi} = \hat{S}^{-1}(y - x)$ $\Rightarrow$ $\hat{H}$ (ARMA)} \hfill {\scriptsize\color{jvgris}bruit}
-                \State \alert{$F'_{opt} \gets (\hat{A} \ \hat{H})^{-1}$} \hfill {\scriptsize\color{jvgris}préfiltre optimal}
+                \State $\hat{G} = \hat{B}/\hat{A}$ \hfill {\footnotesize\color{jvgris}modèle courant}
+                \State $\nu,\ x \gets$ simulation sans bruit par $\hat{G}$ \hfill {\footnotesize\color{jvgris}instruments}
+                \State \alert{$\hat{\xi} = \hat{S}^{-1}(y - x)$ $\Rightarrow$ $\hat{H}$ (ARMA)} \hfill {\footnotesize\color{jvgris}bruit}
+                \State \alert{$F'_{opt} \gets (\hat{A} \ \hat{H})^{-1}$} \hfill {\footnotesize\color{jvgris}préfiltre optimal}
                 \State $y_f,\ u_f,\ x_f,\ \nu_f \gets F'_{opt}\,(y,\ u,\ x,\ \nu)$
                 \State $\hat{\theta} = \left(Z_f^\top \Phi_f\right)^{-1} Z_f^\top Y_f$
             \doWhile{$\sum_j \bigl|\Delta\hat{\theta}_j / \hat{\theta}_j\bigr| > \epsilon$}
             \Ensure $\hat{\theta}$, $\hat{H}$
         \end{algorithmic}}
 
-        \column{0.55\linewidth}
+        \column{0.5\linewidth}
         \setlength{\hauteurcarte}{0mm}
         \carte{\linewidth}{HÉRITÉ DE CLSRIVFR}{Instruments et préfiltre}{Instruments $\nu$, $x$ non corrélés au bruit, préfiltrage itératif des signaux}
-        \vspace{5mm}
+        \vspace{2mm}
         \carte[jvcorail]{\linewidth}{APPORT DE CLRIVFR}{Modèle de bruit}{Bruit coloré estimé à chaque itération : préfiltre \alert{optimal} et modèle de bruit $\hat{H}$ en sortie}
+    \end{columns}
+    \vspace{-1.5mm}
+    \aretenir{\textbf{Conditions d'identification :} \ $\lim_{N\to\infty}\tfrac{1}{N}\sum_{k=1}^{N} z_f(k)\,e_f(k) = 0$ \quad et \quad $Z_f^\top \Phi_f$ non singulière}
+    \vspace{-3mm}
+    \begin{columns}[b]
+        \column{0.5\linewidth}
+        \begin{figure}
+            \centering
+            \resizebox{0.9\linewidth}{!}{\input{images/schema_bloc_simplifié.tex}}
+            \caption{Schéma fonctionnel de la broche en boucle fermée avec le préfiltre}
+        \end{figure}
+        \column{0.5\linewidth}
+        \begin{figure}
+            \centering
+            % même échelle que le schéma de gauche (largeurs naturelles 258 pt / 266 pt)
+            \resizebox{0.872\linewidth}{!}{\input{images/schema_bloc_auxiliaire.tex}}
+            \caption{Modèle auxiliaire $\hat{G}$, sans bruit : instruments $\nu$ et $x$}
+        \end{figure}
     \end{columns}
     % ORAL : lire la boucle de haut en bas ; insister sur les deux lignes en couleur.
     % Version complète : annexe « CLRIVFR » (algorithme détaillé).
@@ -699,15 +716,12 @@
 \begin{frame}
     \assertion{En bruit blanc, les méthodes proposées réduisent le biais par rapport aux méthodes classiques}
 
+    \vspace{0.5mm}
+    \hfill\tikz[baseline=(m.base)]\node[fill=jvcorail, text=white, rounded corners=2pt,
+        inner xsep=2.5mm, inner ysep=1.2mm, font=\small\bfseries] (m)
+        {Simulation : bruit blanc};
+    \vspace{-1mm}
     \begin{columns}[c]
-        \column{0.5\linewidth}
-        \begin{figure}
-            \centering
-            {\fontsize{5pt}{5pt}\selectfont
-                \def\svgwidth{\textwidth}
-                \import{images/}{comp_cllssvffr_clivsvffr_clsrivfr_whitenoise.pdf_tex}}
-            \caption{Comparaison des méthodes avec le préfiltre}
-        \end{figure}
         \column{0.45\linewidth}
         \begin{figure}
             \centering
@@ -715,6 +729,15 @@
                 \def\svgwidth{\textwidth}
                 \import{images/}{comp_cllssvf_clivsvf_clsriv_whitenoise.pdf_tex}}
             \caption{Comparaison des méthodes sans le préfiltre}
+        \end{figure}
+
+        \column{0.5\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_cllssvffr_clivsvffr_clsrivfr_whitenoise.pdf_tex}}
+            \caption{Comparaison des méthodes avec le préfiltre}
         \end{figure}
     \end{columns}
     % SOURCE : tab. 3.1 (à transformer en boxplots), fig. 3.12-3.15.
@@ -724,6 +747,11 @@
 \begin{frame}
     \assertion{En bruit coloré, CLRIVFR est la plus consistante et estime aussi le modèle de bruit}
 
+    \vspace{0.5mm}
+    \hfill\tikz[baseline=(m.base)]\node[fill=jvcorail, text=white, rounded corners=2pt,
+        inner xsep=2.5mm, inner ysep=1.2mm, font=\small\bfseries] (m)
+        {Simulation : bruit coloré};
+    \vspace{-1mm}
     \begin{columns}[c]
         \column{0.5\linewidth}
         \begin{figure}
@@ -759,6 +787,13 @@
                 \import{images/}{sbpa.pdf_tex}}
             \caption{Signaux concaténés}
         \end{figure}
+        \vspace{-1.3cm}
+        \begin{figure}
+            \centering
+            \resizebox{.8\linewidth}{!}{\input{images/schema_normalise}}
+            \caption{Représentation simplifiée}
+        \end{figure}
+        
         \column{0.45\linewidth}
         \begin{figure}
             \centering
@@ -769,6 +804,8 @@
             \item SBPA générée par actions synchrones
             \item Trace variateur à 8\,kHz, mémoire 128\,ko $\approx$ 1\,s
             \item Concaténation des enregistrements
+            \item Consigne réellement active : commande anticipatrice de vitesse
+            \item Sans préfiltre = cas particulier $P\!F = 1$ : les algorithmes restent valables
         \end{itemize}
     \end{columns}
     % SOURCE : fig. 4.1, fig. 4.2.
@@ -777,43 +814,36 @@
 \begin{frame}
     \assertion{Les méthodes à variables instrumentales ne convergent que vers des modèles stables : un filtre passe-haut lève le verrou}
 
-    \vspace{-5mm}
+    \vspace{-3mm}
     \begin{columns}[c]
-        \column{0.5\linewidth}
-        \begin{figure}
-            \centering
-            \begin{subfigure}[b]{\textwidth}
+        \column{0.55\linewidth}
+        % Animation : schéma de la diapo précédente -> ajout des filtres -> réorganisation -> forme simplifiée
+        % Étapes 1, 2 et 4 à la même échelle (largeurs naturelles 203 / 278 / 210 pt) ; l'étape 3 (366 pt) est réduite pour tenir
+        \begin{overlayarea}{\linewidth}{0.52\textheight}
+            \begin{figure}
                 \centering
-                \resizebox{\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur}}
-                \caption{Schéma complet avec filtre passe-haut et filtre inverse}
-            \end{subfigure}
+                \only<1>{%
+                    \resizebox{0.728\linewidth}{!}{\input{images/schema_normalise}}%
+                    \caption{Schéma de départ (diapo précédente)}}%
+                \only<2>{%
+                    \resizebox{\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur}}%
+                    \caption{Ajout du filtre passe-haut et du filtre inverse}}%
+                \only<3>{%
+                    \resizebox{\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur_rearange}}%
+                    \caption{Réorganisation du schéma fonctionnel}}%
+                \only<4>{%
+                    \resizebox{0.756\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur_normalise}}%
+                    \caption{Représentation simplifiée}}%
+            \end{figure}
+        \end{overlayarea}
 
-            \begin{subfigure}[b]{\textwidth}
-                \centering
-                \resizebox{\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur_rearange}}
-                \caption{Réorganisation du schéma fonctionnel}
-            \end{subfigure}
-        \end{figure}
-
-        \column{0.45\linewidth}
-        \begin{figure}
-            \centering
-            \begin{subfigure}[b]{\textwidth}
-                \centering
-                \resizebox{.8\linewidth}{!}{\input{images/schema_avec_filtre_stabilisateur_normalise}}
-                \setcounter{subfigure}{2}% subcaption remet le compteur à zéro au début du subfigure
-                \caption{Représentation simplifiée}
-            \end{subfigure}
-
-            \caption{Étapes de simplification du schéma fonctionnel avec filtre passe-haut}
-        \end{figure}
+        \column{0.4\linewidth}
         \[
             F(q) = \frac{\dfrac{2}{\omega_c T_e + 2}\left(1 - q^{-1}\right)}{1 + \dfrac{\omega_c T_e - 2}{\omega_c T_e + 2}\, q^{-1}}, \quad f_c = 100\,\text{Hz}
         \]
         \begin{itemize}
+            \item Constat : intégrateur pur (moteur)
             \item Passe-haut $F(s) = \frac{s}{s+\omega_c}$ discrétisé par Tustin
-            \item Hypothèse : intégrateur pur (moteur)
-            \item Filtre inverse $\Rightarrow$ transparent pour les signaux
         \end{itemize}
     \end{columns}
     % SOURCE : fig. 4.3, fig. 4.4 ; éq. (4.4)-(4.5).
@@ -821,12 +851,12 @@
 \end{frame}
 
 \begin{frame}
-    \assertion{En validation, CLRIVFR reproduit la sortie mesurée avec un fit de 97,6\,\%}
+    \assertion{En validation, CLRIVFR reproduit la sortie mesurée avec un fit de 97,6\,\% pour la vitesse de 3900\,tr/min}
 
     \begin{columns}[c]
         \column{0.6\linewidth}
         \begin{figure}
-            \vspace{-5mm}
+            \vspace{-3mm}
             \centering
             {\fontsize{6pt}{5pt}\selectfont
                 \def\svgwidth{\textwidth}
@@ -836,14 +866,6 @@
         \column{0.35\linewidth}
         \centering
         \tuile{0.85\linewidth}{97,6\,\%}{fit de CLRIVFR en validation}
-        \par\vspace{3mm}
-        \begin{tabular}{lr}
-            Méthode         & Fit               \\ \hline
-            CLLSSVFFR       & 93,05\,\%         \\
-            CLIVSVFFR       & 90,48\,\%         \\
-            CLSRIVFR        & 90,59\,\%         \\
-            \alert{CLRIVFR} & \alert{97,57\,\%} \\
-        \end{tabular}
     \end{columns}
     % SOURCE : fig. 4.11.
     % ORAL : le gain vient de la modélisation du bruit.
@@ -879,11 +901,13 @@
     \vspace{2mm}
     \setlength{\hauteurcarte}{42mm}
     \carte{0.32\linewidth}{ACQUIS 1}{Quatre algorithmes}{Adaptés au PI parallèle avec préfiltre sur la voie intégrale, en temps discret et continu\par\vspace{1mm}Biais réduit par rapport aux méthodes classiques (Monte-Carlo)\par\vspace{1mm}CLRIVFR : la plus consistante, \alert{estime aussi le bruit}}\hfill
-    \carte{0.32\linewidth}{ACQUIS 2}{Validation sur machine}{SBPA injectée par G-code, traces variateur concaténées\par\vspace{1mm}CLRIVFR : \alert{fit de 97,6\,\%} en validation\par\vspace{1mm}Modèle cohérent de 1000 à 5000\,tr/min}\hfill
-    \carte[jvcorail]{0.32\linewidth}{LIMITES}{Ce qui reste à faire}{Intégrateur pur : filtre causal nécessaire pour les variables instrumentales\par\vspace{1mm}Incertitudes au-delà de 100\,Hz et différences étoile/triangle à basse vitesse}
+    \carte{0.32\linewidth}{ACQUIS 2}{Validation sur machine}{SBPA injectée par G-code, traces variateur concaténées\par\vspace{1mm}CLRIVFR : \alert{fit de 97,6\,\%} en validation\par\vspace{1mm}Modèles cohérents de 1000 à 5000\,tr/min}\hfill
+    \carte[jvcorail]{0.32\linewidth}{PERSPECTIVES}{Ce qui reste à faire}{Modèle incertain au-delà de 100\,Hz : concevoir une \alert{\mbox{commande robuste}} à ces incertitudes}
 
     \aretenir{\textbf{À retenir :} la broche est connue et ses incertitudes sont bornées $\Rightarrow$ on peut la piloter en $V_c$ et, à terme, concevoir une commande robuste}
     % ORAL : synthèse en 30 s ; cœur théorique de la thèse.
+    % ORAL (perspectives) : au-delà de 100 Hz le modèle identifié n'est plus fiable ; plutôt que
+    % de le raffiner, borner ces incertitudes et synthétiser une commande robuste qui les tolère.
     % TRANSITION : « La broche est connue ; reste à savoir vers quelle vitesse la piloter. »
 \end{frame}
 
@@ -914,7 +938,7 @@
                 W_c = \frac{\mathcal{P}_{\text{coupe}}}{Q} \quad \text{(J/cm}^3\text{)}
             \]
             \vspace{-2mm}
-            {\footnotesize
+            {
             \begin{itemize}
                 \item Énergie pour enlever \alert{1\,cm$^3$} de matière
                 \item Minimiser $\mathcal{P}$ seule revient à ralentir ; ramenée au débit $Q$, elle compare des conditions à \alert{productivité différente}
@@ -958,21 +982,21 @@
 
     \begin{columns}[c]
         \column{0.35\linewidth}
-        {\footnotesize
+        {\small
         \begin{algorithmic}[1]
             \Require $V_{c,\text{init}}$, $f_z$, $\hat{\theta}_0$, $R_0$, $\gamma_0$
             \Do
-                \State $y_k \gets \bigl[W_c,\ F_r,\ F_\theta,\ M_z\bigr]^\top$ \hfill {\scriptsize\color{jvgris}mesure}
+                \State $y_k \gets \bigl[W_c,\ F_r,\ F_\theta,\ M_z\bigr]^\top$ \hfill {\footnotesize\color{jvgris}mesure}
                 \State $\hat{y}_k \gets \bigl[a_w V_c^2 + b_w V_c + c_w,\ K f_z a_p\bigr]$
                 \State $\varepsilon_k = y_k - \hat{y}_k$
                 \State $R_k = R_{k-1} + \gamma_k\bigl(\psi_k^\top \psi_k - R_{k-1}\bigr)$
-                \State $\hat{\theta}_k = \hat{\theta}_{k-1} + \gamma_k R_k^{-1} \psi_k^\top \varepsilon_k$ \hfill {\scriptsize\color{jvgris}modèle}
-                \State \alert{$V_c^\star = -b_w / 2a_w$} \hfill {\scriptsize\color{jvgris}optimum}
-                \State $V_c \gets \mathrm{sat}\bigl(V_c^\star\bigr)$ \hfill {\scriptsize\color{jvgris}pas $h_{V_c}$, bornes}
+                \State $\hat{\theta}_k = \hat{\theta}_{k-1} + \gamma_k R_k^{-1} \psi_k^\top \varepsilon_k$ \hfill {\footnotesize\color{jvgris}modèle}
+                \State \alert{$V_c^\star = -b_w / 2a_w$} \hfill {\footnotesize\color{jvgris}optimum}
+                \State $V_c \gets \mathrm{sat}\bigl(V_c^\star\bigr)$ \hfill {\footnotesize\color{jvgris}pas $h_{V_c}$, bornes}
             \doWhile{usinage en cours}
         \end{algorithmic}}
         \vspace{1mm}
-        {\scriptsize\color{jvgris} $\hat{\theta} = [a_w,\ b_w,\ c_w,\ K_f,\ K_c,\ K_m]^\top$, \quad $K \in \{K_f, K_c, K_m\}$\par}
+        {\footnotesize\color{jvgris} $\hat{\theta} = [a_w,\ b_w,\ c_w,\ K_f,\ K_c,\ K_m]^\top$, \quad $K \in \{K_f, K_c, K_m\}$\par}
         \column{0.65\linewidth}
         \begin{figure}
             \centering
@@ -1004,7 +1028,7 @@
         \end{figure}
         \column{0.39\linewidth}
         \hfill\tikz[baseline=(m.base)]\node[fill=jvcorail, text=white, rounded corners=2pt,
-            inner xsep=2.5mm, inner ysep=1.2mm, font=\footnotesize\bfseries] (m)
+            inner xsep=2.5mm, inner ysep=1.2mm, font=\small\bfseries] (m)
             {Validation en simulation};
         \begin{figure}
             \centering
@@ -1033,7 +1057,7 @@
         \end{figure}
         \column{0.39\linewidth}
         \hfill\tikz[baseline=(m.base)]\node[fill=jvcorail, text=white, rounded corners=2pt,
-            inner xsep=2.5mm, inner ysep=1.2mm, font=\footnotesize\bfseries] (m)
+            inner xsep=2.5mm, inner ysep=1.2mm, font=\small\bfseries] (m)
             {Validation en simulation};
         \begin{figure}
             \centering
@@ -1044,7 +1068,7 @@
         \end{figure}
     \end{columns}
     \vspace{-1mm}
-    {\footnotesize\color{jvgris} Le minimum en $f_z$ est \alert{imposé par le modèle de simulation} (il n'a pas été observé sur machine) : on vérifie seulement que l'algorithme sait optimiser deux variables à la fois. Convergence vers $V_c = 250$\,m/min et $f_z = 0{,}17$\,mm/(tr.dent) après un dépassement transitoire.\par}
+    {\small\color{jvgris} Le minimum en $f_z$ est \alert{imposé par le modèle de simulation} (il n'a pas été observé sur machine) : on vérifie seulement que l'algorithme sait optimiser deux variables à la fois. Convergence vers $V_c = 250$\,m/min et $f_z = 0{,}17$\,mm/(tr.dent) après un dépassement transitoire.\par}
     % SOURCE : fig. 4.19 (modèle paraboloïde), fig. 4.22 (RPEM conjointe).
     % ORAL : initialisation à V_c = 200 m/min et f_z = 0,2 ; dépassement transitoire avant convergence ;
     % léger biais sur les coefficients, sans effet sur la convergence des variables optimisées.
@@ -1054,6 +1078,12 @@
 
 \begin{frame}[t]
     \assertion{Sur machine, $V_c$ converge vers 244,9\,m/min, proche des 250\,m/min préconisés par le constructeur}
+
+    \vspace{0.5mm}
+    \hfill\tikz[baseline=(m.base)]\node[fill=jvcorail, text=white, rounded corners=2pt,
+        inner xsep=2.5mm, inner ysep=1.2mm, font=\small\bfseries] (m)
+        {Expérimental : acier C35 sur machine-outil};
+    \vspace{0.5mm}
 
     \begin{columns}[T]
         \column{0.72\linewidth}
@@ -1072,7 +1102,13 @@
         \begin{itemize}
             \item $V_c$ : 250 $\rightarrow$ \alert{244,9\,m/min}, stable
             \only<1>{\item Coefficients $a_w$, $b_w$, $c_w$ estimés en ligne}%
-            \only<2>{\item $K_c \approx 2400$\,MPa, $K_f \approx 1500$\,MPa
+            \only<2>{\item Rappel : efforts et moment \alert{proportionnels à la section de copeau} :
+                      \begin{itemize}
+                          \item $F_{\vec{e}_\theta,\max} = K_c\,A_{d,\max}$
+                          \item $F_{\vec{e}_r,\max} = K_f\,A_{d,\max}$
+                          \item $M_{P,\vec{e}_z,\max} = K_m\,A_{d,\max}$
+                      \end{itemize}
+                      \item $K_c \approx 2400$\,MPa, $K_f \approx 1500$\,MPa
                       \item $K_m$ mal estimé (mesure du moment)}%
             \only<3>{\item Critère $J$ décroît}%
         \end{itemize}
@@ -1093,7 +1129,7 @@
             {\fontsize{4pt}{5pt}\selectfont
                 \def\svgwidth{\textwidth}
                 \import{images/}{energie_spec_Wc_titane.pdf_tex}}
-            \caption{$W_c(V_c)$ sur titane Ti6Al4V}
+            \caption{Énergie spécifique mesurée en fonction de $V_c$ : Ti6Al4V usiné à sec}
         \end{figure}
 
         \column{0.62\linewidth}
@@ -1104,7 +1140,7 @@
     \end{columns}
 
     \vspace{1mm}
-    {\scriptsize\color{jvgris}\textbf{Limites :} $K_m$ mal estimé, convergence lente (OPC-UA), pas de minimum en $f_z$, minimums du titane étroits et sensibles au bruit.\par}
+    {\small\color{jvgris}\textbf{Limites :} $K_m$ mal estimé, convergence lente (OPC-UA), pas de minimum en $f_z$, minimums du titane étroits et sensibles au bruit.\par}
     % SOURCE : fig. 4.20-4.22 (simulation), 4.23 (machine), 4.24 (titane).
     % ORAL : simulation : convergence vers l'optimum ET les paramètres (léger biais ; dépassement
     % transitoire en multi-paramètres). Titane : même fraise, sans lubrification, f_z = 0,125 ;
@@ -1141,7 +1177,7 @@
 
     \vspace{1mm}
     \setlength{\hauteurcarte}{50mm}
-    \carte{0.32\linewidth}{VERROU 1 \textperiodcentered{} CH.~1--2}{Connaître l'énergie en ligne}{\textbf{Ch.~1 :} efforts, cinématique et puissance électrique synchronisés ; étalonnage par cobot, $k_m$ dépend du point d'application (\alert{jusqu'à 30\,\%})\par\vspace{1mm}\textbf{Ch.~2 :} puissance par comoment des torseurs, \alert{calculable en ligne}, cohérente avec la puissance électrique}\hfill
+    \carte{0.32\linewidth}{VERROU 1 \textperiodcentered{} CH.~1--2}{Connaître l'énergie en ligne}{\textbf{Ch.~1 :} efforts, cinématique et puissance électrique synchronisés ; étalonnage par cobot, $k_{m,z}$ dépend du point d'application (\alert{jusqu'à 30\,\%})\par\vspace{1mm}\textbf{Ch.~2 :} puissance par comoment des torseurs, \alert{calculable en ligne}, cohérente avec la puissance électrique}\hfill
     \carte[jvbleu]{0.32\linewidth}{VERROU 2 \textperiodcentered{} CH.~3--4}{Identifier en boucle fermée}{\textbf{Ch.~3 :} 4 algorithmes pour le PI parallèle avec préfiltre, en discret et en continu ; biais réduit, CLRIVFR estime aussi le bruit\par\vspace{1mm}\textbf{Ch.~4 :} \alert{fit de 97,6\,\%} sur machine, modèle cohérent de 1000 à 5000\,tr/min}\hfill
     \carte[jvcorail]{0.32\linewidth}{VERROU 3 \textperiodcentered{} CH.~4}{Optimiser en temps réel}{RPEM sur un modèle empirique $W_c(V_c)$ : \alert{fonctionnelle en simulation} ($V_c$, $f_z$, puis les deux)\par\vspace{1mm}Sur machine : $V_c \to$ \alert{244,9\,m/min} (préconisation : 250\,m/min) ; minimums aussi observés sur titane}
 
@@ -1155,7 +1191,7 @@
     \vspace{1mm}
     \setlength{\hauteurcarte}{44mm}
     \carte{0.32\linewidth}{CONSTAT}{Variations et perturbations}{\textbf{Paramétriques :} matériau (C35, titane), point de fonctionnement (1000 à 5000\,tr/min, étoile/triangle, PI à gains variables)\par\vspace{1mm}\textbf{Perturbations :} efforts de coupe, entrée/sortie de dent, bruit de mesure}\hfill
-    \carte[jvbleu]{0.32\linewidth}{PROPOSITION}{Commande robuste}{Synthèse $H_\infty$, $\mu$-synthèse ou CRONE à partir des \alert{bornes d'incertitude} identifiées (famille de modèles CLRIVFR)\par\vspace{1mm}Stabilité et performances garanties sans ré-identifier à chaque configuration}\hfill
+    \carte[jvbleu]{0.32\linewidth}{PROPOSITION}{Synthèse de loi de commande robuste}{Synthèse $H_\infty$, $\mu$-synthèse ou CRONE à partir des \alert{bornes d'incertitude} identifiées (famille de modèles CLRIVFR)\par\vspace{1mm}Robustesse du degré de stabilité en boucle fermée, performances garanties, prise en compte des incertitudes paramétriques}\hfill
     \carte[jvcorail]{0.32\linewidth}{IMPLICATION}{Architecture de la CN}{Boucle de vitesse Sinamics \alert{fermée et imposée} : impossible d'y loger son propre régulateur\par\vspace{1mm}OPC-UA trop lent : accès temps réel nécessaire (Profinet, consigne de couple)}
 
     \aretenir{\textbf{Conclusion :} identifier et optimiser ne suffisent pas ; réguler l'énergie en production demande un régulateur robuste \emph{et} une commande numérique ouverte}
@@ -1168,16 +1204,19 @@
 
     \vspace{2mm}
     \setlength{\hauteurcarte}{42mm}
-    \carte{0.32\linewidth}{COURT TERME}{Instrumentation}{%
+    \carte{0.32\linewidth}{COURT TERME}{Industrialisation}{%
         \begin{itemize}
+            \item Fiabiliser la mesure en ligne du moment pour estimer $K_m$
             \item Remplacer la platine par la puissance électrique : caractériser $\eta$ et la puissance à vide, exploiter le courant de couple
-            \item Fiabiliser la mesure du moment pour estimer $K_m$
+            $$
+            \mathcal{P}_\text{méca} = \eta (\mathcal{P}_\text{élec} - \mathcal{P}_\text{vide})
+            $$
         \end{itemize}}\hfill
     \carte[jvbleu]{0.32\linewidth}{PISTES DE RECHERCHE}{Élargir l'optimisation}{%
         \begin{itemize}
             \item Trouver une grandeur présentant un minimum en $f_z$
             \item Raie vibratoire vers 6300\,Hz comme contrainte de stabilité
-            \item Régler $\gamma_0$ et $R_0$ pour accélérer la convergence
+            \item Régler les hyperparamètres de la RPEM pour affiner la convergence
         \end{itemize}}\hfill
     \carte[jvcorail]{0.32\linewidth}{LONG TERME}{Commande et industrialisation}{%
         \begin{itemize}
@@ -1191,13 +1230,13 @@
     \assertion{Valorisation}
 
     \tuile{0.235\linewidth}{1}{revue (soumise)}\hfill
-    \tuile{0.235\linewidth}{3}{conférences internationales}\hfill
+    \tuile{0.235\linewidth}{3}{conférences\\internationales}\hfill
     \tuile{0.235\linewidth}{2}{conférence nationale}\hfill
     \tuile{0.235\linewidth}{2}{posters}
-    \vspace{4mm}
+    \vspace{1mm}
 
     \begin{itemize}
-        \item \textbf{Revue} : J. Vignaud, S. Victor, J-Y. K'Nevez, O. Cahuc, Ph. Verlet, «~Closed-Loop System Identification Using Parallel PI Controller and Reference Prefiltering: application to spindle motor identification~», dans IEEE Transactions on Automatic Control (soumis)
+        \item \textbf{Revue} : J. Vignaud, S. Victor, J-Y. K'Nevez, O. Cahuc, Ph. Verlet, «~Closed-Loop System Identification Using Parallel PI Controller and Reference Prefiltering: application to spindle motor identification~», dans IEEE Transactions on Control System Technology (soumis)
         \item \textbf{Conférences internationales} : 
         \begin{itemize}
             \item J. Vignaud, S. Victor, J.-Y. K’nevez, O. Cahuc, et P. Verlet, «~Closed-Loop System Identification in Continuous-Time Using Parallel PI Controller and Reference Prefiltering: White Noise Case~», IFAC-Rocond, vol. 59, n° 16, p. 176-181, 2025.
@@ -1307,7 +1346,7 @@
 
 \begin{frame}
     \frametitle{Algorithme CLRIVFR détaillé}
-    {\scriptsize
+    {\footnotesize
     \begin{algorithmic}[1]
         \Require $y$, $r_1$, $r_2$, $C_P$, $C_I$, $P\!F$, $T_e$, $\omega_c$, $n_a$, $n_b$, $n_k$
         \State Initialisation de $\hat{\theta}_{riv}^0$ par CLSRIVFR (ou valeurs initiales)

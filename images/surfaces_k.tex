@@ -1,4 +1,4 @@
-% Coefficients d'étalonnage k_f et k_m (couple positif) en fonction de la position (x, y)
+% Coefficients d'étalonnage k_{f,z} et k_{m,z} (couple positif) en fonction de la position (x, y)
 % avec le plan k = 1 (étalonnage constructeur) en référence.
 % Données : images/data/Kf.csv et images/data/Km_positif.csv
 %   3 colonnes x (mm), y (mm), k, séparées par des virgules, sans en-tête,
@@ -27,12 +27,12 @@
     grid=major, grid style={jvgris!20},
     colormap/viridis, point meta min=0.75, point meta max=1.1,
 ]
-    \nextgroupplot[title={Force : $k_f$}, zlabel={$k$}]
+    \nextgroupplot[title={Force : $k_{f,z}$}, zlabel={$k$}]
     \addplot3[surfk] table[header=false, col sep=comma, x index=0, y index=1, z index=2]
         {images/data/Kf.csv};
     \addplot3[planun] {1};
 
-    \nextgroupplot[title={Couple : $k_m$},
+    \nextgroupplot[title={Couple : $k_{m,z}$},
         colorbar, colorbar style={width=2mm, ymin=0.75, ymax=1.1, ytick={0.8,0.9,1,1.1},
                                    yticklabel style={font=\tiny}}]
     \addplot3[surfk] table[header=false, col sep=comma, x index=0, y index=1, z index=2]

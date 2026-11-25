@@ -84,8 +84,8 @@
 \setbeamersize{text margin left=15mm, text margin right=15mm}
 
 % En-tête : fil d'Ariane discret « SECTION › sous-section » + filet
-\setbeamerfont{frametitle}{size=\scriptsize, series=\bfseries}
-\setbeamerfont{framesubtitle}{size=\scriptsize, series=\mdseries}
+\setbeamerfont{frametitle}{size=\normalsize, series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\small, series=\mdseries}
 \setbeamertemplate{frametitle}{%
     \vspace*{3.2mm}%
     \begin{beamercolorbox}[wd=\textwidth, left]{frametitle}%
@@ -109,14 +109,21 @@
 
 % Blocs : plats, sans ombre
 \setbeamertemplate{blocks}[rounded][shadow=false]
+% Espace réduit avant/après les blocs
+\addtobeamertemplate{block begin}{\vspace{-1mm}}{}
+\addtobeamertemplate{block alerted begin}{\vspace{-1mm}}{}
+\addtobeamertemplate{block example begin}{\vspace{-1mm}}{}
+\addtobeamertemplate{block end}{}{\vspace{-1mm}}
+\addtobeamertemplate{block alerted end}{}{\vspace{-1mm}}
+\addtobeamertemplate{block example end}{}{\vspace{-1mm}}
 
 % Légendes : sans « Figure: », petites et grises (gérées par le paquet caption,
 % chargé par subcaption) ; les sous-figures gardent leur « (a) »
 \DeclareCaptionFont{jvgris}{\color{jvgris}}
-\captionsetup{font={scriptsize,jvgris}, labelfont={scriptsize,jvgris}, skip=3pt}
+\captionsetup{font={footnotesize,jvgris}, labelfont={footnotesize,jvgris}, skip=3pt}
 \captionsetup[figure]{labelformat=empty, labelsep=none}
 \captionsetup[table]{labelformat=empty, labelsep=none}
-\captionsetup[sub]{labelformat=parens, labelsep=space, font={scriptsize,jvgris}}
+\captionsetup[sub]{labelformat=parens, labelsep=space, font={footnotesize,jvgris}}
 
 % Plan : numéros de section en couleur d'accent, sans boules 3D
 \setbeamertemplate{section in toc}{%
@@ -124,7 +131,7 @@
     \makebox[1.6em][l]{\usebeamercolor[fg]{section number projected}\bfseries\inserttocsectionnumber}%
     \inserttocsection\par}
 \setbeamertemplate{subsection in toc}{%
-    \leavevmode\hangindent=2.6em\hangafter=1\hspace{1.6em}%
+    \leavevmode\hangindent=3.6em\hangafter=1\hspace{3.6em}%
     {\small\inserttocsubsection}\par}
 \setbeamertemplate{section in toc shaded}[default][35]
 \setbeamertemplate{subsection in toc shaded}[default][35]
@@ -235,8 +242,8 @@
 % (Le titre/sous-titre étant déjà pris par section/sous-section,
 %  le message est affiché en tête du corps de la diapo.)
 \newcommand{\assertion}[1]{%
-    {\usebeamercolor[fg]{structure}\large\bfseries #1\par}%
-    \vspace{1.2ex}%
+    {\usebeamercolor[fg]{structure}\normalsize\bfseries #1\par}%
+    \vspace{0.8ex}%
 }
 
 % \figafaire[hauteur]{description} : emplacement réservé d'une figure
@@ -344,8 +351,8 @@
 % ---------------------------------------------------------------------------
 % Composants de mise en page
 % ---------------------------------------------------------------------------
-\setbeamerfont{block title}{size=\small, series=\bfseries}
-\setbeamerfont{block body}{size=\small}
+\setbeamerfont{block title}{size=\normalsize, series=\bfseries}
+\setbeamerfont{block body}{size=\normalsize}
 
 % \tuile[couleur]{largeur}{valeur}{légende} : chiffre clé mis en avant
 % (le chiffre est réduit automatiquement s'il dépasse la largeur de la tuile)
@@ -358,9 +365,9 @@
     \ifdim\wd\jv@tuileboite>\jv@tuilelarg
         \sbox{\jv@tuileboite}{\resizebox{\jv@tuilelarg}{!}{\usebox{\jv@tuileboite}}}%
     \fi
-    \tikz[baseline=(t.north)]\node[fill=#1!8, rounded corners=1.5pt, inner sep=1.8mm,
+    \tikz[baseline={([yshift=-\ht\strutbox]t.north)}]\node[fill=#1!8, rounded corners=1.5pt, inner sep=1.8mm,
         text width=\jv@tuilelarg, align=center, minimum height=12mm] (t)
-        {\usebox{\jv@tuileboite}\\[0.4mm]{\scriptsize\color{jvgris}#4}};%
+        {\usebox{\jv@tuileboite}\\[0.4mm]{\small\color{jvgris}#4}};%
     \endgroup
 }
 
@@ -369,12 +376,12 @@
 \newlength{\hauteurcarte}
 \setlength{\hauteurcarte}{0pt}
 \newcommand{\carte}[5][jvteal]{%
-    \begin{tikzpicture}[baseline=(c.north)]
+    \begin{tikzpicture}[baseline={([yshift=-\ht\strutbox]c.north)}]
         \node[fill=#1!6, inner sep=2.4mm, text width=#2-4.8mm, align=left,
               minimum height=\hauteurcarte, anchor=north west] (c) {%
-            {\scriptsize\bfseries\color{#1}#3}\par\vspace{0.8mm}
+            {\small\bfseries\color{#1}#3}\par\vspace{0.8mm}
             {\bfseries\color{jvbleu}#4}\par\vspace{1mm}
-            {\footnotesize #5}\par};
+            {#5}\par};
         \fill[#1] (c.north west) rectangle ([yshift=-0.8mm]c.north east);
     \end{tikzpicture}%
 }
@@ -386,16 +393,16 @@
         \path[use as bounding box] (0,-1.4mm) rectangle (#2,4.2mm);
         \draw[#1, line width=0.7pt, line cap=round]
             (0,-1.4mm) -- (0,0) -- node[above=0.5mm, inner sep=0pt,
-                font=\scriptsize\bfseries, text=#1] (v) {#3} (#2,0) -- (#2,-1.4mm);
+                font=\small\bfseries, text=#1] (v) {#3} (#2,0) -- (#2,-1.4mm);
     \end{tikzpicture}%
 }
 
 % \aretenir{texte} : bandeau « message à retenir » en bas de diapo
 \newcommand{\aretenir}[1]{%
-    \par\vspace{2mm}\noindent
+    \par\vspace{1mm}\noindent
     \begin{tikzpicture}
         \node[fill=jvteal!9, inner sep=2mm, text width=\linewidth-4mm, align=left] (a)
-            {\small #1};
+            {#1};
         \fill[jvteal] (a.north west) rectangle ([xshift=0.9mm]a.south west);
     \end{tikzpicture}\par
 }

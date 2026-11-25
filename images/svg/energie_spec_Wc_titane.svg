@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.96036455"
-     inkscape:cx="220.22887"
-     inkscape:cy="291.03532"
-     inkscape:window-width="2560"
-     inkscape:window-height="1351"
-     inkscape:window-x="1911"
+     inkscape:zoom="0.67908029"
+     inkscape:cx="250.33859"
+     inkscape:cy="411.58609"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg601" />
@@ -4062,4 +4062,14 @@
        style="font-size:16px;stroke-width:0.632126"
        x="157.19727"
        y="62.8297">médiane</tspan></text>
+  <path
+     style="fill:none;stroke:#009a00;stroke-width:0.850395;stroke-opacity:1"
+     d="m 145.2574,255.37147 c 29.96579,160.60041 70.74185,160.76985 89.8097,0.78096"
+     id="path1"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#9000ff;stroke-width:0.850395;stroke-opacity:1"
+     d="m 221.00992,240.53335 c 29.96579,160.60041 70.74185,160.76985 89.8097,0.78096"
+     id="path3"
+     sodipodi:nodetypes="cc" />
 </svg>

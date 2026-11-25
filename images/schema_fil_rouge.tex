@@ -12,6 +12,11 @@
         pastille/.style={circle, fill=#1, text=white, font=\tiny\bfseries,
                       inner sep=0pt, minimum size=3.8mm},
         flux/.style={->, thick, draw=jvgris},
+        option/.style={draw=black!30, dashed, fill=black!4, rounded corners=2pt,
+                      align=center, minimum width=31mm, minimum height=7.5mm,
+                      font=\footnotesize\bfseries, text=black!45},
+        fluxoption/.style={->, thick, dashed, draw=black!30},
+        etiqoption/.style={etiq, text=black!40},
         etiq/.style={font=\scriptsize, text=jvgris, inner sep=1pt},
     ]
     \newcommand{\soustitre}[1]{\\[-0.4ex]{\normalfont\scriptsize\color{jvgris}#1}}
@@ -21,6 +26,8 @@
     \node[coeur]   (optim)   at (0,0)       {Optimisation\soustitre{RPEM en ligne}};
     \node[coeur]   (broche)  at (\dx,0)     {Broche asservie\soustitre{identification en boucle fermée}};
     \node[procede] (usinage) at (2*\dx,0)   {Usinage\soustitre{machine-outil}};
+    % piste non traitée dans la thèse (en grisé) : avance asservie en parallèle de la broche
+    \node[option]  (avance)  at (\dx,11mm)  {Moteur d'avance asservi\\[-0.4ex]{\normalfont\scriptsize perspective}};
     % rangée basse : mesure et modèle
     \node[etape]   (modele)  at (\dx,-\dy)  {Modèle de puissance\soustitre{torseurs, $K_c$, $K_f$, $K_m$}};
     \node[etape]   (instrum) at (2*\dx,-\dy){Instrumentation\soustitre{platine étalonnée par cobot}};
@@ -31,8 +38,10 @@
         \node[pastille=\c] at ([xshift=0.6mm, yshift=-0.6mm]\n.north west) {\ref{\s}};
 
     % --- flux ---
-    \draw[flux] (optim) -- node[etiq, above] {$V_c$} node[etiq, below] {$f_z$} (broche);
-    \draw[flux] (broche) -- node[etiq, above] {$N$} node[etiq, below] {$V_f$} (usinage);
+    \draw[flux] (optim) -- node[etiq, above] {$V_c$} (broche);
+    \draw[flux] (broche) -- node[etiq, above] {$N$} (usinage);
+    \draw[fluxoption] (optim.north) |- node[etiqoption, pos=0.75, above] {$f_z$} (avance.west);
+    \draw[fluxoption] (avance.east) -| node[etiqoption, pos=0.25, above] {$V_f$} (usinage.north);
     \draw[flux] (usinage) -- node[etiq, right] {$F,\ \mathcal{P}$} (instrum);
     \draw[flux] (instrum) -- node[etiq, above] {efforts} (modele);
     \draw[flux] (modele.west) -| node[etiq, pos=0.75, left, align=center] {énergie\\spécifique} (optim.south);
