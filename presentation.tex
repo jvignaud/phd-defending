@@ -839,7 +839,7 @@
 
         \column{0.4\linewidth}
         \[
-            F(q) = \frac{\dfrac{2}{\omega_c T_e + 2}\left(1 - q^{-1}\right)}{1 + \dfrac{\omega_c T_e - 2}{\omega_c T_e + 2}\, q^{-1}}, \quad f_c = 100\,\text{Hz}
+            F(q) = \frac{\dfrac{2}{\omega_c T_e + 2}\left(1 - q^{-1}\right)}{1 + \dfrac{\omega_c T_e - 2}{\omega_c T_e + 2}\, q^{-1}}, \quad \omega_c = 628\,\text{Hz}
         \]
         \begin{itemize}
             \item Constat : intégrateur pur (moteur)
@@ -887,6 +887,7 @@
         \begin{itemize}
             \item Estimation avec la méthode CLRIVFR
             \item Basses vitesses des couplages étoile/triangle sont différentes
+            \item Incertitudes en hautes fréquences
         \end{itemize}
     \end{columns}
     % SOURCE : fig. 4.12 ; tab. 4.1 en annexe.
@@ -902,7 +903,7 @@
     \setlength{\hauteurcarte}{42mm}
     \carte{0.32\linewidth}{ACQUIS 1}{Quatre algorithmes}{Adaptés au PI parallèle avec préfiltre sur la voie intégrale, en temps discret et continu\par\vspace{1mm}Biais réduit par rapport aux méthodes classiques (Monte-Carlo)\par\vspace{1mm}CLRIVFR : la plus consistante, \alert{estime aussi le bruit}}\hfill
     \carte{0.32\linewidth}{ACQUIS 2}{Validation sur machine}{SBPA injectée par G-code, traces variateur concaténées\par\vspace{1mm}CLRIVFR : \alert{fit de 97,6\,\%} en validation\par\vspace{1mm}Modèles cohérents de 1000 à 5000\,tr/min}\hfill
-    \carte[jvcorail]{0.32\linewidth}{PERSPECTIVES}{Ce qui reste à faire}{Modèle incertain au-delà de 100\,Hz : concevoir une \alert{\mbox{commande robuste}} à ces incertitudes}
+    \carte[jvcorail]{0.32\linewidth}{PERSPECTIVES}{Ce qui reste à faire}{Modèle incertain en hautes fréquences : concevoir une \alert{\mbox{commande robuste}} à ces incertitudes}
 
     \aretenir{\textbf{À retenir :} la broche est connue et ses incertitudes sont bornées $\Rightarrow$ on peut la piloter en $V_c$ et, à terme, concevoir une commande robuste}
     % ORAL : synthèse en 30 s ; cœur théorique de la thèse.
@@ -1260,6 +1261,9 @@
 \appendix
 % DIAPOS DE SECOURS : à sortir uniquement en réponse aux questions du jury
 % =============================================================================
+
+% Réponses préparées aux questions des rapporteurs (M. Gilson, V. Wagner)
+\input{annexes_rapporteurs}
 
 \section{Puissance par comoment}
 \begin{frame}

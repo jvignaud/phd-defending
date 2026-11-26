@@ -91,11 +91,11 @@
     \put(0.73713589,0.42013962){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[t]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{c}600\end{tabular}}}}%
     \put(0.76634471,0.5122066){\color[rgb]{0.12941176,0.12941176,0.12941176}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$c_w$\end{tabular}}}}}%
     \put(0.80582172,0.6050556){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[lt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{l}$\times10^5$\end{tabular}}}}%
-    \put(0.80138326,0.59448537){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,58\end{tabular}}}}%
-    \put(0.80138326,0.55408176){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,56\end{tabular}}}}%
-    \put(0.80138326,0.51294356){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,54\end{tabular}}}}%
-    \put(0.80138326,0.47253998){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,52\end{tabular}}}}%
-    \put(0.80149278,0.43115687){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,5\end{tabular}}}}%
+    \put(0.80138326,0.59448537){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}5\end{tabular}}}}%
+    \put(0.80138326,0.55408176){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,8\end{tabular}}}}%
+    \put(0.80138326,0.51294356){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,6\end{tabular}}}}%
+    \put(0.80138326,0.47253998){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,4\end{tabular}}}}%
+    \put(0.80149278,0.43115687){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[rt]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{r}4,2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{rpem_simu.pdf}}%
     \put(0.80545406,0.42013962){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[t]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
     \put(0.86593543,0.42013962){\color[rgb]{0.12941176,0.12941176,0.12941176}\makebox(0,0)[t]{\lineheight{4.4000001}\smash{\begin{tabular}[t]{c}200\end{tabular}}}}%

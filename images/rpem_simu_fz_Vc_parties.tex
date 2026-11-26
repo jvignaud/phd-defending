@@ -3,7 +3,7 @@
 %   partie 2 : V_c, f_z + K_f, K_c, K_m et les efforts associés
 %   partie 3 : V_c, f_z + W_c,max et critère J
 % Les sous-figures sont découpées dans images/rpem_simu_fz_Vc.pdf_tex (grille 4 lignes x 4 colonnes).
-% Vert = validé, orange = biaisé mais exploitable (a_w, b_w, c_w, d_w, f_w),
+% Vert = validé (axes de a_w, b_w, c_w, d_w, f_w élargis dans svg/rpem_simu_fz_Vc.svg : écart < 4 % non visible),
 % rouge = non exploitable (K_f, K_m, F_er, M_P,ez).
 % Les étiquettes verticales de K_f, K_c, K_m et des efforts sont réécrites (elles se chevauchaient dans l'export MATLAB).
 % La macro \rpempanneau est définie dans le préambule de presentation.tex.
@@ -29,16 +29,16 @@
     \only<1>{%
         % fenêtre de la ligne du haut remontée de 0,006 : les exposants (x10^n) dépassent le haut de la figure
         \pgfmathsetmacro{\rDh}{\rD+0.006}\pgfmathsetmacro{\rEh}{\rE+0.006}%
-        \rpempanneau[droite=0.008, droitey=0.03]{\cC}{\cD}{\rDh}{\rEh}{\xg}{\haut}{2}                % a_w
+        \rpempanneau[droite=0.008, droitey=0.03]{\cC}{\cD}{\rDh}{\rEh}{\xg}{\haut}{1}                % a_w
         \rpempanneau[bande=0.0369, marge=0.018, etiq={$b_w$}, etiqx=0.008,
-            apres={\rpemgrad[3.5pt]{0.0363}{0.1220}{$-$2} \rpemgrad[3.5pt]{0.0344}{0.0851}{$-$2,2} \rpemgrad[3.5pt]{0.0344}{0.0489}{$-$2,4} \rpemgrad[3.5pt]{0.0344}{0.0128}{$-$2,6}}]
-            {\cD}{\cE}{\rDh}{\rEh}{\xg+\pas}{\haut}{2}                  % b_w (étiquette et graduations réécrites)
-        \rpempanneau[expo+, expo-]{\cA}{\cB}{\rC}{\rD}{\xg+2*\pas}{\haut}{2}  % c_w
-        \rpempanneau[expo+, expo-]{\cB}{\cC}{\rC}{\rD}{\xg}{0}{2}             % d_w
+            apres={\rpemgrad[3.5pt]{0.0363}{0.1220}{0} \rpemgrad[3.5pt]{0.0363}{0.0851}{$-$3} \rpemgrad[3.5pt]{0.0363}{0.0489}{$-$6} \rpemgrad[3.5pt]{0.0363}{0.0128}{$-$9}}]
+            {\cD}{\cE}{\rDh}{\rEh}{\xg+\pas}{\haut}{1}                  % b_w (étiquette et graduations réécrites)
+        \rpempanneau[expo+, expo-]{\cA}{\cB}{\rC}{\rD}{\xg+2*\pas}{\haut}{1}  % c_w
+        \rpempanneau[expo+, expo-]{\cB}{\cC}{\rC}{\rD}{\xg}{0}{1}             % d_w
         \rpempanneau[expo+, droite=0.004, droitey=0.03]{\cC}{\cD}{\rC}{\rD}{\xg+\pas}{0}{1}               % e_w
         \rpempanneau[expo-, bande=0.0465, bandey=0.0155, bandeb=0.035, marge=0.008, etiq={$f_w$}, etiqx=0.013,
-            apres={\rpemgrad[3.5pt]{0.0445}{0.1332}{1000} \rpemgrad[3.5pt]{0.0459}{0.1043}{800} \rpemgrad[3.5pt]{0.0459}{0.0749}{600} \rpemgrad[3.5pt]{0.0459}{0.0462}{400} \rpemgrad[3.5pt]{0.0459}{0.0167}{200}}]
-            {\cD}{\cE}{\rC}{\rD}{\xg+2*\pas}{0}{2}}            % f_w (étiquette et graduations réécrites)
+            apres={\rpemgrad[3.5pt]{0.0445}{0.1332}{2000} \rpemgrad[3.5pt]{0.0445}{0.1043}{1500} \rpemgrad[3.5pt]{0.0445}{0.0749}{1000} \rpemgrad[3.5pt]{0.0459}{0.0462}{500} \rpemgrad[3.5pt]{0.0459}{0.0167}{0}}]
+            {\cD}{\cE}{\rC}{\rD}{\xg+2*\pas}{0}{1}}            % f_w (étiquette et graduations réécrites)
 
     % partie 2 : pressions spécifiques (ligne 1) et efforts associés (ligne 2)
     \only<2>{%
@@ -62,5 +62,5 @@
     % légende des filtres, sous f_z
     \node[anchor=north west, font=\tiny, text=jvtexte, inner sep=0pt]
         at (0, \yfz-0.012)
-        {\rpemlegende{1}{1}{1}};
+        {\rpemlegende{1}{0}{1}};
 \end{tikzpicture}

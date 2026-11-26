@@ -1,0 +1,19 @@
+% Figure appelée par annexes_rapporteurs.tex (hors frame : les ; de babel-french restent compatibles)
+\begin{tikzpicture}
+    \begin{axis}[
+            width=\linewidth, height=0.55\textheight,
+            xmode=log, xmin=1e-2, xmax=1e4, ymin=-85, ymax=45,
+            grid=both, grid style={black!10},
+            xlabel={$\omega / \omega_0$ avec $\omega_0 = f/J$}, ylabel={Gain normalisé (dB)},
+            tick label style={font=\tiny}, label style={font=\scriptsize},
+            legend style={font=\tiny, at={(0.02,0.03)}, anchor=south west, draw=none, fill=white, fill opacity=0.8},
+            every axis plot/.append style={line width=1pt, samples=120, domain=1e-2:1e4},
+        ]
+        \fill[jvteal, opacity=0.12] (axis cs:1e2,-85) rectangle (axis cs:1e4,45);
+        \node[font=\tiny, text=jvteal, anchor=north] at (axis cs:1e3,42) {bande identifiée};
+        \addplot[jvbleu] {-10*log10(1+x^2)};
+        \addlegendentry{$1/(Js+f)$}
+        \addplot[jvcorail, dashed] {-20*log10(x)};
+        \addlegendentry{$1/(Js)$}
+    \end{axis}
+\end{tikzpicture}

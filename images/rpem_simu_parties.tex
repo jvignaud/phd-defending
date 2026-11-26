@@ -3,7 +3,7 @@
 %   partie 2 : V_c + K_f, K_c, K_m et les efforts associés
 %   partie 3 : V_c + W_c,max et critère J
 % Les sous-figures sont découpées dans images/rpem_simu.pdf_tex (grille 3 lignes x 4 colonnes).
-% Vert = validé, orange = biaisé mais exploitable (c_w).
+% Vert = validé. Axe de c_w élargi (dézoom) dans svg/rpem_simu.svg : l'écart à la valeur vraie (0,2 %) n'est plus visible.
 % La macro \rpempanneau est définie dans le préambule de presentation.tex.
 \providecommand{\rpemlargeur}{0.83\linewidth}
 \sbox{\rpemboite}{\fontsize{3pt}{3.6pt}\selectfont\def\svgwidth{\rpemlargeur}\import{images/}{rpem_simu_aligne.pdf_tex}}%
@@ -33,7 +33,7 @@
     \only<1>{%
         \rpempanneau[droite=0.0175, droitey=0.025]{\cB}{\cCb}{\rC}{\rD}{\xg}{\haut}{1}                  % a_w
         \rpempanneau[etiq-, coin=0.006, deb=0.03]{0.494}{\cDa}{\rC}{\rD}{\xg+\pas}{\haut}{1}   % b_w (élargi à gauche : étiquette entière)
-        \rpempanneau[expo+, expo-]{\cDa}{1.01}{\rC}{\rD}{\xg}{0}{2}}                                    % c_w (biaisé)
+        \rpempanneau[expo+, expo-]{\cDa}{1.01}{\rC}{\rD}{\xg}{0}{1}}                                    % c_w (axe élargi : 4,2 à 5 x10^5)
 
     % partie 2 : pressions spécifiques (ligne 1) et efforts associés (ligne 2)
     \only<2>{%
@@ -70,5 +70,5 @@
     % légende des filtres, sous V_c
     \node[anchor=north west, font=\tiny, text=jvtexte, inner sep=0pt]
         at (0, \yvc-0.012)
-        {\rpemlegende{1}{1}{0}};
+        {\rpemlegende{1}{0}{0}};
 \end{tikzpicture}

@@ -1,0 +1,501 @@
+% =============================================================================
+% DIAPOS DE SECOURS : approfondissements par thème
+% Inclus après \appendix dans presentation.tex : \input{annexes_rapporteurs}
+% Les commentaires « % À VÉRIFIER » signalent ce qui doit être relu ou complété.
+% =============================================================================
+\section{Identification : consistance et validation}
+
+% -----------------------------------------------------------------------------
+\subsection*{Méthodes classiques : pourquoi biaisées ?}
+\begin{frame}
+    \assertion{Les méthodes classiques ignorent le préfiltre : l'entrée reconstruite est fausse, d'où un biais structurel}
+
+    \begin{columns}[t]
+        \column{0.5\linewidth}
+        \textbf{Excitation réelle} (PI parallèle, préfiltre sur $C_I$)
+        \[
+            r(k) = r_1(k) + \bigl[C_P(q) + C_I(q)\,\alert{P\!F(q)}\bigr]\, r_2(k)
+        \]
+        \textbf{Hypothèse des méthodes classiques} (structure standard)
+        \[
+            \tilde{r}(k) = r_1(k) + \bigl[C_P(q) + C_I(q)\bigr]\, r_2(k)
+        \]
+        \vspace{-2mm}
+        \begin{itemize}
+            \item Commande reconstruite : $\tilde{u} = u + \alert{C_I(1-P\!F)\,r_2}$
+            \item Erreur d'équation : $G_o\,C_I(1-P\!F)\,r_2$, \alert{corrélée aux instruments} (construits à partir de $r_2$)
+            \item La condition $\mathbb{E}[z_f(k)\,\varepsilon(k)] = 0$ n'est plus vérifiée : la VI ne peut pas être consistante
+        \end{itemize}
+
+        \column{0.45\linewidth}
+        \textbf{Preuve : le biais ne dépend pas du bruit}\par\vspace{1mm}
+        {\scriptsize
+        \begin{tabular}{lccc}
+            \hline
+            $\hat{a}_2$ (réel : \num{0.9048}) & \num{10}\,dB & \num{15}\,dB & \num{20}\,dB \\
+            \hline
+            CLIVSVF   & \num{0.8666} & \num{0.8664} & \num{0.8662} \\
+            CLSRIV    & \num{0.8839} & \num{0.8839} & \num{0.8838} \\
+            \rowcolor{gray!20}
+            CLIVSVFFR & \num{0.9041} & \num{0.9045} & \num{0.9047} \\
+            \rowcolor{gray!20}
+            CLSRIVFR  & \num{0.9048} & \num{0.9048} & \num{0.9048} \\
+            \hline
+        \end{tabular}}
+        \par\vspace{2mm}
+        \begin{itemize}
+            \item Classiques : biais \alert{constant} quand le SNR augmente $\Rightarrow$ erreur de structure, pas d'estimation
+            \item Proposées : biais qui tend vers zéro $\Rightarrow$ consistance retrouvée
+        \end{itemize}
+    \end{columns}
+
+    \aretenir{L'écart vient de la \textbf{prise en compte de l'architecture réelle}, pas des propriétés de l'algorithme : avec $P\!F = 1$, les deux familles coïncident.}
+    % SOURCE : tab. 3.1 (lignes CLIVSVF, CLSRIV, CLIVSVFFR, CLSRIVFR).
+    % À VÉRIFIER : les méthodes classiques ont bien été codées avec r = r1 + (CP + CI) r2,
+    % c'est-à-dire avec les mêmes données (générées AVEC préfiltre) mais sans PF dans la reconstruction.
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Consistance et sensibilité des estimateurs}
+\begin{frame}
+    \assertion{La consistance repose sur trois conditions ; la connaissance exacte de la commande est la plus sensible}
+
+    \vspace{1mm}
+    \setlength{\hauteurcarte}{30mm}
+    {\small
+    \carte{0.32\linewidth}{C1}{Instruments non corrélés au bruit}{$\mathbb{E}[z_f(k)\,\xi_f(k)] = 0$ : $x$, $\nu$ simulés depuis $r$ seul\par\vspace{1mm}$\Rightarrow$ $C_P$, $C_I$, $P\!F$, interpolateur et anticipation \alert{connus exactement}}\hfill
+    \carte{0.32\linewidth}{C2}{Rang plein}{$\mathbb{E}[z_f(k)\,\varphi_f^\top(k)]$ inversible : excitation persistante (SBPA)\par\vspace{1mm}Ordres $n_a$, $n_b$ \alert{non surestimés} (compensations pôles/zéros $\Rightarrow$ mal conditionné)}\hfill
+    \carte{0.32\linewidth}{C3}{Classe de modèle}{$G_o \in \mathcal{G}$ : nécessaire à la consistance\par\vspace{1mm}$H_o$ correct : nécessaire seulement pour la \alert{variance minimale} (RIV)\par\vspace{1mm}CLSRIVFR reste consistante si le bruit est coloré}}
+
+    \vspace{1mm}
+    {\small
+    \begin{columns}[t]
+        \column{0.48\linewidth}
+        \textbf{Sensibilité au filtrage}
+        \begin{itemize}
+            \item VI : $\omega_c$ du FVE (250 / 300\,rad/s) agit sur la \alert{variance}, pas sur le biais
+            \item MC : $\omega_c$ agit aussi sur le \alert{biais}
+            \item Filtre optimal (raffiné) : choix de $\omega_c$ supprimé
+        \end{itemize}
+        \column{0.48\linewidth}
+        \textbf{Sensibilité aux erreurs de modélisation}
+        \begin{itemize}
+            \item Erreur sur $C_P$, $C_I$ : biais de même nature que les méthodes classiques
+            \item $K_p$, $T_i$ variables avec la vitesse : supposés constants localement
+            \item Perspective : Monte-Carlo avec erreur de $\pm x\,\%$ sur $K_p$, $T_i$
+        \end{itemize}
+    \end{columns}}
+    % ORAL : C1 est la condition la plus exposée en contexte industriel : c'est pourquoi
+    % l'analyse de la régulation Sinamics (interpolateur, anticipation, préfiltre) a été indispensable.
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Moindres carrés et VI en haute fréquence}
+\begin{frame}
+    \assertion{En haute fréquence, les moindres carrés ajustent le bruit amplifié par le filtre stabilisateur}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{4.5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{bode_estim_prime.pdf_tex}}
+            \caption{Modèles estimés $\hat{G}^*$ avec le filtre stabilisateur}
+        \end{figure}
+
+        \column{0.47\linewidth}
+        \begin{itemize}
+            \item Boucle fermée : le régresseur contient $y$, \alert{corrélé au bruit} par la rétroaction $\Rightarrow$ MC biaisés
+            \item Le passe-haut rehausse le bruit HF : SNR faible au-delà de $\omega_c$ (fig. 4.5)
+            \item MC : gain qui \alert{remonte} en HF, sortie simulée bruitée (fig. 4.7)
+            \item VI : instruments simulés sans bruit $\Rightarrow$ les trois méthodes VI \alert{convergent vers le même modèle}
+        \end{itemize}
+        \aretenir{L'ampleur de l'écart traduit le faible SNR haute fréquence de $y^*$ : c'est précisément le cas où la VI est utile.}
+    \end{columns}
+    % SOURCE : fig. 4.5, 4.6, 4.7.
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Pouvoir discriminant de la validation}
+\begin{frame}
+    \assertion{Le fit en boucle fermée discrimine peu les modèles : la boucle masque les écarts sur $G$}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{comp_est.pdf_tex}}
+            \caption{Validation : MC 93,1\,\%, CLIVSVFFR 90,5\,\%, CLSRIVFR 90,6\,\%, CLRIVFR 97,6\,\%}
+        \end{figure}
+
+        \column{0.47\linewidth}
+        \textbf{Pourquoi le fit est peu sensible}
+        \begin{itemize}
+            \item $\hat{y} = \hat{T}\,r_2$ avec $\hat{T} = \dfrac{\hat{G}C}{1+\hat{G}C}$
+            \item $|\hat{G}C| \gg 1$ (sous $\omega_u \approx 330$\,rad/s) : $\hat{T} \approx 1$ quel que soit $\hat{G}$
+            \item $|\hat{G}C| \ll 1$ : $\hat{T}$ petit, écarts atténués
+            \item Seule la zone autour de $\omega_u$ discrimine
+            \item CLRIVFR gagne surtout par son \alert{modèle de bruit} (prédiction)
+        \end{itemize}
+        \textbf{Validations complémentaires}
+        \begin{itemize}
+            \item Prédire la \alert{commande} $u$ (sensible à $1/G$)
+            \item Tests de blancheur des résidus et d'intercorrélation $r$/résidus
+            \item Validation croisée sur un autre jeu, autre point de fonctionnement
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 4.11.
+    % À COMPLÉTER si demandé : bande excitée par la SBPA (période d'horloge, densité spectrale de r2).
+\end{frame}
+
+% =============================================================================
+\section{Filtre stabilisateur et intégrateur}
+
+% -----------------------------------------------------------------------------
+\subsection*{Rôle du filtre stabilisateur}
+\begin{frame}
+    \assertion{Le filtre stabilisateur retire l'intégrateur pour que les instruments restent stables pendant les itérations}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \centering
+        \input{images/bode_filtre_stabilisateur.tex}
+        {\scriptsize\color{jvgris} $F(s) = \dfrac{s}{s+\omega_c}$ (tracé continu, discrétisé par Tustin)}
+
+        \column{0.47\linewidth}
+        \textbf{Pourquoi il est nécessaire}
+        \begin{itemize}
+            \item Les instruments $x = S\,\hat{G}\,r$ et le filtre $1/\hat{A}$ sont simulés à chaque itération
+            \item Pôle en $z = 1$ : la moindre erreur place un pôle \alert{hors du cercle unité} $\Rightarrow$ divergence
+        \end{itemize}
+        \textbf{Ce qu'il fait}
+        \begin{itemize}
+            \item Zéro de $F$ en $z = 1$ : compense l'intégrateur
+            \item $G^* = F\,G_o$ est \alert{stable} : retour au cas de la section 3.4 avec $P\!F = 1$
+            \item Transparent pour la boucle : $F$ et $F^{-1}$ répartis sur le schéma (éq. 4.6)
+        \end{itemize}
+    \end{columns}
+    % SOURCE : fig. 4.3, fig. 4.4, éq. (4.4)-(4.6).
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\begin{frame}
+    \assertion{Le modèle CLRIVFR à 3900\,tr/min ne dépend pas de $f_c$ dans la bande utile ; seul $f_c = 500$\,Hz s'écarte en haute fréquence}
+
+    \begin{columns}[c]
+        \column{0.62\linewidth}
+        \begin{figure}
+            \centering
+            \IfFileExists{images/comp_filtre.pdf_tex}{%
+                {\fontsize{5pt}{5pt}\selectfont
+                    \def\svgwidth{\textwidth}
+                    \import{images/}{comp_filtre.pdf_tex}}%
+            }{%
+                \figafaire[0.6\textheight]{comp\_filtre.fig $\rightarrow$ images/svg/comp\_filtre.svg\\$\rightarrow$ images/comp\_filtre.pdf + .pdf\_tex (export Inkscape)}%
+            }
+            \caption{Bode du modèle CLRIVFR à 3900\,tr/min selon $f_c$}
+        \end{figure}
+
+        \column{0.35\linewidth}
+        \begin{itemize}
+            \item Jusqu'à $\approx 300$\,rad/s : gain et phase \alert{superposés} pour 50, 100 et 500\,Hz : pente de $-20$\,dB/déc, phase $-90^\circ$ (270° sur l'axe)
+            \item 50 et 100\,Hz : modèles quasi identiques sur toute la bande (écart $\approx 1$\,dB près de Nyquist)
+            \item 500\,Hz ($\omega_c \approx 3140$\,rad/s) : écart au-delà de $\approx 500$\,rad/s, jusqu'à $\approx 6$\,dB, creux de phase vers $10^3$\,rad/s
+            \item $f_c = 100$\,Hz : dans la zone où le modèle est \alert{insensible} au choix, au-dessus de $\omega_u \approx 330$\,rad/s
+        \end{itemize}
+    \end{columns}
+    % SOURCE : images/matlab/comp_filtre.fig (nouvelle figure, hors manuscrit).
+    % ORAL : l'intégrateur et la bande utile ne dépendent pas du filtre ; avec fc = 500 Hz, F ne retire
+    % l'intégrateur qu'au-dessus de ~3000 rad/s, donc G* reste quasi intégrateur sur la bande excitée :
+    % on se rapproche du cas qui ne convergeait pas, d'où l'écart en haute fréquence (interprétation à assumer comme telle).
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\begin{frame}
+    \assertion{L'inversion $\hat{G} = F^{-1}\hat{G}^*$ impose l'intégrateur : c'est une hypothèse de structure, vérifiée a posteriori}
+
+    \begin{columns}[t]
+        \column{0.48\linewidth}
+        \textbf{Conséquences de l'inversion}
+        \begin{itemize}
+            \item Le pôle en $z = 1$ est \alert{imposé}, pas estimé : un pôle lent $f/J \ll \omega_c$ n'est pas distinguable
+            \item $\omega \gg \omega_c$ : $F^{-1} \approx 1$ $\Rightarrow$ $\hat{G} \approx \hat{G}^*$
+            \item $\omega \ll \omega_c$ : gain $\omega_c/\omega$ $\Rightarrow$ les erreurs relatives de $\hat{G}^*$ sont conservées, les erreurs absolues amplifiées
+            \item Bruit : $H^* = F\,H_o$ ; $y^*$ plus bruité (fit de 49 à 66\,\% sur $y^*$)
+        \end{itemize}
+
+        \column{0.48\linewidth}
+        \textbf{Ce qui valide l'hypothèse}
+        \begin{itemize}
+            \item Pôles/zéros de $\hat{G}^*$ : deux paires \alert{se compensent}, il reste un pôle sur le cercle unité (fig. 4.9)
+            \item Modèle de bruit : comportement intégrateur jusqu'à 1000\,rad/s (fig. 4.10)
+            \item Validation en boucle fermée sur $y$ (non filtré) : fit de \alert{97,6\,\%}
+        \end{itemize}
+        \textbf{Limite}
+        \begin{itemize}
+            \item Près de Nyquist, gain $\approx -40$\,dB et phase $\to 0^\circ$ : artefact au-delà de $f_c$
+        \end{itemize}
+    \end{columns}
+    % SOURCE : §4.2.4-4.2.5, fig. 4.7 à 4.10, éq. (4.8).
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Intégrateur pur et dynamique de broche}
+\begin{frame}
+    \assertion{Une broche « lente » se comporte justement comme un intégrateur dans la bande identifiée}
+
+    \begin{columns}[c]
+        \column{0.5\linewidth}
+        \centering
+        \input{images/integrateur_broche.tex}
+        {\scriptsize\color{jvgris} Tracé illustratif (échelles normalisées)}
+
+        \column{0.47\linewidth}
+        \[
+            J\,\dot{\Omega} = C_m - f\,\Omega - C_r
+            \;\Rightarrow\;
+            G(s) = \frac{1}{Js + f}
+        \]
+        \begin{itemize}
+            \item Pôle mécanique en $\omega_0 = f/J$ : frottement visqueux faible, inertie forte
+            \item « Lent » = constante $J/f$ \alert{grande} $\Rightarrow$ $\omega_0$ très inférieur à la bande excitée (10 à 1000\,rad/s)
+            \item Boucle de courant rapide : $G_o \approx \dfrac{1}{Js}\,e^{-\tau s}$
+            \item La CN elle-même modélise la broche par son inertie : anticipation $r_1 = J\,\dot{r}_2$ (fig. 4.2)
+        \end{itemize}
+        \aretenir{L'intégrateur est une approximation \textbf{dans la bande utile}, non une affirmation sur le régime statique.}
+    \end{columns}
+    % ORAL : le pôle f/J existe mais tombe sous la résolution fréquentielle des essais (~1 s de trace par enregistrement).
+    % Vérification possible : temps de ralentissement de la broche en roue libre => J/f.
+\end{frame}
+
+% =============================================================================
+\section{Platine et modèle de coupe}
+
+% -----------------------------------------------------------------------------
+\subsection*{Orientation outil / platine}
+\begin{frame}
+    \assertion{L'axe de broche est colinéaire à $\vec{z}_k$ : seule la position de l'outil dans le plan varie}
+    % À VÉRIFIER : le vecteur visé par la question est illisible dans le rapport (caractères corrompus) ;
+    % réponse préparée pour l'axe de rotation de l'outil et le vecteur FO.
+
+    \begin{columns}[t]
+        \column{0.48\linewidth}
+        \textbf{Géométrie}
+        \begin{itemize}
+            \item Machine 3 axes, broche verticale : $\vec{z} = -\vec{z}_k$, $\vec{x} = -\vec{x}_k$, $\vec{y} = \vec{y}_k$
+            \item $\vec{\omega}_{\vec{z},\text{Outil/Pièce}}$ colinéaire à $\vec{z}_k$
+            \item $\vec{FO}$ : composantes $y$, $z$ constantes, $x$ suit l'avance (éq. 1.6-1.7)
+            \item Transport au centre fraise $F$, puis à la pointe de dent $P$ dans le repère tournant $(\vec{e}_r, \vec{e}_\theta, \vec{e}_z)$
+        \end{itemize}
+
+        \column{0.48\linewidth}
+        \textbf{Une seule plaquette : balourd}
+        \begin{itemize}
+            \item Fraise $R = 50$\,mm à une dent : \alert{non équilibrée}
+            \item Vitesse limitée à \alert{5000\,tr/min} pour limiter le balourd
+            \item Effort tournant à la fréquence de rotation : vu par la platine, atténué par le filtre de Notch et la détection par tour
+            \item Choix volontaire : un seul copeau à la fois, lecture directe de $h(\theta)$
+        \end{itemize}
+    \end{columns}
+    % SOURCE : §1.3.1 (éq. 1.2-1.8, fig. 1.9-1.11), §4.2.2.
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Charges appliquées lors de l'étalonnage}
+\begin{frame}
+    \assertion{Les moments d'étalonnage couvrent ceux de l'usinage ; les efforts, plus faibles, s'appuient sur la linéarité piézoélectrique}
+
+    \vspace{1mm}
+    \begin{center}
+        \small
+        \begin{tabular}{lccc}
+            \hline
+                                    & Étalonnage (cobot + KT110) & Usinage C35 (fig. 2.11) & Rapport \\
+            \hline
+            Force suivant $\vec{z}_k$ & $\approx 50$\,N (capteur 200\,N) & $F_{\vec{e}_\theta}$ jusqu'à $\approx 500$\,N & $\times 10$ \\
+            Moment suivant $\vec{z}_k$ & $\pm$ quelques N.m (capteur 5\,N.m) & $|M_{P,\vec{e}_z}| \lesssim 2{,}5$\,N.m & \alert{même ordre} \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \begin{columns}[t]
+        \column{0.48\linewidth}
+        \textbf{Ce qui est représentatif}
+        \begin{itemize}
+            \item Le \alert{moment} : grandeur la moins fiable, et la plus corrigée (écarts de 6 à 7,5\,\%)
+            \item $k_{f,z} \approx 1$ : l'étalonnage constructeur en force est confirmé
+            \item Capteurs piézoélectriques linéaires sur la gamme : les coefficients en force s'extrapolent
+        \end{itemize}
+        \column{0.48\linewidth}
+        \textbf{Limites et suite}
+        \begin{itemize}
+            \item Charge utile du UR5e : 5\,kg (jusqu'à 10\,kg selon la configuration)
+            \item Non-linéarités près de zéro (hystérésis, couplage des voies) sur les couples
+            \item Monter en effort : masses étalons, bras de levier ou vérin, avec le même protocole de positionnement
+        \end{itemize}
+    \end{columns}
+    % SOURCE : §1.4.1 (UR5e, KT110), fig. 1.23, fig. 2.11.
+    % À VÉRIFIER : niveaux exacts de couple appliqués pendant les campagnes (fig. 1.23).
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Autres orientations et combinaison des corrections}
+\begin{frame}
+    \assertion{Seul l'axe $\vec{z}_k$ a été étalonné : combiner les axes exige une matrice de couplage, pas un produit de coefficients}
+
+    \begin{columns}[c]
+        \column{0.45\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{0.8\textwidth}
+                \import{images/}{etalonnage_z.pdf_tex}}
+            \caption{Coefficients d'étalonnage suivant $\vec{z}_k$}
+        \end{figure}
+
+        \column{0.52\linewidth}
+        \begin{itemize}
+            \item Utile pour l'usinage : $M_{P,\vec{e}_z}$ est porté par $\vec{z}_k$
+            \item Montage sur profilés possible pour $\vec{x}_k$, $\vec{y}_k$ (fig. 1.20), \alert{non exploité} dans la thèse
+            \item Coefficients actuels : correction \alert{diagonale} $k(x,y)$ par composante
+            \item Point extrême ($x$, $y$, $z$ maximaux) : les erreurs ne se multiplient pas, elles se \alert{couplent} entre voies
+        \end{itemize}
+        \textbf{Généralisation}
+        \[
+            \{\tau\}_{\text{étalonné}} = \mathbf{K}(x,y,z)\,\{\tau\}_{\text{brut}}, \qquad \mathbf{K} \in \mathbb{R}^{6\times 6}
+        \]
+        \begin{itemize}
+            \item Identification de $\mathbf{K}$ avec les trois orientations de la plaque (démarche de Couétard)
+        \end{itemize}
+    \end{columns}
+    % SOURCE : §1.4.2-1.4.3, fig. 1.20, réf. [3] du chapitre 1.
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Engagement radial}
+\begin{frame}
+    \assertion{Le modèle est écrit pour un engagement radial quelconque ; le rainurage a été choisi pour les essais}
+
+    \begin{columns}[t]
+        \column{0.48\linewidth}
+        \textbf{Où intervient $a_e$}
+        \begin{itemize}
+            \item Épaisseur moyenne : $h_m = \dfrac{f_z\, a_e \sin\kappa_r}{2R\arcsin\left(\frac{a_e}{R}\right)}$ (éq. 2.20)
+            \item Bornes d'entrée/sortie de dent $\theta_e(a_e)$, $\theta_s(a_e)$ dans $h(\theta)$
+            \item $K_c(h_m)$ par Kienzle-Victor : l'effet de $a_e$ passe par $h_m$
+            \item Régression sur $A_d$ et comoment inchangés
+        \end{itemize}
+        \column{0.48\linewidth}
+        \textbf{Pourquoi le rainurage}
+        \begin{itemize}
+            \item Une passe contient l'usinage \alert{en avalant puis en opposition}
+            \item Engagement maximal et constant : section de copeau la plus grande, meilleur SNR sur la platine
+            \item Aucune incertitude sur la position latérale de l'outil
+        \end{itemize}
+        \textbf{Suite}
+        \begin{itemize}
+            \item Essais à $a_e < 2R$ pour valider $K_c$, $K_f$, $K_m$ en engagement partiel
+        \end{itemize}
+    \end{columns}
+    % SOURCE : §2.2.4, éq. (2.20)-(2.22).
+    % À VÉRIFIER : expression des bornes theta_e, theta_s en fonction de ae dans le manuscrit.
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Angle de coupe et outils cylindriques}
+\begin{frame}
+    \assertion{L'angle de coupe agit sur les efforts, déjà absorbés par $K_c$, $K_f$, $K_m$ ; le modèle reste valable pour $\kappa_r = 90^\circ$}
+
+    \begin{columns}[c]
+        \column{0.4\linewidth}
+        \begin{figure}
+            \centering
+            {\fontsize{5pt}{5pt}\selectfont
+                \def\svgwidth{\textwidth}
+                \import{images/}{schema_fraise.pdf_tex}}
+            \caption{Géométrie de la fraise}
+        \end{figure}
+
+        \column{0.57\linewidth}
+        \textbf{Rôle de chaque angle}
+        \begin{itemize}
+            \item $\kappa_r$ : position du point $P$, $\ell = \dfrac{a_p}{2}\cot\kappa_r$ $\Rightarrow$ \alert{torseur cinématique}
+            \item $\gamma_o = 6{,}5^\circ$, $\lambda_s = -19{,}8^\circ$ : \alert{direction des efforts}, pas la cinématique de $P$
+            \item Leur effet est contenu dans les pressions spécifiques identifiées pour une plaquette donnée ; correction en $\gamma_o$ dans $K_c$ (éq. 2.30)
+        \end{itemize}
+        \textbf{Outil cylindrique}
+        \begin{itemize}
+            \item $\kappa_r = 90^\circ$ $\Rightarrow$ $\ell = 0$ : $P$ sur le rayon $R$, le modèle reste valable
+            \item Angle d'hélice : joue le rôle de $\lambda_s$, à réidentifier dans $K_c$, $K_f$, $K_m$
+        \end{itemize}
+    \end{columns}
+    % SOURCE : §2.2.1 (éq. 2.7-2.8), §2.3 (fig. 2.10, éq. 2.30).
+\end{frame}
+
+% =============================================================================
+\section{Optimisation en ligne : limites}
+
+% -----------------------------------------------------------------------------
+\subsection*{Section maximale avec plusieurs dents}
+\begin{frame}
+    \assertion{Avec plusieurs dents, l'instant de section maximale doit venir du codeur de broche, plus de l'effort}
+
+    \begin{columns}[t]
+        \column{0.48\linewidth}
+        \textbf{Méthode actuelle (une dent)}
+        \begin{itemize}
+            \item $\theta = 0^\circ$ repéré par le maximum de $|Y_k|$
+            \item Valable si un seul copeau est en prise
+            \item Sensible aux transitoires et à l'arrachement du copeau : $K_m$ mal estimé
+        \end{itemize}
+        \textbf{Avec $Z$ dents}
+        \begin{itemize}
+            \item Efforts \alert{superposés} : $F = \sum_{j=1}^{Z} F_j(\theta + 2\pi j/Z)$
+            \item Le maximum de $|Y_k|$ ne correspond plus à une dent unique
+        \end{itemize}
+        \column{0.48\linewidth}
+        \textbf{Pistes}
+        \begin{itemize}
+            \item Position angulaire de broche par la \alert{CN} (codeur, OPC-UA) au lieu de l'effort
+            \item Modèle mécaniste sommé sur les dents, inversé par moindres carrés sur un tour
+            \item Énergie spécifique en \alert{moyenne par tour} : $W_c = \bar{P}_c / Q$, sans localisation angulaire
+            \item À terme : puissance électrique de broche à la place de la platine (chapitre 2)
+        \end{itemize}
+    \end{columns}
+    % SOURCE : §4.3 (algorithme 5), discussion fig. 4.23.
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\subsection*{Rejoindre ou découvrir l'optimum}
+\begin{frame}
+    \assertion{Sur machine, l'optimum a été rejoint depuis une initialisation proche ; sa découverte n'est démontrée qu'en simulation}
+
+    \begin{columns}[t]
+        \column{0.48\linewidth}
+        \textbf{Ce qui est démontré}
+        \begin{itemize}
+            \item Simulation : initialisation \alert{volontairement éloignée}, convergence vers l'optimum et les paramètres réels (léger biais)
+            \item Machine (C35) : $V_c$ de 250 vers $\approx 245$\,m/min, coefficients initialisés par une caractérisation préalable, qui évoluent peu
+        \end{itemize}
+        \textbf{Ce qui manque}
+        \begin{itemize}
+            \item Peu d'itérations : usinage stabilisé court, délais OPC-UA
+            \item Gain énergétique non chiffré entre point initial et point final
+            \item Titane : minima étroits (24 et 32\,m/min) dans la dispersion
+        \end{itemize}
+        \column{0.48\linewidth}
+        \textbf{Pour découvrir et suivre un optimum inconnu}
+        \begin{itemize}
+            \item \alert{Excitation persistante} sur $V_c$ (perturbation, recherche d'extremum) : sans elle, $a_w$, $b_w$ ne sont pas identifiables
+            \item Facteur d'oubli et $R_0$ : compromis vitesse d'adaptation / bruit
+            \item Passes plus longues, essais répétés pour la répétabilité des minima
+            \item Suivi de dérive : usure d'outil, changement de matière
+            \item Analyse de convergence : conditions sur $\lambda$ et l'excitation (théorie RPEM)
+        \end{itemize}
+    \end{columns}
+    % SOURCE : §4.3, fig. 4.17-4.25, annexe RPEM (initialisations éloignées).
+    % ORAL : reconnaître franchement la limite, elle est déjà notée dans la conclusion du manuscrit.
+\end{frame}
