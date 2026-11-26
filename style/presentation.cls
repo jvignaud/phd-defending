@@ -26,6 +26,7 @@
 \RequirePackage{siunitx}
 \RequirePackage{appendixnumberbeamer}
 \RequirePackage{pgfplots}
+\usetikzlibrary{backgrounds}
 \usetikzlibrary{babel}% neutralise les ; : actifs de babel-french dans TikZ/pgfplots
 
 % ---------------------------------------------------------------------------
@@ -375,13 +376,20 @@
 % (hauteur minimale commune réglable par \setlength{\hauteurcarte}{...})
 \newlength{\hauteurcarte}
 \setlength{\hauteurcarte}{0pt}
+% Texte aligné en haut : seul le fond est prolongé jusqu'à \hauteurcarte
 \newcommand{\carte}[5][jvteal]{%
     \begin{tikzpicture}[baseline={([yshift=-\ht\strutbox]c.north)}]
-        \node[fill=#1!6, inner sep=2.4mm, text width=#2-4.8mm, align=left,
-              minimum height=\hauteurcarte, anchor=north west] (c) {%
+        \node[inner sep=2.4mm, text width=#2-4.8mm, align=left,
+              anchor=north west] (c) at (0,0) {%
             {\small\bfseries\color{#1}#3}\par\vspace{0.8mm}
             {\bfseries\color{jvbleu}#4}\par\vspace{1mm}
             {#5}\par};
+        \begin{pgfonlayer}{background}
+            \pgfpointanchor{c}{south}\pgfgetlastxy{\jv@cx}{\jv@cy}%
+            \pgfmathsetlengthmacro{\jv@cb}{min(\jv@cy,-\hauteurcarte)}%
+            \coordinate (cbas) at (0,\jv@cb);
+            \fill[#1!6] (c.north west) rectangle (c.east |- cbas);
+        \end{pgfonlayer}
         \fill[#1] (c.north west) rectangle ([yshift=-0.8mm]c.north east);
     \end{tikzpicture}%
 }
